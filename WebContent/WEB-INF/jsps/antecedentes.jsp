@@ -32,9 +32,15 @@
 				<form action="${logoutUrl}" method="post" id="logoutForm">
 					<input type="hidden" name="${_csrf.parameterName}"value="${_csrf.token}" />
 				</form>
+				
 				<div class="logout">
-					<a href="http://localhost:8080/spring/login">Salir</a>
-				</div>	
+					<div class="row">
+						<div class="col-md-7"></div>
+						<div class="col-md-3">Usuario: ${dni}</div>
+						<div class="col-md-2"><a href="http://www.um.edu.ar/cv/login">Salir</a></div>
+					</div>
+				</div>
+					
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para cargar/editar sus datos:</p>
 				
@@ -57,18 +63,22 @@
 					method="post"
 					action="${pageContext.request.contextPath}/crearantecedentes"
 					modelAttribute="antedecentes">
-					
+                   
+                    <!-- BOTON EDITAR -->
 					<div class="form-group">
-						<label for="dni">DNI
-						<input type="text"
-							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}"></label>
+		     			<div class="row">
+		     				<div class="col-md-8">
+		     					<h2>ANTECEDENTES</h2>
+		     					 <h3>Formación de recursos humanos en CyT</h3>
+		     				</div>
+		                   	<div class="col-md-1"></div>
+		                   	<div class="col-md-3">
+		                   		<button type="submit" class="btn btn-default disabled">Editar</button>	
+		                   	</div>
+		                </div>
 					</div>
-					
-     				<div class="form-group">
-                        <h2>ANTECEDENTES</h2>
-                        <h3>Formación de recursos humanos en CyT</h3>
-                    </div>                                
+                    
+                                                  
                     <!-- Becarios -->
 				    <div class="form-group">
 				        <label for="inputBecarios">Becarios</label>

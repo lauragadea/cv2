@@ -1312,6 +1312,12 @@ h2,
 .form-group >h2{
 	text-decoration: underline;
 }
+
+.col-md-8 >h2{
+	text-decoration: underline;
+}
+
+
 h3,
 .h3 {
   font-size: 24px;
@@ -2654,6 +2660,8 @@ label {
   margin-bottom: 5px;
   font-weight: bold;
 }
+
+
 input[type="search"] {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -3196,6 +3204,20 @@ fieldset[disabled] .btn {
   background-color: #fff;
   border-color: #ccc;
 }
+
+.col-md-3 > .btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+  margin-top: 20px;
+}
+
+.col-md-3 <h2{
+	text-decoration: underline;
+}
+
+
+
 .btn-default:hover,
 .btn-default:focus,
 .btn-default.focus,

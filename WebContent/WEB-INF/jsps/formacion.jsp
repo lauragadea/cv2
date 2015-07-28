@@ -34,8 +34,12 @@
 				</form>
 				
 				<div class="logout">
-					<a href="http://localhost:8080/spring/login">Salir</a>
-				</div>	
+					<div class="row">
+						<div class="col-md-7"></div>
+						<div class="col-md-3">Usuario: ${dni}</div>
+						<div class="col-md-2"><a href="http://www.um.edu.ar/cv/login">Salir</a></div>
+					</div>
+				</div>
 				
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para cargar/editar sus datos:</p>
@@ -59,17 +63,21 @@
 					method="post"
 					action="${pageContext.request.contextPath}/crearformacion"
 					modelAttribute="formacion">
+	
+					<!-- BOTON EDITAR -->
 					<div class="form-group">
-						<label for="dni">DNI
-						<input type="text"
-							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}"></label>
+		     			<div class="row">
+		     				<div class="col-md-8">
+		     					<h2>FORMACION</h2>
+		     					 <h3>Formación Académica</h3>
+		     				</div>
+		                   	<div class="col-md-1"></div>
+		                   	<div class="col-md-3">
+		                   		<button type="submit" class="btn btn-default disabled">Editar</button>	
+		                   	</div>
+		                </div>
 					</div>
-					<div class="form-group">
-						<h2>FORMACION</h2>
-						<h3>Formación Académica</h3>
-					</div>
-					
+										
 					<!-- Nivel Universitario de posgrado -->
 					<div class="form-group">
 						<label for="inputNivelUniversitarioPosgrado">Nivel Universitario de Posgrado</label> <input

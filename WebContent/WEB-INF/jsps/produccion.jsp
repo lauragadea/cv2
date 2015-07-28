@@ -27,9 +27,15 @@
 		<img src="resources/imagenes/marca.png">
 		<div class="well">
 			<div class="container">
+				
 				<div class="logout">
-					<a href="http://localhost:8080/spring/login">Salir</a>
-				</div>	
+					<div class="row">
+						<div class="col-md-7"></div>
+						<div class="col-md-3">Usuario: ${dni}</div>
+						<div class="col-md-2"><a href="http://www.um.edu.ar/cv/login">Salir</a></div>
+					</div>
+				</div>
+				
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para cargar/editar sus datos:</p>
 				
@@ -53,20 +59,22 @@
 					action="${pageContext.request.contextPath}/crearproduccion"
 					modelAttribute="produccion">
 
-					<!-- DNI -->
+					<!-- BOTON EDITAR -->
 					<div class="form-group">
-						<label for="dni">DNI
-						<input type="text"
-							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}"></label>
+		     			<div class="row">
+		     				<div class="col-md-8">
+		                       <h2>PRODUCCION</h2>
+		                       <h3>Producción científica</h3>
+		     				</div>
+		                   	<div class="col-md-1"></div>
+		                   	<div class="col-md-3">
+		                   		<button type="submit" class="btn btn-default disabled">Editar</button>	
+		                   	</div>
+		                </div>
 					</div>
 
         			<!-- PRODUCCION -->
 
-                   <div class="form-group">
-                       <h2>PRODUCCION</h2>
-                       <h3>Producción científica</h3>
-                   </div>   
                    <!-- Artículos publicados en revistas con/sin referato --> 
                    <div class="form-group">
                        <label for="artRef">Artículos publicados en revistas con referato</label>

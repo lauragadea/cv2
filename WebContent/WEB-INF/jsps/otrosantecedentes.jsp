@@ -27,9 +27,15 @@
 		<img src="resources/imagenes/marca.png">
 		<div class="well">
 			<div class="container">
+					
 				<div class="logout">
-					<a href="http://localhost:8080/spring/login">Salir</a>
-				</div>	
+					<div class="row">
+						<div class="col-md-7"></div>
+						<div class="col-md-3">Usuario: ${dni}</div>
+						<div class="col-md-2"><a href="http://www.um.edu.ar/cv/login">Salir</a></div>
+					</div>
+				</div>
+				
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para cargar/editar sus datos:</p>
 
@@ -53,18 +59,20 @@
 					action="${pageContext.request.contextPath}/crearotrosantecedentes"
 					modelAttribute="produccion">
 
-						<div class="form-group">
-						<label for="dni">DNI
-						<input type="text"
-							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}"></label>
+					<!-- BOTON EDITAR -->
+					<div class="form-group">
+		     			<div class="row">
+		     				<div class="col-md-8">
+			                     <h2>OTROS ANTECEDENTES</h2>
+			                     <h3>Participación u organización de eventos CyT</h3>
+		     				</div>
+		                   	<div class="col-md-1"></div>
+		                   	<div class="col-md-3">
+		                   		<button type="submit" class="btn btn-default disabled">Editar</button>	
+		                   	</div>
+		                </div>
 					</div>
- 					<!-- OTRAS ANTECEDENTES -->
 
-                   <div class="form-group">
-                     <h2>OTROS ANTECEDENTES</h2>
-                     <h3>Participación u organización de eventos CyT</h3>
-                   </div>                                
                    <!-- Participación u organización de eventos CyT -->
        				    <div class="form-group">
        				        <label for="inputEstanciasyPasantias">Estancias y pasantías</label>
