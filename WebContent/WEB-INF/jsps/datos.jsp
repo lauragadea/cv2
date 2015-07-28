@@ -43,7 +43,7 @@
 					<div class="row">
 						<div class="col-md-7"></div>
 						<div class="col-md-3">Usuario: ${dni}</div>
-						<div class="col-md-2"><a href="http://www.um.edu.ar/cv/login">Salir</a></div>
+						<div class="col-md-2"><a href="j_spring_security_logout">Logout</a></div>
 					</div>
 				</div>
 				

@@ -38,11 +38,11 @@ public class MainController {
  
 	}
 	
-	/*@RequestMapping(value = "logout", method = RequestMethod.GET)
+	@RequestMapping(value = "logout", method = RequestMethod.GET)
 	public String logout() {
-	    SecurityContextHolder.clearContext();
-	    return "redirect:/j_spring_security_logout";
-	} */
+	    
+	    return "logout";
+	}
  
 	@RequestMapping(value = "/admin**", method = RequestMethod.GET)
 	public ModelAndView adminPage() {
