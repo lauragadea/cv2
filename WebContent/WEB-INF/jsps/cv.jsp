@@ -33,12 +33,18 @@
 				<c:url value="/j_spring_security_logout" var="logoutUrl" />
 				
 				<form action="${logoutUrl}" method="post" id="logoutForm">
-					<input type="hidden" name="${_csrf.parameterName}"
-						value="${_csrf.token}" />
+					<input type="hidden" name="${_csrf.parameterName}"value="${_csrf.token}" />
 				</form>
+				
+
+				
 				<div class="logout">
-					<a href="http://localhost:8080/spring/login">Salir</a>
-				</div>	
+					<div class="row">
+						<div class="col-md-7"></div>
+						<div class="col-md-3">Usuario: ${dni}</div>
+						<div class="col-md-2"><a href="http://localhost:8080/spring/login">Logout</a></div>
+					</div>
+				</div>
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para cargar/editar sus datos:</p>
 

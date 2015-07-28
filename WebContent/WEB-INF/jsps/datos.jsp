@@ -39,11 +39,13 @@
 					<input type="hidden" name="${_csrf.parameterName}"value="${_csrf.token}" />
 				</form>
 				
+
+				
 				<div class="logout">
 					<div class="row">
 						<div class="col-md-7"></div>
 						<div class="col-md-3">Usuario: ${dni}</div>
-						<div class="col-md-2"><a href="j_spring_security_logout">Logout</a></div>
+						<div class="col-md-2"><a href="http://localhost:8080/spring/login">Salir</a></div>
 					</div>
 				</div>
 				
@@ -68,7 +70,13 @@
 					<form:form id="registration-form" class="form-horizontal"
 					method="post"
 					action="${pageContext.request.contextPath}/creardatos"
-					modelAttribute="produccion">
+					modelAttribute="datos">
+					
+					<div class="form-group">
+						<label for="dni">DNI
+						<input type="text"
+							id="dni" class="form-control" path="dni"
+							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
 					
 					<!-- BOTON EDITAR -->
 					<div class="form-group">

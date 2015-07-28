@@ -32,7 +32,7 @@
 					<div class="row">
 						<div class="col-md-7"></div>
 						<div class="col-md-3">Usuario: ${dni}</div>
-						<div class="col-md-2"><a href="http://localhost:8080/spring/logout">Salir</a></div>
+						<div class="col-md-2"><a href="http://localhost:8080/spring/login">Salir</a></div>
 					</div>
 				</div>
 				
@@ -58,6 +58,13 @@
 					method="post"
 					action="${pageContext.request.contextPath}/crearproduccion"
 					modelAttribute="produccion">
+
+					<div class="form-group">
+						<label for="dni">DNI
+						<input type="text"
+							id="dni" class="form-control" path="dni"
+							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
+					
 
 					<!-- BOTON EDITAR -->
 					<div class="form-group">
