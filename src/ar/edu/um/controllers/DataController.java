@@ -64,4 +64,40 @@ public class DataController {
 		return "cv";
 	}
 	
+	@RequestMapping(value="/modificardatos", method=RequestMethod.POST)
+	public String modificaDatos(Model model, @RequestParam BigDecimal dni, @RequestParam String dia, @RequestParam String mes, @RequestParam String anio, @Valid DatosPersonales dp, BindingResult result) {
+		if (result.hasErrors()){
+			System.out.println("no se valido el formulario");
+			List<ObjectError> errors = result.getAllErrors();
+			
+			for (Object error: errors) {
+				System.out.println(error);
+			}
+			
+			return "/";
+		}
+		
+		String fecha = anio + "-" + mes + "-" + dia;
+		dp.setFecha_nac(fecha);
+		
+		datosPersonalesService.modify(dp);
+		
+		model.addAttribute("dni", dp.getDni());
+		model.addAttribute("nombre", dp.getNombre());
+		model.addAttribute("apellido", dp.getApellido());
+		model.addAttribute("sexo", dp.getSexo());
+		model.addAttribute("estado_civil", dp.getEstado_civil());
+		model.addAttribute("email", dp.getEmail());
+		model.addAttribute("fecha_nac", dp.getFecha_nac());
+		model.addAttribute("nacionalidad", dp.getNacionalidad());
+		model.addAttribute("CUIL_CUIT", dp.getCUIL_CUIT());
+		model.addAttribute("domicilio", dp.getDomicilio());
+		model.addAttribute("departamento", dp.getDepartamento());
+		model.addAttribute("provincia", dp.getProvincia());
+		model.addAttribute("pais", dp.getPais());
+		
+		
+		return "cv";
+	}
+	
 }

@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import ar.edu.um.model.DatosPersonales;
-import ar.edu.um.model.User;
+import ar.edu.um.model.Formacion;
 import ar.edu.um.service.DatosPersonalesService;
 import ar.edu.um.service.FormacionService;
 
@@ -147,13 +147,13 @@ public class CvController {
 	}
 	
 	/*** FORMACION EDITAR ***/
-	/*
+	
 	@RequestMapping(value="/formacionEditar")
 	public String formacionEditar(Model model){
 	
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
-	   /*
+	   
 		System.out.println("USER: " + username);
 	     
 		Formacion dp = formacionService.getData(Integer.parseInt(username));
@@ -171,7 +171,7 @@ public class CvController {
 		return "formacionEditar";
 	}
 	
-	*/
+	
 	@RequestMapping(value="/cargos")
 	public String cargos(Model model){
 

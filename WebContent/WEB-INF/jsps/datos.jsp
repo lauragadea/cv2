@@ -45,7 +45,7 @@
 					<div class="row">
 						<div class="col-md-7"></div>
 						<div class="col-md-3">Usuario: ${dni}</div>
-						<div class="col-md-2"><a href="http://localhost:8080/spring/login">Salir</a></div>
+						<div class="col-md-2"><a href="http://www.um.edu.ar/cv/">Salir</a></div>
 					</div>
 				</div>
 				
@@ -54,6 +54,7 @@
 				<p>Seleccione una categoría para cargar/editar sus datos:</p>
 
 				<!-- NAVBAR -->
+					
 					<nav class="navbar navbar-default">
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				      <ul class="nav navbar-nav">
@@ -81,7 +82,10 @@
 					<!-- BOTON EDITAR -->
 					<div class="form-group">
 		     			<div class="row">
-		     				<div class="col-md-8"><h2>DATOS PERSONALES</h2></div>
+		     				<div class="col-md-8">
+		     					<h2>DATOS PERSONALES</h2>
+		     					 
+		     				</div>
 		                   	<div class="col-md-1"></div>
 		                   	<div class="col-md-3">
 		                   		<button type="submit" class="btn btn-default disabled">Editar</button>	

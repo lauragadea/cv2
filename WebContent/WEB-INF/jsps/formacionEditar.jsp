@@ -33,7 +33,7 @@
 					<input type="hidden" name="${_csrf.parameterName}"value="${_csrf.token}" />
 				</form>
 				<h1>Currículum Vitae</h1>
-				<p>Seleccione una categoría para ver/editar sus datos:</p>
+				<p>Seleccione una categoría para cargar/editar sus datos:</p>
 				
 				<!-- NAVBAR -->
 				<nav class="navbar navbar-default">
@@ -52,13 +52,29 @@
 
 				<form:form id="registration-form" class="form-horizontal"
 					method="post"
-					action="${pageContext.request.contextPath}/crearformacion"
-					modelAttribute="formacion">
-
+					action="${pageContext.request.contextPath}/modificarformacion"
+					modelAttribute="dp">
+		
+					<!-- DNI  -->
 					<div class="form-group">
-						<h2>FORMACION</h2>
-						<h3>Formación Académica</h3>
+						<label for="dni">DNI
+						<input type="text"
+							id="dni" class="form-control" path="dni"
+							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
+					<!-- BOTON EDITAR -->
+					<div class="form-group">
+		     			<div class="row">
+		     				<div class="col-md-8">
+		     					<h2>FORMACION</h2></div>
+		     					<h3>Formación Académica</h3>
+		                   		<div class="col-md-1"></div>
+		                   		<div class="col-md-3">
+		                   		<button type="submit" class="btn btn-default disabled">Editar</button>	
+		                   	</div>
+		                </div>
 					</div>
+
+				
 					
 					<!-- Nivel Universitario de posgrado -->
 					<div class="form-group">

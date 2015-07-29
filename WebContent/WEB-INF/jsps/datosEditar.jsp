@@ -34,19 +34,20 @@
 			<div class="container">
 
 				<h1>Currículum Vitae</h1>
-				<p>Seleccione una categoría para ver/editar sus datos:</p>
+				<p>Seleccione una categoría para cargar/editar sus datos:</p>
 
 
 				<!-- NAVBAR -->
-				<nav class="navbar navbar-default">
+				
+					<nav class="navbar navbar-default">
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				      <ul class="nav navbar-nav">
-				         <li><a href="http://www.um.edu.ar/cv/datos" role="button">Datos Personales</a></li>
-				        <li><a href="http://www.um.edu.ar/cv/formacion" role="button">Formación</a></li>
-				        <li><a href="http://www.um.edu.ar/cv/cargos" role="button">Cargos</a></li>
-				        <li><a href="http://www.um.edu.ar/cv/antecedentes" role="button">Antecedentes</a></li>
-				        <li><a href="http://www.um.edu.ar/cv/produccion" role="button">Producción</a></li>
-				         <li>Otros Antecedentes</li>
+				        <li><a href="http://localhost:8080/spring/datos" role="button">Datos Personales</a></li>
+				        <li><a href="http://localhost:8080/spring/formacion" role="button">Formación</a></li>
+				        <li><a href="http://localhost:8080/spring/cargos" role="button">Cargos</a></li>
+				        <li><a href="http://localhost:8080/spring/antecedentes" role="button">Antecedentes</a></li>
+				        <li><a href="http://localhost:8080/spring/produccion" role="button">Producción</a></li>
+				        <li><a href="http://localhost:8080/spring/otrosantecedentes" role="button">Otros Antecedentes</a></li>
 				      </ul>
 				    </div>
 				</nav>
@@ -54,16 +55,24 @@
 
 				<form:form id="registration-form" class="form-horizontal"
 					method="post"
-					action="${pageContext.request.contextPath}/creardatos"
+					action="${pageContext.request.contextPath}/modificardatos"
 					modelAttribute="dp">
 		
-					<!-- DNI // sacar y traer del login -->
+					<!-- DNI  -->
 					<div class="form-group">
-						<label for="inputName">DNI</label><br> 
+						<label for="dni">DNI
 						<input type="text"
 							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}">
-						<form:errors cssClass="error" path="dni"></form:errors>
+							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
+					<!-- BOTON EDITAR -->
+					<div class="form-group">
+		     			<div class="row">
+		     				<div class="col-md-8"><h2>DATOS PERSONALES</h2></div>
+		                   	<div class="col-md-1"></div>
+		                   	<div class="col-md-3">
+		                   		<button type="submit" class="btn btn-default disabled">Editar</button>	
+		                   	</div>
+		                </div>
 					</div>
 
 					<!-- NOMBRE -->

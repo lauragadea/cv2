@@ -57,4 +57,34 @@ public class FormacionController {
 		return "cv";
 	}
 	
+	@RequestMapping(value="/modificarformacion", method=RequestMethod.POST)
+	public String modificaaDatos(Model model, @Valid Formacion formacion, BindingResult result) {
+		if (result.hasErrors()){
+			System.out.println("no se valido el formulario");
+			List<ObjectError> errors = result.getAllErrors();
+			
+			for (Object error: errors) {
+				System.out.println(error);
+			}
+			
+			return "/";
+			}
+		
+		formacionService.modify(formacion);
+		
+		model.addAttribute("dni", formacion.getDni());
+		model.addAttribute("nivel_universitario_posgrado", formacion.getNivel_universitario_posgrado());
+		model.addAttribute("nivel_universitario_posgrado_especializacion", formacion.getNivel_universitario_posgrado_especializacion());
+		model.addAttribute("nivel_universitario_grado", formacion.getNivel_universitario_grado());
+		model.addAttribute("nivel_terciario_no_universitario", formacion.getNivel_terciario_no_universitario());
+		model.addAttribute("especialidad_certificada", formacion.getEspecialidad_certificada());
+		model.addAttribute("posdoctorado", formacion.getPosdoctorado());
+		model.addAttribute("cursos_posgrado_y_capacitaciones", formacion.getCursos_posgrado_y_capacitaciones());
+		model.addAttribute("idiomas", formacion.getIdiomas());
+		
+		
+		return "cv";
+	}
+	
+	
 }

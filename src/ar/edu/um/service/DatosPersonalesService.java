@@ -23,4 +23,8 @@ public class DatosPersonalesService {
 	public DatosPersonales getData(int dni){
 		return datosPersonalesDao.getData(dni);
 	}
+	
+	public void modify(DatosPersonales datosPersonales){
+		datosPersonalesDao.modify(datosPersonales);
+	}
 }

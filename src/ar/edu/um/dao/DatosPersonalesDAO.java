@@ -77,5 +77,12 @@ private NamedParameterJdbcTemplate jdbc;
 		return jdbc.update("insert into datos_personales (dni, nombre, apellido, sexo, estado_civil, email, fecha_nac, nacionalidad, CUIL_CUIT, domicilio, departamento, provincia, pais) values (:dni, :nombre, :apellido, :sexo, :estado_civil, :email, :fecha_nac, :nacionalidad, :CUIL_CUIT, :domicilio, :departamento, :provincia, :pais)", params) == 1;
 
 	}
+	/*modificar datos*/
+	public boolean modify(DatosPersonales datosPersonales) {
+
+		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(datosPersonales);
+		return jdbc.update("update datos_personales set nombre=:nombre, apellido=:apellido, sexo=:sexo, estado_civil=:estado_civil, email=:email, fecha_nac=:fecha_nac, nacionalidad=:nacionalidad, CUIL_CUIT=:CUIL_CUIT, domicilio=:domicilio, departamento=:departamento, provincia=:provincia, pais=:pais WHERE dni=:dni", params) == 1;
+
+	}
 
 }

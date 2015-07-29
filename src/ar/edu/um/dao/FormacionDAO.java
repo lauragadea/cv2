@@ -34,7 +34,7 @@ public class FormacionDAO {
 		return jdbc.update("insert into formacion (dni, nivel_universitario_posgrado, nivel_universitario_posgrado_especializacion, nivel_universitario_grado, nivel_terciario_no_universitario, especialidad_certificada, posdoctorado, cursos_posgrado_y_capacitaciones, idiomas) values (:dni, :nivel_universitario_posgrado, :nivel_universitario_posgrado_especializacion, :nivel_universitario_grado, :nivel_terciario_no_universitario, :especialidad_certificada, :posdoctorado, :cursos_posgrado_y_capacitaciones, :idiomas)", params) == 1;
 
 	}
-	/*
+	
 
 	public Formacion getData(int dni) {
 
@@ -59,7 +59,7 @@ public class FormacionDAO {
 							dp.setPosdoctorado(rs.getString("posdoctorado"));
 							dp.setCursos_posgrado_y_capacitaciones(rs.getString("cursos_posgrado_y_capacitaciones"));
 							dp.setIdiomas(rs.getString("idiomas"));
-							System.out.println("ALU DENTRO DAO: " + dp);
+			
 	
 							return dp;
 						}
@@ -72,5 +72,12 @@ public class FormacionDAO {
 		}
 		
 	}
-	*/
+	
+	
+	public boolean modify(Formacion formacion) {
+
+		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(formacion);
+		return jdbc.update("update formacion set nivel_universitario_posgrado=:nivel_universitario_posgrado, nivel_universitario_posgrado_especializacion=:nivel_universitario_posgrado_especializacion, nivel_universitario_grado=:nivel_universitario_grado, nivel_terciario_no_universitario=:nivel_terciario_no_universitario, especialidad_certificada=:especialidad_certificada, posdoctorado=:posdoctorado, cursos_posgrado_y_capacitaciones=:cursos_posgrado_y_capacitaciones, idiomas=:idiomas WHERE dni=:dni", params) == 1;
+
+	}
 }
