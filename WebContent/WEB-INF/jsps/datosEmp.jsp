@@ -32,13 +32,29 @@
 		<img src="resources/imagenes/marca.png">
 		<div class="well">
 			<div class="container">
+				
+				<c:url value="/j_spring_security_logout" var="logoutUrl" />
+				
+				<form action="${logoutUrl}" method="post" id="logoutForm">
+					<input type="hidden" name="${_csrf.parameterName}"value="${_csrf.token}" />
+				</form>
+				
 
+				
+				<div class="logout">
+					<div class="row">
+						<div class="col-md-7"></div>
+						<div class="col-md-3">Usuario: ${dni}</div>
+						<div class="col-md-2"><a href="http://www.um.edu.ar/cv/">Salir</a></div>
+					</div>
+				</div>
+				
+					
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para cargar/editar sus datos:</p>
 
-
 				<!-- NAVBAR -->
-				
+					
 					<nav class="navbar navbar-default">
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				      <ul class="nav navbar-nav">
@@ -52,42 +68,43 @@
 				    </div>
 				</nav>
 				<!--  -->
-
-				<form:form id="registration-form" class="form-horizontal"
+					<form:form id="registration-form" class="form-horizontal"
 					method="post"
-					action="${pageContext.request.contextPath}/modificardatos"
-					modelAttribute="dp">
-		
-					<!-- DNI  -->
+					action="${pageContext.request.contextPath}/creardatos"
+					modelAttribute="datos">
+					
 					<div class="form-group">
 						<label for="dni">DNI
 						<input type="text"
 							id="dni" class="form-control" path="dni"
 							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
+					
 					<!-- BOTON EDITAR -->
 					<div class="form-group">
 		     			<div class="row">
-		     				<div class="col-md-8"><h2>DATOS PERSONALES</h2></div>
+		     				<div class="col-md-8">
+		     					<h2>DATOS PERSONALES</h2>
+		     					 
+		     				</div>
 		                   	<div class="col-md-1"></div>
 		                   	<div class="col-md-3">
-		                   		<button type="submit" class="btn btn-default disabled">Editar</button>	
+		                   		<button type="submit" class="btn btn-default" name="action" value="editar">Editar</button>	
 		                   	</div>
 		                </div>
 					</div>
-
+						
 					<!-- NOMBRE -->
 					<div class="form-group">
 						<label for="inputName">Nombre</label> <input type="text"
 							id="nombre" class="form-control" path="nombre"
-							name="nombre" placeholder="Nombre" value="${nombre}">
+							name="nombre" placeholder="Nombre">
 						<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
-
-					<!-- APELLIDO -->
+										<!-- APELLIDO -->
 					<div class="form-group">
 						<label for="inputApellido">Apellido</label> <input type="text"
 							class="form-control" id="alu_apellido" path="apellido"
-							name="apellido" placeholder="Apellido" value="${apellido}">
+							name="apellido" placeholder="Apellido">
 						<form:errors cssClass="error" path="apellido"></form:errors>
 					</div>
 
@@ -97,8 +114,8 @@
 							<label for="inputNumDoc">Sexo</label><br> <select
 								class="form-control" path="sexo" id="sexo"
 								name="sexo"><form:errors cssClass="error"
-									path="sexo" value="${sexo}"></form:errors>
-								<option value="${sexo}" label="${sexo}"></option>
+									path="sexo"></form:errors>
+								
 								<option value="M">Masculino</option>
 								<option value="F">Femenino</option>
 							</select>
@@ -110,7 +127,6 @@
 						<label for="inputEstadoCivil">Estado civil</label> <select
 							class="form-control" id="estado_civil" path="estado_civil"
 							name="estado_civil" placeholder="estado_civil" value="${estado_civil}">
-							<option value="${estado_civil}" label="${estado_civil}"></option>
 							<option value="S">Soltero</option>
 							<option value="C">Casado</option>
 							<option value="V">Viudo</option>
@@ -125,17 +141,15 @@
 					<div class="form-group">
 						<label for="inputEmail">Email</label> <input type="email"
 							class="form-control" id="email" path="email"
-							name="email" placeholder="Email"value="${email}">
+							name="email" placeholder="Email">
 						<form:errors cssClass="error" path="email"></form:errors>
 					</div>
-
-					Dia: <c:out value="${diaa}"/>
 
 					<!-- FECHA DE NACIMIENTO -->
 					<div class="form-group">
 						<label for="inputFechaNac">Fecha de Nacimiento</label> <select
-							class="form-control" id="dia" name="dia" value="${dia}">
-							<option selected="${diaa}">${diaa}</option>
+							class="form-control" id="dia" name="dia" >
+							
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -168,7 +182,7 @@
 							<option value="30">30</option>
 							<option value="31">31</option>
 						</select> <select class="form-control" id="mes" name="mes" value="${mes}">
-							<option selected="${mess}">${mess}</option>
+							
 							<option value="01">Enero</option>
 							<option value="02">Febrero</option>
 							<option value="03">Marzo</option>
@@ -182,7 +196,7 @@
 							<option value="11">Noviembre</option>
 							<option value="12">Diciembre</option>
 						</select> <select class="form-control" id="anio" name="anio" value="${anio}">
-							<option selected="${anioo}">${anioo}</option>
+							
 							<option value="2001">2001</option>
 							<option value="2000">2000</option>
 							<option value="1999">1999</option>
@@ -264,7 +278,7 @@
 						<label for="inputNacionalidad">Nacionalidad</label> <select
 							class="form-control" id="nacionalidad" path="nacionalidad"
 							name="nacionalidad" placeholder="nacionalidad" value="${nacionalidad}">
-							<option value="${nacionalidad}" label="${nacionalidad}" selected></option>
+							
 							<option value="AF">Afganistán</option>
 							<option value="AL">Albania</option>
 							<option value="DE">Alemania</option>
@@ -276,7 +290,7 @@
 							<option value="AN">Antillas Holandesas</option>
 							<option value="SA">Arabia Saudí</option>
 							<option value="DZ">Argelia</option>
-							<option value="AR">Argentina</option>
+							<option value="AR" selected>Argentina</option>
 							<option value="AM">Armenia</option>
 							<option value="AW">Aruba</option>
 							<option value="AU">Australia</option>
@@ -509,7 +523,7 @@
 					<div class="form-group">
 						<label for="inputCuil">CUIL/CUIT</label> <input type="text"
 							class="form-control" id="CUIL_CUIT" path="CUIL_CUIT"
-							name="CUIL_CUIT" placeholder="CUIL/CUIT" value="${CUIL_CUIT}">
+							name="CUIL_CUIT" placeholder="CUIL/CUIT">
 						<form:errors cssClass="error" path="CUIL"></form:errors>
 					</div>
 
@@ -518,7 +532,7 @@
 					<div class="form-group">
 						<label for="inputDomicilio">Domicilio</label> <input type="text"
 							class="form-control" path="domicilio" id="domicilio "
-							name="domicilio" placeholder="Domicilio" value="${domicilio}">
+							name="domicilio" placeholder="Domicilio" >
 						<form:errors cssClass="error" path="domicilio"></form:errors>
 					</div>
 					
@@ -526,7 +540,7 @@
 					<div class="form-group">
 						<label for="inputDepartamento">Departamento</label> <input type="text"
 							class="form-control" path="departamento" id="departamento"
-							name="departamento" placeholder="Departamento" value="${departamento}">
+							name="departamento" placeholder="Departamento">
 						<form:errors cssClass="error" path="departamento"></form:errors>
 					</div>
 
@@ -534,7 +548,7 @@
 					<div class="form-group">
 						<label for="inputProvincia">Provincia</label> <input type="text"
 							class="form-control" path="provincia" id="provincia"
-							name="provincia" placeholder="Provincia" value="${provincia}">
+							name="provincia" placeholder="Provincia">
 						<form:errors cssClass="error" path="provincia"></form:errors>
 					</div>
 					
@@ -542,17 +556,15 @@
 					<div class="form-group">
 						<label for="inputPais">País</label><br> <input type="text"
 							class="form-control" path="pais" id="pais"
-							name="pais" placeholder="Pais" value="${pais}">
+							name="pais" placeholder="Pais">
 						<form:errors cssClass="error" path="pais"></form:errors>
 					</div>
+					<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
 
-		
-					<button type="submit" class="btn btn-primary">Enviar</button>
+			
 
 				</form:form>
-
-			</div>
-			<!--container-->
+			</div><!--container-->
 		</div>
 	</div>
 

@@ -1,6 +1,10 @@
 package ar.edu.um.controllers;
 
 import java.math.BigDecimal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -60,14 +64,8 @@ public class CvController {
 	    System.out.println("USER: " + username);
 	    BigDecimal dni = new BigDecimal (username);
 	    model.addAttribute("dni", dni);
-		
-		
-		
-		/* Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	     String username = auth.getName();
-	     System.out.println("USER: " + username);
 	      
-		DatosPersonales dp = datosPersonalesService.getData(Integer.parseInt(username));
+		DatosPersonales dp = datosPersonalesService.getData(dni);
 		System.out.println("dp = " + dp);
 		
 		model.addAttribute("dni", dp.getDni());
@@ -82,21 +80,24 @@ public class CvController {
 		model.addAttribute("domicilio", dp.getDomicilio());
 		model.addAttribute("departamento", dp.getDepartamento());
 		model.addAttribute("provincia", dp.getProvincia());
-		model.addAttribute("pais", dp.getPais());*/
+		model.addAttribute("pais", dp.getPais());
 		
 		return "datos";
 	}
 	
-	/*** DATOS EDITAR ***/
+	/*** DATOS EDITAR 
+	 * @throws ParseException ***/
 	
 	@RequestMapping(value="/datosEditar")
-	public String datosEditar(Model model){
+	public String datosEditar(Model model) throws ParseException{
 		
 		 Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	     String username = auth.getName(); /*trae el usuario logueado en el sistema */
 	     System.out.println("USER: " + username);
+	     Integer.parseInt(username);
+	     BigDecimal dni = new BigDecimal(username);
 	      
-		DatosPersonales dp = datosPersonalesService.getData(Integer.parseInt(username));
+		DatosPersonales dp = datosPersonalesService.getData(dni);
 		
 		model.addAttribute("dni", dp.getDni());
 		model.addAttribute("nombre", dp.getNombre());
@@ -104,7 +105,23 @@ public class CvController {
 		model.addAttribute("sexo", dp.getSexo());
 		model.addAttribute("estado_civil", dp.getEstado_civil());
 		model.addAttribute("email", dp.getEmail());
-		model.addAttribute("fecha_nac", dp.getFecha_nac());
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	    Date convertedCurrentDate = sdf.parse(dp.getFecha_nac());
+	    Calendar cal = Calendar.getInstance();
+	    cal.setTime(convertedCurrentDate);
+	    
+	    int anio = cal.get(Calendar.YEAR);
+	    int mes = cal.get(Calendar.MONTH);
+	    int dia = cal.get(Calendar.DAY_OF_MONTH);
+
+		
+		model.addAttribute("diaa", dia);
+		model.addAttribute("mess", mes);
+		model.addAttribute("anioo", anio);
+		
+		System.out.println("dia:" + dia + "mes: " + mes + "anio:" + anio);
+		
 		model.addAttribute("nacionalidad", dp.getNacionalidad());
 		model.addAttribute("CUIL_CUIT", dp.getCUIL_CUIT());
 		model.addAttribute("domicilio", dp.getDomicilio());

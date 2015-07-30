@@ -1,5 +1,7 @@
 package ar.edu.um.service;
 
+import java.math.BigDecimal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +22,7 @@ public class DatosPersonalesService {
 		datosPersonalesDao.create(datosPersonales);
 	}
 	
-	public DatosPersonales getData(int dni){
+	public DatosPersonales getData(BigDecimal dni){
 		return datosPersonalesDao.getData(dni);
 	}
 	

@@ -1,5 +1,6 @@
 package ar.edu.um.dao;
 
+import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -27,7 +28,7 @@ private NamedParameterJdbcTemplate jdbc;
 	}
 	
 	//trae los datos de la bd
-	public DatosPersonales getData(int dni) {
+	public DatosPersonales getData(BigDecimal dni) {
 
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("dni", dni);
