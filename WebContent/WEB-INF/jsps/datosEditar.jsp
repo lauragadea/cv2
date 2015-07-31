@@ -129,8 +129,6 @@
 						<form:errors cssClass="error" path="email"></form:errors>
 					</div>
 
-					Dia: <c:out value="${diaa}"/>
-
 					<!-- FECHA DE NACIMIENTO -->
 					<div class="form-group">
 						<label for="inputFechaNac">Fecha de Nacimiento</label> <select

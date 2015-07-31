@@ -54,10 +54,11 @@ public class CvController {
 		return "cv";
 	}
 	
-	/*** DATOS ***/
+	/*** DATOS 
+	 * @throws ParseException ***/
 	
 	@RequestMapping(value="/datos")
-	public String datos(Model model){
+	public String datos(Model model) throws ParseException{
 		
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
@@ -66,23 +67,34 @@ public class CvController {
 	    model.addAttribute("dni", dni);
 	      
 		DatosPersonales dp = datosPersonalesService.getData(dni);
-		System.out.println("dp = " + dp);
 		
-		model.addAttribute("dni", dp.getDni());
-		model.addAttribute("nombre", dp.getNombre());
-		model.addAttribute("apellido", dp.getApellido());
-		model.addAttribute("sexo", dp.getSexo());
-		model.addAttribute("estado_civil", dp.getEstado_civil());
-		model.addAttribute("email", dp.getEmail());
-		model.addAttribute("fecha_nac", dp.getFecha_nac());
-		model.addAttribute("nacionalidad", dp.getNacionalidad());
-		model.addAttribute("CUIL_CUIT", dp.getCUIL_CUIT());
-		model.addAttribute("domicilio", dp.getDomicilio());
-		model.addAttribute("departamento", dp.getDepartamento());
-		model.addAttribute("provincia", dp.getProvincia());
-		model.addAttribute("pais", dp.getPais());
+		if (dp == null){
+			
+			model.addAttribute("dni", dni);
+			return "datosEmp";
+			
+		}else{
+			
+			System.out.println("dp = " + dp);
+			
+			model.addAttribute("dni", dp.getDni());
+			model.addAttribute("nombre", dp.getNombre());
+			model.addAttribute("apellido", dp.getApellido());
+			model.addAttribute("sexo", dp.getSexo());
+			model.addAttribute("estado_civil", dp.getEstado_civil());
+			model.addAttribute("email", dp.getEmail());
+			model.addAttribute("fecha_nac", dp.getFecha_nac());
+			model.addAttribute("nacionalidad", dp.getNacionalidad());
+			model.addAttribute("CUIL_CUIT", dp.getCUIL_CUIT());
+			model.addAttribute("domicilio", dp.getDomicilio());
+			model.addAttribute("departamento", dp.getDepartamento());
+			model.addAttribute("provincia", dp.getProvincia());
+			model.addAttribute("pais", dp.getPais());
+			
+			return "datos";
+			
+		}
 		
-		return "datos";
 	}
 	
 	/*** DATOS EDITAR 
@@ -131,6 +143,51 @@ public class CvController {
 		
 		return "datosEditar";
 	}
+	/*
+	@RequestMapping(value="/datosEmp")
+	public String datosEmp(Model model) throws ParseException{
+		
+		 Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	     String username = auth.getName(); 
+	     System.out.println("USER: " + username);
+	     Integer.parseInt(username);
+	     BigDecimal dni = new BigDecimal(username);
+	      
+		DatosPersonales dp = datosPersonalesService.getData(dni);
+		
+		model.addAttribute("dni", dp.getDni());
+		model.addAttribute("nombre", dp.getNombre());
+		model.addAttribute("apellido", dp.getApellido());
+		model.addAttribute("sexo", dp.getSexo());
+		model.addAttribute("estado_civil", dp.getEstado_civil());
+		model.addAttribute("email", dp.getEmail());
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	    Date convertedCurrentDate = sdf.parse(dp.getFecha_nac());
+	    Calendar cal = Calendar.getInstance();
+	    cal.setTime(convertedCurrentDate);
+	    
+	    int anio = cal.get(Calendar.YEAR);
+	    int mes = cal.get(Calendar.MONTH);
+	    int dia = cal.get(Calendar.DAY_OF_MONTH);
+
+		
+		model.addAttribute("diaa", dia);
+		model.addAttribute("mess", mes);
+		model.addAttribute("anioo", anio);
+		
+		System.out.println("dia:" + dia + "mes: " + mes + "anio:" + anio);
+		
+		model.addAttribute("nacionalidad", dp.getNacionalidad());
+		model.addAttribute("CUIL_CUIT", dp.getCUIL_CUIT());
+		model.addAttribute("domicilio", dp.getDomicilio());
+		model.addAttribute("departamento", dp.getDepartamento());
+		model.addAttribute("provincia", dp.getProvincia());
+		model.addAttribute("pais", dp.getPais());
+		
+		return "datosEmp";
+	}
+*/
 
 	/*** FORMACION ***/
 	

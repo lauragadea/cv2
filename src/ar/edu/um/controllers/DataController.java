@@ -73,11 +73,11 @@ public class DataController {
 			model.addAttribute("provincia", dp.getProvincia());
 			model.addAttribute("pais", dp.getPais());
 
-			return "cv";
+			return "datos";
 			
 		}
 
-		return "cv";
+		return "datos";
 		
 	}
 	
