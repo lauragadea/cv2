@@ -2,7 +2,7 @@ package ar.edu.um.controllers;
 
 import java.math.BigDecimal;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
@@ -40,7 +40,7 @@ public class MainController {
 	
 	@RequestMapping(value = "logout", method = RequestMethod.GET)
 	public String logout() {
-	    
+		
 	    return "logout";
 	}
  

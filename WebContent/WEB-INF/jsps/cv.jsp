@@ -42,7 +42,7 @@
 					<div class="row">
 						<div class="col-md-7"></div>
 						<div class="col-md-3">Usuario: ${dni}</div>
-						<div class="col-md-2"><a href="http://www.um.edu.ar/cv/">Logout</a></div>
+						<div class="col-md-2"><a href="<c:url value="/logout" />"> Salir</a></div>
 					</div>
 				</div>
 				<h1>Currículum Vitae</h1>
@@ -120,5 +120,8 @@
 		<!--well-->
 	</div>
 </footer>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
 </html>
 

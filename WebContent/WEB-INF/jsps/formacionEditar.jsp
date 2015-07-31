@@ -32,6 +32,14 @@
 				<form action="${logoutUrl}" method="post" id="logoutForm">
 					<input type="hidden" name="${_csrf.parameterName}"value="${_csrf.token}" />
 				</form>
+				
+				<div class="logout">
+					<div class="row">
+						<div class="col-md-7"></div>
+						<div class="col-md-3">Usuario: ${dni}</div>
+						<div class="col-md-2"><a href="<c:url value="/logout" />">Salir</a></div>
+					</div>
+				</div>
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para cargar/editar sus datos:</p>
 				

@@ -48,7 +48,7 @@
 						<div class="col-md-7"></div>
 						<div class="col-md-3">Usuario: ${dni}</div>
 						<div class="col-md-2">
-							<a href="http://www.um.edu.ar/cv/">Salir</a>
+							<a href="<c:url value="/logout" />"> Salir</a>
 						</div>
 					</div>
 				</div>
@@ -83,7 +83,7 @@
 					method="post"
 					action="${pageContext.request.contextPath}/datosEditar"
 					modelAttribute="datos">
-					
+				
 					<!-- BOTON EDITAR -->
 					<div class="form-group">
 		     			<div class="row">

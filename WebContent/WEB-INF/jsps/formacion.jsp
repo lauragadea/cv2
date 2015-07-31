@@ -37,7 +37,7 @@
 					<div class="row">
 						<div class="col-md-7"></div>
 						<div class="col-md-3">Usuario: ${dni}</div>
-						<div class="col-md-2"><a href="http://www.um.edu.ar/cv/">Salir</a></div>
+						<div class="col-md-2"><a href="<c:url value="/logout" />">Salir</a></div>
 					</div>
 				</div>
 				
