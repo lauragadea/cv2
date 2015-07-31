@@ -41,8 +41,6 @@
 						value="${_csrf.token}" />
 				</form>
 
-
-
 				<div class="logout">
 					<div class="row">
 						<div class="col-md-7"></div>
@@ -53,9 +51,7 @@
 					</div>
 				</div>
 
-
 				<h1>Currículum Vitae</h1>
-				<p>Seleccione una categoría para cargar/editar sus datos:</p>
 
 				<!-- NAVBAR -->
 
@@ -63,8 +59,9 @@
 					<div class="collapse navbar-collapse"
 						id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
-							<li><a href="http://localhost:8080/spring/datos"
-								role="button">Datos Personales</a></li>
+							<li class="active"><a
+								href="http://localhost:8080/spring/datos" role="button">Datos
+									Personales</a></li>
 							<li><a href="http://localhost:8080/spring/formacion"
 								role="button">Formación</a></li>
 							<li><a href="http://localhost:8080/spring/cargos"
@@ -83,112 +80,117 @@
 					method="post"
 					action="${pageContext.request.contextPath}/datosEditar"
 					modelAttribute="datos">
-					
-					<!-- BOTON EDITAR -->
-					<div class="form-group">
-		     			<div class="row">
-		     				<div class="col-md-8">
-		     					<h2>DATOS PERSONALES</h2>
-		     					 
-		     				</div>
-		                   	<div class="col-md-1"></div>
-		                   	<div class="col-md-3">
-		                   		<button type="submit" class="btn btn-default" name="action" value="editar">Editar</button>	
-		                   	</div>
-		                </div>
-					</div>
-
-					<!-- -DNI -->
-					<div class="form-group">
-						<label for="inputName">DNI:</label>
-						<c:out value="${dni}" />
-						<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
-					</div>
-
-					<!-- NOMBRE -->
-					<div class="form-group">
-						<label for="inputName">Nombre:</label>
-						<c:out value="${nombre}" />
-					</div>
-
-					<!-- APELLIDO -->
-					<div class="form-group">
-						<label for="inputName">Apellido:</label>
-						<c:out value="${apellido}" />
-					</div>
-
-					<!-- SEXO -->
-					<div class="form-group">
-						<label for="inputName">Sexo:</label>
-						<c:out value="${sexo}" />
-					</div>
-
-					<!-- EMAIL -->
-					<div class="form-group">
-						<label for="inputName">Email:</label>
-						<c:out value="${email}" />
-					</div>
-
-					<!-- ESTADO CIVIL -->
-					<div class="form-group">
-						<label for="inputName">Estado Civil:</label>
-						<c:out value="${estado_civil}" />
-					</div>
 
 
-					<!-- EMAIL -->
-					<div class="form-group">
-						<label for="inputName">Email:</label>
-						<c:out value="${email}" />
-					</div>
-
-					<!-- FECHA DE NACIMIENTO -->
-					<div class="form-group">
-						<label for="inputName">Fecha de Nacimiento:</label>
-						<c:out value="${fecha_nac}" />
-					</div>
-
-					<!-- EMAIL -->
-					<div class="form-group">
-						<label for="inputName">Nacionalidad:</label>
-						<c:out value="${nacionalidad}" />
-					</div>
-
-					<!-- CUIL/CUIT -->
-					<div class="form-group">
-						<label for="inputName">CUIL/CUIT:</label>
-						<c:out value="${CUIL_CUIT}" />
-					</div>
-
-					<!-- DOMICILIO -->
-					<div class="form-group">
-						<label for="inputName">Domicilio:</label>
-						<c:out value="${domicilio}" />
-					</div>
-
-					<!-- DEPARTAMENTO -->
-					<div class="form-group">
-						<label for="inputName">Departamento:</label>
-						<c:out value="${departamento}" />
-					</div>
-
-					<!-- PRIVINCIA -->
-					<div class="form-group">
-						<label for="inputName">Provincia:</label>
-						<c:out value="${provincia}" />
-					</div>
-
-					<!-- PAIS -->
-					<div class="form-group">
-						<label for="inputName">País:</label>
-						<c:out value="${pais}" />
-					</div>
+					<div class="container">
+						<div class="row-fluid">
+							<div class="pull-left" >
 
 
+
+
+								<!-- NOMBRE -->
+								<div class="form-group">
+									<label for="inputName">Nombre:</label>
+									<c:out value="${nombre}" />
+								</div>
+
+								<!-- APELLIDO -->
+								<div class="form-group">
+									<label for="inputName">Apellido:</label>
+									<c:out value="${apellido}" />
+								</div>
+
+								<!-- SEXO -->
+								<div class="form-group">
+									<label for="inputName">Sexo:</label>
+									<c:out value="${sexo}" />
+								</div>
+
+								<!-- EMAIL -->
+								<div class="form-group">
+									<label for="inputName">Email:</label>
+									<c:out value="${email}" />
+								</div>
+
+								<!-- ESTADO CIVIL -->
+								<div class="form-group">
+									<label for="inputName">Estado Civil:</label>
+									<c:out value="${estado_civil}" />
+								</div>
+
+
+								<!-- EMAIL -->
+								<div class="form-group">
+									<label for="inputName">Email:</label>
+									<c:out value="${email}" />
+								</div>
+
+								<!-- FECHA DE NACIMIENTO -->
+								<div class="form-group">
+									<label for="inputName">Fecha de Nacimiento:</label>
+									<c:out value="${fecha_nac}" />
+								</div>
+
+								<!-- EMAIL -->
+								<div class="form-group">
+									<label for="inputName">Nacionalidad:</label>
+									<c:out value="${nacionalidad}" />
+								</div>
+
+								<!-- CUIL/CUIT -->
+								<div class="form-group">
+									<label for="inputName">CUIL/CUIT:</label>
+									<c:out value="${CUIL_CUIT}" />
+								</div>
+
+								<!-- DOMICILIO -->
+								<div class="form-group">
+									<label for="inputName">Domicilio:</label>
+									<c:out value="${domicilio}" />
+								</div>
+
+								<!-- DEPARTAMENTO -->
+								<div class="form-group">
+									<label for="inputName">Departamento:</label>
+									<c:out value="${departamento}" />
+								</div>
+
+								<!-- PRIVINCIA -->
+								<div class="form-group">
+									<label for="inputName">Provincia:</label>
+									<c:out value="${provincia}" />
+								</div>
+
+								<!-- PAIS -->
+								<div class="form-group">
+									<label for="inputName">País:</label>
+									<c:out value="${pais}" />
+								</div>
+							</div>
+							<div class="span6 pull-right" style="text-align: right">
+								<!-- BOTON EDITAR -->
+								<div class="form-group">
+									<div class="span6 pull-right" style="text-align: right">
+										<button type="submit" class="btn btn-default"
+											class="btn btn-primary pull-right btn-sm RbtnMargin"
+											name="action"  style="margin-right: 40px" value="editar">Editar</button>
+									</div>
+								</div>
+							</div>
 				</form:form>
+
 			</div>
-			<!--container-->
 		</div>
+	</div>
+
+
+	</div>
+	<!--container-->
+	</div>
+
+
+
 	</div>
 
 	<script
