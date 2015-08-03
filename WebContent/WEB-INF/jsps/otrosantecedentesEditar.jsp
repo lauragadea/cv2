@@ -57,17 +57,17 @@
 				
 				<form:form id="registration-form" class="form-horizontal"
 					method="post"
-					action="${pageContext.request.contextPath}/otrosantecedentesEditar"
+					action="${pageContext.request.contextPath}/modificarOtrosAntecedentes"
 					modelAttribute="produccion">
 
 					<div class="form-group">
 						<label for="dni">DNI
 						<input type="text"
 							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
-					
-
-	
+							name="dni" placeholder="DNI" value="${dni}" readonly>
+						</label>
+					</div>
+						
 					<!-- BOTON EDITAR -->
 					<div class="form-group">
 		     			<div class="row">
@@ -83,10 +83,11 @@
 					</div>
 
                    <!-- Participación u organización de eventos CyT -->
-       				    <div class="form-group">
-       				       <label for="inputEstanciasyPasantias">Estancias y pasantías: </label>
-       				       <c:out value="${estancias_pasantias}"/>
-       				    </div> 
+ 				    <div class="form-group">
+ 				        <label for="inputEstanciasyPasantias">Estancias y pasantías</label>
+ 				        <input type="text" class="form-control"  placeholder="Estancias y pasantías" id="estancias_pasantias" 
+ 				        path="estancias_pasantias" name="estancias_pasantias" value="${estancias_pasantias}">
+ 				    </div> 
 
                    <!-- Membresías, redes y/o programas de cooperación -->
 
@@ -96,20 +97,26 @@
                              				
                    <!-- Membresías n asocianiones C-T y/o profesionales -->                
                    <div class="form-group">
-                       <label for="inputMembresíasEnAsociacionesCT">Membresías en asocianiones C-T y/o profesionales: </label>
-                       <c:out value="${membresias_asociaciones_ct}"/>
+                       <label for="inputMembresíasEnAsociacionesCT">Membresías en asocianiones C-T y/o profesionales</label>
+                       <input type="text" class="form-control"  placeholder="Membresías en asocianiones C-T y/o profesionales"
+                       id="membresias_asociaciones_ct" path="membresias_asociaciones_ct" name="membresias_asociaciones_ct"
+                       value="${membresias_asociaciones_ct}">
                    </div>
                    
                    <!-- Participación en redes temáticas o institucionales --> 
                    <div class="form-group">
-                       <label for="inputParticipacionEnRedesTematicas">Participación en redes temáticas o institucionales: </label>
-                       <c:out value="${participacion_redes_tematicas}"/>
+                       <label for="inputParticipacionEnRedesTematicas">Participación en redes temáticas o institucionales</label>
+                       <input type="text" class="form-control"  placeholder="Participación en redes temáticas o institucionales"
+                       id="participacion_redes_tematicas" path="participacion_redes_tematicas" name="participacion_redes_tematicas"
+                       value="${participacion_redes_tematicas}">
                    </div>
                    
                    <!-- Coordinación de proyectos de cooperación académica o  C-T --> 
                    <div class="form-group">
-                       <label for="inputCoordinacionDeProyectosCooperacion">Coordinación de proyectos de cooperación académica o  C-T: </label>
-                       <c:out value="${coordinacion_proyectos_cooperacion}"/>
+                       <label for="inputCoordinacionDeProyectosCooperacion">Coordinación de proyectos de cooperación académica o  C-T</label>
+                       <input type="text" class="form-control"  placeholder="Coordinación de proyectos de cooperación académica o  C-T"
+                       id="coordinacion_proyectos_cooperacion" path="coordinacion_proyectos_cooperacion" name="coordinacion_proyectos_cooperacion"
+                       value="${coordinacion_proyectos_cooperacion}">
                    </div>
 
                    <!-- PREMIOS Y/O DISTINCIONES -->
@@ -119,8 +126,10 @@
                    </div>   
                    <!-- Premios y/o distinciones --> 
                    <div class="form-group">
-                       <label for="inputPremiosDistinciones">Premios y/o distinciones: </label>
-                       <c:out value="${premios_distinciones}"/>
+                       <label for="inputPremiosDistinciones">Premios y/o distinciones</label>
+                       <input type="text" class="form-control"  placeholder="Premios y/o distinciones"
+                       id="premios_distinciones" path="premios_distinciones" name="premios_distinciones"
+                       value="${premios_distinciones}">
                    </div>
 
                      <!-- OTROS ANTECEDENTES --> 
@@ -131,14 +140,16 @@
                    
                    <!--Dato Académico --> 
                    <div class="form-group">
-                       <label for="inputDatoAcademico">Dato Académico: </label>
-                       <c:out value="${dato_academico}"/>
+                       <label for="inputDatoAcademico">Dato Académico</label>
+                       <input type="text" class="form-control"  placeholder="Dato Académico" id="dato_academico"
+                       path="dato_academico" name="dato_academico" value="${dato_academico}">
                    </div>
                    
                    <!-- Curriculum Vitae --> 
                    <div class="form-group">
-                       <label for="inputCurriculVitae">Curriculum Vitae: </label>
-                        <c:out value="${curriculum_vitae}"/>
+                       <label for="inputCurriculVitae">Curriculum Vitae</label>
+                       <input type="text" class="form-control"  placeholder="Curriculum Vitae" id="curriculum_vitae"
+                       path="curriculum_vitae" name="curriculum_vitae" value="${curriculum_vitae}">
                    </div>
 
                   	<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
