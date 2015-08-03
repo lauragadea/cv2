@@ -15,8 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import ar.edu.um.model.DatosPersonales;
 import ar.edu.um.model.Formacion;
+import ar.edu.um.model.OtrosAntecedentes;
+import ar.edu.um.model.Cargos;
+import ar.edu.um.service.CargosService;
 import ar.edu.um.service.DatosPersonalesService;
 import ar.edu.um.service.FormacionService;
+import ar.edu.um.service.OtrosAntecedentesService;
 
 
 @Controller
@@ -34,6 +38,8 @@ public class CvController {
 	
 	private DatosPersonalesService datosPersonalesService;
 	private FormacionService formacionService;
+	private OtrosAntecedentesService otrosAntecedentesService;
+	private CargosService cargosService;
 	
 	@Autowired
 	public void setDatosPersonalesService(DatosPersonalesService datosPersonalesService) {
@@ -43,6 +49,16 @@ public class CvController {
 	@Autowired
 	public void setFormacionService(FormacionService formacionService){
 		this.formacionService = formacionService;
+	}
+	
+	@Autowired
+	public void setotrosAntecedentesService(OtrosAntecedentesService otrosAntecedentesService){
+		this.otrosAntecedentesService = otrosAntecedentesService;
+	}	
+	
+	@Autowired
+	public void setCargosService(CargosService cargosService){
+		this.cargosService = cargosService;
 	}
 	
 	
@@ -205,7 +221,6 @@ public class CvController {
 	    BigDecimal dni = new BigDecimal (username);
 	    model.addAttribute("dni", dni);
 	
-	    
 	    Formacion formacion = formacionService.getData(dni);
 	    	
 	    if (formacion == null){
@@ -224,8 +239,6 @@ public class CvController {
 	 			
 	 		return "formacion";
 	 	}
-	 
-	
 	}
 	
 	/*** FORMACION EDITAR ***/
@@ -254,6 +267,7 @@ public class CvController {
 		return "formacionEditar";
 	}
 	
+	/*** CARGOS ***/
 	
 	@RequestMapping(value="/cargos")
 	public String cargos(Model model){
@@ -263,10 +277,55 @@ public class CvController {
 	    System.out.println("USER: " + username);
 	    BigDecimal dni = new BigDecimal (username);
 	    model.addAttribute("dni", dni);
-		
-		
-		return "cargos";
+	
+	    Cargos cargos = cargosService.getData(dni);
+	    	
+	    if (cargos == null){
+	     	model.addAttribute("dni", dni);
+	    	return "cargosEmp";
+	    }else{
+			model.addAttribute("dni", cargos.getDni());
+			model.addAttribute("nivel_superior_universitario", cargos.getNivel_superior_universitario());
+			model.addAttribute("nivel_terciario_no_universitario", cargos.getNivel_terciario_no_universitario());
+			model.addAttribute("nivel_basico", cargos.getNivel_basico());
+			model.addAttribute("cursos_posgrado_y_capacitaciones", cargos.getCursos_posgrado_y_capacitaciones());
+			model.addAttribute("cargos_organismos_ct", cargos.getCargos_organismos_ct());
+			model.addAttribute("categorizacion_programa_incentivos", cargos.getCargos_organismos_ct());
+			model.addAttribute("cargos_id_otro", cargos.getCargos_id_otro());
+			model.addAttribute("cargos_gestion_institucional", cargos.getCargos_gestion_institucional());
+			model.addAttribute("otros_cargos", cargos.getOtros_cargos());
+				
+	 		return "cargos";
+	 	}
 	}
+
+	/*** CARGOS EDITAR ***/
+	
+	@RequestMapping(value="/cargosEditar")
+	public String cargosEditar(Model model){
+	
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
+	    System.out.println("USER: " + username);
+	    BigDecimal dni = new BigDecimal (username);
+	    model.addAttribute("dni", dni);
+	     
+		Cargos cargos = cargosService.getData(dni);
+				
+		model.addAttribute("dni", cargos.getDni());
+		model.addAttribute("nivel_superior_universitario", cargos.getNivel_superior_universitario());
+		model.addAttribute("nivel_terciario_no_universitario", cargos.getNivel_terciario_no_universitario());
+		model.addAttribute("nivel_basico", cargos.getNivel_basico());
+		model.addAttribute("cursos_posgrado_y_capacitaciones", cargos.getCursos_posgrado_y_capacitaciones());
+		model.addAttribute("cargos_organismos_ct", cargos.getCargos_organismos_ct());
+		model.addAttribute("categorizacion_programa_incentivos", cargos.getCargos_organismos_ct());
+		model.addAttribute("cargos_id_otro", cargos.getCargos_id_otro());
+		model.addAttribute("cargos_gestion_institucional", cargos.getCargos_gestion_institucional());
+		model.addAttribute("otros_cargos", cargos.getOtros_cargos());
+		
+		return "cargosEditar";
+	}
+	
 	
 
 	@RequestMapping(value="/produccion")
@@ -289,13 +348,64 @@ public class CvController {
 		return "antecedentes";
 	}
 	
+	
+	/** OTROS ANTECEDENTES **/
+	
 	@RequestMapping(value="/otrosantecedentes")
 	public String otrosAntecedentes(Model model){
+		
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
+	    System.out.println("USER otros antecedentes: " + username);
+	    
+	    BigDecimal dni = new BigDecimal (username);
+	    model.addAttribute("dni", dni);
+	
+	    
+	    OtrosAntecedentes otrosAntecedentes = otrosAntecedentesService.getData(dni);
+	    	
+	    if (otrosAntecedentes == null){
+	     	model.addAttribute("dni", dni);
+	     	
+	     	return "otrosantecedentesEmp";
+	    	
+	    }else{
+	 	   	model.addAttribute("dni", otrosAntecedentes.getDni());
+	 		model.addAttribute("estancias_pasantias",otrosAntecedentes.getEstancias_pasantias());
+	 		model.addAttribute("membresias_asociaciones_ct",otrosAntecedentes.getMembresias_asociaciones_ct());
+	 		model.addAttribute("coordinacion_proyectos_cooperacion", otrosAntecedentes.getCoordinacion_proyectos_cooperacion() );
+	 		model.addAttribute("premios_distinciones",otrosAntecedentes.getPremios_distinciones() );
+	 		model.addAttribute("dato_academico",otrosAntecedentes.getDato_academico() );
+	 		model.addAttribute("curriculum_vitae",otrosAntecedentes.getCurriculum_vitae() );
+	 		model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());	 			
+	 		
+	 		return "otrosantecedentes";
+	 	}
+	}
+	
+	/*** OTROS ANTECEDENTES EDITAR ***/
+	
+	@RequestMapping(value="/otrosantecedentesEditar")
+	public String otrosantecedentesEditar(Model model){
+	
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
 	    System.out.println("USER: " + username);
 	    BigDecimal dni = new BigDecimal (username);
 	    model.addAttribute("dni", dni);
-		return "otrosantecedentes";
+	     
+	    OtrosAntecedentes otrosAntecedentes = otrosAntecedentesService.getData(dni);
+				
+ 	   	model.addAttribute("dni", otrosAntecedentes.getDni());
+ 		model.addAttribute("estancias_pasantias",otrosAntecedentes.getEstancias_pasantias());
+ 		model.addAttribute("membresias_asociaciones_ct",otrosAntecedentes.getMembresias_asociaciones_ct());
+ 		model.addAttribute("coordinacion_proyectos_cooperacion", otrosAntecedentes.getCoordinacion_proyectos_cooperacion() );
+ 		model.addAttribute("premios_distinciones",otrosAntecedentes.getPremios_distinciones() );
+ 		model.addAttribute("dato_academico",otrosAntecedentes.getDato_academico() );
+ 		model.addAttribute("curriculum_vitae",otrosAntecedentes.getCurriculum_vitae() );
+ 		model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());	 			
+
+		return "otrosantecedentesEditar";
 	}
+	
 }

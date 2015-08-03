@@ -6,14 +6,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet"
-	href="resources/bootstrap-3.3.4-dist/css/bootstrap.css" />
-<link rel="stylesheet" href="resources/bootstrap-3.3.4-dist/style.css" />
-<link type="text/css" rel="stylesheet"
-	href="http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700,700italic,400italic">
-<script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="resources/bootstrap-3.3.4-dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="resources/bootstrap-3.3.4-dist/style.css" />
+	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700,700italic,400italic">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -64,16 +61,16 @@
 
 				<form:form id="registration-form" class="form-horizontal"
 					method="post"
-					action="${pageContext.request.contextPath}/cargosEditar"
+					action="${pageContext.request.contextPath}/modificarCargos"
 					modelAttribute="formacion">
 					
 					<div class="form-group">
 						<label for="dni">DNI
 						<input type="text"
 							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
-					
-					
+							name="dni" placeholder="DNI" value="${dni}" readonly>
+						</label>
+					</div>
 					
 					<!-- BOTON EDITAR -->
 					<div class="form-group">
@@ -84,7 +81,7 @@
 		     				</div>
 		                   	<div class="col-md-1"></div>
 		                   	<div class="col-md-3">
-		                   		<button type="submit" class="btn btn-default disabled" name="action" value="editar">Editar</button>	
+		                   		<button type="submit" class="btn btn-default disabled" name="action" value="Editar">Editar</button>	
 		                   	</div>
 		                </div>
 					</div>
@@ -94,25 +91,39 @@
 					<!-- nivel superior universitario y/o posgrado -->
 					<div class="form-group">
 						<label for="inputNivelSuperiorUniversitarioyPosgrado">Nivel
-							superior universitario y/o posgrado: </label>
-						<c:out value="${nivel_superior_universitario}"/>
+							superior universitario y/o posgrado</label> <input type="text"
+							class="form-control" id="nivel_superior_universitario"
+							path="nivel_superior_universitario"
+							name="nivel_superior_universitario"
+							placeholder="Nivel superioruniversitario y/o posgrado"
+							value="${nivel_superior_universitario}">
 					</div>
 					<!-- nivel terciario no universitario -->
 					<div class="form-group">
 						<label for="inputNivelTerciarioNoUniversitario">Nivel
-							terciario no universitario: </label>
-							<c:out value="${nivel_terciario_no_universitario}"/>
+							terciario no universitario</label> <input type="text"
+							class="form-control" id="nivel_terciario_no_universitario"
+							path="nivel_terciario_no_universitario" name="nivel_terciario_no_universitario"
+							placeholder="Nivel terciario no universitario"
+							value="${nivel_terciario_no_universitario}">
 					</div>
 					<!-- Nivel basico y/o medio -->
 					<div class="form-group">
-						<label for="inputNivelBasicoyMedio">Nivel basico y/o medio: </label>
-						<c:out value="${nivel_basico}"/>
+						<label for="inputNivelBasicoyMedio">Nivel basico y/o medio</label>
+						<input type="text" class="form-control" id="nivel_basico"
+							path="nivel_basico" name ="nivel_basico"
+							placeholder="Nivel terciario no universitario"
+							value="${nivel_basico}">
 					</div>
 					<!-- Cursos de posgrado y/o capacitaciones extracurriculares -->
 					<div class="form-group">
 						<label for="inputCursosPosgradoyCapacitacionesExtracurriculares">Cursos
-							de posgrado y/o capacitaciones extracurriculares: </label>
-						<c:out value="${cursos_posgrado_y_capacitaciones}"/>
+							de posgrado y/o capacitaciones extracurriculares</label> <input
+							type="text" class="form-control"
+							id="cursos_posgrado_y_capacitaciones"
+							path="cursos_posgrado_y_capacitaciones" name="cursos_posgrado_y_capacitaciones"
+							placeholder="Cursos de posgrado y/o capacitaciones extracurriculares"
+							value="${cursos_posgrado_y_capacitaciones}">
 					</div>
 
 					<!-- CARGOS I+D -->
@@ -123,21 +134,28 @@
 					<!-- cargos en organismos científico-tecnológicos -->
 					<div class="form-group">
 						<label for="inputCargosEnOrganismosCT">Cargos en
-							organismos científico-tecnológicos: </label>
-						<c:out value="${cargos_organismos_ct}"/>
+							organismos científico-tecnológicos</label> <input type="text"
+							class="form-control" id="cargos_organismos_ct"
+							path="cargos_organismos_ct" name="cargos_organismos_ct"
+							placeholder="Cargos en organismos científico-tecnológicos"
+							value="${cargos_organismos_ct}">
 					</div>
-					
 					<!-- Categorización del programa de incentivos -->
 					<div class="form-group">
 						<label for="inputCategorizacionProgramaIncentivos">Categorización
-							del programa de incentivos: </label>
-						<c:out value="${categorizacion_programa_incentivos}"/>
+							del programa de incentivos</label> <input type="text"
+							class="form-control" id="categorizacion_programa_incentivos"
+							path="categorizacion_programa_incentivos" name="categorizacion_programa_incentivos"
+							placeholder="Categorización del programa de incentivos"
+							value="${categorizacion_programa_incentivos}">
 					</div>
 					<!-- Cargos I+D en otro tipo de institucines -->
 					<div class="form-group">
 						<label for="inputCargosIDenOtroTipodeInstituciones">Cargos
-							I+D en otro tipo de institucines: </label>
-						<c:out value="${cargos_id_otro}"/>
+							I+D en otro tipo de institucines</label> <input type="text"
+							class="form-control" id="cargos_id_otro" path="cargos_id_otro" name="cargos_id_otro"
+							placeholder="Cargos I+D en otro tipo de institucines"
+							value="${cargos_id_otro}">
 					</div>
 
 					<!-- CARGOS EN GESTION INSTITUCIONAL -->
@@ -148,8 +166,11 @@
 					<!-- cargos en gestion institucional -->
 					<div class="form-group">
 						<label for="inputCargosenGestionInstitucional">Cargos en
-							gestion institucional: </label>
-						<c:out value="${cargos_gestion_institucional}"/>
+							gestion institucional</label> <input type="text" class="form-control"
+							id="cargos_gestion_institucional"
+							path="cargos_gestion_institucional" name="cargos_gestion_institucional"
+							placeholder="Cargos en gestion institucional"
+							value="${cargos_gestion_institucional}">
 					</div>
 
 					<!-- OTROS CARGOS -->
@@ -159,12 +180,14 @@
 					</div>
 					<!-- Otros Cargos -->
 					<div class="form-group">
-						<label for="inputOtrosCargos">Otros Cargos: </label>
-						<c:out value="${otros_cargos}"/>
+						<label for="inputOtrosCargos">Otros Cargos</label> 
+						<input type="text" class="form-control" id="otros_cargos"
+							path="otros_cargos" name="otros_cargos"
+							placeholder="Otros Cargos" value="${otros_cargos}">
 					</div>
 
-						<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
-
+						<button type="submit" class="btn btn-primary" name="action" value="Enviar">Enviar</button>
+ 
 				</form:form>
 			</div>
 		</div>
