@@ -1,5 +1,7 @@
 package ar.edu.um.service;
 
+import java.math.BigDecimal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,5 +21,9 @@ public class AntecedentesService {
 	
 	public void create(Antecedentes antecedentes){
 		antecedentesDao.create(antecedentes);
+	}
+	
+	public Antecedentes getData(BigDecimal dni){
+		return antecedentesDao.getData(dni);
 	}
 }

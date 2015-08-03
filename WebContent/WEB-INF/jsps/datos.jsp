@@ -80,76 +80,12 @@
 					method="post"
 					action="${pageContext.request.contextPath}/datosEditar"
 					modelAttribute="datos">
-<<<<<<< HEAD
-=======
-				
-					
-					<div class="form-group">
-		     			<div class="row">
-		     				<div class="col-md-8">
-		     					<h2>DATOS PERSONALES</h2>
-		     					 
-		     				</div>
-		                   	<div class="col-md-1"></div>
-		                   	<div class="col-md-3">
-		                   		<button type="submit" class="btn btn-default" name="action" value="editar">Editar</button>	
-		                   	</div>
-		                </div>
-					</div>
-
-					<!-- -DNI -->
-					<div class="form-group">
-						<label for="inputName">DNI:</label>
-						<c:out value="${dni}" />
-						<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
-					</div>
-
-					<!-- NOMBRE -->
-					<div class="form-group">
-						<label for="inputName">Nombre:</label>
-						<c:out value="${nombre}" />
-					</div>
-
-					<!-- APELLIDO -->
-					<div class="form-group">
-						<label for="inputName">Apellido:</label>
-						<c:out value="${apellido}" />
-					</div>
-
-					<!-- SEXO -->
-					<div class="form-group">
-						<label for="inputName">Sexo:</label>
-						<c:out value="${sexo}" />
-					</div>
-
-					<!-- EMAIL -->
-					<div class="form-group">
-						<label for="inputName">Email:</label>
-						<c:out value="${email}" />
-					</div>
-
-					<!-- ESTADO CIVIL -->
-					<div class="form-group">
-						<label for="inputName">Estado Civil:</label>
-						<c:out value="${estado_civil}" />
-					</div>
-
-
-					<!-- EMAIL -->
-					<div class="form-group">
-						<label for="inputName">Email:</label>
-						<c:out value="${email}" />
-					</div>
->>>>>>> 59f36ee85177d7798ec11b4b2461de75a1fb92f0
 
 
 					<div class="container">
 						<div class="row-fluid">
 							<div class="pull-left" >
-
-
-
-
+							
 								<!-- NOMBRE -->
 								<div class="form-group">
 									<label for="inputName">Nombre:</label>
@@ -245,14 +181,6 @@
 		</div>
 	</div>
 
-
-	</div>
-	<!--container-->
-	</div>
-
-
-
-	</div>
 
 	<script
 		src="resources/bootstrap-3.3.4-dist/assets/js/jquery-1.7.1.min.js"></script>
