@@ -29,7 +29,7 @@
 								<div class="msg">${msg}</div>
 							</c:if>
 							
-							<p>a cerrado sesion correctamente</p>
+							<p>Ha cerrado sesion correctamente</p>
 
 							<form name='loginForm'
 								action="<c:url value='/j_spring_security_check' />"
@@ -48,7 +48,7 @@
 
 								<div class="form-group">
 									¿No tenés una cuenta? <a href="<c:url value="/registro" />">Registrate
-										aquí.</a>
+										acá.</a>
 								</div>
 
 								<input type="hidden" name="${_csrf.parameterName}"

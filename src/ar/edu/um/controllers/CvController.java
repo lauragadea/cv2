@@ -30,7 +30,7 @@ public class CvController {
 		this.cvService = cvService;
 	}
 	
-	/* muestra los cursos que hay en la BD */ 
+	 */ 
 	
 	private DatosPersonalesService datosPersonalesService;
 	private FormacionService formacionService;
@@ -38,6 +38,11 @@ public class CvController {
 	@Autowired
 	public void setDatosPersonalesService(DatosPersonalesService datosPersonalesService) {
 		this.datosPersonalesService = datosPersonalesService;
+	}
+	
+	@Autowired
+	public void setFormacionService(FormacionService formacionService){
+		this.formacionService = formacionService;
 	}
 	
 	
@@ -200,24 +205,27 @@ public class CvController {
 	    BigDecimal dni = new BigDecimal (username);
 	    model.addAttribute("dni", dni);
 	
-	    /*
-		Formacion dp = formacionService.getData(Integer.parseInt(username));
-		System.out.println("pasamos formacion dp en cv controller");
-		if (dp == null){
-			System.out.println("formacion es null");
-			return "formacion";
-		}
-		model.addAttribute("dni", dp.getDni());
-		model.addAttribute("nivel_universitario_posgrado", dp.getNivel_universitario_posgrado());
-		model.addAttribute("nivel_universitario_posgrado_especializacion", dp.getNivel_universitario_posgrado_especializacion());
-		model.addAttribute("nivel_universitario_grado", dp.getNivel_universitario_grado());
-		model.addAttribute("nivel_terciario_no_universitario", dp.getNivel_terciario_no_universitario());
-		model.addAttribute("especialidad_certificada", dp.getEspecialidad_certificada());
-		model.addAttribute("posdoctorado", dp.getPosdoctorado());
-		model.addAttribute("cursos_posgrado_y_capacitaciones", dp.getCursos_posgrado_y_capacitaciones());
-		model.addAttribute("idiomas", dp.getIdiomas());
-		*/
-		return "formacion";
+	    
+	    Formacion formacion = formacionService.getData(dni);
+	    	
+	    if (formacion == null){
+	     	model.addAttribute("dni", dni);
+	    	return "formacionEmp";
+	    }else{
+	 	   	model.addAttribute("dni", formacion.getDni());
+	 		model.addAttribute("nivel_universitario_posgrado", formacion.getNivel_universitario_posgrado());
+	 		model.addAttribute("nivel_universitario_posgrado_especializacion", formacion.getNivel_universitario_posgrado_especializacion());
+	 		model.addAttribute("nivel_universitario_grado", formacion.getNivel_universitario_grado());
+	 		model.addAttribute("nivel_terciario_no_universitario", formacion.getNivel_terciario_no_universitario());
+	 		model.addAttribute("especialidad_certificada", formacion.getEspecialidad_certificada());
+	 		model.addAttribute("posdoctorado", formacion.getPosdoctorado());
+	 		model.addAttribute("cursos_posgrado_y_capacitaciones", formacion.getCursos_posgrado_y_capacitaciones());
+	 		model.addAttribute("idiomas", formacion.getIdiomas());
+	 			
+	 		return "formacion";
+	 	}
+	 
+	
 	}
 	
 	/*** FORMACION EDITAR ***/
@@ -227,20 +235,21 @@ public class CvController {
 	
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
-	   
-		System.out.println("USER: " + username);
+	    System.out.println("USER: " + username);
+	    BigDecimal dni = new BigDecimal (username);
+	    model.addAttribute("dni", dni);
 	     
-		Formacion dp = formacionService.getData(Integer.parseInt(username));
+		Formacion formacion = formacionService.getData(dni);
 				
-		model.addAttribute("dni", dp.getDni());
-		model.addAttribute("nivel_universitario_posgrado", dp.getNivel_universitario_posgrado());
-		model.addAttribute("nivel_universitario_posgrado_especializacion", dp.getNivel_universitario_posgrado_especializacion());
-		model.addAttribute("nivel_universitario_grado", dp.getNivel_universitario_grado());
-		model.addAttribute("nivel_terciario_no_universitario", dp.getNivel_terciario_no_universitario());
-		model.addAttribute("especialidad_certificada", dp.getEspecialidad_certificada());
-		model.addAttribute("posdoctorado", dp.getPosdoctorado());
-		model.addAttribute("cursos_posgrado_y_capacitaciones", dp.getCursos_posgrado_y_capacitaciones());
-		model.addAttribute("idiomas", dp.getIdiomas());
+		model.addAttribute("dni", formacion.getDni());
+		model.addAttribute("nivel_universitario_posgrado", formacion.getNivel_universitario_posgrado());
+		model.addAttribute("nivel_universitario_posgrado_especializacion", formacion.getNivel_universitario_posgrado_especializacion());
+		model.addAttribute("nivel_universitario_grado", formacion.getNivel_universitario_grado());
+		model.addAttribute("nivel_terciario_no_universitario", formacion.getNivel_terciario_no_universitario());
+		model.addAttribute("especialidad_certificada", formacion.getEspecialidad_certificada());
+		model.addAttribute("posdoctorado", formacion.getPosdoctorado());
+		model.addAttribute("cursos_posgrado_y_capacitaciones", formacion.getCursos_posgrado_y_capacitaciones());
+		model.addAttribute("idiomas", formacion.getIdiomas());
 		
 		return "formacionEditar";
 	}

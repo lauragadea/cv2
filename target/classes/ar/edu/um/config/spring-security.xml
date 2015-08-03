@@ -19,11 +19,16 @@
 		    login-page="/login" 
 		    default-target-url="/cv" 
 			authentication-failure-url="/login?error" 
-			username-parameter="username"
+			username-parameter="username"	
 			password-parameter="password" />
+	
+	
+		<logout logout-success-url="/login?logout=1" delete-cookies="JSESSIONID" invalidate-session="true" />
 		
-		<!-- <logout invalidate-session="true" logout-success-url="/logout" logout-url="/logout" />-->
+		<!--
+		ESTE FUNCIONA
 		<logout logout-success-url="/login?logout"  />
+		-->
 		<!-- enable csrf protection -->
 		<csrf/>
 	</http>

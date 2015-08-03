@@ -37,7 +37,7 @@
 					<div class="row">
 						<div class="col-md-7"></div>
 						<div class="col-md-3">Usuario: ${dni}</div>
-						<div class="col-md-2"><a href="http://www.um.edu.ar/cv/">Salir</a></div>
+						<div class="col-md-2"><a href="<c:url value="/logout" />">Salir</a></div>
 					</div>
 				</div>
 					
@@ -244,7 +244,7 @@
                         <input type="text" class="form-control" id="otra_actividad_cyt" path="otra_actividad_cyt" name="otra_actividad_cyt" placeholder="Otra actividad CyT">
                     </div>
 
-                   	<button type="submit" class="btn btn-primary">Enviar</button>
+                  <button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
 
 
 				</form:form>

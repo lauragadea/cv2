@@ -22,14 +22,14 @@ import ar.edu.um.service.FormacionService;
 public class FormacionController {
 
 	private FormacionService formacionService;
-	
+
 	@Autowired
 	public void setFormacionService(FormacionService formacionService) {
 		this.formacionService = formacionService;
 	}
-	
+
 	@RequestMapping(value="/crearformacion", method=RequestMethod.POST)
-	public String creaDatos(Model model, @Valid Formacion formacion, BindingResult result) {
+	public String creaDatos(Model model, @Valid Formacion formacion, @RequestParam BigDecimal dni, BindingResult result, @RequestParam String action) {
 		if (result.hasErrors()){
 			System.out.println("no se valido el formulario");
 			List<ObjectError> errors = result.getAllErrors();
@@ -39,39 +39,57 @@ public class FormacionController {
 			}
 			
 			return "/";
-			}
+		}
 		
-		formacionService.create(formacion);
+		System.out.println("action: "+ action);
 		
-		model.addAttribute("dni", formacion.getDni());
-		model.addAttribute("nivel_universitario_posgrado", formacion.getNivel_universitario_posgrado());
-		model.addAttribute("nivel_universitario_posgrado_especializacion", formacion.getNivel_universitario_posgrado_especializacion());
-		model.addAttribute("nivel_universitario_grado", formacion.getNivel_universitario_grado());
-		model.addAttribute("nivel_terciario_no_universitario", formacion.getNivel_terciario_no_universitario());
-		model.addAttribute("especialidad_certificada", formacion.getEspecialidad_certificada());
-		model.addAttribute("posdoctorado", formacion.getPosdoctorado());
-		model.addAttribute("cursos_posgrado_y_capacitaciones", formacion.getCursos_posgrado_y_capacitaciones());
-		model.addAttribute("idiomas", formacion.getIdiomas());
+		if (action.equals("editar")) {
+			
+			model.addAttribute("dni", formacion.getDni());
+			
+			return "modificarformacion";
+			
+		} else if (action.equals("enviar")) {
 		
 		
-		return "cv";
+			formacionService.create(formacion);
+		
+			model.addAttribute("dni", formacion.getDni());
+			model.addAttribute("nivel_universitario_posgrado", formacion.getNivel_universitario_posgrado());
+			model.addAttribute("nivel_universitario_posgrado_especializacion", formacion.getNivel_universitario_posgrado_especializacion());
+			model.addAttribute("nivel_universitario_grado", formacion.getNivel_universitario_grado());
+			model.addAttribute("nivel_terciario_no_universitario", formacion.getNivel_terciario_no_universitario());
+			model.addAttribute("especialidad_certificada", formacion.getEspecialidad_certificada());
+			model.addAttribute("posdoctorado", formacion.getPosdoctorado());
+			model.addAttribute("cursos_posgrado_y_capacitaciones", formacion.getCursos_posgrado_y_capacitaciones());
+			model.addAttribute("idiomas", formacion.getIdiomas());
+		
+		
+		
+			return "formacion";
+		}
+		
+		return "formacion";
 	}
-	
-	@RequestMapping(value="/modificarformacion", method=RequestMethod.POST)
-	public String modificaaDatos(Model model, @Valid Formacion formacion, BindingResult result) {
-		if (result.hasErrors()){
+		
+
+	@RequestMapping(value = "/modificarformacion", method = RequestMethod.POST)
+	public String modificaFormacion(Model model, @RequestParam BigDecimal dni, @Valid Formacion formacion,
+			BindingResult result) {
+		
+		if (result.hasErrors()) {
 			System.out.println("no se valido el formulario");
 			List<ObjectError> errors = result.getAllErrors();
-			
-			for (Object error: errors) {
+
+			for (Object error : errors) {
 				System.out.println(error);
 			}
-			
+
 			return "/";
-			}
-		
+		}
+
 		formacionService.modify(formacion);
-		
+
 		model.addAttribute("dni", formacion.getDni());
 		model.addAttribute("nivel_universitario_posgrado", formacion.getNivel_universitario_posgrado());
 		model.addAttribute("nivel_universitario_posgrado_especializacion", formacion.getNivel_universitario_posgrado_especializacion());
@@ -81,10 +99,8 @@ public class FormacionController {
 		model.addAttribute("posdoctorado", formacion.getPosdoctorado());
 		model.addAttribute("cursos_posgrado_y_capacitaciones", formacion.getCursos_posgrado_y_capacitaciones());
 		model.addAttribute("idiomas", formacion.getIdiomas());
-		
-		
+
 		return "cv";
 	}
-	
-	
+
 }

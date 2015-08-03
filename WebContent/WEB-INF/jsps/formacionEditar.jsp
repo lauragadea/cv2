@@ -32,6 +32,14 @@
 				<form action="${logoutUrl}" method="post" id="logoutForm">
 					<input type="hidden" name="${_csrf.parameterName}"value="${_csrf.token}" />
 				</form>
+				
+				<div class="logout">
+					<div class="row">
+						<div class="col-md-7"></div>
+						<div class="col-md-3">Usuario: ${dni}</div>
+						<div class="col-md-2"><a href="<c:url value="/logout" />">Salir</a></div>
+					</div>
+				</div>
 				<h1>Currículum Vitae</h1>
 				<p>Seleccione una categoría para cargar/editar sus datos:</p>
 				
@@ -55,12 +63,15 @@
 					action="${pageContext.request.contextPath}/modificarformacion"
 					modelAttribute="dp">
 		
-					<!-- DNI  -->
+					
+					<!-- -DNI -->
 					<div class="form-group">
-						<label for="dni">DNI
-						<input type="text"
-							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
+						<label for="inputName">DNI:</label>
+						<c:out value="${dni}" />
+						<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
+					</div>
+							
+							
 					<!-- BOTON EDITAR -->
 					<div class="form-group">
 		     			<div class="row">
@@ -78,29 +89,35 @@
 					
 					<!-- Nivel Universitario de posgrado -->
 					<div class="form-group">
-						<label for="inputNivelUniversitarioPosgrado">Nivel Universitario de Posgrado</label> <input
+						<label for="inputName">Nivel Universitario de Posgrado</label> <input
 							type="text" id="nivel_universitario_posgrado" path="nivel_universitario_posgrado" name="nivel_universitario_posgrado" class="form-control"
-							placeholder="Nivel Universitario de Posgrado">
+							placeholder="Nivel Universitario de Posgrado" value="${nivel_universitario_posgrado}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
+					
+					
 					<!--  -->
 					<div class="form-group">
 						<label for="inputNivelUniversitarioPosgradoEsp">Nivel Universitario de
 							Posgrado/especialización</label> <input type="text" id="nivel_universitario_posgrado_especializacion" path="nivel_universitario_posgrado_especializacion" name="nivel_universitario_posgrado_especializacion"
 							class="form-control"
-							placeholder="Nivel Universitario de Posgrado/especialización">
+							placeholder="Nivel Universitario de Posgrado/especialización" value="${nivel_universitario_posgrado_especializacion}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!--  -->
 					<div class="form-group">
 						<label for="inputNivelUniversitarioGrado">Nivel Universitario de
 							Grado</label> <input type="text" id="nivel_universitario_grado"
 							class="form-control"
-							placeholder="Nivel Universitario de Grado">
+							placeholder="Nivel Universitario de Grado" value="${nivel_universitario_grado}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!--  -->
 					<div class="form-group">
 						<label for="inputNivelTerciario">Nivel Terciario no Universitario</label> <input type="text" id="nivel_terciario_no_universitario" path="nivel_terciario_no_universitario" name="nivel_terciario_no_universitario"
 							class="form-control"
-							placeholder="Nivel Terciario No Universitario">
+							placeholder="Nivel Terciario No Universitario" value="${nivel_terciario_no_universitario}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
 					<!-- FORMACION COMPLEMENTARIA -->
@@ -112,27 +129,31 @@
 					<div class="form-group">
 						<label for="inputEspecialidadCertificada">Especialidad certificada por
 							organismo de salud</label> <input type="text"  id="especialidad_certificada" path="especialidad_certificada" name="especialidad_certificada" class="form-control"
-							placeholder="Especialidad certificada por organismo de salud">
+							placeholder="Especialidad certificada por organismo de salud" value="${especialidad_certificada}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Posdoctorado -->
 					<div class="form-group">
 						<label for="inputPosdoctorado">Posdoctorado</label> <input type="text" id="posdoctorado" path="posdoctorado" name="posdoctorado"
-							class="form-control" placeholder="Posdoctorado">
+							class="form-control" placeholder="Posdoctorado" value="${posdoctorado}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Cursos de posgrado y/o capacitaciones extracurriculares -->
 					<div class="form-group">
 						<label for="inputCursosPosgrado">Cursos de posgrado y/o
 							capacitaciones extracurriculares</label> <input type="text" id="cursos_posgrado_y_capacitaciones" path="cursos_posgrado_y_capacitaciones" name="cursos_posgrado_y_capacitaciones"
 							class="form-control"
-							placeholder="Cursos de posgrado y/o capacitaciones extracurriculares">
+							placeholder="Cursos de posgrado y/o capacitaciones extracurriculares" value="${cursos_posgrado_y_capacitaciones}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Idiomas -->
 					<div class="form-group">
 						<label for="inputIdiomas">Idiomas</label> <input type="text" id="idiomas" path="idiomas" name="idiomas"
-							class="form-control" placeholder="Idiomas">
+							class="form-control" placeholder="Idiomas" value="${idiomas}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
-					<button type="submit" class="btn btn-primary">Enviar</button>
+					<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
 
 				</form:form>
 			</div>	<!--container-->

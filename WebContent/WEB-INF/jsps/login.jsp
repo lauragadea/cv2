@@ -46,7 +46,7 @@
 
 								<div class="form-group">
 									¿No tenés una cuenta? <a href="<c:url value="/registro" />">Registrate
-										aquí.</a>
+										acá.</a>
 								</div>
 
 								<input type="hidden" name="${_csrf.parameterName}"

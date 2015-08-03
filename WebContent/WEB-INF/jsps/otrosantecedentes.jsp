@@ -32,7 +32,7 @@
 					<div class="row">
 						<div class="col-md-7"></div>
 						<div class="col-md-3">Usuario: ${dni}</div>
-						<div class="col-md-2"><a href="http://www.um.edu.ar/cv/">Salir</a></div>
+						<div class="col-md-2"><a href="<c:url value="/logout" />">Salir</a></div>
 					</div>
 				</div>
 				
@@ -148,12 +148,7 @@
                        path="curriculum_vitae" name="curriculum_vitae">
                    </div>
 
-                   <!-- BOTON SIGUIENTE -->
-                   <div class="row">
-                     <div class="col-md-4"></div>
-                     <div class="col-md-4"><button type="submit" class="btn-siguiente">Enviar</button></div>
-                     <div class="col-md-4"></div>
-                   </div>
+                  	<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
         			
 				</form:form>
 			</div>	<!--container-->
