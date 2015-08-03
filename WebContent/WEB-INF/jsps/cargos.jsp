@@ -181,7 +181,7 @@
 							path="otros_cargos" name="otros_cargos" placeholder="Otros Cargos">
 					</div>
 
-						<button type="submit" class="btn btn-primary">Enviar</button>
+						<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
 
 				</form:form>
 			</div>

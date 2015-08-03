@@ -148,12 +148,7 @@
                        path="curriculum_vitae" name="curriculum_vitae">
                    </div>
 
-                   <!-- BOTON SIGUIENTE -->
-                   <div class="row">
-                     <div class="col-md-4"></div>
-                     <div class="col-md-4"><button type="submit" class="btn-siguiente">Enviar</button></div>
-                     <div class="col-md-4"></div>
-                   </div>
+                  	<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
         			
 				</form:form>
 			</div>	<!--container-->

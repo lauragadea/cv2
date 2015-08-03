@@ -1,5 +1,6 @@
 package ar.edu.um.dao;
 
+import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -13,7 +14,6 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import ar.edu.um.model.DatosPersonales;
 import ar.edu.um.model.Formacion;
 
 @Component("formacionDao")
@@ -36,7 +36,7 @@ public class FormacionDAO {
 	}
 	
 
-	public Formacion getData(int dni) {
+	public Formacion getData(BigDecimal dni) {
 
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("dni", dni);
@@ -48,20 +48,20 @@ public class FormacionDAO {
 						public Formacion mapRow(ResultSet rs, int rowNum) throws SQLException {
 	
 						
-							Formacion dp = new Formacion();
+							Formacion formacion = new Formacion();
 							
-							dp.setDni(rs.getBigDecimal("dni"));
-							dp.setNivel_universitario_posgrado(rs.getString("nivel_universitario_posgrado"));
-							dp.setNivel_universitario_posgrado_especializacion(rs.getString("nivel_universitario_posgrado_especializacion"));
-							dp.setNivel_universitario_grado(rs.getString("nivel_universitario_grado"));
-							dp.setNivel_terciario_no_universitario(rs.getString("nivel_terciario_no_universitario"));
-							dp.setEspecialidad_certificada(rs.getString("especialidad_certificada"));
-							dp.setPosdoctorado(rs.getString("posdoctorado"));
-							dp.setCursos_posgrado_y_capacitaciones(rs.getString("cursos_posgrado_y_capacitaciones"));
-							dp.setIdiomas(rs.getString("idiomas"));
+							formacion.setDni(rs.getBigDecimal("dni"));
+							formacion.setNivel_universitario_posgrado(rs.getString("nivel_universitario_posgrado"));
+							formacion.setNivel_universitario_posgrado_especializacion(rs.getString("nivel_universitario_posgrado_especializacion"));
+							formacion.setNivel_universitario_grado(rs.getString("nivel_universitario_grado"));
+							formacion.setNivel_terciario_no_universitario(rs.getString("nivel_terciario_no_universitario"));
+							formacion.setEspecialidad_certificada(rs.getString("especialidad_certificada"));
+							formacion.setPosdoctorado(rs.getString("posdoctorado"));
+							formacion.setCursos_posgrado_y_capacitaciones(rs.getString("cursos_posgrado_y_capacitaciones"));
+							formacion.setIdiomas(rs.getString("idiomas"));
 			
 	
-							return dp;
+							return formacion;
 						}
 	
 					});

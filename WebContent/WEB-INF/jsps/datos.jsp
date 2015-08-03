@@ -84,7 +84,7 @@
 					action="${pageContext.request.contextPath}/datosEditar"
 					modelAttribute="datos">
 				
-					<!-- BOTON EDITAR -->
+					
 					<div class="form-group">
 		     			<div class="row">
 		     				<div class="col-md-8">

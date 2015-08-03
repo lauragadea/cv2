@@ -244,7 +244,7 @@
                         <input type="text" class="form-control" id="otra_actividad_cyt" path="otra_actividad_cyt" name="otra_actividad_cyt" placeholder="Otra actividad CyT">
                     </div>
 
-                   	<button type="submit" class="btn btn-primary">Enviar</button>
+                  <button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
 
 
 				</form:form>
