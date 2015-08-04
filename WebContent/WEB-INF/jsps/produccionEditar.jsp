@@ -57,16 +57,14 @@
 
 				<form:form id="registration-form" class="form-horizontal"
 					method="post"
-					action="${pageContext.request.contextPath}/produccionEditar"
+					action="${pageContext.request.contextPath}/modificarproduccion"
 					modelAttribute="produccion">
 
 					<div class="form-group">
 						<label for="dni">DNI
 						<input type="text"
 							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}" readonly>
-						</label>
-					</div>
+							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
 					
 
 					<!-- BOTON EDITAR -->
@@ -78,8 +76,7 @@
 		     				</div>
 		                   	<div class="col-md-1"></div>
 		                   	<div class="col-md-3">
-		                   		<button type="submit" class="btn btn-default" name="action" value="editar" enabled >Editar</button>	
-		                   	</div>
+	                   	</div>
 		                </div>
 					</div>
 
@@ -87,74 +84,81 @@
 
                    <!-- Artículos publicados en revistas con/sin referato --> 
                    <div class="form-group">
-                       <label for="artRef">Artículos publicados en revistas con referato: </label>
-                       <c:out value="${articulos_revistas_con_referato}" />
+                       <label for="artRef">Artículos publicados en revistas con referato</label>
+                       <input type="text" id="articulos_revistas_con_referato" path="articulos_revistas_con_referato" 
+                       	name="articulos_revistas_con_referato" class="form-control"
+					  	placeholder="Artículos publicados en revistas con referato"
+					  	value="${articulos_revistas_con_referato}">
                    </div>
                    
                    <div class="form-group">
-                       <label for="artSRef">Artículos publicados en revistas sin referato: </label>
-                       <c:out value="${articulos_revistas_sin_referato}" />
+                       <label for="artSRef">Artículos publicados en revistas sin referato</label>
+                       <input type="text" id="articulos_revistas_sin_referato" path="articulos_revistas_sin_referato" 
+                       		name="articulos_revistas_sin_referato" class="form-control"
+					  		placeholder="Artículos publicados en revistas sin referato"
+					  		value="${articulos_revistas_sin_referato}">
                    </div>
-                   
                    <!-- Libros --> 
                    <div class="form-group">
-                       <label for="libros">Libros: </label>
-                      <c:out value="${libros}" />
+                       <label for="libros">Libros</label>
+                       <input type="text" id="libros" path="libros" name="libros" class="form-control" 
+                       		placeholder="Libros" value="${libros}">
                    </div>
-                   
                    <!-- Partes de Libros --> 
                    <div class="form-group">
-                       <label for="partesLibros">Partes de Libros: </label>
-                      <c:out value="${partes_libros}" />
+                       <label for="partesLibros">Partes de Libros</label>
+                       <input type="text" id="partes_libros" path="partes_libros" name="partes_libros"  
+                       		class="form-control"  placeholder="Partes de Libros" value="${partes_libros}">
                    </div>
-                   
                    <!-- Trabajos en eventos C-T publicados --> 
                    <div class="form-group">
-                       <label for="Estado">Trabajos en eventos C-T publicados: </label>
-                      <c:out value="${trabajos_eventos_ct_publicados}" />
+                       <label for="Estado">Trabajos en eventos C-T publicados</label>
+                       <input type="text" id="trabajos_eventos_ct_publicados" path="trabajos_eventos_ct_publicados" 
+                       		name="trabajos_eventos_ct_publicados" class="form-control"  
+                       		placeholder="Trabajos en eventos C-T publicados" value="${trabajos_eventos_ct_publicados}">
                    </div>
-                   
                    <!-- Trabajos en eventos C-T no publicados --> 
                    <div class="form-group">
-                       <label for="Trab">Trabajos en eventos C-T no publicados: </label>
-                       <c:out value="${trabajos_eventos_ct_no_publicados}" />
+                       <label for="Trab">Trabajos en eventos C-T no publicados</label>
+                       <input type="text" id="trabajos_eventos_ct_no_publicados" path="trabajos_eventos_ct_no_publicados" 
+                       name="trabajos_eventos_ct_no_publicados"  class="form-control"  
+                       placeholder="Trabajos en eventos C-T no publicados" value="${trabajos_eventos_ct_no_publicados}">
                    </div>
-                   
                    <!-- Demás producciones C-T --> 
                    <div class="form-group">
-                       	<label for="Estado">Demás producciones C-T: </label>
-                   		<c:out value="${demas_producciones_ct}" />
+                       <label for="Estado">Demás producciones C-T</label>
+                       <input type="text" id="demas_producciones_ct" path="demas_producciones_ct" name="demas_producciones_ct" 
+                       class="form-control"  placeholder="Demás producciones C-T" value="${demas_producciones_ct}">
                    </div>
-                   
 
                    <!-- PRODUCCION TECNOLOGICA-->
 
                    <div class="form-group">
                        <h3>Producción Tecnológica</h3>
                    </div> 
-                   
                    <!-- Con titulo de propiedad intelectual --> 
                    <div class="form-group">
-                       <label for="Estado">Con titulo de propiedad intelectual: </label>
-                       <c:out value="${con_titulo_prop_int}" />
+                       <label for="Estado">Con titulo de propiedad intelectual</label>
+                       <input type="text" id="con_titulo_prop_int" path="con_titulo_prop_int" name="con_titulo_prop_int"  
+                       		class="form-control"  placeholder="Con titulo de propiedad intelectual" value="${con_titulo_prop_int}">
                    </div>
-                   
                    <!-- sin titulo de propiedad intelectual --> 
                    <div class="form-group">
-                       <label for="Estado">Sin titulo de propiedad intelectual: </label>
-                       <c:out value="${sin_titulo_prop_int}" />
+                       <label for="Estado">Sin titulo de propiedad intelectual</label>
+                       <input type="text" id="sin_titulo_prop_int" path="sin_titulo_prop_int" name="sin_titulo_prop_int"  
+                       		class="form-control"  placeholder="Sin titulo de propiedad intelectual" value="${sin_titulo_prop_int}">
                    </div>
-                   
                    <!-- servicio científico-tecnológico --> 
                    <div class="form-group">
-                       <label for="Estado">Servicio científico-tecnológico: </label>
-                       <c:out value="${servicio_ct}" />
+                       <label for="Estado">Servicio científico-tecnológico</label>
+                       <input type="text" id="servicio_ct" path="servicio_ct" name="servicio_ct"  class="form-control"
+                       		placeholder="Servicio científico-tecnológico" value="${servicio_ct}">
                    </div>
-                   
                    <!-- Informe técnico --> 
                    <div class="form-group">
-                       <label for="Estado">Informe técnico: </label>
-                       <c:out value="${informe_tecnico}" />
+                       <label for="Estado">Informe técnico</label>
+                       <input type="text" id="informe_tecnico" path="informe_tecnico" name="informe_tecnico"  
+                       class="form-control"  placeholder="Informe técnico" value="${informe_tecnico}">
                    </div>
                    
                    <!-- PRODUCCION ARTÍSICA-->
@@ -162,60 +166,64 @@
                    <div class="form-group">
                        <h3>Producción Artística</h3>
                    </div>     
-                   
                    <!-- Musical-sonora --> 
                    <div class="form-group">
-                       <label for="Estado">Musical-sonora: </label>
-                       <c:out value="${musical_sonora}" />
+                       <label for="Estado">Musical-sonora</label>
+                       <input type="text" id="musical_sonora" path="musical_sonora" name="musical_sonora"  
+                       class="form-control"  placeholder="Musical-sonora" value="${musical_sonora}">
                    </div>
-                   
                    <!-- Visual --> 
                    <div class="form-group">
-                       <label for="Estado">Visual: </label>
-                       <c:out value="${visual}" />
+                       <label for="Estado">Visual</label>
+                       <input type="text" id="visual" path="visual" name="visual" class="form-control" placeholder="Visual" value="${visual}">
                    </div>
-                   
                    <!-- Audiovisual multimedial --> 
                    <div class="form-group">
-                       <label for="Estado">Audiovisual multimedial: </label>
-                       <c:out value="${audiovisual}" />
+                       <label for="Estado">Audiovisual multimedial</label>
+                       <input type="text" id="audiovisual" path="audiovisual" name="audiovisual" class="form-control"  
+                       placeholder="Audiovisual multimedial" value="${audiovisual}">
                    </div>
-                   
                    <!-- Corporal teatral --> 
                    <div class="form-group">
-                       <label for="Estado">Corporal teatral: </label>
-                      <c:out value="${corporal_teatral}" />
+                       <label for="Estado">Corporal teatral</label>
+                       <input type="text" id="corporal_teatral" path="corporal_teatral" name="corporal_teatral"  
+                       class="form-control"  placeholder="Corporal teatral" value="${corporal_teatral}">
                    </div>
-                   
                    <!-- Genero literario narrativo --> 
                    <div class="form-group">
-                       <label for="Estado">Genero literario narrativo: </label>
-                       <c:out value="${genero_literario_narrativo}" />
+                       <label for="Estado">Genero literario narrativo</label>
+                       <input type="text" id="genero_literario_narrativo" path="genero_literario_narrativo" 
+                       name="genero_literario_narrativo" class="form-control"  placeholder="Genero literario narrativo"
+                       value="${genero_literario_narrativo}">
                    </div>
-                   
                    <!-- Genero literario dramático, poético o ensayo --> 
                    <div class="form-group">
-                       <label for="Estado">Genero literario dramático, poético o ensayo: </label>
-                       <c:out value="${genero_literario_dramatico}" />
+                       <label for="Estado">Genero literario dramático, poético o ensayo</label>
+                       <input type="text" id="genero_literario_dramatico" path="genero_literario_dramatico"
+						name="genero_literario_dramatico"  class="form-control"  
+						placeholder="Genero literario dramático, poético o ensayo" value="${genero_literario_dramatico}">
                    </div>
-                   
                    <!-- Genero literario guión --> 
                    <div class="form-group">
-                      <label for="Estado">Genero literario guión: </label>
-                      <c:out value="${genero_literario_guion}" />
+                       <label for="Estado">Genero literario guión</label>
+                       <input type="text" id="genero_literario_guion" path="genero_literario_guion" 
+                       name="genero_literario_guion" class="form-control"  placeholder="Genero literario guión" value="${genero_literario_guion}">
                    </div>
-                   
                    <!-- otro tipo de Genero literario --> 
                    <div class="form-group">
-                       <label for="Estado">Otro tipo de Genero literario: </label>
-                       <c:out value="${otro_tipo}" />
+                       <label for="Estado">Otro tipo de Genero literario</label>
+                       <input type="text" id="otro_tipo" path="otro_tipo" name="otro_tipo"  class="form-control"  
+                       placeholder="Otro tipo de Genero literario" value="${otro_tipo}">
                    </div>
-                   
                    <!-- otra producción artística --> 
                    <div class="form-group">
-                       <label for="Estado">Otra producción artística: </label>
-                       <c:out value="${otra_produccion}" />
+                       <label for="Estado">Otra producción artística</label>
+                       <input type="text" id="otra_produccion" path="otra_produccion" name="otra_produccion"  
+                       class="form-control"  placeholder="Otra producción artística" value="${otra_produccion}">
                    </div>
+
+                  
+                   <button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
 
 				</form:form>
 			</div>	<!--container-->

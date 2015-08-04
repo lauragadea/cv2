@@ -18,11 +18,17 @@ import ar.edu.um.model.Cargos;
 import ar.edu.um.model.DatosPersonales;
 import ar.edu.um.model.Formacion;
 import ar.edu.um.model.OtrosAntecedentes;
+
 import ar.edu.um.service.AntecedentesService;
+
+import ar.edu.um.model.Cargos;
+import ar.edu.um.model.Produccion;
+
 import ar.edu.um.service.CargosService;
 import ar.edu.um.service.DatosPersonalesService;
 import ar.edu.um.service.FormacionService;
 import ar.edu.um.service.OtrosAntecedentesService;
+import ar.edu.um.service.ProduccionService;
 
 
 @Controller
@@ -42,7 +48,11 @@ public class CvController {
 	private FormacionService formacionService;
 	private OtrosAntecedentesService otrosAntecedentesService;
 	private CargosService cargosService;
+
 	private AntecedentesService antecedentesService;
+
+	private ProduccionService produccionService;
+
 	
 	@Autowired
 	public void setDatosPersonalesService(DatosPersonalesService datosPersonalesService) {
@@ -64,9 +74,17 @@ public class CvController {
 		this.cargosService = cargosService;
 	}
 	
+
 	@Autowired
 	public void setAntecedentesService(AntecedentesService antecedentesService){
 		this.antecedentesService = antecedentesService;
+
+	}
+		
+	@Autowired 
+	public void setProduccionService(ProduccionService produccionService){
+		this.produccionService = produccionService;
+
 	}
 	
 	
@@ -334,17 +352,91 @@ public class CvController {
 		return "cargosEditar";
 	}
 	
-	
+	/** PRODUCCION **/
 
 	@RequestMapping(value="/produccion")
 	public String produccion(Model model){
+		
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
-	    System.out.println("USER: " + username);
+	    System.out.println("USER produccion: " + username);
+	   
 	    BigDecimal dni = new BigDecimal (username);
 	    model.addAttribute("dni", dni);
-		return "produccion";
+	    		
+	    Produccion produccion = produccionService.getData(dni);
+	    	
+	    if (produccion == null){
+	     	model.addAttribute("dni", dni);
+	    	return "produccionEmp";
+	    }else{
+	    
+			model.addAttribute("dni", produccion.getDni());
+			model.addAttribute("articulos_revistas_con_referato", produccion.getArticulos_revistas_con_referato());
+			model.addAttribute("articulos_revistas_sin_referato", produccion.getArticulos_revistas_sin_referato());
+			model.addAttribute("libros", produccion.getLibros());
+			model.addAttribute("partes_libros", produccion.getPartes_libros());
+			model.addAttribute("trabajos_eventos_ct_publicados", produccion.getTrabajos_eventos_ct_publicados());
+			model.addAttribute("trabajos_eventos_ct_no_publicados", produccion.getTrabajos_eventos_ct_no_publicados());
+			model.addAttribute("demas_producciones_ct", produccion.getDemas_producciones_ct());
+			model.addAttribute("con_titulo_prop_int", produccion.getCon_titulo_prop_int());
+			model.addAttribute("sin_titulo_prop_int", produccion.getSin_titulo_prop_int());
+			model.addAttribute("servicio_ct", produccion.getServicio_ct());
+			model.addAttribute("informe_tecnico", produccion.getInforme_tecnico());
+			model.addAttribute("musical_sonora", produccion.getMusical_sonora());
+			model.addAttribute("visual", produccion.getVisual());
+			model.addAttribute("audiovisual", produccion.getAudiovisual());
+			model.addAttribute("corporal_teatral", produccion.getCorporal_teatral());
+			model.addAttribute("genero_literario_narrativo", produccion.getGenero_literario_narrativo());
+			model.addAttribute("genero_literario_dramatico", produccion.getGenero_literario_dramatico());
+			model.addAttribute("genero_literario_guion", produccion.getGenero_literario_guion());
+			model.addAttribute("otro_tipo", produccion.getOtro_tipo());
+			model.addAttribute("otra_produccion", produccion.getOtra_produccion());
+			
+			return "produccion";
+	    }
 	}
+	
+	
+	/*** PRODUCCION EDITAR ***/
+	
+	@RequestMapping(value="/produccionEditar")
+	public String produccionEditar(Model model){
+	
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
+	    System.out.println("USER produciconeditar: " + username);
+	    BigDecimal dni = new BigDecimal (username);
+	    model.addAttribute("dni", dni);
+	     
+		Produccion produccion = produccionService.getData(dni);
+				
+		model.addAttribute("dni", produccion.getDni());
+		model.addAttribute("articulos_revistas_con_referato", produccion.getArticulos_revistas_con_referato());
+		model.addAttribute("articulos_revistas_sin_referato", produccion.getArticulos_revistas_sin_referato());
+		model.addAttribute("libros", produccion.getLibros());
+		model.addAttribute("partes_libros", produccion.getPartes_libros());
+		model.addAttribute("trabajos_eventos_ct_publicados", produccion.getTrabajos_eventos_ct_publicados());
+		model.addAttribute("trabajos_eventos_ct_no_publicados", produccion.getTrabajos_eventos_ct_no_publicados());
+		model.addAttribute("demas_producciones_ct", produccion.getDemas_producciones_ct());
+		model.addAttribute("con_titulo_prop_int", produccion.getCon_titulo_prop_int());
+		model.addAttribute("sin_titulo_prop_int", produccion.getSin_titulo_prop_int());
+		model.addAttribute("servicio_ct", produccion.getServicio_ct());
+		model.addAttribute("informe_tecnico", produccion.getInforme_tecnico());
+		model.addAttribute("musical_sonora", produccion.getMusical_sonora());
+		model.addAttribute("visual", produccion.getVisual());
+		model.addAttribute("audiovisual", produccion.getAudiovisual());
+		model.addAttribute("corporal_teatral", produccion.getCorporal_teatral());
+		model.addAttribute("genero_literario_narrativo", produccion.getGenero_literario_narrativo());
+		model.addAttribute("genero_literario_dramatico", produccion.getGenero_literario_dramatico());
+		model.addAttribute("genero_literario_guion", produccion.getGenero_literario_guion());
+		model.addAttribute("otro_tipo", produccion.getOtro_tipo());
+		model.addAttribute("otra_produccion", produccion.getOtra_produccion());
+		
+		return "produccionEditar";
+	}
+	
+	
 	
 	@RequestMapping(value="/antecedentes")
 	public String antecedentes(Model model){
