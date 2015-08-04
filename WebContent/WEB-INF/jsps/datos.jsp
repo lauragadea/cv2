@@ -113,9 +113,6 @@
 			</div>
 		</div>
 	</div>
-
-</body>
 <%@include file="includes/footer.jsp" %>
-
 </body>
 </html>
