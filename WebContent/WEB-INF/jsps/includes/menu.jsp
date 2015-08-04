@@ -1,23 +1,21 @@
-	<form action="${logoutUrl}" method="post" id="logoutForm">
-		<input type="hidden" name="${_csrf.parameterName}"
-			value="${_csrf.token}" />
-	</form>
+			<form action="${logoutUrl}" method="post" id="logoutForm">
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
+		</form>
 
-	<div class="logout">
-		<div class="row">
-			<div class="col-md-7"></div>
-			<div class="col-md-3">Usuario: ${dni}</div>
-			<div class="col-md-2">
-				<a href="<c:url value="/logout" />"> Salir</a>
-				<logout logout-url="/sign-out"/>
-				
+		<div class="logout">
+			<div class="row">
+				<div class="col-md-7"></div>
+				<div class="col-md-3">Usuario: ${dni}</div>
+				<div class="col-md-2">
+					<a href="<c:url value="/logout" />"> Salir</a>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<h1>Currículum Vitae</h1>
+		<h1>Currículum Vitae</h1>
 
-	<!-- NAVBAR -->
+		<!-- NAVBAR -->
 
 	<nav class="navbar navbar-default">
 		<div class="collapse navbar-collapse"
