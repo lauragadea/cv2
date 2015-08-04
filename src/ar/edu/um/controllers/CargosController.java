@@ -47,12 +47,10 @@ public class CargosController{
 			
 			model.addAttribute("dni", cargos.getDni());
 			
-			return "modificarCargos";
+			return "modificarcargos";
 			
 		} else if (action.equals("enviar")) {
-			
-			System.out.println("crear otros antecedentes");
-			cargosService.create(cargos);
+		
 	
 			cargosService.create(cargos);
 			
@@ -72,9 +70,9 @@ public class CargosController{
 		return "cargos";
 	}
 	
-	/** MODIFICAR OTROS ANTECEDENTES */
+	/** MODIFICAR CARGOS */
 	
-	@RequestMapping(value = "/modificarCargos", method = RequestMethod.POST)
+	@RequestMapping(value = "/modificarcargos", method = RequestMethod.POST)
 	public String modificarOtrosAntecedentes(Model model, @RequestParam BigDecimal dni, @Valid Cargos cargos, BindingResult result) {
 		
 		if (result.hasErrors()) {

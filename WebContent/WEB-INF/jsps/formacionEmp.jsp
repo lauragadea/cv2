@@ -42,7 +42,7 @@
 				</div>
 				
 				<h1>Currículum Vitae</h1>
-				<p>Seleccione una categoría para cargar/editar sus datos:</p>
+				
 				
 				<!-- NAVBAR -->
 				

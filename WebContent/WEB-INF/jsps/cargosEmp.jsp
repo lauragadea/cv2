@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<link rel="stylesheet" href="resources/bootstrap-3.3.4-dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="resources/bootstrap-3.3.4-dist/style.css" />
 	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700,700italic,400italic">
@@ -41,7 +41,7 @@
 				</div>
 				
 				<h1>Currículum Vitae</h1>
-				<p>Seleccione una categoría para cargar/editar sus datos:</p>
+				
 				
 				<!-- NAVBAR -->
 				
@@ -81,7 +81,7 @@
 		     				</div>
 		                   	<div class="col-md-1"></div>
 		                   	<div class="col-md-3">
-		                   		<button type="submit" class="btn btn-default disabled" name="action" value="Editar">Editar</button>	
+		                   		<button type="submit" class="btn btn-default disabled" name="action" value="editar">Editar</button>	
 		                   	</div>
 		                </div>
 					</div>
@@ -177,7 +177,7 @@
 							path="otros_cargos" name="otros_cargos" placeholder="Otros Cargos">
 					</div>
 
-						<button type="submit" class="btn btn-primary" name="action" value="Enviar">Enviar</button>
+						<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
 				</form:form>
 			</div>
 		</div>

@@ -65,13 +65,14 @@
 				<form:form id="registration-form" class="form-horizontal"
 					method="post"
 					action="${pageContext.request.contextPath}/cargosEditar"
-					modelAttribute="formacion">
+					modelAttribute="cargos">
 					
+					<!-- -DNI -->
 					<div class="form-group">
-						<label for="dni">DNI
-						<input type="text"
-							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
+						<label for="inputName">DNI:</label>
+						<c:out value="${dni}" />
+						<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
+					</div>
 					
 					
 					
@@ -84,7 +85,7 @@
 		     				</div>
 		                   	<div class="col-md-1"></div>
 		                   	<div class="col-md-3">
-		                   		<button type="submit" class="btn btn-default disabled" name="action" value="editar">Editar</button>	
+		                   		<button type="submit" class="btn btn-default" name="action" value="editar">Editar</button>	
 		                   	</div>
 		                </div>
 					</div>
@@ -162,8 +163,6 @@
 						<label for="inputOtrosCargos">Otros Cargos: </label>
 						<c:out value="${otros_cargos}"/>
 					</div>
-
-						<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
 
 				</form:form>
 			</div>

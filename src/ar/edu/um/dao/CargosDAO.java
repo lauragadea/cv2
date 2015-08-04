@@ -30,7 +30,7 @@ public class CargosDAO {
 
 	/*Crear datos cargos*/
 	public boolean create(Cargos cargos) {
-		System.out.println(cargos.toString());
+		//System.out.println(cargos.toString());
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(cargos);
 		return jdbc.update("insert into cargos (dni, nivel_superior_universitario, nivel_terciario_no_universitario, nivel_basico, cursos_posgrado_y_capacitaciones, cargos_organismos_ct, categorizacion_programa_incentivos, cargos_id_otro, cargos_gestion_institucional, otros_cargos)"
 				+ " values (:dni, :nivel_superior_universitario, :nivel_terciario_no_universitario, :nivel_basico, :cursos_posgrado_y_capacitaciones, :cargos_organismos_ct, :categorizacion_programa_incentivos, :cargos_id_otro, :cargos_gestion_institucional, :otros_cargos)", params) == 1;
@@ -66,7 +66,7 @@ public class CargosDAO {
 					});
 		}
 		catch(EmptyResultDataAccessException erdae) {
-			System.out.println("en formacionDAO devuelve null");
+			System.out.println("en cargosDAO devuelve null");
 			return null;
 		}
 	}
@@ -75,16 +75,7 @@ public class CargosDAO {
 	public boolean modify(Cargos cargos) {
 
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(cargos);
-		return jdbc.update("update cargos set "
-				+ "nivel_superior_universitario=nivel_superior_universitario:,"
-				+ "nivel_terciario_no_universitario=nivel_terciario_no_universitario:,"
-				+ "nivel_basico=nivel_basico:, "
-				+ "cursos_posgrado_y_capacitaciones=cursos_posgrado_y_capacitaciones:, "
-				+ "cargos_organismos_ct=cargos_organismos_ct:, "
-				+ "categorizacion_programa_incentivos=categorizacion_programa_incentivos:, "
-				+ "cargos_id_otro=cargos_id_otro:,"
-				+ "cargos_gestion_institucional=cargos_gestion_institucional:,"
-				+ "otros_cargos=otros_cargos:", params) == 1;
+		return jdbc.update("update cargos set nivel_superior_universitario=:nivel_superior_universitario, nivel_terciario_no_universitario=:nivel_terciario_no_universitario, nivel_basico=:nivel_basico, cursos_posgrado_y_capacitaciones=:cursos_posgrado_y_capacitaciones, cargos_organismos_ct=:cargos_organismos_ct, categorizacion_programa_incentivos=:categorizacion_programa_incentivos, cargos_id_otro=:cargos_id_otro, cargos_gestion_institucional=:cargos_gestion_institucional, otros_cargos=:otros_cargos", params) == 1;
 	}
 }
 
