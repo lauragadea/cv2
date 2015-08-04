@@ -81,7 +81,7 @@
 		     				</div>
 		                   	<div class="col-md-1"></div>
 		                   	<div class="col-md-3">
-		                   		<button type="submit" class="btn btn-default" name="action" value="editar">Editar</button>		
+		                  	
 		                   	</div>
 		                </div>
 					</div>

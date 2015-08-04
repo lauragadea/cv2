@@ -73,7 +73,6 @@
 							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
 					
                    
-                    <!-- BOTON EDITAR -->
 					<div class="form-group">
 		     			<div class="row">
 		     				<div class="col-md-8">
@@ -82,7 +81,7 @@
 		     				</div>
 		                   	<div class="col-md-1"></div>
 		                   	<div class="col-md-3">
-		                   		<button type="submit" class="btn btn-default disabled" name="action" value="editar">Editar</button>	
+		                   
 		                   	</div>
 		                </div>
 					</div>
