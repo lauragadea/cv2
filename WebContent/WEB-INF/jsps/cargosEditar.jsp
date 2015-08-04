@@ -41,7 +41,7 @@
 				</div>
 				
 				<h1>Currículum Vitae</h1>
-				<p>Seleccione una categoría para cargar/editar sus datos:</p>
+			
 				
 				<!-- NAVBAR -->
 				
@@ -61,15 +61,14 @@
 
 				<form:form id="registration-form" class="form-horizontal"
 					method="post"
-					action="${pageContext.request.contextPath}/modificarCargos"
+					action="${pageContext.request.contextPath}/modificarcargos"
 					modelAttribute="formacion">
 					
+					<!-- -DNI -->
 					<div class="form-group">
-						<label for="dni">DNI
-						<input type="text"
-							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}" readonly>
-						</label>
+						<label for="inputName">DNI:</label>
+						<c:out value="${dni}" />
+						<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
 					</div>
 					
 					<!-- BOTON EDITAR -->
@@ -81,7 +80,7 @@
 		     				</div>
 		                   	<div class="col-md-1"></div>
 		                   	<div class="col-md-3">
-		                   		<button type="submit" class="btn btn-default disabled" name="action" value="Editar">Editar</button>	
+		                   		<button type="submit" class="btn btn-default disabled">Editar</button>
 		                   	</div>
 		                </div>
 					</div>
@@ -97,6 +96,7 @@
 							name="nivel_superior_universitario"
 							placeholder="Nivel superioruniversitario y/o posgrado"
 							value="${nivel_superior_universitario}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- nivel terciario no universitario -->
 					<div class="form-group">
@@ -106,6 +106,7 @@
 							path="nivel_terciario_no_universitario" name="nivel_terciario_no_universitario"
 							placeholder="Nivel terciario no universitario"
 							value="${nivel_terciario_no_universitario}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Nivel basico y/o medio -->
 					<div class="form-group">
@@ -114,6 +115,7 @@
 							path="nivel_basico" name ="nivel_basico"
 							placeholder="Nivel terciario no universitario"
 							value="${nivel_basico}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Cursos de posgrado y/o capacitaciones extracurriculares -->
 					<div class="form-group">
@@ -124,6 +126,7 @@
 							path="cursos_posgrado_y_capacitaciones" name="cursos_posgrado_y_capacitaciones"
 							placeholder="Cursos de posgrado y/o capacitaciones extracurriculares"
 							value="${cursos_posgrado_y_capacitaciones}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
 					<!-- CARGOS I+D -->
@@ -139,6 +142,7 @@
 							path="cargos_organismos_ct" name="cargos_organismos_ct"
 							placeholder="Cargos en organismos científico-tecnológicos"
 							value="${cargos_organismos_ct}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Categorización del programa de incentivos -->
 					<div class="form-group">
@@ -148,6 +152,7 @@
 							path="categorizacion_programa_incentivos" name="categorizacion_programa_incentivos"
 							placeholder="Categorización del programa de incentivos"
 							value="${categorizacion_programa_incentivos}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Cargos I+D en otro tipo de institucines -->
 					<div class="form-group">
@@ -156,6 +161,7 @@
 							class="form-control" id="cargos_id_otro" path="cargos_id_otro" name="cargos_id_otro"
 							placeholder="Cargos I+D en otro tipo de institucines"
 							value="${cargos_id_otro}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
 					<!-- CARGOS EN GESTION INSTITUCIONAL -->
@@ -171,6 +177,7 @@
 							path="cargos_gestion_institucional" name="cargos_gestion_institucional"
 							placeholder="Cargos en gestion institucional"
 							value="${cargos_gestion_institucional}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
 					<!-- OTROS CARGOS -->
@@ -184,6 +191,7 @@
 						<input type="text" class="form-control" id="otros_cargos"
 							path="otros_cargos" name="otros_cargos"
 							placeholder="Otros Cargos" value="${otros_cargos}">
+							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
 						<button type="submit" class="btn btn-primary" name="action" value="Enviar">Enviar</button>

@@ -86,12 +86,6 @@
 		                   	</div>
 		                </div>
 					</div>
-							<!-- -DNI -->
-					<div class="form-group">
-						<label for="inputName">DNI:</label>
-						<c:out value="${dni}" />
-						<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
-					</div>
 										
 					<!-- Nivel Universitario de posgrado -->
 					<div class="form-group">
