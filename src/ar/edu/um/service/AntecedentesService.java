@@ -23,6 +23,10 @@ public class AntecedentesService {
 		antecedentesDao.create(antecedentes);
 	}
 	
+	public void modify(Antecedentes antecedentes){
+		antecedentesDao.modify(antecedentes);
+	}
+	
 	public Antecedentes getData(BigDecimal dni){
 		return antecedentesDao.getData(dni);
 	}

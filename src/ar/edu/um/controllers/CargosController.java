@@ -73,7 +73,7 @@ public class CargosController{
 	/** MODIFICAR CARGOS */
 	
 	@RequestMapping(value = "/modificarcargos", method = RequestMethod.POST)
-	public String modificarOtrosAntecedentes(Model model, @RequestParam BigDecimal dni, @Valid Cargos cargos, BindingResult result) {
+	public String modificarCargos(Model model, @RequestParam BigDecimal dni, @Valid Cargos cargos, BindingResult result) {
 		
 		if (result.hasErrors()) {
 			System.out.println("no se valido el formulario");
