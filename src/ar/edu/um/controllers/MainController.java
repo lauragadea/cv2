@@ -40,7 +40,7 @@ public class MainController {
 	
 	@RequestMapping(value = "logout", method = RequestMethod.GET)
 	public String logout() {
-		
+		SecurityContextHolder.getContext().getAuthentication().setAuthenticated(false); 
 	    return "logout";
 	}
  
