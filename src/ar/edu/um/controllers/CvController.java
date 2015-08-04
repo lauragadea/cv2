@@ -118,7 +118,7 @@ public class CvController {
 		if (dp == null){
 			
 			model.addAttribute("dni", dni);
-			return "datosEmp";
+			return "datos";
 			
 		}else{
 			
@@ -137,6 +137,7 @@ public class CvController {
 			model.addAttribute("departamento", dp.getDepartamento());
 			model.addAttribute("provincia", dp.getProvincia());
 			model.addAttribute("pais", dp.getPais());
+			model.addAttribute("titulo", "datos");
 			
 			return "datos";
 			
@@ -262,6 +263,7 @@ public class CvController {
 	 		model.addAttribute("posdoctorado", formacion.getPosdoctorado());
 	 		model.addAttribute("cursos_posgrado_y_capacitaciones", formacion.getCursos_posgrado_y_capacitaciones());
 	 		model.addAttribute("idiomas", formacion.getIdiomas());
+	 		model.addAttribute("titulo", "formacion");
 	 			
 	 		return "formacion";
 	 	}
@@ -289,6 +291,7 @@ public class CvController {
 		model.addAttribute("posdoctorado", formacion.getPosdoctorado());
 		model.addAttribute("cursos_posgrado_y_capacitaciones", formacion.getCursos_posgrado_y_capacitaciones());
 		model.addAttribute("idiomas", formacion.getIdiomas());
+		model.addAttribute("titulo", "formacion");
 		
 		return "formacionEditar";
 	}
@@ -320,6 +323,7 @@ public class CvController {
 			model.addAttribute("cargos_id_otro", cargos.getCargos_id_otro());
 			model.addAttribute("cargos_gestion_institucional", cargos.getCargos_gestion_institucional());
 			model.addAttribute("otros_cargos", cargos.getOtros_cargos());
+			model.addAttribute("titulo", "cargos");
 				
 	 		return "cargos";
 	 	}
@@ -348,6 +352,7 @@ public class CvController {
 		model.addAttribute("cargos_id_otro", cargos.getCargos_id_otro());
 		model.addAttribute("cargos_gestion_institucional", cargos.getCargos_gestion_institucional());
 		model.addAttribute("otros_cargos", cargos.getOtros_cargos());
+		model.addAttribute("titulo", "cargos");
 		
 		return "cargosEditar";
 	}
@@ -392,6 +397,7 @@ public class CvController {
 			model.addAttribute("genero_literario_guion", produccion.getGenero_literario_guion());
 			model.addAttribute("otro_tipo", produccion.getOtro_tipo());
 			model.addAttribute("otra_produccion", produccion.getOtra_produccion());
+			model.addAttribute("titulo", "produccion");
 			
 			return "produccion";
 	    }
@@ -432,6 +438,7 @@ public class CvController {
 		model.addAttribute("genero_literario_guion", produccion.getGenero_literario_guion());
 		model.addAttribute("otro_tipo", produccion.getOtro_tipo());
 		model.addAttribute("otra_produccion", produccion.getOtra_produccion());
+		model.addAttribute("titulo", "produccion");
 		
 		return "produccionEditar";
 	}
@@ -481,6 +488,7 @@ public class CvController {
 	     	model.addAttribute("normalizacion", antecedentes.getNormalizacion());
 	     	model.addAttribute("ejercicio_profesion_ambito_no_academico", antecedentes.getEjercicio_profesion_ambito_no_academico());
 	     	model.addAttribute("otra_actividad_cyt", antecedentes.getOtra_actividad_cyt());
+	     	model.addAttribute("titulo", "antecedentes");
 	     	
 	     	return "antecedentes";
 	    }
@@ -523,6 +531,7 @@ public class CvController {
      	model.addAttribute("normalizacion", antecedentes.getNormalizacion());
      	model.addAttribute("ejercicio_profesion_ambito_no_academico", antecedentes.getEjercicio_profesion_ambito_no_academico());
      	model.addAttribute("otra_actividad_cyt", antecedentes.getOtra_actividad_cyt());		
+     	model.addAttribute("titulo", "antecedentes");
 	
 		
 		return "antecedentesEditar";
@@ -557,7 +566,8 @@ public class CvController {
 	 		model.addAttribute("premios_distinciones",otrosAntecedentes.getPremios_distinciones() );
 	 		model.addAttribute("dato_academico",otrosAntecedentes.getDato_academico() );
 	 		model.addAttribute("curriculum_vitae",otrosAntecedentes.getCurriculum_vitae() );
-	 		model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());	 			
+	 		model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());
+	 		model.addAttribute("titulo", "otrosantecedentes");
 	 		
 	 		return "otrosantecedentes";
 	 	}
@@ -583,7 +593,8 @@ public class CvController {
  		model.addAttribute("premios_distinciones",otrosAntecedentes.getPremios_distinciones() );
  		model.addAttribute("dato_academico",otrosAntecedentes.getDato_academico() );
  		model.addAttribute("curriculum_vitae",otrosAntecedentes.getCurriculum_vitae() );
- 		model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());	 			
+ 		model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());	
+ 		model.addAttribute("titulo", "otrosantecedentes");
 
 		return "otrosantecedentesEditar";
 	}
