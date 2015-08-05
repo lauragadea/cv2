@@ -107,8 +107,8 @@
 								class="form-control" path="sexo" id="sexo" name="sexo"><form:errors
 									cssClass="error" path="sexo" value="${sexo}"></form:errors>
 								<option value="${sexo}" label="${sexo}"></option>
-								<option value="M">Masculino</option>
-								<option value="F">Femenino</option>
+								<option value="Masculino">Masculino</option>
+								<option value="Femenino">Femenino</option>
 							</select>
 						</div>
 					</div>
@@ -120,9 +120,9 @@
 							name="estado_civil" placeholder="estado_civil"
 							value="${estado_civil}">
 							<option value="${estado_civil}" label="${estado_civil}"></option>
-							<option value="S">Soltero</option>
-							<option value="C">Casado</option>
-							<option value="V">Viudo</option>
+							<option value="Soltero">Soltero</option>
+							<option value="Casado">Casado</option>
+							<option value="Viudo">Viudo</option>
 
 						</select>
 						<form:errors cssClass="error" path="estado_civil"></form:errors>
