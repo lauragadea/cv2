@@ -1721,11 +1721,10 @@ padding-bottom: 20px;
 }
 
 .form-signin {
-    max-width: 330px;
+    max-width: 246px;
     padding: 1px 25px 23px 25px;
     margin: 0px auto;
-    background-color: rgba(0, 0, 0, 0.32);
-    margin-top: 100px;
+    #background-color: fff;    
     border-radius: 10px;
 }
 
