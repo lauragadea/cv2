@@ -118,10 +118,13 @@ public class CvController {
 		if (dp == null){
 			
 			model.addAttribute("dni", dni);
-			return "datos";
+			model.addAttribute("objeto", false);
+	
 			
 		}else{
 			
+			model.addAttribute("objeto", true);
+						
 			System.out.println("dp = " + dp);
 			
 			model.addAttribute("dni", dp.getDni());
@@ -139,10 +142,11 @@ public class CvController {
 			model.addAttribute("pais", dp.getPais());
 			model.addAttribute("titulo", "datos");
 			
-			return "datos";
+			
+			
 			
 		}
-		
+		return "datos";
 	}
 	
 	/*** DATOS EDITAR 
@@ -252,8 +256,11 @@ public class CvController {
 	    	
 	    if (formacion == null){
 	     	model.addAttribute("dni", dni);
-	    	return "formacionEmp";
+	     	model.addAttribute("objeto", false);
+	 
 	    }else{
+	    	
+	    	model.addAttribute("objeto", true);
 	 	   	model.addAttribute("dni", formacion.getDni());
 	 		model.addAttribute("nivel_universitario_posgrado", formacion.getNivel_universitario_posgrado());
 	 		model.addAttribute("nivel_universitario_posgrado_especializacion", formacion.getNivel_universitario_posgrado_especializacion());
@@ -265,8 +272,9 @@ public class CvController {
 	 		model.addAttribute("idiomas", formacion.getIdiomas());
 	 		model.addAttribute("titulo", "formacion");
 	 			
-	 		return "formacion";
+	 		
 	 	}
+	    return "formacion";
 	}
 	
 	/*** FORMACION EDITAR ***/
@@ -311,8 +319,12 @@ public class CvController {
 	    	
 	    if (cargos == null){
 	     	model.addAttribute("dni", dni);
-	    	return "cargosEmp";
+	     	model.addAttribute("objeto", false);
+	    	
 	    }else{
+	    	
+	    	model.addAttribute("objeto", true);
+	    	
 			model.addAttribute("dni", cargos.getDni());
 			model.addAttribute("nivel_superior_universitario", cargos.getNivel_superior_universitario());
 			model.addAttribute("nivel_terciario_no_universitario", cargos.getNivel_terciario_no_universitario());
@@ -325,8 +337,9 @@ public class CvController {
 			model.addAttribute("otros_cargos", cargos.getOtros_cargos());
 			model.addAttribute("titulo", "cargos");
 				
-	 		return "cargos";
+	 		
 	 	}
+	    return "cargos";
 	}
 
 	/*** CARGOS EDITAR ***/
@@ -459,10 +472,13 @@ public class CvController {
 	    
 	    if (antecedentes == null){
 	     	model.addAttribute("dni", dni);
+	     	model.addAttribute("objeto", false);
 	     	
-	     	return "antecedentesEmp";
 	    	
 	    }else{
+	    	
+	    	model.addAttribute("objeto", true);
+	    	
 	     	model.addAttribute("dni", antecedentes.getDni());
 	     	model.addAttribute("becario", antecedentes.getBecario());
 	     	model.addAttribute("tesista_doctoral", antecedentes.getTesista_doctoral());
@@ -490,8 +506,10 @@ public class CvController {
 	     	model.addAttribute("otra_actividad_cyt", antecedentes.getOtra_actividad_cyt());
 	     	model.addAttribute("titulo", "antecedentes");
 	     	
-	     	return "antecedentes";
+	     
 	    }
+	    
+		return "antecedentes";
 	}
 	
 	@RequestMapping(value="/antecedentesEditar")
