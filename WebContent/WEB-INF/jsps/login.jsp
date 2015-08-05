@@ -14,6 +14,13 @@
 	<div class="col-lg-4 col-lg-offset-4">
 		<img src="resources/images/marca.png">
 		<div class="well">
+
+		<c:choose>
+			<c:when test="${objeto == false}">
+				<label> Usted ya se encuentra registrado. </label>
+			</c:when>
+		</c:choose>
+
 			<form class="form-signin" name='loginForm'
 				action="<c:url value='/j_spring_security_check' />"
 				method='POST'>
