@@ -52,7 +52,7 @@
 				
 					
 				<h1>Currículum Vitae</h1>
-				<p>Seleccione una categoría para cargar/editar sus datos:</p>
+			
 
 				<!-- NAVBAR -->
 					
@@ -584,7 +584,12 @@
 					<div class="container">
 						<div class="row-fluid">
 							<div class="pull-left" >
-							
+							<!-- -DNI -->
+					<div class="form-group">
+						<label for="inputName">DNI:</label>
+						<c:out value="${dni}" />
+						<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
+					</div>
 								<!-- NOMBRE -->
 								<div class="form-group">
 									<label for="inputName">Nombre:</label>

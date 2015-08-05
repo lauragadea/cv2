@@ -386,9 +386,12 @@ public class CvController {
 	    	
 	    if (produccion == null){
 	     	model.addAttribute("dni", dni);
-	    	return "produccionEmp";
+	     	model.addAttribute("objeto", false);
+	    	
 	    }else{
 	    
+	    	model.addAttribute("objeto", true);
+	    	
 			model.addAttribute("dni", produccion.getDni());
 			model.addAttribute("articulos_revistas_con_referato", produccion.getArticulos_revistas_con_referato());
 			model.addAttribute("articulos_revistas_sin_referato", produccion.getArticulos_revistas_sin_referato());
@@ -412,8 +415,9 @@ public class CvController {
 			model.addAttribute("otra_produccion", produccion.getOtra_produccion());
 			model.addAttribute("titulo", "produccion");
 			
-			return "produccion";
+			
 	    }
+	    return "produccion";
 	}
 	
 	
@@ -573,10 +577,13 @@ public class CvController {
 	    	
 	    if (otrosAntecedentes == null){
 	     	model.addAttribute("dni", dni);
+	     	model.addAttribute("objeto", false);
 	     	
-	     	return "otrosantecedentesEmp";
 	    	
 	    }else{
+	    	
+	    	model.addAttribute("objeto", true);
+	    	
 	 	   	model.addAttribute("dni", otrosAntecedentes.getDni());
 	 		model.addAttribute("estancias_pasantias",otrosAntecedentes.getEstancias_pasantias());
 	 		model.addAttribute("membresias_asociaciones_ct",otrosAntecedentes.getMembresias_asociaciones_ct());
@@ -587,8 +594,9 @@ public class CvController {
 	 		model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());
 	 		model.addAttribute("titulo", "otrosantecedentes");
 	 		
-	 		return "otrosantecedentes";
+	 		
 	 	}
+	    return "otrosantecedentes";
 	}
 	
 	/*** OTROS ANTECEDENTES EDITAR ***/
