@@ -35,13 +35,13 @@ public class MainController {
 	public String defaultPage() {
 
 	  return "login";
- 
 	}
 	
 	@RequestMapping(value = "logout", method = RequestMethod.GET)
 	public String logout() {
-		SecurityContextHolder.getContext().getAuthentication().setAuthenticated(false); 		
-	    return "logout";
+		SecurityContextHolder.getContext().getAuthentication().setAuthenticated(false); 	
+		
+	    return "login";
 	}
  
 	@RequestMapping(value = "/admin**", method = RequestMethod.GET)

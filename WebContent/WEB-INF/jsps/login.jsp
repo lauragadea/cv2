@@ -32,8 +32,7 @@
 			</form>
 			
 			<div class="mensaje">
-				¿No tenés una cuenta? <a href="<c:url value="/registro" />">Regístrate
-					aquí.</a>
+				¿No tenés una cuenta? <a href="<c:url value="/registro" />">Regístrate aquí.</a>
 			<c:if test="${not empty error}">
 				<div class="error">${error}</div>
 			</c:if>
@@ -41,8 +40,7 @@
 				<div class="msg">${msg}</div>
 			</c:if>
 			</div>
-			</div>	
 		</div>	
-	
+	</div>		
 </body>
 </html>
