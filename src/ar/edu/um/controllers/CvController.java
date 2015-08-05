@@ -148,9 +148,7 @@ public class CvController {
 			model.addAttribute("provincia", dp.getProvincia());
 			model.addAttribute("pais", dp.getPais());
 			model.addAttribute("titulo", "datos");
-			
-			
-			
+
 			
 		}
 		return "datos";
