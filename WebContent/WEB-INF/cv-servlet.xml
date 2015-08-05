@@ -20,5 +20,14 @@
 	
 	<mvc:resources location="/resources/" mapping="/static/**" />
 	<mvc:resources mapping="/resources/**" location="/resources/" cache-period="0" />
+ 
+ 	<mvc:interceptors>
+       <bean id="webContentInterceptor" class="org.springframework.web.servlet.mvc.WebContentInterceptor">
+	       <property name="cacheSeconds" value="0"/>
+	       <property name="useExpiresHeader" value="false"/>
+	       <property name="useCacheControlHeader" value="true"/>
+	       <property name="useCacheControlNoStore" value="true"/>
+        </bean>     
+    </mvc:interceptors>
 
 </beans>
