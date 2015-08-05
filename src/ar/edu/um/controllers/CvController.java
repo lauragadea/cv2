@@ -118,10 +118,13 @@ public class CvController {
 		if (dp == null){
 			
 			model.addAttribute("dni", dni);
-			return "datosEmp";
+			model.addAttribute("objeto", false);
+	
 			
 		}else{
 			
+			model.addAttribute("objeto", true);
+						
 			System.out.println("dp = " + dp);
 			
 			model.addAttribute("dni", dp.getDni());
@@ -137,11 +140,13 @@ public class CvController {
 			model.addAttribute("departamento", dp.getDepartamento());
 			model.addAttribute("provincia", dp.getProvincia());
 			model.addAttribute("pais", dp.getPais());
+			model.addAttribute("titulo", "datos");
 			
-			return "datos";
+			
+			
 			
 		}
-		
+		return "datos";
 	}
 	
 	/*** DATOS EDITAR 
@@ -251,8 +256,11 @@ public class CvController {
 	    	
 	    if (formacion == null){
 	     	model.addAttribute("dni", dni);
-	    	return "formacionEmp";
+	     	model.addAttribute("objeto", false);
+	 
 	    }else{
+	    	
+	    	model.addAttribute("objeto", true);
 	 	   	model.addAttribute("dni", formacion.getDni());
 	 		model.addAttribute("nivel_universitario_posgrado", formacion.getNivel_universitario_posgrado());
 	 		model.addAttribute("nivel_universitario_posgrado_especializacion", formacion.getNivel_universitario_posgrado_especializacion());
@@ -262,9 +270,11 @@ public class CvController {
 	 		model.addAttribute("posdoctorado", formacion.getPosdoctorado());
 	 		model.addAttribute("cursos_posgrado_y_capacitaciones", formacion.getCursos_posgrado_y_capacitaciones());
 	 		model.addAttribute("idiomas", formacion.getIdiomas());
+	 		model.addAttribute("titulo", "formacion");
 	 			
-	 		return "formacion";
+	 		
 	 	}
+	    return "formacion";
 	}
 	
 	/*** FORMACION EDITAR ***/
@@ -289,6 +299,7 @@ public class CvController {
 		model.addAttribute("posdoctorado", formacion.getPosdoctorado());
 		model.addAttribute("cursos_posgrado_y_capacitaciones", formacion.getCursos_posgrado_y_capacitaciones());
 		model.addAttribute("idiomas", formacion.getIdiomas());
+		model.addAttribute("titulo", "formacion");
 		
 		return "formacionEditar";
 	}
@@ -308,8 +319,12 @@ public class CvController {
 	    	
 	    if (cargos == null){
 	     	model.addAttribute("dni", dni);
-	    	return "cargosEmp";
+	     	model.addAttribute("objeto", false);
+	    	
 	    }else{
+	    	
+	    	model.addAttribute("objeto", true);
+	    	
 			model.addAttribute("dni", cargos.getDni());
 			model.addAttribute("nivel_superior_universitario", cargos.getNivel_superior_universitario());
 			model.addAttribute("nivel_terciario_no_universitario", cargos.getNivel_terciario_no_universitario());
@@ -320,9 +335,11 @@ public class CvController {
 			model.addAttribute("cargos_id_otro", cargos.getCargos_id_otro());
 			model.addAttribute("cargos_gestion_institucional", cargos.getCargos_gestion_institucional());
 			model.addAttribute("otros_cargos", cargos.getOtros_cargos());
+			model.addAttribute("titulo", "cargos");
 				
-	 		return "cargos";
+	 		
 	 	}
+	    return "cargos";
 	}
 
 	/*** CARGOS EDITAR ***/
@@ -348,6 +365,7 @@ public class CvController {
 		model.addAttribute("cargos_id_otro", cargos.getCargos_id_otro());
 		model.addAttribute("cargos_gestion_institucional", cargos.getCargos_gestion_institucional());
 		model.addAttribute("otros_cargos", cargos.getOtros_cargos());
+		model.addAttribute("titulo", "cargos");
 		
 		return "cargosEditar";
 	}
@@ -368,9 +386,12 @@ public class CvController {
 	    	
 	    if (produccion == null){
 	     	model.addAttribute("dni", dni);
-	    	return "produccionEmp";
+	     	model.addAttribute("objeto", false);
+	    	
 	    }else{
 	    
+	    	model.addAttribute("objeto", true);
+	    	
 			model.addAttribute("dni", produccion.getDni());
 			model.addAttribute("articulos_revistas_con_referato", produccion.getArticulos_revistas_con_referato());
 			model.addAttribute("articulos_revistas_sin_referato", produccion.getArticulos_revistas_sin_referato());
@@ -392,9 +413,11 @@ public class CvController {
 			model.addAttribute("genero_literario_guion", produccion.getGenero_literario_guion());
 			model.addAttribute("otro_tipo", produccion.getOtro_tipo());
 			model.addAttribute("otra_produccion", produccion.getOtra_produccion());
+			model.addAttribute("titulo", "produccion");
 			
-			return "produccion";
+			
 	    }
+	    return "produccion";
 	}
 	
 	
@@ -432,6 +455,7 @@ public class CvController {
 		model.addAttribute("genero_literario_guion", produccion.getGenero_literario_guion());
 		model.addAttribute("otro_tipo", produccion.getOtro_tipo());
 		model.addAttribute("otra_produccion", produccion.getOtra_produccion());
+		model.addAttribute("titulo", "produccion");
 		
 		return "produccionEditar";
 	}
@@ -452,10 +476,13 @@ public class CvController {
 	    
 	    if (antecedentes == null){
 	     	model.addAttribute("dni", dni);
+	     	model.addAttribute("objeto", false);
 	     	
-	     	return "antecedentesEmp";
 	    	
 	    }else{
+	    	
+	    	model.addAttribute("objeto", true);
+	    	
 	     	model.addAttribute("dni", antecedentes.getDni());
 	     	model.addAttribute("becario", antecedentes.getBecario());
 	     	model.addAttribute("tesista_doctoral", antecedentes.getTesista_doctoral());
@@ -481,9 +508,12 @@ public class CvController {
 	     	model.addAttribute("normalizacion", antecedentes.getNormalizacion());
 	     	model.addAttribute("ejercicio_profesion_ambito_no_academico", antecedentes.getEjercicio_profesion_ambito_no_academico());
 	     	model.addAttribute("otra_actividad_cyt", antecedentes.getOtra_actividad_cyt());
+	     	model.addAttribute("titulo", "antecedentes");
 	     	
-	     	return "antecedentes";
+	     
 	    }
+	    
+		return "antecedentes";
 	}
 	
 	@RequestMapping(value="/antecedentesEditar")
@@ -523,6 +553,7 @@ public class CvController {
      	model.addAttribute("normalizacion", antecedentes.getNormalizacion());
      	model.addAttribute("ejercicio_profesion_ambito_no_academico", antecedentes.getEjercicio_profesion_ambito_no_academico());
      	model.addAttribute("otra_actividad_cyt", antecedentes.getOtra_actividad_cyt());		
+     	model.addAttribute("titulo", "antecedentes");
 	
 		
 		return "antecedentesEditar";
@@ -546,10 +577,13 @@ public class CvController {
 	    	
 	    if (otrosAntecedentes == null){
 	     	model.addAttribute("dni", dni);
+	     	model.addAttribute("objeto", false);
 	     	
-	     	return "otrosantecedentesEmp";
 	    	
 	    }else{
+	    	
+	    	model.addAttribute("objeto", true);
+	    	
 	 	   	model.addAttribute("dni", otrosAntecedentes.getDni());
 	 		model.addAttribute("estancias_pasantias",otrosAntecedentes.getEstancias_pasantias());
 	 		model.addAttribute("membresias_asociaciones_ct",otrosAntecedentes.getMembresias_asociaciones_ct());
@@ -557,10 +591,12 @@ public class CvController {
 	 		model.addAttribute("premios_distinciones",otrosAntecedentes.getPremios_distinciones() );
 	 		model.addAttribute("dato_academico",otrosAntecedentes.getDato_academico() );
 	 		model.addAttribute("curriculum_vitae",otrosAntecedentes.getCurriculum_vitae() );
-	 		model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());	 			
+	 		model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());
+	 		model.addAttribute("titulo", "otrosantecedentes");
 	 		
-	 		return "otrosantecedentes";
+	 		
 	 	}
+	    return "otrosantecedentes";
 	}
 	
 	/*** OTROS ANTECEDENTES EDITAR ***/
@@ -583,7 +619,8 @@ public class CvController {
  		model.addAttribute("premios_distinciones",otrosAntecedentes.getPremios_distinciones() );
  		model.addAttribute("dato_academico",otrosAntecedentes.getDato_academico() );
  		model.addAttribute("curriculum_vitae",otrosAntecedentes.getCurriculum_vitae() );
- 		model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());	 			
+ 		model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());	
+ 		model.addAttribute("titulo", "otrosantecedentes");
 
 		return "otrosantecedentesEditar";
 	}
