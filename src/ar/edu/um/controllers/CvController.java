@@ -98,6 +98,13 @@ public class CvController {
 	@RequestMapping(value="/cv")
 	public String cv (Model model){
 		
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    String username = auth.getName(); /*trae el usuario logueado en el sistema */
+	    System.out.println("USER: " + username);
+	    BigDecimal dni = new BigDecimal (username);
+	    model.addAttribute("dni", dni);
+	     
+		
 		return "cv";
 	}
 	
