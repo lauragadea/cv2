@@ -1,14 +1,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
+<!DOCTYPE html>
 <html>
-<head>
-<title>Currículum Vitae</title>
 
-<meta charset="UTF-8">
-<link rel="stylesheet"
-	href="resources/bootstrap-3.3.4-dist/css/bootstrap.css" />
-<link rel="stylesheet" href="resources/bootstrap-3.3.4-dist/style.css" />
+<head>
+	<title>Currículum Vitae</title>
+	
+	<meta charset="UTF-8">
+	<link rel="stylesheet"	href="resources/bootstrap-3.3.4-dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="resources/bootstrap-3.3.4-dist/style.css" />
 </head>
+
 <body onload='document.loginForm.username.focus();'>
 
 	<div class="col-lg-4 col-lg-offset-4">
