@@ -255,15 +255,7 @@ public class CvController {
 	    }else{
 	    	
 	    	model.addAttribute("objeto", true);
-	 	   	model.addAttribute("dni", formacion.getDni());
-	 		model.addAttribute("nivel_universitario_posgrado", formacion.getNivel_universitario_posgrado());
-	 		model.addAttribute("nivel_universitario_posgrado_especializacion", formacion.getNivel_universitario_posgrado_especializacion());
-	 		model.addAttribute("nivel_universitario_grado", formacion.getNivel_universitario_grado());
-	 		model.addAttribute("nivel_terciario_no_universitario", formacion.getNivel_terciario_no_universitario());
-	 		model.addAttribute("especialidad_certificada", formacion.getEspecialidad_certificada());
-	 		model.addAttribute("posdoctorado", formacion.getPosdoctorado());
-	 		model.addAttribute("cursos_posgrado_y_capacitaciones", formacion.getCursos_posgrado_y_capacitaciones());
-	 		model.addAttribute("idiomas", formacion.getIdiomas());
+	    	model.addAttribute("formacion", formacion);
 	 		model.addAttribute("titulo", "formacion");
 	 			
 	 		
@@ -284,15 +276,7 @@ public class CvController {
 	     
 		Formacion formacion = formacionService.getData(dni);
 				
-		model.addAttribute("dni", formacion.getDni());
-		model.addAttribute("nivel_universitario_posgrado", formacion.getNivel_universitario_posgrado());
-		model.addAttribute("nivel_universitario_posgrado_especializacion", formacion.getNivel_universitario_posgrado_especializacion());
-		model.addAttribute("nivel_universitario_grado", formacion.getNivel_universitario_grado());
-		model.addAttribute("nivel_terciario_no_universitario", formacion.getNivel_terciario_no_universitario());
-		model.addAttribute("especialidad_certificada", formacion.getEspecialidad_certificada());
-		model.addAttribute("posdoctorado", formacion.getPosdoctorado());
-		model.addAttribute("cursos_posgrado_y_capacitaciones", formacion.getCursos_posgrado_y_capacitaciones());
-		model.addAttribute("idiomas", formacion.getIdiomas());
+		model.addAttribute("formacion", formacion);
 		model.addAttribute("titulo", "formacion");
 		
 		return "formacionEditar";
