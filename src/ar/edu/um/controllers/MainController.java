@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import ar.edu.um.model.DatosPersonales;
 import ar.edu.um.model.User;
 import ar.edu.um.model.UserRole;
 import ar.edu.um.service.UsersService;
@@ -63,7 +64,7 @@ public class MainController {
 	  if (error != null) {
 		model.addObject("error", "Usuario o contraseña inválidos");
 	  }
- 
+	   
 	  if (logout != null) {
 		model.addObject("msg", "Usted ha cerrado sesión correctamente");
 	  }
@@ -90,13 +91,19 @@ public class MainController {
 	@RequestMapping(value="/registrado", method=RequestMethod.POST)
 	public String confirmaRegistro(Model model, @RequestParam("DNI") BigDecimal DNI, @RequestParam("password") String password) {
 
-
-		
 		User user = new User();
 		user.setDNI(DNI);
 		user.setPassword(password);
-	   	System.out.println(user);
-		usersService.create(user);
+
+		System.out.println(user);
+		
+		if(usersService.create(user) == false){
+			System.out.println("ya esta registrado");
+			model.addAttribute("objeto", false);
+			return "login";
+		}
+		
+		System.out.println();
 		
 		UserRole userRole = new UserRole();
 		userRole.setDNI(DNI);

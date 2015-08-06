@@ -1,5 +1,7 @@
 package ar.edu.um.service;
 
+import java.math.BigDecimal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,8 +19,8 @@ public class UsersService {
 		this.usersDao = usersDao;
 	}
 	
-	public void create(User user){
-		usersDao.create(user);
+	public boolean create(User user){
+		return usersDao.create(user);
 	}
 	
 	public void createRole(UserRole userRole){

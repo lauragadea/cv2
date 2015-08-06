@@ -3,6 +3,7 @@ package ar.edu.um.dao;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
@@ -24,8 +25,15 @@ private NamedParameterJdbcTemplate jdbc;
 
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(user);
 		System.out.println();
-		return jdbc.update("insert into users (DNI, password, enabled) values (:DNI, :password, 1)", params) == 1;
-
+		
+		try{
+			jdbc.update("insert into users (DNI, password, enabled) values (:DNI, :password, 1)", params);
+			return true;
+		
+		}catch(DuplicateKeyException dup){
+			System.out.println("devuelve false");
+			return false;
+		}
 	}
 	
 	public boolean createRole(UserRole userRole) {
