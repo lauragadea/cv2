@@ -94,7 +94,7 @@ public class MainController {
 		User user = new User();
 		user.setDNI(DNI);
 		user.setPassword(password);
-
+		
 		System.out.println(user);
 		
 		if(usersService.create(user) == false){

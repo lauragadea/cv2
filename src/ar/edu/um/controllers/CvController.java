@@ -134,19 +134,8 @@ public class CvController {
 						
 			System.out.println("dp = " + dp);
 			
-			model.addAttribute("dni", dp.getDni());
-			model.addAttribute("nombre", dp.getNombre());
-			model.addAttribute("apellido", dp.getApellido());
-			model.addAttribute("sexo", dp.getSexo());
-			model.addAttribute("estado_civil", dp.getEstado_civil());
-			model.addAttribute("email", dp.getEmail());
-			model.addAttribute("fecha_nac", dp.getFecha_nac());
-			model.addAttribute("nacionalidad", dp.getNacionalidad());
-			model.addAttribute("CUIL_CUIT", dp.getCUIL_CUIT());
-			model.addAttribute("domicilio", dp.getDomicilio());
-			model.addAttribute("departamento", dp.getDepartamento());
-			model.addAttribute("provincia", dp.getProvincia());
-			model.addAttribute("pais", dp.getPais());
+			
+			model.addAttribute("datosPersonales", dp);
 			model.addAttribute("titulo", "datos");
 
 			

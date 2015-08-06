@@ -530,80 +530,73 @@
 								<!-- NOMBRE -->
 								<div class="form-group">
 									<label for="inputName">Nombre:</label>
-									<c:out value="${nombre}" />
+									<c:out value="${datosPersonales.nombre}" />
 								</div>
 
 								<!-- APELLIDO -->
 								<div class="form-group">
 									<label for="inputName">Apellido:</label>
-									<c:out value="${apellido}" />
+									<c:out value="${datosPersonales.apellido}" />
 								</div>
-
-								<!-- SEXO -->
-								<div class="form-group">
-									<label for="inputName">Sexo:</label>
-									<c:out value="${sexo}" />
-								</div>
-
+								
 								<!-- EMAIL -->
 								<div class="form-group">
 									<label for="inputName">Email:</label>
-									<c:out value="${email}" />
+									<c:out value="${datosPersonales.email}" />
 								</div>
+								
+								<!-- SEXO -->
+								<div class="form-group">
+									<label for="inputName">Sexo:</label>
+									<c:out value="${datosPersonales.sexo}" />
+								</div>
+								
 
 								<!-- ESTADO CIVIL -->
 								<div class="form-group">
 									<label for="inputName">Estado Civil:</label>
-									<c:out value="${estado_civil}" />
-								</div>
-
-
-								<!-- EMAIL -->
-								<div class="form-group">
-									<label for="inputName">Email:</label>
-									<c:out value="${email}" />
+									<c:out value="${datosPersonales.estado_civil}" />
 								</div>
 
 								<!-- FECHA DE NACIMIENTO -->
 								<div class="form-group">
 									<label for="inputName">Fecha de Nacimiento:</label>
-									<c:out value="${fecha_nac}" />
 								</div>
 
 								<!-- EMAIL -->
 								<div class="form-group">
 									<label for="inputName">Nacionalidad:</label>
-									<c:out value="${nacionalidad}" />
+									<c:out value="${datosPersonales.nacionalidad}" />
 								</div>
 
 								<!-- CUIL/CUIT -->
 								<div class="form-group">
 									<label for="inputName">CUIL/CUIT:</label>
-									<c:out value="${CUIL_CUIT}" />
+									<c:out value="${datosPersonales.CUIL_CUIT}" />
 								</div>
 
 								<!-- DOMICILIO -->
 								<div class="form-group">
 									<label for="inputName">Domicilio:</label>
-									<c:out value="${domicilio}" />
+									<c:out value="${datosPersonales.domicilio}" />
 								</div>
 
 								<!-- DEPARTAMENTO -->
 								<div class="form-group">
 									<label for="inputName">Departamento:</label>
-									<c:out value="${departamento}" />
+									<c:out value="${datosPersonales.departamento}" />
 								</div>
 
 								<!-- PRIVINCIA -->
 								<div class="form-group">
 									<label for="inputName">Provincia:</label>
-									<c:out value="${provincia}" />
+									<c:out value="${datosPersonales.provincia}" />
 								</div>
 
 								<!-- PAIS -->
 								<div class="form-group">
 									<label for="inputName">País:</label>
-									<c:out value="${pais}" />
+									<c:out value="${datosPersonales.pais}" />
 								</div>
 							</div>
 							<div class="span6 pull-right" style="text-align: right">

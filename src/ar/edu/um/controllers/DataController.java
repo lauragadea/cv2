@@ -82,7 +82,6 @@ public class DataController {
 	}
 	
 	
-
 	@RequestMapping(value = "/modificardatos", method = RequestMethod.POST)
 	public String modificaDatos(Model model, @RequestParam BigDecimal dni,
 			@RequestParam String dia, @RequestParam String mes,
