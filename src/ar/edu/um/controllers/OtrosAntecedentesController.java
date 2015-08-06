@@ -30,7 +30,7 @@ public class OtrosAntecedentesController {
 	}
 	
 	@RequestMapping(value="/crearotrosantecedentes", method=RequestMethod.POST)
-	public String creaCargos(Model model, @Valid OtrosAntecedentes otrosAntecedentes, @RequestParam BigDecimal dni, BindingResult result,@RequestParam String action) {
+	public String creaOtrosAntecedentes(Model model, @Valid OtrosAntecedentes otrosAntecedentes, @RequestParam BigDecimal dni, BindingResult result,@RequestParam String action) {
 		
 		if (result.hasErrors()){
 			System.out.println("no se valido el formulario");
@@ -65,10 +65,10 @@ public class OtrosAntecedentesController {
 			model.addAttribute("curriculum_vitae", otrosAntecedentes.getCurriculum_vitae());
 			model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());
 				
-			return "otrosAntecedentes";
+			return "otrosantecedentes";
 		}
 		
-		return "otrosAntecedentes";
+		return "otrosantecedentes";
 	}
 	
 		

@@ -26,3 +26,9 @@ label.error {
 .mensaje{
 	text-align:center;
 }
+
+.mensajepass{
+	text-align:center;
+	font-size: 10px;
+	
+}

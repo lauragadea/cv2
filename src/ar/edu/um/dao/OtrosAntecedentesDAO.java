@@ -26,7 +26,7 @@ private NamedParameterJdbcTemplate jdbc;
 	}
 	
 
-	/*Crear datos cargos*/
+	/*Crear otros antecedentes*/
 	public boolean create(OtrosAntecedentes otrosAntecedentes) {
 		
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(otrosAntecedentes);

@@ -40,6 +40,8 @@
 			
 			<div class="mensaje">
 				¿No tenés una cuenta? <a href="<c:url value="/registro" />">Regístrate aquí.</a>
+			<div class="mensajepass"> Si olvidó su contraseña o no puede ingresar, comuníquese con el Departamento de Tecnología a sistemas@um.edu.ar o llamando al 4202017 (int 167)
+				
 			<c:if test="${not empty error}">
 				<div class="error">${error}</div>
 			</c:if>

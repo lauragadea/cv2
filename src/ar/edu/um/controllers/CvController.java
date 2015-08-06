@@ -65,7 +65,7 @@ public class CvController {
 	}
 	
 	@Autowired
-	public void setotrosAntecedentesService(OtrosAntecedentesService otrosAntecedentesService){
+	public void setOtrosAntecedentesService(OtrosAntecedentesService otrosAntecedentesService){
 		this.otrosAntecedentesService = otrosAntecedentesService;
 	}	
 	
