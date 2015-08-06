@@ -64,12 +64,13 @@ public class DataController {
 			dp.setFecha_nac(fecha_nac);
 			datosPersonalesService.create(dp);
 			model.addAttribute("datosPersonales", dp);
+			
 
-
+			model.addAttribute("titulo", "datos");
 			return "datos";
 			
 		}
-
+		model.addAttribute("titulo", "datos");
 		return "datos";
 		
 	}
@@ -103,7 +104,7 @@ public class DataController {
 		
 		
 
-		return "cv";
+		return "datos";
 	}
 
 }

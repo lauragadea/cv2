@@ -33,43 +33,7 @@
 		<img src="resources/imagenes/marca.png">
 		<div class="well">
 			<div class="container">
-
-				<div class="logout">
-					<div class="row">
-						<div class="col-md-7"></div>
-						<div class="col-md-3">Usuario: ${datosPersonales.dni}</div>
-						<div class="col-md-2">
-							<a href="http://www.um.edu.ar/cv/">Salir</a>
-						</div>
-					</div>
-				</div>
-
-				<h1>Currículum Vitae</h1>
-				<p>Seleccione una categoría para cargar/editar sus datos:</p>
-
-
-				<!-- NAVBAR -->
-
-				<nav class="navbar navbar-default">
-					<div class="collapse navbar-collapse"
-						id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav">
-							<li><a href="http://localhost:8080/spring/datos"
-								role="button">Datos Personales</a></li>
-							<li><a href="http://localhost:8080/spring/formacion"
-								role="button">Formación</a></li>
-							<li><a href="http://localhost:8080/spring/cargos"
-								role="button">Cargos</a></li>
-							<li><a href="http://localhost:8080/spring/antecedentes"
-								role="button">Antecedentes</a></li>
-							<li><a href="http://localhost:8080/spring/produccion"
-								role="button">Producción</a></li>
-							<li><a href="http://localhost:8080/spring/otrosantecedentes"
-								role="button">Otros Antecedentes</a></li>
-						</ul>
-					</div>
-				</nav>
-				<!--  -->
+				<%@include file="includes/menu.jsp" %>
 
 				<form:form id="registration-form" class="form-horizontal"
 					method="post"

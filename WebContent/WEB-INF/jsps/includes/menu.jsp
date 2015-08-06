@@ -28,8 +28,8 @@
 					class="active"
 				</c:if>
 				><a
-					href="http://localhost:8080/spring/datos" role="button">Datos
-						Personales</a></li>
+					href="${pageContext.request.contextPath}/datos" role="button">Datos Personales</a></li>
+					
 				<li 
 				<c:if test="${titulo=='formacion'}">
 					class="active"

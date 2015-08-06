@@ -5,14 +5,13 @@
 		<div class="well">
 			<div class="container">
 				<%@include file="includes/menu.jsp" %>
-				
-		
+
 				<c:choose>
 					<c:when test="${objeto == false}">
 				
 					<form:form id="registration-form" class="form-horizontal"
 					method="post"
-					action="${pageContext.request.contextPath}/creardatos"
+					action="${pageContext.request.contextPath}/datosEditar"
 					modelAttribute="datos">
 					
 					<div class="form-group">
