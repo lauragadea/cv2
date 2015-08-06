@@ -98,6 +98,6 @@ public class OtrosAntecedentesController {
  		model.addAttribute("curriculum_vitae",otrosAntecedentes.getCurriculum_vitae() );
  		model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());	 			
 
-		return "cv";
+		return "otrosantecedentes";
 	}
 }

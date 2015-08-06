@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import ar.edu.um.model.Formacion;
 import ar.edu.um.model.Produccion;
 import ar.edu.um.service.ProduccionService;
 
@@ -119,7 +118,7 @@ private ProduccionService produccionService;
 		model.addAttribute("otro_tipo", produccion.getOtro_tipo());
 		model.addAttribute("otra_produccion", produccion.getOtra_produccion());
 		
-		return "cv";
+		return "produccion";
 	}
 	
 }

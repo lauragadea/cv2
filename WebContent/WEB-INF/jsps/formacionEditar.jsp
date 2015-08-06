@@ -79,9 +79,7 @@
 		     					<h2>FORMACION</h2></div>
 		     					<h3>Formación Académica</h3>
 		                   		<div class="col-md-1"></div>
-		                   		<div class="col-md-3">
-		                   		<button type="submit" class="btn btn-default disabled">Editar</button>	
-		                   	</div>
+		                   		<div class="col-md-3"></div>
 		                </div>
 					</div>
 

@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import ar.edu.um.model.Cargos;
-import ar.edu.um.model.OtrosAntecedentes;
 import ar.edu.um.service.CargosService;
 
 
@@ -97,7 +96,7 @@ public class CargosController{
 		model.addAttribute("cargos_id_otro", cargos.getCargos_id_otro());
 		model.addAttribute("cargos_gestion_institucional", cargos.getCargos_gestion_institucional());
 		model.addAttribute("otros_cargos", cargos.getOtros_cargos());
-		return "cv";
+		return "cargos";
 	}
 
 }

@@ -100,7 +100,7 @@ public class FormacionController {
 		model.addAttribute("cursos_posgrado_y_capacitaciones", formacion.getCursos_posgrado_y_capacitaciones());
 		model.addAttribute("idiomas", formacion.getIdiomas());
 
-		return "cv";
+		return "formacion";
 	}
 
 }

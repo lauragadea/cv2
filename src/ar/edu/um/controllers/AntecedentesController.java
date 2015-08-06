@@ -1,17 +1,11 @@
 package ar.edu.um.controllers;
 
 import java.math.BigDecimal;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -21,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import ar.edu.um.model.Antecedentes;
-import ar.edu.um.model.Cargos;
-import ar.edu.um.model.DatosPersonales;
 import ar.edu.um.service.AntecedentesService;
 
 @Controller
@@ -156,12 +148,7 @@ public class AntecedentesController {
 		model.addAttribute("ejercicio_profsion_ambito_no_academico", antecedentes.getEjercicio_profesion_ambito_no_academico());
 		model.addAttribute("otra_actividad_cyt", antecedentes.getOtra_actividad_cyt());
 		
-		return "cv";
+		return "antecedentes";
 	}
-	
-	
-	
-	
-	
-	
+
 }
