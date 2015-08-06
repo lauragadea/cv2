@@ -88,7 +88,7 @@
                        <input type="text" id="articulos_revistas_con_referato" path="articulos_revistas_con_referato" 
                        	name="articulos_revistas_con_referato" class="form-control"
 					  	placeholder="Artículos publicados en revistas con referato"
-					  	value="${articulos_revistas_con_referato}">
+					  	value="${produccion.articulos_revistas_con_referato}">
                    </div>
                    
                    <div class="form-group">
@@ -96,39 +96,39 @@
                        <input type="text" id="articulos_revistas_sin_referato" path="articulos_revistas_sin_referato" 
                        		name="articulos_revistas_sin_referato" class="form-control"
 					  		placeholder="Artículos publicados en revistas sin referato"
-					  		value="${articulos_revistas_sin_referato}">
+					  		value="${produccion.articulos_revistas_sin_referato}">
                    </div>
                    <!-- Libros --> 
                    <div class="form-group">
                        <label for="libros">Libros</label>
                        <input type="text" id="libros" path="libros" name="libros" class="form-control" 
-                       		placeholder="Libros" value="${libros}">
+                       		placeholder="Libros" value="${produccion.libros}">
                    </div>
                    <!-- Partes de Libros --> 
                    <div class="form-group">
                        <label for="partesLibros">Partes de Libros</label>
                        <input type="text" id="partes_libros" path="partes_libros" name="partes_libros"  
-                       		class="form-control"  placeholder="Partes de Libros" value="${partes_libros}">
+                       		class="form-control"  placeholder="Partes de Libros" value="${produccion.partes_libros}">
                    </div>
                    <!-- Trabajos en eventos C-T publicados --> 
                    <div class="form-group">
                        <label for="Estado">Trabajos en eventos C-T publicados</label>
                        <input type="text" id="trabajos_eventos_ct_publicados" path="trabajos_eventos_ct_publicados" 
                        		name="trabajos_eventos_ct_publicados" class="form-control"  
-                       		placeholder="Trabajos en eventos C-T publicados" value="${trabajos_eventos_ct_publicados}">
+                       		placeholder="Trabajos en eventos C-T publicados" value="${produccion.trabajos_eventos_ct_publicados}">
                    </div>
                    <!-- Trabajos en eventos C-T no publicados --> 
                    <div class="form-group">
                        <label for="Trab">Trabajos en eventos C-T no publicados</label>
                        <input type="text" id="trabajos_eventos_ct_no_publicados" path="trabajos_eventos_ct_no_publicados" 
                        name="trabajos_eventos_ct_no_publicados"  class="form-control"  
-                       placeholder="Trabajos en eventos C-T no publicados" value="${trabajos_eventos_ct_no_publicados}">
+                       placeholder="Trabajos en eventos C-T no publicados" value="${produccion.trabajos_eventos_ct_no_publicados}">
                    </div>
                    <!-- Demás producciones C-T --> 
                    <div class="form-group">
                        <label for="Estado">Demás producciones C-T</label>
                        <input type="text" id="demas_producciones_ct" path="demas_producciones_ct" name="demas_producciones_ct" 
-                       class="form-control"  placeholder="Demás producciones C-T" value="${demas_producciones_ct}">
+                       class="form-control"  placeholder="Demás producciones C-T" value="${produccion.demas_producciones_ct}">
                    </div>
 
                    <!-- PRODUCCION TECNOLOGICA-->
@@ -140,25 +140,25 @@
                    <div class="form-group">
                        <label for="Estado">Con titulo de propiedad intelectual</label>
                        <input type="text" id="con_titulo_prop_int" path="con_titulo_prop_int" name="con_titulo_prop_int"  
-                       		class="form-control"  placeholder="Con titulo de propiedad intelectual" value="${con_titulo_prop_int}">
+                       		class="form-control"  placeholder="Con titulo de propiedad intelectual" value="${produccion.con_titulo_prop_int}">
                    </div>
                    <!-- sin titulo de propiedad intelectual --> 
                    <div class="form-group">
                        <label for="Estado">Sin titulo de propiedad intelectual</label>
                        <input type="text" id="sin_titulo_prop_int" path="sin_titulo_prop_int" name="sin_titulo_prop_int"  
-                       		class="form-control"  placeholder="Sin titulo de propiedad intelectual" value="${sin_titulo_prop_int}">
+                       		class="form-control"  placeholder="Sin titulo de propiedad intelectual" value="${produccion.sin_titulo_prop_int}">
                    </div>
                    <!-- servicio científico-tecnológico --> 
                    <div class="form-group">
                        <label for="Estado">Servicio científico-tecnológico</label>
                        <input type="text" id="servicio_ct" path="servicio_ct" name="servicio_ct"  class="form-control"
-                       		placeholder="Servicio científico-tecnológico" value="${servicio_ct}">
+                       		placeholder="Servicio científico-tecnológico" value="${produccion.servicio_ct}">
                    </div>
                    <!-- Informe técnico --> 
                    <div class="form-group">
                        <label for="Estado">Informe técnico</label>
                        <input type="text" id="informe_tecnico" path="informe_tecnico" name="informe_tecnico"  
-                       class="form-control"  placeholder="Informe técnico" value="${informe_tecnico}">
+                       class="form-control"  placeholder="Informe técnico" value="${produccion.informe_tecnico}">
                    </div>
                    
                    <!-- PRODUCCION ARTÍSICA-->
@@ -170,56 +170,56 @@
                    <div class="form-group">
                        <label for="Estado">Musical-sonora</label>
                        <input type="text" id="musical_sonora" path="musical_sonora" name="musical_sonora"  
-                       class="form-control"  placeholder="Musical-sonora" value="${musical_sonora}">
+                       class="form-control"  placeholder="Musical-sonora" value="${produccion.musical_sonora}">
                    </div>
                    <!-- Visual --> 
                    <div class="form-group">
                        <label for="Estado">Visual</label>
-                       <input type="text" id="visual" path="visual" name="visual" class="form-control" placeholder="Visual" value="${visual}">
+                       <input type="text" id="visual" path="visual" name="visual" class="form-control" placeholder="Visual" value="${produccion.visual}">
                    </div>
                    <!-- Audiovisual multimedial --> 
                    <div class="form-group">
                        <label for="Estado">Audiovisual multimedial</label>
                        <input type="text" id="audiovisual" path="audiovisual" name="audiovisual" class="form-control"  
-                       placeholder="Audiovisual multimedial" value="${audiovisual}">
+                       placeholder="Audiovisual multimedial" value="${produccion.audiovisual}">
                    </div>
                    <!-- Corporal teatral --> 
                    <div class="form-group">
                        <label for="Estado">Corporal teatral</label>
                        <input type="text" id="corporal_teatral" path="corporal_teatral" name="corporal_teatral"  
-                       class="form-control"  placeholder="Corporal teatral" value="${corporal_teatral}">
+                       class="form-control"  placeholder="Corporal teatral" value="${produccion.corporal_teatral}">
                    </div>
                    <!-- Genero literario narrativo --> 
                    <div class="form-group">
                        <label for="Estado">Genero literario narrativo</label>
                        <input type="text" id="genero_literario_narrativo" path="genero_literario_narrativo" 
                        name="genero_literario_narrativo" class="form-control"  placeholder="Genero literario narrativo"
-                       value="${genero_literario_narrativo}">
+                       value="${produccion.genero_literario_narrativo}">
                    </div>
                    <!-- Genero literario dramático, poético o ensayo --> 
                    <div class="form-group">
                        <label for="Estado">Genero literario dramático, poético o ensayo</label>
                        <input type="text" id="genero_literario_dramatico" path="genero_literario_dramatico"
 						name="genero_literario_dramatico"  class="form-control"  
-						placeholder="Genero literario dramático, poético o ensayo" value="${genero_literario_dramatico}">
+						placeholder="Genero literario dramático, poético o ensayo" value="${produccion.genero_literario_dramatico}">
                    </div>
                    <!-- Genero literario guión --> 
                    <div class="form-group">
                        <label for="Estado">Genero literario guión</label>
                        <input type="text" id="genero_literario_guion" path="genero_literario_guion" 
-                       name="genero_literario_guion" class="form-control"  placeholder="Genero literario guión" value="${genero_literario_guion}">
+                       name="genero_literario_guion" class="form-control"  placeholder="Genero literario guión" value="${produccion.genero_literario_guion}">
                    </div>
                    <!-- otro tipo de Genero literario --> 
                    <div class="form-group">
                        <label for="Estado">Otro tipo de Genero literario</label>
                        <input type="text" id="otro_tipo" path="otro_tipo" name="otro_tipo"  class="form-control"  
-                       placeholder="Otro tipo de Genero literario" value="${otro_tipo}">
+                       placeholder="Otro tipo de Genero literario" value="${produccion.otro_tipo}">
                    </div>
                    <!-- otra producción artística --> 
                    <div class="form-group">
                        <label for="Estado">Otra producción artística</label>
                        <input type="text" id="otra_produccion" path="otra_produccion" name="otra_produccion"  
-                       class="form-control"  placeholder="Otra producción artística" value="${otra_produccion}">
+                       class="form-control"  placeholder="Otra producción artística" value="${produccion.otra_produccion}">
                    </div>
 
                   

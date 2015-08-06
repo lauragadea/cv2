@@ -168,24 +168,24 @@
 					<div class="form-group">
 						<label for="inputNivelSuperiorUniversitarioyPosgrado">Nivel
 							superior universitario y/o posgrado: </label>
-						<c:out value="${nivel_superior_universitario}"/>
+						<c:out value="${cargos.nivel_superior_universitario}"/>
 					</div>
 					<!-- nivel terciario no universitario -->
 					<div class="form-group">
 						<label for="inputNivelTerciarioNoUniversitario">Nivel
 							terciario no universitario: </label>
-							<c:out value="${nivel_terciario_no_universitario}"/>
+							<c:out value="${cargos.nivel_terciario_no_universitario}"/>
 					</div>
 					<!-- Nivel basico y/o medio -->
 					<div class="form-group">
 						<label for="inputNivelBasicoyMedio">Nivel basico y/o medio: </label>
-						<c:out value="${nivel_basico}"/>
+						<c:out value="${cargos.nivel_basico}"/>
 					</div>
 					<!-- Cursos de posgrado y/o capacitaciones extracurriculares -->
 					<div class="form-group">
 						<label for="inputCursosPosgradoyCapacitacionesExtracurriculares">Cursos
 							de posgrado y/o capacitaciones extracurriculares: </label>
-						<c:out value="${cursos_posgrado_y_capacitaciones}"/>
+						<c:out value="${cargos.cursos_posgrado_y_capacitaciones}"/>
 					</div>
 
 					<!-- CARGOS I+D -->
@@ -197,20 +197,20 @@
 					<div class="form-group">
 						<label for="inputCargosEnOrganismosCT">Cargos en
 							organismos científico-tecnológicos: </label>
-						<c:out value="${cargos_organismos_ct}"/>
+						<c:out value="${cargos.cargos_organismos_ct}"/>
 					</div>
 					
 					<!-- Categorización del programa de incentivos -->
 					<div class="form-group">
 						<label for="inputCategorizacionProgramaIncentivos">Categorización
 							del programa de incentivos: </label>
-						<c:out value="${categorizacion_programa_incentivos}"/>
+						<c:out value="${cargos.categorizacion_programa_incentivos}"/>
 					</div>
 					<!-- Cargos I+D en otro tipo de institucines -->
 					<div class="form-group">
 						<label for="inputCargosIDenOtroTipodeInstituciones">Cargos
 							I+D en otro tipo de institucines: </label>
-						<c:out value="${cargos_id_otro}"/>
+						<c:out value="${cargos.cargos_id_otro}"/>
 					</div>
 
 					<!-- CARGOS EN GESTION INSTITUCIONAL -->
@@ -222,7 +222,7 @@
 					<div class="form-group">
 						<label for="inputCargosenGestionInstitucional">Cargos en
 							gestion institucional: </label>
-						<c:out value="${cargos_gestion_institucional}"/>
+						<c:out value="${cargos.cargos_gestion_institucional}"/>
 					</div>
 
 					<!-- OTROS CARGOS -->
@@ -233,7 +233,7 @@
 					<!-- Otros Cargos -->
 					<div class="form-group">
 						<label for="inputOtrosCargos">Otros Cargos: </label>
-						<c:out value="${otros_cargos}"/>
+						<c:out value="${cargos.otros_cargos}"/>
 					</div>
 
 				</form:form>

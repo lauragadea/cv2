@@ -190,42 +190,42 @@
                    <!-- Artículos publicados en revistas con/sin referato --> 
                    <div class="form-group">
                        <label for="artRef">Artículos publicados en revistas con referato: </label>
-                       <c:out value="${articulos_revistas_con_referato}" />
+                       <c:out value="${produccion.articulos_revistas_con_referato}" />
                    </div>
                    
                    <div class="form-group">
                        <label for="artSRef">Artículos publicados en revistas sin referato: </label>
-                       <c:out value="${articulos_revistas_sin_referato}" />
+                       <c:out value="${produccion.articulos_revistas_sin_referato}" />
                    </div>
                    
                    <!-- Libros --> 
                    <div class="form-group">
                        <label for="libros">Libros: </label>
-                      <c:out value="${libros}" />
+                      <c:out value="${produccion.libros}" />
                    </div>
                    
                    <!-- Partes de Libros --> 
                    <div class="form-group">
                        <label for="partesLibros">Partes de Libros: </label>
-                      <c:out value="${partes_libros}" />
+                      <c:out value="${produccion.partes_libros}" />
                    </div>
                    
                    <!-- Trabajos en eventos C-T publicados --> 
                    <div class="form-group">
                        <label for="Estado">Trabajos en eventos C-T publicados: </label>
-                      <c:out value="${trabajos_eventos_ct_publicados}" />
+                      <c:out value="${produccion.trabajos_eventos_ct_publicados}" />
                    </div>
                    
                    <!-- Trabajos en eventos C-T no publicados --> 
                    <div class="form-group">
                        <label for="Trab">Trabajos en eventos C-T no publicados: </label>
-                       <c:out value="${trabajos_eventos_ct_no_publicados}" />
+                       <c:out value="${produccion.trabajos_eventos_ct_no_publicados}" />
                    </div>
                    
                    <!-- Demás producciones C-T --> 
                    <div class="form-group">
                        	<label for="Estado">Demás producciones C-T: </label>
-                   		<c:out value="${demas_producciones_ct}" />
+                   		<c:out value="${produccion.demas_producciones_ct}" />
                    </div>
                    
 
@@ -238,25 +238,25 @@
                    <!-- Con titulo de propiedad intelectual --> 
                    <div class="form-group">
                        <label for="Estado">Con titulo de propiedad intelectual: </label>
-                       <c:out value="${con_titulo_prop_int}" />
+                       <c:out value="${produccion.con_titulo_prop_int}" />
                    </div>
                    
                    <!-- sin titulo de propiedad intelectual --> 
                    <div class="form-group">
                        <label for="Estado">Sin titulo de propiedad intelectual: </label>
-                       <c:out value="${sin_titulo_prop_int}" />
+                       <c:out value="${produccion.sin_titulo_prop_int}" />
                    </div>
                    
                    <!-- servicio científico-tecnológico --> 
                    <div class="form-group">
                        <label for="Estado">Servicio científico-tecnológico: </label>
-                       <c:out value="${servicio_ct}" />
+                       <c:out value="${produccion.servicio_ct}" />
                    </div>
                    
                    <!-- Informe técnico --> 
                    <div class="form-group">
                        <label for="Estado">Informe técnico: </label>
-                       <c:out value="${informe_tecnico}" />
+                       <c:out value="${produccion.informe_tecnico}" />
                    </div>
                    
                    <!-- PRODUCCION ARTÍSICA-->
@@ -268,55 +268,55 @@
                    <!-- Musical-sonora --> 
                    <div class="form-group">
                        <label for="Estado">Musical-sonora: </label>
-                       <c:out value="${musical_sonora}" />
+                       <c:out value="${produccion.musical_sonora}" />
                    </div>
                    
                    <!-- Visual --> 
                    <div class="form-group">
                        <label for="Estado">Visual: </label>
-                       <c:out value="${visual}" />
+                       <c:out value="${produccion.visual}" />
                    </div>
                    
                    <!-- Audiovisual multimedial --> 
                    <div class="form-group">
                        <label for="Estado">Audiovisual multimedial: </label>
-                       <c:out value="${audiovisual}" />
+                       <c:out value="${produccion.audiovisual}" />
                    </div>
                    
                    <!-- Corporal teatral --> 
                    <div class="form-group">
                        <label for="Estado">Corporal teatral: </label>
-                      <c:out value="${corporal_teatral}" />
+                      <c:out value="${produccion.corporal_teatral}" />
                    </div>
                    
                    <!-- Genero literario narrativo --> 
                    <div class="form-group">
                        <label for="Estado">Genero literario narrativo: </label>
-                       <c:out value="${genero_literario_narrativo}" />
+                       <c:out value="${produccion.genero_literario_narrativo}" />
                    </div>
                    
                    <!-- Genero literario dramático, poético o ensayo --> 
                    <div class="form-group">
                        <label for="Estado">Genero literario dramático, poético o ensayo: </label>
-                       <c:out value="${genero_literario_dramatico}" />
+                       <c:out value="${produccion.genero_literario_dramatico}" />
                    </div>
                    
                    <!-- Genero literario guión --> 
                    <div class="form-group">
                       <label for="Estado">Genero literario guión: </label>
-                      <c:out value="${genero_literario_guion}" />
+                      <c:out value="${produccion.genero_literario_guion}" />
                    </div>
                    
                    <!-- otro tipo de Genero literario --> 
                    <div class="form-group">
                        <label for="Estado">Otro tipo de Genero literario: </label>
-                       <c:out value="${otro_tipo}" />
+                       <c:out value="${produccion.otro_tipo}" />
                    </div>
                    
                    <!-- otra producción artística --> 
                    <div class="form-group">
                        <label for="Estado">Otra producción artística: </label>
-                       <c:out value="${otra_produccion}" />
+                       <c:out value="${produccion.otra_produccion}" />
                    </div>
 
 				</form:form>

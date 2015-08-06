@@ -86,7 +86,7 @@
  				    <div class="form-group">
  				        <label for="inputEstanciasyPasantias">Estancias y pasantías</label>
  				        <input type="text" class="form-control"  placeholder="Estancias y pasantías" id="estancias_pasantias" 
- 				        path="estancias_pasantias" name="estancias_pasantias" value="${estancias_pasantias}">
+ 				        path="estancias_pasantias" name="estancias_pasantias" value="${otrosAntecedentes.estancias_pasantias}">
  				    </div> 
 
                    <!-- Membresías, redes y/o programas de cooperación -->
@@ -100,7 +100,7 @@
                        <label for="inputMembresíasEnAsociacionesCT">Membresías en asocianiones C-T y/o profesionales</label>
                        <input type="text" class="form-control"  placeholder="Membresías en asocianiones C-T y/o profesionales"
                        id="membresias_asociaciones_ct" path="membresias_asociaciones_ct" name="membresias_asociaciones_ct"
-                       value="${membresias_asociaciones_ct}">
+                       value="${otrosAntecedentes.membresias_asociaciones_ct}">
                    </div>
                    
                    <!-- Participación en redes temáticas o institucionales --> 
@@ -108,7 +108,7 @@
                        <label for="inputParticipacionEnRedesTematicas">Participación en redes temáticas o institucionales</label>
                        <input type="text" class="form-control"  placeholder="Participación en redes temáticas o institucionales"
                        id="participacion_redes_tematicas" path="participacion_redes_tematicas" name="participacion_redes_tematicas"
-                       value="${participacion_redes_tematicas}">
+                       value="${otrosAntecedentes.participacion_redes_tematicas}">
                    </div>
                    
                    <!-- Coordinación de proyectos de cooperación académica o  C-T --> 
@@ -116,7 +116,7 @@
                        <label for="inputCoordinacionDeProyectosCooperacion">Coordinación de proyectos de cooperación académica o  C-T</label>
                        <input type="text" class="form-control"  placeholder="Coordinación de proyectos de cooperación académica o  C-T"
                        id="coordinacion_proyectos_cooperacion" path="coordinacion_proyectos_cooperacion" name="coordinacion_proyectos_cooperacion"
-                       value="${coordinacion_proyectos_cooperacion}">
+                       value="${otrosAntecedentes.coordinacion_proyectos_cooperacion}">
                    </div>
 
                    <!-- PREMIOS Y/O DISTINCIONES -->
@@ -129,7 +129,7 @@
                        <label for="inputPremiosDistinciones">Premios y/o distinciones</label>
                        <input type="text" class="form-control"  placeholder="Premios y/o distinciones"
                        id="premios_distinciones" path="premios_distinciones" name="premios_distinciones"
-                       value="${premios_distinciones}">
+                       value="${otrosAntecedentes.premios_distinciones}">
                    </div>
 
                      <!-- OTROS ANTECEDENTES --> 
@@ -142,14 +142,14 @@
                    <div class="form-group">
                        <label for="inputDatoAcademico">Dato Académico</label>
                        <input type="text" class="form-control"  placeholder="Dato Académico" id="dato_academico"
-                       path="dato_academico" name="dato_academico" value="${dato_academico}">
+                       path="dato_academico" name="dato_academico" value="${otrosAntecedentes.dato_academico}">
                    </div>
                    
                    <!-- Curriculum Vitae --> 
                    <div class="form-group">
                        <label for="inputCurriculVitae">Curriculum Vitae</label>
                        <input type="text" class="form-control"  placeholder="Curriculum Vitae" id="curriculum_vitae"
-                       path="curriculum_vitae" name="curriculum_vitae" value="${curriculum_vitae}">
+                       path="curriculum_vitae" name="curriculum_vitae" value="${otrosAntecedentes.curriculum_vitae}">
                    </div>
 
                   	<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
