@@ -139,7 +139,7 @@
                    <!-- Participación u organización de eventos CyT -->
        				    <div class="form-group">
        				       <label for="inputEstanciasyPasantias">Estancias y pasantías: </label>
-       				       <c:out value="${estancias_pasantias}"/>
+       				       <c:out value="${otrosAntecedentes.estancias_pasantias}"/>
        				    </div> 
 
                    <!-- Membresías, redes y/o programas de cooperación -->
@@ -151,19 +151,19 @@
                    <!-- Membresías n asocianiones C-T y/o profesionales -->                
                    <div class="form-group">
                        <label for="inputMembresíasEnAsociacionesCT">Membresías en asocianiones C-T y/o profesionales: </label>
-                       <c:out value="${membresias_asociaciones_ct}"/>
+                       <c:out value="${otrosAntecedentes.membresias_asociaciones_ct}"/>
                    </div>
                    
                    <!-- Participación en redes temáticas o institucionales --> 
                    <div class="form-group">
                        <label for="inputParticipacionEnRedesTematicas">Participación en redes temáticas o institucionales: </label>
-                       <c:out value="${participacion_redes_tematicas}"/>
+                       <c:out value="${otrosAntecedentes.participacion_redes_tematicas}"/>
                    </div>
                    
                    <!-- Coordinación de proyectos de cooperación académica o  C-T --> 
                    <div class="form-group">
                        <label for="inputCoordinacionDeProyectosCooperacion">Coordinación de proyectos de cooperación académica o  C-T: </label>
-                       <c:out value="${coordinacion_proyectos_cooperacion}"/>
+                       <c:out value="${otrosAntecedentes.coordinacion_proyectos_cooperacion}"/>
                    </div>
 
                    <!-- PREMIOS Y/O DISTINCIONES -->
@@ -174,7 +174,7 @@
                    <!-- Premios y/o distinciones --> 
                    <div class="form-group">
                        <label for="inputPremiosDistinciones">Premios y/o distinciones: </label>
-                       <c:out value="${premios_distinciones}"/>
+                       <c:out value="${otrosAntecedentes.premios_distinciones}"/>
                    </div>
 
                      <!-- OTROS ANTECEDENTES --> 
@@ -186,13 +186,13 @@
                    <!--Dato Académico --> 
                    <div class="form-group">
                        <label for="inputDatoAcademico">Dato Académico: </label>
-                       <c:out value="${dato_academico}"/>
+                       <c:out value="${otrosAntecedentes.dato_academico}"/>
                    </div>
                    
                    <!-- Curriculum Vitae --> 
                    <div class="form-group">
                        <label for="inputCurriculVitae">Curriculum Vitae: </label>
-                        <c:out value="${curriculum_vitae}"/>
+                        <c:out value="${otrosAntecedentes.curriculum_vitae}"/>
                    </div>
 
                   	<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>

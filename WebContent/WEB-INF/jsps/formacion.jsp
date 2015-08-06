@@ -132,24 +132,24 @@
 					<!-- Nivel Universitario de posgrado -->
 					<div class="form-group">
 						<label for="inputName">Nivel Universitario de Posgrado:</label>
-						<c:out value="${nivel_universitario_posgrado}" />
+						<c:out value="${formacion.nivel_universitario_posgrado}" />
 					</div>
 					
 					
 					<div class="form-group">
 						<label for="inputName">Nivel Universitario de Posgrado/especializacion:</label>
-						<c:out value="${nivel_universitario_posgrado_especializacion}" />
+						<c:out value="${formacion.nivel_universitario_posgrado_especializacion}" />
 					</div>
 					
 					<div class="form-group">
 						<label for="inputName">Nivel Universitario de Grado:</label>
-						<c:out value="${nivel_universitario_grado}" />
+						<c:out value="${formacion.nivel_universitario_grado}" />
 					</div>
 					
 					
 					<div class="form-group">
 						<label for="inputName">Nivel Terciario no Univeresitario:</label>
-						<c:out value="${nivel_terciario_no_universitario}" />
+						<c:out value="${formacion.nivel_terciario_no_universitario}" />
 					</div>
 					
 					
@@ -164,7 +164,7 @@
 					<div class="form-group">
 						<label for="inputName">Especialidad certificada por
 							organismo de salud:</label>
-						<c:out value="${especialidad_certificada}" />
+						<c:out value="${formacion.especialidad_certificada}" />
 					</div>
 					
 				
@@ -172,7 +172,7 @@
 					
 					<div class="form-group">
 						<label for="inputName">Posdoctorado:</label>
-						<c:out value="${posdoctorado}" />
+						<c:out value="${formacion.posdoctorado}" />
 					</div>
 					
 					<!-- Cursos de posgrado y/o capacitaciones extracurriculares -->
@@ -180,14 +180,14 @@
 					<div class="form-group">
 						<label for="inputName">Cursos de posgrado y/o
 							capacitaciones extracurriculares:</label>
-						<c:out value="${cursos_posgrado_y_capacitaciones}" />
+						<c:out value="${formacion.cursos_posgrado_y_capacitaciones}" />
 					</div>
 					
 										
 					<!-- Idiomas -->
 					<div class="form-group">
 						<label for="inputName">Idiomas:</label>
-						<c:out value="${idiomas}" />
+						<c:out value="${formacion.idiomas}" />
 					</div>
 			
 

@@ -68,7 +68,7 @@
 					<div class="form-group">
 						<label for="inputName">DNI:</label>
 						<c:out value="${dni}" />
-						<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
+						<input type="hidden" id="dni"value="${cargos.dni}" path="dni" name="dni">
 					</div>
 					
 					<!-- BOTON EDITAR -->
@@ -95,7 +95,7 @@
 							path="nivel_superior_universitario"
 							name="nivel_superior_universitario"
 							placeholder="Nivel superioruniversitario y/o posgrado"
-							value="${nivel_superior_universitario}">
+							value="${cargos.nivel_superior_universitario}">
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- nivel terciario no universitario -->
@@ -105,7 +105,7 @@
 							class="form-control" id="nivel_terciario_no_universitario"
 							path="nivel_terciario_no_universitario" name="nivel_terciario_no_universitario"
 							placeholder="Nivel terciario no universitario"
-							value="${nivel_terciario_no_universitario}">
+							value="${cargos.nivel_terciario_no_universitario}">
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Nivel basico y/o medio -->
@@ -114,7 +114,7 @@
 						<input type="text" class="form-control" id="nivel_basico"
 							path="nivel_basico" name ="nivel_basico"
 							placeholder="Nivel terciario no universitario"
-							value="${nivel_basico}">
+							value="${cargos.nivel_basico}">
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Cursos de posgrado y/o capacitaciones extracurriculares -->
@@ -125,7 +125,7 @@
 							id="cursos_posgrado_y_capacitaciones"
 							path="cursos_posgrado_y_capacitaciones" name="cursos_posgrado_y_capacitaciones"
 							placeholder="Cursos de posgrado y/o capacitaciones extracurriculares"
-							value="${cursos_posgrado_y_capacitaciones}">
+							value="${cargos.cursos_posgrado_y_capacitaciones}">
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
@@ -141,7 +141,7 @@
 							class="form-control" id="cargos_organismos_ct"
 							path="cargos_organismos_ct" name="cargos_organismos_ct"
 							placeholder="Cargos en organismos científico-tecnológicos"
-							value="${cargos_organismos_ct}">
+							value="${cargos.cargos_organismos_ct}">
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Categorización del programa de incentivos -->
@@ -151,7 +151,7 @@
 							class="form-control" id="categorizacion_programa_incentivos"
 							path="categorizacion_programa_incentivos" name="categorizacion_programa_incentivos"
 							placeholder="Categorización del programa de incentivos"
-							value="${categorizacion_programa_incentivos}">
+							value="${cargos.categorizacion_programa_incentivos}">
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Cargos I+D en otro tipo de institucines -->
@@ -160,7 +160,7 @@
 							I+D en otro tipo de institucines</label> <input type="text"
 							class="form-control" id="cargos_id_otro" path="cargos_id_otro" name="cargos_id_otro"
 							placeholder="Cargos I+D en otro tipo de institucines"
-							value="${cargos_id_otro}">
+							value="${cargos.cargos_id_otro}">
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
@@ -176,7 +176,7 @@
 							id="cargos_gestion_institucional"
 							path="cargos_gestion_institucional" name="cargos_gestion_institucional"
 							placeholder="Cargos en gestion institucional"
-							value="${cargos_gestion_institucional}">
+							value="${cargos.cargos_gestion_institucional}">
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
@@ -190,7 +190,7 @@
 						<label for="inputOtrosCargos">Otros Cargos</label> 
 						<input type="text" class="form-control" id="otros_cargos"
 							path="otros_cargos" name="otros_cargos"
-							placeholder="Otros Cargos" value="${otros_cargos}">
+							placeholder="Otros Cargos" value="${cargos.otros_cargos}">
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
