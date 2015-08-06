@@ -501,16 +501,9 @@
 						<form:errors cssClass="error" path="pais"></form:errors>
 					</div>
 					<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
-
-			
-
 				</form:form>
-					</c:when>
-				
-					
+					</c:when>	
 					<c:otherwise>
-				
-				
 				
 				<form:form id="registration-form" class="form-horizontal"
 					method="post"
@@ -557,10 +550,11 @@
 									<label for="inputName">Estado Civil:</label>
 									<c:out value="${datosPersonales.estado_civil}" />
 								</div>
-
+													
 								<!-- FECHA DE NACIMIENTO -->
 								<div class="form-group">
-									<label for="inputName">Fecha de Nacimiento:</label>
+									<label for="inputFechaNac">Fecha de Nacimiento:</label>
+									<fmt:formatDate pattern="dd/MM/yyyy" value="${datosPersonales.fecha_nac}" />
 								</div>
 
 								<!-- EMAIL -->

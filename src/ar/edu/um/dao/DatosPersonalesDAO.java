@@ -49,7 +49,7 @@ private NamedParameterJdbcTemplate jdbc;
 							dp.setSexo(rs.getString("sexo"));
 							dp.setEstado_civil(rs.getString("estado_civil"));
 							dp.setEmail(rs.getString("email"));
-							dp.setFecha_nac(rs.getString("fecha_nac"));
+							dp.setFecha_nac(rs.getDate("fecha_nac"));
 							dp.setNacionalidad(rs.getString("nacionalidad"));
 							dp.setCUIL_CUIT(rs.getString("CUIL_CUIT"));
 							dp.setDomicilio(rs.getString("domicilio"));

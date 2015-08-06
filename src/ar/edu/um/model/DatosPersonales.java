@@ -1,6 +1,7 @@
 package ar.edu.um.model;
 
 import java.math.BigDecimal;
+import  java.util.Date;
 
 public class DatosPersonales {
 	private BigDecimal dni;
@@ -9,7 +10,7 @@ public class DatosPersonales {
 	private String sexo;
 	private String estado_civil;
 	private String email;
-	private String fecha_nac;
+	private Date fecha_nac;
 	private int dia;
 	private int mes;
 	private int anio;
@@ -61,10 +62,10 @@ public class DatosPersonales {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getFecha_nac() {
+	public Date getFecha_nac() {
 		return fecha_nac;
 	}
-	public void setFecha_nac(String fecha_nac) {
+	public void setFecha_nac(Date fecha_nac) {
 		this.fecha_nac = fecha_nac;
 	}
 	public int getDia() {

@@ -37,7 +37,7 @@
 				<div class="logout">
 					<div class="row">
 						<div class="col-md-7"></div>
-						<div class="col-md-3">Usuario: ${dni}</div>
+						<div class="col-md-3">Usuario: ${datosPersonales.dni}</div>
 						<div class="col-md-2">
 							<a href="http://www.um.edu.ar/cv/">Salir</a>
 						</div>
@@ -80,15 +80,14 @@
 					<div class="form-group">
 						<label for="dni">DNI <input type="text" id="dni"
 							class="form-control" path="dni" name="dni" placeholder="DNI"
-							value="${dni}" readonly></label>
+							value="${datosPersonales.dni}" readonly></label>
 					</div>
-
 
 					<!-- NOMBRE -->
 					<div class="form-group">
 						<label for="inputName">Nombre</label> <input type="text"
 							id="nombre" class="form-control" path="nombre" name="nombre"
-							placeholder="Nombre" value="${nombre}">
+							placeholder="Nombre" value="${datosPersonales.nombre}">
 						<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
@@ -96,7 +95,7 @@
 					<div class="form-group">
 						<label for="inputApellido">Apellido</label> <input type="text"
 							class="form-control" id="alu_apellido" path="apellido"
-							name="apellido" placeholder="Apellido" value="${apellido}">
+							name="apellido" placeholder="Apellido" value="${datosPersonales.apellido}">
 						<form:errors cssClass="error" path="apellido"></form:errors>
 					</div>
 
@@ -105,8 +104,8 @@
 						<div class="dropdown">
 							<label for="inputNumDoc">Sexo</label><br> <select
 								class="form-control" path="sexo" id="sexo" name="sexo"><form:errors
-									cssClass="error" path="sexo" value="${sexo}"></form:errors>
-								<option value="${sexo}" label="${sexo}"></option>
+									cssClass="error" path="sexo" value="${datosPersonales.sexo}"></form:errors>
+								<option value="${datosPersonales.sexo}" label="${datosPersonales.sexo}"></option>
 								<option value="Masculino">Masculino</option>
 								<option value="Femenino">Femenino</option>
 							</select>
@@ -118,8 +117,8 @@
 						<label for="inputEstadoCivil">Estado civil</label> <select
 							class="form-control" id="estado_civil" path="estado_civil"
 							name="estado_civil" placeholder="estado_civil"
-							value="${estado_civil}">
-							<option value="${estado_civil}" label="${estado_civil}"></option>
+							value="${datosPersonales.estado_civil}">
+							<option value="${datosPersonales.estado_civil}" label="${datosPersonales.estado_civil}"></option>
 							<option value="Soltero">Soltero</option>
 							<option value="Casado">Casado</option>
 							<option value="Viudo">Viudo</option>
@@ -129,151 +128,153 @@
 					</div>
 
 
+					<div class="form-group">
+					<label for="inputFechaNac">Fecha de Nacimiento</label> <select
+					class="form-control" id="dia" name="dia" value="${dia}">
+					<option selected="${diaa}">${diaa}</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+					</select> <select class="form-control" id="mes" name="mes" value="${mes}">
+					<option selected="${mess}">${mess}</option>
+					<option value="01">Enero</option>
+					<option value="02">Febrero</option>
+					<option value="03">Marzo</option>
+					<option value="04">Abril</option>
+					<option value="05">Mayo</option>
+					<option value="06">Junio</option>
+					<option value="07">Julio</option>
+					<option value="08">Agosto</option>
+					<option value="09">Septiembre</option>
+					<option value="10">Octubre</option>
+					<option value="11">Noviembre</option>
+					<option value="12">Diciembre</option>
+					</select> <select class="form-control" id="anio" name="anio"
+					value="${anio}">
+					<option selected="${anioo}">${anioo}</option>
+					<option value="2001">2001</option>
+					<option value="2000">2000</option>
+					<option value="1999">1999</option>
+					<option value="1998">1998</option>
+					<option value="1997">1997</option>
+					<option value="1996">1996</option>
+					<option value="1995">1995</option>
+					<option value="1994">1994</option>
+					<option value="1993">1993</option>
+					<option value="1992">1992</option>
+					<option value="1991">1991</option>
+					<option value="1990">1990</option>
+					<option value="1989">1989</option>
+					<option value="1988">1988</option>
+					<option value="1987">1987</option>
+					<option value="1986">1986</option>
+					<option value="1985">1985</option>
+					<option value="1984">1984</option>
+					<option value="1983">1983</option>
+					<option value="1982">1982</option>
+					<option value="1981">1981</option>
+					<option value="1980">1980</option>
+					<option value="1979">1979</option>
+					<option value="1978">1978</option>
+					<option value="1977">1977</option>
+					<option value="1976">1976</option>
+					<option value="1975">1975</option>
+					<option value="1974">1974</option>
+					<option value="1973">1973</option>
+					<option value="1972">1972</option>
+					<option value="1971">1971</option>
+					<option value="1970">1970</option>
+					<option value="1969">1969</option>
+					<option value="1968">1968</option>
+					<option value="1967">1967</option>
+					<option value="1966">1966</option>
+					<option value="1965">1965</option>
+					<option value="1964">1964</option>
+					<option value="1963">1963</option>
+					<option value="1962">1962</option>
+					<option value="1961">1961</option>
+					<option value="1960">1960</option>
+					<option value="1959">1959</option>
+					<option value="1958">1958</option>
+					<option value="1957">1957</option>
+					<option value="1956">1956</option>
+					<option value="1955">1955</option>
+					<option value="1954">1954</option>
+					<option value="1953">1953</option>
+					<option value="1952">1952</option>
+					<option value="1951">1951</option>
+					<option value="1950">1950</option>
+					<option value="1949">1949</option>
+					<option value="1948">1948</option>
+					<option value="1947">1947</option>
+					<option value="1946">1946</option>
+					<option value="1945">1945</option>
+					<option value="1944">1944</option>
+					<option value="1943">1943</option>
+					<option value="1942">1942</option>
+					<option value="1941">1941</option>
+					<option value="1940">1940</option>
+					<option value="1939">1939</option>
+					<option value="1938">1938</option>
+					<option value="1937">1937</option>
+					<option value="1936">1936</option>
+					<option value="1935">1935</option>
+					<option value="1934">1934</option>
+					<option value="1933">1933</option>
+					<option value="1932">1932</option>
+					<option value="1931">1931</option>
+					<option value="1930">1930</option>
+					</select>
+					</div>
+					
+				
+
 
 					<!-- EMAIL -->
 					<div class="form-group">
 						<label for="inputEmail">Email</label> <input type="email"
 							class="form-control" id="email" path="email" name="email"
-							placeholder="Email" value="${email}">
+							placeholder="Email" value="${datosPersonales.email}">
 						<form:errors cssClass="error" path="email"></form:errors>
 					</div>
 
 					<!-- FECHA DE NACIMIENTO -->
-					<div class="form-group">
-						<label for="inputFechaNac">Fecha de Nacimiento</label> <select
-							class="form-control" id="dia" name="dia" value="${dia}">
-							<option selected="${diaa}">${diaa}</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-							<option value="11">11</option>
-							<option value="12">12</option>
-							<option value="13">13</option>
-							<option value="14">14</option>
-							<option value="15">15</option>
-							<option value="16">16</option>
-							<option value="17">17</option>
-							<option value="18">18</option>
-							<option value="19">19</option>
-							<option value="20">20</option>
-							<option value="21">21</option>
-							<option value="22">22</option>
-							<option value="23">23</option>
-							<option value="24">24</option>
-							<option value="25">25</option>
-							<option value="26">26</option>
-							<option value="27">27</option>
-							<option value="28">28</option>
-							<option value="29">29</option>
-							<option value="30">30</option>
-							<option value="31">31</option>
-						</select> <select class="form-control" id="mes" name="mes" value="${mes}">
-							<option selected="${mess}">${mess}</option>
-							<option value="01">Enero</option>
-							<option value="02">Febrero</option>
-							<option value="03">Marzo</option>
-							<option value="04">Abril</option>
-							<option value="05">Mayo</option>
-							<option value="06">Junio</option>
-							<option value="07">Julio</option>
-							<option value="08">Agosto</option>
-							<option value="09">Septiembre</option>
-							<option value="10">Octubre</option>
-							<option value="11">Noviembre</option>
-							<option value="12">Diciembre</option>
-						</select> <select class="form-control" id="anio" name="anio"
-							value="${anio}">
-							<option selected="${anioo}">${anioo}</option>
-							<option value="2001">2001</option>
-							<option value="2000">2000</option>
-							<option value="1999">1999</option>
-							<option value="1998">1998</option>
-							<option value="1997">1997</option>
-							<option value="1996">1996</option>
-							<option value="1995">1995</option>
-							<option value="1994">1994</option>
-							<option value="1993">1993</option>
-							<option value="1992">1992</option>
-							<option value="1991">1991</option>
-							<option value="1990">1990</option>
-							<option value="1989">1989</option>
-							<option value="1988">1988</option>
-							<option value="1987">1987</option>
-							<option value="1986">1986</option>
-							<option value="1985">1985</option>
-							<option value="1984">1984</option>
-							<option value="1983">1983</option>
-							<option value="1982">1982</option>
-							<option value="1981">1981</option>
-							<option value="1980">1980</option>
-							<option value="1979">1979</option>
-							<option value="1978">1978</option>
-							<option value="1977">1977</option>
-							<option value="1976">1976</option>
-							<option value="1975">1975</option>
-							<option value="1974">1974</option>
-							<option value="1973">1973</option>
-							<option value="1972">1972</option>
-							<option value="1971">1971</option>
-							<option value="1970">1970</option>
-							<option value="1969">1969</option>
-							<option value="1968">1968</option>
-							<option value="1967">1967</option>
-							<option value="1966">1966</option>
-							<option value="1965">1965</option>
-							<option value="1964">1964</option>
-							<option value="1963">1963</option>
-							<option value="1962">1962</option>
-							<option value="1961">1961</option>
-							<option value="1960">1960</option>
-							<option value="1959">1959</option>
-							<option value="1958">1958</option>
-							<option value="1957">1957</option>
-							<option value="1956">1956</option>
-							<option value="1955">1955</option>
-							<option value="1954">1954</option>
-							<option value="1953">1953</option>
-							<option value="1952">1952</option>
-							<option value="1951">1951</option>
-							<option value="1950">1950</option>
-							<option value="1949">1949</option>
-							<option value="1948">1948</option>
-							<option value="1947">1947</option>
-							<option value="1946">1946</option>
-							<option value="1945">1945</option>
-							<option value="1944">1944</option>
-							<option value="1943">1943</option>
-							<option value="1942">1942</option>
-							<option value="1941">1941</option>
-							<option value="1940">1940</option>
-							<option value="1939">1939</option>
-							<option value="1938">1938</option>
-							<option value="1937">1937</option>
-							<option value="1936">1936</option>
-							<option value="1935">1935</option>
-							<option value="1934">1934</option>
-							<option value="1933">1933</option>
-							<option value="1932">1932</option>
-							<option value="1931">1931</option>
-							<option value="1930">1930</option>
-
-						</select>
-
-					</div>
+					
 
 					<div class="form-group">
 						<label for="inputNacionalidad">Nacionalidad</label> <select
 							class="form-control" id="nacionalidad" path="nacionalidad"
 							name="nacionalidad" placeholder="nacionalidad"
-							value="${nacionalidad}">
-							<option value="${nacionalidad}" label="${nacionalidad}" selected></option>
+							value="${datosPersonales.nacionalidad}">
+							<option value="${datosPersonales.nacionalidad}" label="${datosPersonales.nacionalidad}" selected></option>
 							<option value="AF">Afganistán</option>
 							<option value="AL">Albania</option>
 							<option value="DE">Alemania</option>
@@ -518,7 +519,7 @@
 					<div class="form-group">
 						<label for="inputCuil">CUIL/CUIT</label> <input type="text"
 							class="form-control" id="CUIL_CUIT" path="CUIL_CUIT"
-							name="CUIL_CUIT" placeholder="CUIL/CUIT" value="${CUIL_CUIT}">
+							name="CUIL_CUIT" placeholder="CUIL/CUIT" value="${datosPersonales.CUIL_CUIT}">
 						<form:errors cssClass="error" path="CUIL"></form:errors>
 					</div>
 
@@ -527,7 +528,7 @@
 					<div class="form-group">
 						<label for="inputDomicilio">Domicilio</label> <input type="text"
 							class="form-control" path="domicilio" id="domicilio "
-							name="domicilio" placeholder="Domicilio" value="${domicilio}">
+							name="domicilio" placeholder="Domicilio" value="${datosPersonales.domicilio}">
 						<form:errors cssClass="error" path="domicilio"></form:errors>
 					</div>
 
@@ -536,7 +537,7 @@
 						<label for="inputDepartamento">Departamento</label> <input
 							type="text" class="form-control" path="departamento"
 							id="departamento" name="departamento" placeholder="Departamento"
-							value="${departamento}">
+							value="${datosPersonales.departamento}">
 						<form:errors cssClass="error" path="departamento"></form:errors>
 					</div>
 
@@ -544,7 +545,7 @@
 					<div class="form-group">
 						<label for="inputProvincia">Provincia</label> <input type="text"
 							class="form-control" path="provincia" id="provincia"
-							name="provincia" placeholder="Provincia" value="${provincia}">
+							name="provincia" placeholder="Provincia" value="${datosPersonales.provincia}">
 						<form:errors cssClass="error" path="provincia"></form:errors>
 					</div>
 
@@ -552,7 +553,7 @@
 					<div class="form-group">
 						<label for="inputPais">País</label><br> <input type="text"
 							class="form-control" path="pais" id="pais" name="pais"
-							placeholder="Pais" value="${pais}">
+							placeholder="Pais" value="${datosPersonales.pais}">
 						<form:errors cssClass="error" path="pais"></form:errors>
 					</div>
 

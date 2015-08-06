@@ -7,10 +7,13 @@ import java.util.Calendar;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import ar.edu.um.model.Antecedentes;
@@ -18,12 +21,8 @@ import ar.edu.um.model.Cargos;
 import ar.edu.um.model.DatosPersonales;
 import ar.edu.um.model.Formacion;
 import ar.edu.um.model.OtrosAntecedentes;
-
 import ar.edu.um.service.AntecedentesService;
-
-import ar.edu.um.model.Cargos;
 import ar.edu.um.model.Produccion;
-
 import ar.edu.um.service.CargosService;
 import ar.edu.um.service.DatosPersonalesService;
 import ar.edu.um.service.FormacionService;
@@ -33,16 +32,6 @@ import ar.edu.um.service.ProduccionService;
 
 @Controller
 public class CvController {
-	/*
-	private CvService cvService;
-	
-	
-	@Autowired
-	public void setCursosService(CvService cvService) {
-		this.cvService = cvService;
-	}
-	
-	 */ 
 	
 	private DatosPersonalesService datosPersonalesService;
 	private FormacionService formacionService;
@@ -129,22 +118,22 @@ public class CvController {
 	
 			
 		}else{
-			
 			model.addAttribute("objeto", true);
-						
-			System.out.println("dp = " + dp);
-			
-			
 			model.addAttribute("datosPersonales", dp);
 			model.addAttribute("titulo", "datos");
-
-			
 		}
 		return "datos";
 	}
 	
 	/*** DATOS EDITAR 
 	 * @throws ParseException ***/
+	
+	@InitBinder
+    public void initBinder(WebDataBinder binder) {
+        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy");
+        sdf.setLenient(true);
+        binder.registerCustomEditor(Date.class, new CustomDateEditor(sdf, true));
+    }
 	
 	@RequestMapping(value="/datosEditar")
 	public String datosEditar(Model model) throws ParseException{
@@ -157,15 +146,17 @@ public class CvController {
 	      
 		DatosPersonales dp = datosPersonalesService.getData(dni);
 		
-		model.addAttribute("dni", dp.getDni());
+		/*model.addAttribute("dni", dp.getDni());
 		model.addAttribute("nombre", dp.getNombre());
 		model.addAttribute("apellido", dp.getApellido());
 		model.addAttribute("sexo", dp.getSexo());
 		model.addAttribute("estado_civil", dp.getEstado_civil());
-		model.addAttribute("email", dp.getEmail());
+		model.addAttribute("email", dp.getEmail());*/
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-	    Date convertedCurrentDate = sdf.parse(dp.getFecha_nac());
+		model.addAttribute("datosPersonales", dp);
+		
+//		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	/*    Date convertedCurrentDate = sdf.parse(dp.getFecha_nac());
 	    Calendar cal = Calendar.getInstance();
 	    cal.setTime(convertedCurrentDate);
 	    
@@ -178,63 +169,18 @@ public class CvController {
 		model.addAttribute("mess", mes);
 		model.addAttribute("anioo", anio);
 		
-		System.out.println("dia:" + dia + "mes: " + mes + "anio:" + anio);
+		System.out.println("dia:" + dia + "mes: " + mes + "anio:" + anio);*/
 		
-		model.addAttribute("nacionalidad", dp.getNacionalidad());
+		/*model.addAttribute("nacionalidad", dp.getNacionalidad());
 		model.addAttribute("CUIL_CUIT", dp.getCUIL_CUIT());
 		model.addAttribute("domicilio", dp.getDomicilio());
 		model.addAttribute("departamento", dp.getDepartamento());
 		model.addAttribute("provincia", dp.getProvincia());
 		model.addAttribute("pais", dp.getPais());
-		
+		*/
 		return "datosEditar";
 	}
-	/*
-	@RequestMapping(value="/datosEmp")
-	public String datosEmp(Model model) throws ParseException{
-		
-		 Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	     String username = auth.getName(); 
-	     System.out.println("USER: " + username);
-	     Integer.parseInt(username);
-	     BigDecimal dni = new BigDecimal(username);
-	      
-		DatosPersonales dp = datosPersonalesService.getData(dni);
-		
-		model.addAttribute("dni", dp.getDni());
-		model.addAttribute("nombre", dp.getNombre());
-		model.addAttribute("apellido", dp.getApellido());
-		model.addAttribute("sexo", dp.getSexo());
-		model.addAttribute("estado_civil", dp.getEstado_civil());
-		model.addAttribute("email", dp.getEmail());
-		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-	    Date convertedCurrentDate = sdf.parse(dp.getFecha_nac());
-	    Calendar cal = Calendar.getInstance();
-	    cal.setTime(convertedCurrentDate);
-	    
-	    int anio = cal.get(Calendar.YEAR);
-	    int mes = cal.get(Calendar.MONTH);
-	    int dia = cal.get(Calendar.DAY_OF_MONTH);
-
-		
-		model.addAttribute("diaa", dia);
-		model.addAttribute("mess", mes);
-		model.addAttribute("anioo", anio);
-		
-		System.out.println("dia:" + dia + "mes: " + mes + "anio:" + anio);
-		
-		model.addAttribute("nacionalidad", dp.getNacionalidad());
-		model.addAttribute("CUIL_CUIT", dp.getCUIL_CUIT());
-		model.addAttribute("domicilio", dp.getDomicilio());
-		model.addAttribute("departamento", dp.getDepartamento());
-		model.addAttribute("provincia", dp.getProvincia());
-		model.addAttribute("pais", dp.getPais());
-		
-		return "datosEmp";
-	}
-*/
-
+	
 	/*** FORMACION ***/
 	
 	@RequestMapping(value="/formacion")

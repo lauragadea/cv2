@@ -1,6 +1,9 @@
 package ar.edu.um.controllers;
 
 import java.math.BigDecimal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import  java.util.Date;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -33,7 +36,7 @@ public class DataController {
 			@RequestParam String dia, @RequestParam String mes,
 			@RequestParam String anio, @Valid DatosPersonales dp,
 			@RequestParam String action,
-			BindingResult result) {
+			BindingResult result) throws ParseException {
 		if (result.hasErrors()) {
 			System.out.println("no se valido el formulario");
 			List<ObjectError> errors = result.getAllErrors();
@@ -45,7 +48,6 @@ public class DataController {
 			return "/";
 		}
 
-		System.out.println("action: " + action);
 		
 		if (action.equals("editar")) {
 			
@@ -55,23 +57,14 @@ public class DataController {
 		} else if (action.equals("enviar")) {
 			
 			String fecha = anio + "-" + mes + "-" + dia;
-			dp.setFecha_nac(fecha);
 
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			Date fecha_nac = sdf.parse(fecha);
+			
+			dp.setFecha_nac(fecha_nac);
 			datosPersonalesService.create(dp);
+			model.addAttribute("datosPersonales", dp);
 
-			model.addAttribute("dni", dp.getDni());
-			model.addAttribute("nombre", dp.getNombre());
-			model.addAttribute("apellido", dp.getApellido());
-			model.addAttribute("sexo", dp.getSexo());
-			model.addAttribute("estado_civil", dp.getEstado_civil());
-			model.addAttribute("email", dp.getEmail());
-			model.addAttribute("fecha_nac", dp.getFecha_nac());
-			model.addAttribute("nacionalidad", dp.getNacionalidad());
-			model.addAttribute("CUIL_CUIT", dp.getCUIL_CUIT());
-			model.addAttribute("domicilio", dp.getDomicilio());
-			model.addAttribute("departamento", dp.getDepartamento());
-			model.addAttribute("provincia", dp.getProvincia());
-			model.addAttribute("pais", dp.getPais());
 
 			return "datos";
 			
@@ -86,7 +79,7 @@ public class DataController {
 	public String modificaDatos(Model model, @RequestParam BigDecimal dni,
 			@RequestParam String dia, @RequestParam String mes,
 			@RequestParam String anio, @Valid DatosPersonales dp,
-			BindingResult result) {
+			BindingResult result) throws ParseException {
 		if (result.hasErrors()) {
 			System.out.println("no se valido el formulario");
 			List<ObjectError> errors = result.getAllErrors();
@@ -97,25 +90,18 @@ public class DataController {
 
 			return "/";
 		}
-
+		
 		String fecha = anio + "-" + mes + "-" + dia;
-		dp.setFecha_nac(fecha);
 
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Date fecha_nac = sdf.parse(fecha);
+		
+		dp.setFecha_nac(fecha_nac);
 		datosPersonalesService.modify(dp);
-
-		model.addAttribute("dni", dp.getDni());
-		model.addAttribute("nombre", dp.getNombre());
-		model.addAttribute("apellido", dp.getApellido());
-		model.addAttribute("sexo", dp.getSexo());
-		model.addAttribute("estado_civil", dp.getEstado_civil());
-		model.addAttribute("email", dp.getEmail());
-		model.addAttribute("fecha_nac", dp.getFecha_nac());
-		model.addAttribute("nacionalidad", dp.getNacionalidad());
-		model.addAttribute("CUIL_CUIT", dp.getCUIL_CUIT());
-		model.addAttribute("domicilio", dp.getDomicilio());
-		model.addAttribute("departamento", dp.getDepartamento());
-		model.addAttribute("provincia", dp.getProvincia());
-		model.addAttribute("pais", dp.getPais());
+		
+		model.addAttribute("datosPersonales", dp);
+		
+		
 
 		return "cv";
 	}
