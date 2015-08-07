@@ -8,6 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -174,10 +175,12 @@ public class CvController {
 		meses.put(new Integer(12), "Diciembre");
 		model.addAttribute("meses", meses);
 	 
-		/*for(int i=1;i < 71;i++){
-			
-		}*/
+		Map<Integer, String> sexo = new LinkedHashMap<Integer, String>();
+		sexo.put(new Integer(1), "Femenino");
+		sexo.put(new Integer(2), "Masculino");
+		model.addAttribute("sexo", sexo);
 
+		
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(dp.getFecha_nac());
 		int anio = cal.get(Calendar.YEAR);

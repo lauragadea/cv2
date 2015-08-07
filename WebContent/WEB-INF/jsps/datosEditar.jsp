@@ -37,13 +37,12 @@
 					<!-- SEXO -->
 					<div class="form-group">
 						<div class="dropdown">
-							<label for="inputNumDoc">Sexo</label><br> <select
-								class="form-control" path="sexo" id="sexo" name="sexo"><form:errors
-									cssClass="error" path="sexo" value="${datosPersonales.sexo}"></form:errors>
-								<option value="${datosPersonales.sexo}" label="${datosPersonales.sexo}"></option>
-								<option value="Masculino">Masculino</option>
-								<option value="Femenino">Femenino</option>
-							</select>
+							<label for="inputSexo">Sexo</label><br> 
+							<form:select path="sexo">
+    							<form:options items="${sexo}" />
+							</form:select>
+							
+							
 						</div>
 					</div>
 
@@ -62,10 +61,8 @@
 						<form:errors cssClass="error" path="estado_civil"></form:errors>
 					</div>
 					<div class="form-group date">
-					<label for="inputFechaNac">Fecha de Nacimiento</label> 
-						
-						<div class="date">
-							
+					<label for="inputFechaNac">Fecha de Nacimiento</label> 						
+						<div class="date">							
 							<select class="form-control" id="dia" name="dia" value="${dia}">
 							<option selected="${diaa}">${diaa}</option>
 							<option value="1">1</option>
