@@ -1,6 +1,5 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc 
 	http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
@@ -12,22 +11,38 @@
 
 	<context:component-scan base-package="ar.edu.um.*" />
 
-<bean id="jspViewResolver"
+	<bean
+		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+	
+
+	<!-- Register the Customer.properties -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="message" />
+	</bean>
+
+	<bean id="jspViewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsps/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
-	
+
 	<mvc:resources location="/resources/" mapping="/static/**" />
-	<mvc:resources mapping="/resources/**" location="/resources/" cache-period="0" />
- 
- 	<mvc:interceptors>
-       <bean id="webContentInterceptor" class="org.springframework.web.servlet.mvc.WebContentInterceptor">
-	       <property name="cacheSeconds" value="0"/>
-	       <property name="useExpiresHeader" value="false"/>
-	       <property name="useCacheControlHeader" value="true"/>
-	       <property name="useCacheControlNoStore" value="true"/>
-        </bean>     
-    </mvc:interceptors>
+	<mvc:resources mapping="/resources/**" location="/resources/"
+		cache-period="0" />
+
+	<mvc:interceptors>
+		<bean id="webContentInterceptor"
+			class="org.springframework.web.servlet.mvc.WebContentInterceptor">
+			<property name="cacheSeconds" value="0" />
+			<property name="useExpiresHeader" value="false" />
+			<property name="useCacheControlHeader" value="true" />
+			<property name="useCacheControlNoStore" value="true" />
+		</bean>
+	</mvc:interceptors>
 
 </beans>

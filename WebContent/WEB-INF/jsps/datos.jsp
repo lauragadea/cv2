@@ -11,7 +11,7 @@
 				
 					<form:form id="registration-form" class="form-horizontal"
 					method="post"
-					action="${pageContext.request.contextPath}/datosEditar"
+					action="${pageContext.request.contextPath}/creardatos"
 					modelAttribute="datos">
 					
 					<div class="form-group">

@@ -56,15 +56,8 @@ public class OtrosAntecedentesController {
 			System.out.println("crear otros antecedentes");
 			otrosAntecedentesService.create(otrosAntecedentes);
 			
-			model.addAttribute("dni", otrosAntecedentes.getDni());
-			model.addAttribute("estancias_pasantias", otrosAntecedentes.getEstancias_pasantias());
-			model.addAttribute("membresias_asociaciones_ct", otrosAntecedentes.getMembresias_asociaciones_ct());
-			model.addAttribute("coordinacion_proyectos_cooperacion", otrosAntecedentes.getCoordinacion_proyectos_cooperacion());
-			model.addAttribute("premios_distinciones", otrosAntecedentes.getPremios_distinciones());
-			model.addAttribute("dato_academico",otrosAntecedentes.getDato_academico());
-			model.addAttribute("curriculum_vitae", otrosAntecedentes.getCurriculum_vitae());
-			model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());
-				
+			model.addAttribute("otrosAntecedentes", otrosAntecedentes);
+		
 			return "otrosantecedentes";
 		}
 		
@@ -89,14 +82,8 @@ public class OtrosAntecedentesController {
 		}
 
 		otrosAntecedentesService.modify(otrosAntecedentes);
- 	   	model.addAttribute("dni", otrosAntecedentes.getDni());
- 		model.addAttribute("estancias_pasantias",otrosAntecedentes.getEstancias_pasantias());
- 		model.addAttribute("membresias_asociaciones_ct",otrosAntecedentes.getMembresias_asociaciones_ct());
- 		model.addAttribute("coordinacion_proyectos_cooperacion", otrosAntecedentes.getCoordinacion_proyectos_cooperacion() );
- 		model.addAttribute("premios_distinciones",otrosAntecedentes.getPremios_distinciones() );
- 		model.addAttribute("dato_academico",otrosAntecedentes.getDato_academico() );
- 		model.addAttribute("curriculum_vitae",otrosAntecedentes.getCurriculum_vitae() );
- 		model.addAttribute("participacion_redes_tematicas",otrosAntecedentes.getParticipacion_redes_tematicas());	 			
+ 	   	model.addAttribute("otrosAntecedentes", otrosAntecedentes);
+ 		
 
 		return "otrosantecedentes";
 	}

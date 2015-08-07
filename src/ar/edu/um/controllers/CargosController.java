@@ -53,16 +53,7 @@ public class CargosController{
 	
 			cargosService.create(cargos);
 			
-			model.addAttribute("dni", cargos.getDni());
-			model.addAttribute("nivel_superior_universitario", cargos.getNivel_superior_universitario());
-			model.addAttribute("nivel_terciario_no_universitario", cargos.getNivel_terciario_no_universitario());
-			model.addAttribute("nivel_basico", cargos.getNivel_basico());
-			model.addAttribute("cursos_posgrado_y_capacitaciones", cargos.getCursos_posgrado_y_capacitaciones());
-			model.addAttribute("cargos_organismos_ct", cargos.getCargos_organismos_ct());
-			model.addAttribute("categorizacion_programa_incentivos", cargos.getCargos_organismos_ct());
-			model.addAttribute("cargos_id_otro", cargos.getCargos_id_otro());
-			model.addAttribute("cargos_gestion_institucional", cargos.getCargos_gestion_institucional());
-			model.addAttribute("otros_cargos", cargos.getOtros_cargos());
+			model.addAttribute("cargos", cargos);
 			
 			return "cargos";
 		}
@@ -86,16 +77,8 @@ public class CargosController{
 
 		cargosService.modify(cargos);
 		
-		model.addAttribute("dni", cargos.getDni());
-		model.addAttribute("nivel_superior_universitario", cargos.getNivel_superior_universitario());
-		model.addAttribute("nivel_terciario_no_universitario", cargos.getNivel_terciario_no_universitario());
-		model.addAttribute("nivel_basico", cargos.getNivel_basico());
-		model.addAttribute("cursos_posgrado_y_capacitaciones", cargos.getCursos_posgrado_y_capacitaciones());
-		model.addAttribute("cargos_organismos_ct", cargos.getCargos_organismos_ct());
-		model.addAttribute("categorizacion_programa_incentivos", cargos.getCargos_organismos_ct());
-		model.addAttribute("cargos_id_otro", cargos.getCargos_id_otro());
-		model.addAttribute("cargos_gestion_institucional", cargos.getCargos_gestion_institucional());
-		model.addAttribute("otros_cargos", cargos.getOtros_cargos());
+		model.addAttribute("cargos", cargos);
+		
 		return "cargos";
 	}
 
