@@ -15,16 +15,9 @@
 					method="post"
 					action="${pageContext.request.contextPath}/crearformacion"
 					modelAttribute="formacion">
-	
-<<<<<<< HEAD
+
 					<input type="hidden" id="dni" path="dni" name="dni" placeholder="DNI" value="${dni}">
-=======
-					<div class="form-group">
-						<label for="dni">DNI
-						<input type="text"
-							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${formacion.dni}" readonly></label></div>
->>>>>>> a7d6ede978e00091e272d17417aeb38fe38b240f
+
 					
 	
 					<!-- BOTON EDITAR -->
