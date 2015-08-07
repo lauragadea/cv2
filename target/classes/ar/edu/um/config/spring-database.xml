@@ -4,10 +4,20 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a7d6ede978e00091e272d17417aeb38fe38b240f
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost:3306/cv" />
         <property name="username" value="root" />
         <property name="password" value="root" />
     </bean>
+<<<<<<< HEAD
 </beans> 
+=======
+=======
+>>>>>>> 33b2827d530dc2fc969ce9715a24447182e354b5
+</beans>
+>>>>>>> a7d6ede978e00091e272d17417aeb38fe38b240f

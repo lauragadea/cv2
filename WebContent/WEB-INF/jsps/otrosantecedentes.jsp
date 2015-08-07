@@ -14,7 +14,28 @@
 							action="${pageContext.request.contextPath}/crearotrosantecedentes"
 							modelAttribute="produccion">
 
+<<<<<<< HEAD
 							<input type="hidden" id="dni" path="dni" name="dni" placeholder="DNI" value="${dni}">
+=======
+							<div class="form-group">
+								<label for="dni">DNI <input type="text" id="dni"
+									class="form-control" path="dni" name="dni" placeholder="DNI"
+									value="${otrosAntecedentes.dni}" readonly>
+								</label>
+							</div>
+
+							<!-- BOTON EDITAR -->
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-8">
+										<h2>OTROS ANTECEDENTES</h2>
+										<h3>Participación u organización de eventos CyT</h3>
+									</div>
+									<div class="col-md-1"></div>
+									<div class="col-md-3"></div>
+								</div>
+							</div>
+>>>>>>> a7d6ede978e00091e272d17417aeb38fe38b240f
 
 							<!-- Participación u organización de eventos CyT -->
 							<div class="form-group">
@@ -114,7 +135,16 @@
 							modelAttribute="produccion">
 
 							<!-- -DNI -->
+<<<<<<< HEAD
 							<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
+=======
+							<div class="form-group">
+								<label for="inputName">DNI:</label>
+								<c:out value="${dni}" />
+								<input type="hidden" id="dni" value="${otrosAntecedentes.dni}" path="dni"
+									name="dni">
+							</div>
+>>>>>>> a7d6ede978e00091e272d17417aeb38fe38b240f
 
 							<!-- BOTON EDITAR -->
 							<div class="form-group">

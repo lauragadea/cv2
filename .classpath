@@ -25,6 +25,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/opt/spring-boot-maven-plugin-1.2.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/home/ivan/Descargas/com.mysql.jdbc_5.1.5.jar"/>
+	<classpathentry kind="lib" path="/opt/com.mysql.jdbc_5.1.5.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

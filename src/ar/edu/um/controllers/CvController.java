@@ -42,8 +42,7 @@ public class CvController {
 	private ProduccionService produccionService;
 
 	@Autowired
-	public void setDatosPersonalesService(
-			DatosPersonalesService datosPersonalesService) {
+	public void setDatosPersonalesService(DatosPersonalesService datosPersonalesService) {
 		this.datosPersonalesService = datosPersonalesService;
 	}
 
@@ -112,7 +111,7 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		System.out.println("USER: " + username);
+		
 		BigDecimal dni = new BigDecimal(username);
 		model.addAttribute("dni", dni);
 
@@ -137,13 +136,6 @@ public class CvController {
 	 * 
 	 * @throws ParseException
 	 ***/
-
-	@InitBinder
-	public void initBinder(WebDataBinder binder) {
-		SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy");
-		sdf.setLenient(true);
-		binder.registerCustomEditor(Date.class, new CustomDateEditor(sdf, true));
-	}
 
 	@RequestMapping(value = "/datosEditar")
 	public String datosEditar(Model model) throws ParseException {

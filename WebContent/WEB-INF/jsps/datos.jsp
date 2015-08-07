@@ -513,8 +513,8 @@
 							<!-- -DNI -->
 					<div class="form-group">
 						<label for="inputName">DNI:</label>
-						<c:out value="${dni}" />
-						<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
+						<c:out value="${datosPersonales.dni}" />
+						<input type="hidden" id="dni"value="${datosPersonales.dni}" path="dni" name="dni">
 					</div>
 								<!-- NOMBRE -->
 								<div class="form-group">

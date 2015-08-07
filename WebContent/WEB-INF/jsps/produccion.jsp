@@ -14,7 +14,15 @@
 					action="${pageContext.request.contextPath}/crearproduccion"
 					modelAttribute="produccion">
 
+<<<<<<< HEAD
 					<input type="hidden" id="dni" path="dni" name="dni" placeholder="DNI" value="${dni}">
+=======
+					<div class="form-group">
+						<label for="dni">DNI
+						<input type="text"
+							id="dni" class="form-control" path="dni"
+							name="dni" placeholder="DNI" value="${produccion.dni}" readonly></label></div>
+>>>>>>> a7d6ede978e00091e272d17417aeb38fe38b240f
 					
 
         			<!-- PRODUCCION -->
@@ -154,7 +162,16 @@
 					action="${pageContext.request.contextPath}/produccionEditar"
 					modelAttribute="produccion">
 
+<<<<<<< HEAD
 					<input type="hidden" id="dni" path="dni" name="dni" placeholder="DNI" value="${dni}">
+=======
+					<!-- -DNI -->
+					<div class="form-group">
+						<label for="inputName">DNI:</label>
+						<c:out value="${dni}" />
+						<input type="hidden" id="dni"value="${produccion.dni}" path="dni" name="dni">
+					</div>
+>>>>>>> a7d6ede978e00091e272d17417aeb38fe38b240f
 
 					<!-- BOTON EDITAR -->
 					<div class="form-group">
