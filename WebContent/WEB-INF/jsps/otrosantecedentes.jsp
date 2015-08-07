@@ -17,7 +17,7 @@
 							<div class="form-group">
 								<label for="dni">DNI <input type="text" id="dni"
 									class="form-control" path="dni" name="dni" placeholder="DNI"
-									value="${dni}" readonly>
+									value="${otrosAntecedentes.dni}" readonly>
 								</label>
 							</div>
 
@@ -133,7 +133,7 @@
 							<div class="form-group">
 								<label for="inputName">DNI:</label>
 								<c:out value="${dni}" />
-								<input type="hidden" id="dni" value="${dni}" path="dni"
+								<input type="hidden" id="dni" value="${otrosAntecedentes.dni}" path="dni"
 									name="dni">
 							</div>
 

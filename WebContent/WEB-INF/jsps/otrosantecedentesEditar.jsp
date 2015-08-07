@@ -25,7 +25,7 @@
 						<label for="dni">DNI
 						<input type="text"
 							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}" readonly>
+							name="dni" placeholder="DNI" value="${otrosAntecedentes.dni}" readonly>
 						</label>
 					</div>
 						

@@ -42,8 +42,7 @@ public class CvController {
 	private ProduccionService produccionService;
 
 	@Autowired
-	public void setDatosPersonalesService(
-			DatosPersonalesService datosPersonalesService) {
+	public void setDatosPersonalesService(DatosPersonalesService datosPersonalesService) {
 		this.datosPersonalesService = datosPersonalesService;
 	}
 

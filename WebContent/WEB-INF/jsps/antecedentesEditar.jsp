@@ -25,7 +25,7 @@
 					<div class="form-group">
 						<label for="inputName">DNI:</label>
 						<c:out value="${dni}" />
-						<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
+						<input type="hidden" id="dni"value="${antecedentes.dni}" path="dni" name="dni">
 					</div>
 					
                    

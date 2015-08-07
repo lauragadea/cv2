@@ -18,7 +18,7 @@
 						<label for="dni">DNI
 						<input type="text"
 							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
+							name="dni" placeholder="DNI" value="${produccion.dni}" readonly></label></div>
 					
 
 					<!-- BOTON EDITAR -->
@@ -168,7 +168,7 @@
 					<div class="form-group">
 						<label for="inputName">DNI:</label>
 						<c:out value="${dni}" />
-						<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
+						<input type="hidden" id="dni"value="${produccion.dni}" path="dni" name="dni">
 					</div>
 
 					<!-- BOTON EDITAR -->
