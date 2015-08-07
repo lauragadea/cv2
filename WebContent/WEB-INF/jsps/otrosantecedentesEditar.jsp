@@ -99,13 +99,7 @@
                        path="dato_academico" name="dato_academico" value="${otrosAntecedentes.dato_academico}">
                    </div>
                    
-                   <!-- Curriculum Vitae --> 
-                   <div class="form-group">
-                       <label for="inputCurriculVitae">Curriculum Vitae</label>
-                       <input type="text" class="form-control"  placeholder="Curriculum Vitae" id="curriculum_vitae"
-                       path="curriculum_vitae" name="curriculum_vitae" value="${otrosAntecedentes.curriculum_vitae}">
-                       (Próximamente podrá cargar su CV en formato PDF)
-                   </div>
+                
 
                   	<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
         			
