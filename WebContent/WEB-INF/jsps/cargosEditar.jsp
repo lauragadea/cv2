@@ -19,19 +19,16 @@
 					method="post"
 					action="${pageContext.request.contextPath}/modificarcargos"
 					modelAttribute="formacion">
-					
-					<!-- -DNI -->
-					<div class="form-group">
-						<label for="inputName">DNI:</label>
-						<c:out value="${dni}" />
-						<input type="hidden" id="dni"value="${cargos.dni}" path="dni" name="dni">
-					</div>
-					
+
+
+					<input type="hidden" id="dni" value="${cargos.dni}" path="dni"
+						name="dni">
+
 					<!-- BOTON EDITAR -->
 					<div class="form-group">
 		     			<div class="row">
 		     				<div class="col-md-8">
-								<h2>CARGOS</h2>
+
 								<h3>Docencia</h3>
 		     				</div>
 		                   	<div class="col-md-1"></div>

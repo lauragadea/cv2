@@ -126,8 +126,9 @@ public class CvController {
 		} else {
 			model.addAttribute("objeto", true);
 			model.addAttribute("datosPersonales", dp);
-			model.addAttribute("titulo", "datos");
+
 		}
+		model.addAttribute("titulo", "datos");
 		return "datos";
 	}
 
@@ -202,9 +203,10 @@ public class CvController {
 
 			model.addAttribute("objeto", true);
 			model.addAttribute("formacion", formacion);
-			model.addAttribute("titulo", "formacion");
 
 		}
+
+		model.addAttribute("titulo", "formacion");
 		return "formacion";
 	}
 
@@ -257,9 +259,10 @@ public class CvController {
 			model.addAttribute("objeto", true);
 
 			model.addAttribute("cargos", cargos);
-			model.addAttribute("titulo", "cargos");
+
 
 		}
+		model.addAttribute("titulo", "cargos");
 		return "cargos";
 	}
 
@@ -313,9 +316,10 @@ public class CvController {
 			model.addAttribute("objeto", true);
 
 			model.addAttribute("produccion", produccion);
-			model.addAttribute("titulo", "produccion");
+			
 
 		}
+		model.addAttribute("titulo", "produccion");
 		return "produccion";
 	}
 
@@ -366,10 +370,10 @@ public class CvController {
 			model.addAttribute("objeto", true);
 
 			model.addAttribute("antecedentes", antecedentes);
-			model.addAttribute("titulo", "antecedentes");
+			
 
 		}
-
+		model.addAttribute("titulo", "antecedentes");
 		return "antecedentes";
 	}
 
@@ -422,9 +426,10 @@ public class CvController {
 			model.addAttribute("objeto", true);
 
 			model.addAttribute("otrosAntecedentes", otrosAntecedentes);
-			model.addAttribute("titulo", "otrosantecedentes");
+			
 
 		}
+		model.addAttribute("titulo", "otrosantecedentes");
 		return "otrosantecedentes";
 	}
 

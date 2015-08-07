@@ -14,26 +14,16 @@
 					action="${pageContext.request.contextPath}/crearproduccion"
 					modelAttribute="produccion">
 
-					<div class="form-group">
-						<label for="dni">DNI
-						<input type="text"
-							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
+					<input type="hidden" id="dni" path="dni" name="dni" placeholder="DNI" value="${dni}">
 					
 
-					<!-- BOTON EDITAR -->
-					<div class="form-group">
-		     			<div class="row">
-		     				<div class="col-md-8">
-		                       <h2>PRODUCCION</h2>
-		                       <h3>Producción científica</h3>
-		     				</div>
-		                   	<div class="col-md-1"></div>
-		                   	<div class="col-md-3"></div>
-		                </div>
-					</div>
-
         			<!-- PRODUCCION -->
+        			
+        			<!-- PRODUCCION TECNOLOGICA-->
+
+                   <div class="form-group">
+                       <h3>Producción Científica</h3>
+                   </div>
 
                    <!-- Artículos publicados en revistas con/sin referato --> 
                    <div class="form-group">
@@ -164,18 +154,13 @@
 					action="${pageContext.request.contextPath}/produccionEditar"
 					modelAttribute="produccion">
 
-					<!-- -DNI -->
-					<div class="form-group">
-						<label for="inputName">DNI:</label>
-						<c:out value="${dni}" />
-						<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
-					</div>
+					<input type="hidden" id="dni" path="dni" name="dni" placeholder="DNI" value="${dni}">
 
 					<!-- BOTON EDITAR -->
 					<div class="form-group">
 		     			<div class="row">
 		     				<div class="col-md-8">
-		                       <h2>PRODUCCION</h2>
+		
 		                       <h3>Producción científica</h3>
 		     				</div>
 		                   	<div class="col-md-1"></div>

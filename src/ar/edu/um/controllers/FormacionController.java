@@ -55,10 +55,11 @@ public class FormacionController {
 			formacionService.create(formacion);
 		
 			model.addAttribute("formacion", formacion);
+			model.addAttribute("titulo", "formacion");
 		
 			return "formacion";
 		}
-		
+		model.addAttribute("titulo", "formacion");
 		return "formacion";
 	}
 		
@@ -81,7 +82,7 @@ public class FormacionController {
 		formacionService.modify(formacion);
 
 		model.addAttribute("formacion", formacion);
-		
+		model.addAttribute("titulo", "formacion");
 
 		return "formacion";
 	}

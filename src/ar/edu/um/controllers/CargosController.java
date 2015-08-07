@@ -54,9 +54,10 @@ public class CargosController{
 			cargosService.create(cargos);
 			
 			model.addAttribute("cargos", cargos);
-			
+			model.addAttribute("titulo", "cargos");
 			return "cargos";
 		}
+		model.addAttribute("titulo", "cargos");
 		return "cargos";
 	}
 	
@@ -78,6 +79,7 @@ public class CargosController{
 		cargosService.modify(cargos);
 		
 		model.addAttribute("cargos", cargos);
+		model.addAttribute("titulo", "cargos");
 		
 		return "cargos";
 	}
