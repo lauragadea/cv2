@@ -37,27 +37,23 @@
 					<!-- SEXO -->
 					<div class="form-group">
 						<div class="dropdown">
-							<label for="inputSexo">Sexo</label><br> 
-							<form:select path="sexo">
-    							<form:options items="${sexo}" />
-							</form:select>
-							
-							
+							<label for="inputNumDoc">Sexo</label><br> 
+							<select class="form-control" id="sexo" name="sexo" value="${sexo}">
+								    <c:forEach items="${sexo}" var="sex">
+								        <option value="${sex.key}" ${sex.key == sex ? 'selected' : ''}>${sex.value}</option>
+								    </c:forEach>
+							</select>													
 						</div>
 					</div>
 
 					<!-- ESTADO CIVIL -->
 					<div class="form-group">
-						<label for="inputEstadoCivil">Estado civil</label> <select
-							class="form-control" id="estado_civil" path="estado_civil"
-							name="estado_civil" placeholder="estado_civil"
-							value="${datosPersonales.estado_civil}">
-							<option value="${datosPersonales.estado_civil}" label="${datosPersonales.estado_civil}"></option>
-							<option value="Soltero">Soltero</option>
-							<option value="Casado">Casado</option>
-							<option value="Viudo">Viudo</option>
-
-						</select>
+						<label for="inputEstadoCivil">Estado civil</label> 
+						<select class="form-control" id="estado_civil" name="estado_civil" value="${datosPersonales.estado_civil}">
+						    <c:forEach items="${estado_civil}" var="ec">
+						        <option value="${ec.key}" ${ec.key == datosPersonales.estado_civil ? 'selected' : ''}>${ec.value}</option>
+						    </c:forEach>
+							</select>							
 						<form:errors cssClass="error" path="estado_civil"></form:errors>
 					</div>
 					<div class="form-group date">
@@ -99,9 +95,9 @@
 							</select> 
 													
 							<select class="form-control" id="mes" name="mes" value="${mess}">
-								    <c:forEach items="${meses}" var="mes">
-								        <option value="${mes.key}" ${mes.key == mess ? 'selected' : ''}>${mes.value}</option>
-								    </c:forEach>
+							    <c:forEach items="${meses}" var="mes">
+							        <option value="${mes.key}" ${mes.key == mess ? 'selected' : ''}>${mes.value}</option>
+							    </c:forEach>
 							</select>
 													
 							<select class="form-control" id="anio" name="anio"

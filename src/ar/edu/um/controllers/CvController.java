@@ -175,11 +175,20 @@ public class CvController {
 		meses.put(new Integer(12), "Diciembre");
 		model.addAttribute("meses", meses);
 	 
-		Map<Integer, String> sexo = new LinkedHashMap<Integer, String>();
-		sexo.put(new Integer(1), "Femenino");
-		sexo.put(new Integer(2), "Masculino");
+		Map<String, String> sexo = new LinkedHashMap<String, String>();
+		sexo.put("Femenino", "Femenino");
+		sexo.put("Masculino", "Masculino");
 		model.addAttribute("sexo", sexo);
-
+		String sex = dp.getSexo();
+		model.addAttribute("sex", sex);
+		
+		Map<String, String> estado_civil = new LinkedHashMap<String, String>();
+		estado_civil.put("Soltero", "Soltero");
+		estado_civil.put("Casado", "Casado");
+		estado_civil.put("Viudo", "Viudo");
+		model.addAttribute("estado_civil", estado_civil );
+		String estadocivil  = dp.getEstado_civil();
+		model.addAttribute("estadocivil", estadocivil);
 		
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(dp.getFecha_nac());
