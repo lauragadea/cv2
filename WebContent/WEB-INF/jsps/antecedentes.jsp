@@ -393,8 +393,8 @@
 
 					<!-- Becas -->
 					<div class="form-group">
-						<label for="inputBeca">Becas: </label>
-						<c:out value="${antecedentes.inputBeca}" />
+						<label for="inputBecas">Becas: </label>
+						<c:out value="${antecedentes.becas}" />
 					</div>
 
 					<!-- OTRAS ACTIVIDADES -->
