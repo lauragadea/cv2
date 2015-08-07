@@ -233,7 +233,7 @@
 		     			<div class="row">
 		     				<div class="col-md-8">
 								<h2>ANTECEDENTES</h2>
-								
+								<h3>Formación de recursos humanos en CyT</h3>								
 		     				</div>
 		                   	<div class="col-md-1"></div>
 		                   	<div class="col-md-3">
@@ -241,7 +241,6 @@
 		                   	</div>
 		                </div>
 					</div>
-					<h3>Formación de recursos humanos en CyT</h3>
 
 
 
@@ -393,8 +392,8 @@
 
 					<!-- Becas -->
 					<div class="form-group">
-						<label for="inputBeca">Becas: </label>
-						<c:out value="${antecedentes.inputBeca}" />
+						<label for="inputBecas">Becas: </label>
+						<c:out value="${antecedentes.becas}" />
 					</div>
 
 					<!-- OTRAS ACTIVIDADES -->
