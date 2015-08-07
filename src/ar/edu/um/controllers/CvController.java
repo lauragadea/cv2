@@ -111,7 +111,7 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		System.out.println("USER: " + username);
+		
 		BigDecimal dni = new BigDecimal(username);
 		model.addAttribute("dni", dni);
 
