@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 81c21847c7cc9f157cdc2cc087d53e9b4aab9a79
 <beans xmlns="http://www.springframework.org/schema/beans"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
@@ -9,4 +13,8 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
         <property name="username" value="root" />
         <property name="password" value="root" />
     </bean>
+<<<<<<< HEAD
 </beans>
+=======
+</beans> 
+>>>>>>> 81c21847c7cc9f157cdc2cc087d53e9b4aab9a79

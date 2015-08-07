@@ -57,10 +57,11 @@ public class OtrosAntecedentesController {
 			otrosAntecedentesService.create(otrosAntecedentes);
 			
 			model.addAttribute("otrosAntecedentes", otrosAntecedentes);
+			model.addAttribute("titulo", "otrosantecedentes");
 		
 			return "otrosantecedentes";
 		}
-		
+		model.addAttribute("titulo", "otrosantecedentes");
 		return "otrosantecedentes";
 	}
 	
@@ -83,7 +84,7 @@ public class OtrosAntecedentesController {
 
 		otrosAntecedentesService.modify(otrosAntecedentes);
  	   	model.addAttribute("otrosAntecedentes", otrosAntecedentes);
- 		
+ 	   model.addAttribute("titulo", "otrosantecedentes");
 
 		return "otrosantecedentes";
 	}

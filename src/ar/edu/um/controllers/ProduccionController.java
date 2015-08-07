@@ -52,9 +52,11 @@ private ProduccionService produccionService;
 			produccionService.create(produccion);
 			
 			model.addAttribute("produccion", produccion);
+			model.addAttribute("titulo", "produccion");
 			
 			return "produccion";
 		}
+		model.addAttribute("titulo", "produccion");
 		return "produccion";
 	}
 	
@@ -77,6 +79,7 @@ private ProduccionService produccionService;
 		produccionService.modify(produccion);
 		
 		model.addAttribute("produccion", produccion);
+		model.addAttribute("titulo", "produccion");
 		
 		return "produccion";
 	}

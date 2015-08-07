@@ -21,19 +21,14 @@
 					action="${pageContext.request.contextPath}/modificarOtrosAntecedentes"
 					modelAttribute="produccion">
 
-					<div class="form-group">
-						<label for="dni">DNI
-						<input type="text"
-							id="dni" class="form-control" path="dni"
-							name="dni" placeholder="DNI" value="${otrosAntecedentes.dni}" readonly>
-						</label>
-					</div>
+				<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
+
 						
 					<!-- BOTON EDITAR -->
 					<div class="form-group">
 		     			<div class="row">
 		     				<div class="col-md-8">
-			                     <h2>OTROS ANTECEDENTES</h2>
+
 			                     <h3>Participación u organización de eventos CyT</h3>
 		     				</div>
 		                   	<div class="col-md-1"></div>
@@ -109,6 +104,7 @@
                        <label for="inputCurriculVitae">Curriculum Vitae</label>
                        <input type="text" class="form-control"  placeholder="Curriculum Vitae" id="curriculum_vitae"
                        path="curriculum_vitae" name="curriculum_vitae" value="${otrosAntecedentes.curriculum_vitae}">
+                       (Próximamente podrá cargar su CV en formato PDF)
                    </div>
 
                   	<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>

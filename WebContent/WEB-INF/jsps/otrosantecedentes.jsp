@@ -14,24 +14,9 @@
 							action="${pageContext.request.contextPath}/crearotrosantecedentes"
 							modelAttribute="produccion">
 
-							<div class="form-group">
-								<label for="dni">DNI <input type="text" id="dni"
-									class="form-control" path="dni" name="dni" placeholder="DNI"
-									value="${otrosAntecedentes.dni}" readonly>
-								</label>
-							</div>
 
-							<!-- BOTON EDITAR -->
-							<div class="form-group">
-								<div class="row">
-									<div class="col-md-8">
-										<h2>OTROS ANTECEDENTES</h2>
-										<h3>Participación u organización de eventos CyT</h3>
-									</div>
-									<div class="col-md-1"></div>
-									<div class="col-md-3"></div>
-								</div>
-							</div>
+							<input type="hidden" id="dni" path="dni" name="dni" placeholder="DNI" value="${dni}">
+
 
 							<!-- Participación u organización de eventos CyT -->
 							<div class="form-group">
@@ -113,6 +98,7 @@
 									type="text" class="form-control" placeholder="Curriculum Vitae"
 									id="curriculum_vitae" path="curriculum_vitae"
 									name="curriculum_vitae">
+									(Próximamente podrá cargar su CV en formato PDF)
 							</div>
 
 							<button type="submit" class="btn btn-primary" name="action"
@@ -130,18 +116,15 @@
 							modelAttribute="produccion">
 
 							<!-- -DNI -->
-							<div class="form-group">
-								<label for="inputName">DNI:</label>
-								<c:out value="${dni}" />
-								<input type="hidden" id="dni" value="${otrosAntecedentes.dni}" path="dni"
-									name="dni">
-							</div>
+
+							<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
+
 
 							<!-- BOTON EDITAR -->
 							<div class="form-group">
 								<div class="row">
 									<div class="col-md-8">
-										<h2>OTROS ANTECEDENTES</h2>
+		
 										<h3>Participación u organización de eventos CyT</h3>
 									</div>
 									<div class="col-md-1"></div>
@@ -216,10 +199,10 @@
 							<div class="form-group">
 								<label for="inputCurriculVitae">Curriculum Vitae: </label>
 								<c:out value="${otrosAntecedentes.curriculum_vitae}" />
+								(Próximamente podrá cargar su CV en formato PDF)
 							</div>
 
-							<button type="submit" class="btn btn-primary" name="action"
-								value="enviar">Enviar</button>
+				
 
 						</form:form>
 					</c:otherwise>

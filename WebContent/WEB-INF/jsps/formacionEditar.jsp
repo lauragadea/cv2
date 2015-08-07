@@ -23,18 +23,16 @@
 		
 					
 					<!-- -DNI -->
-					<div class="form-group">
-						<label for="inputName">DNI:</label>
-						<c:out value="${dni}" />
-						<input type="hidden" id="dni"value="${formacion.dni}" path="dni" name="dni">
-					</div>
+
+					<input type="hidden" id="dni" path="dni" name="dni" placeholder="DNI" value="${dni}">
+
 							
 							
 					<!-- BOTON EDITAR -->
 					<div class="form-group">
 		     			<div class="row">
 		     				<div class="col-md-8">
-		     					<h2>FORMACION</h2></div>
+	
 		     					<h3>Formación Académica</h3>
 		                   		<div class="col-md-1"></div>
 		                   		<div class="col-md-3"></div>
@@ -112,22 +110,13 @@
 					<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
 
 				</form:form>
+			
 			</div>	<!--container-->
+			</div>
 		</div>
 	</div>
 
-	<script src="resources/bootstrap-3.3.4-dist/assets/js/jquery-1.7.1.min.js"></script>
-	<script	src="resources/bootstrap-3.3.4-dist/assets/js/jquery.validate.js"></script>
-	<script	src="resources/bootstrap-3.3.4-dist/assets/js/jquery.validate.min.js"></script>
-	<script src="resources/bootstrap-3.3.4-dist/script.js"></script>
-
-	<script>
-		addEventListener('load', prettyPrint, false);
-		$(document).ready(function() {
-			$('pre').addClass('prettyprint linenums');
-		});
-	</script>
-
+	
 <%@include file="includes/footer.jsp" %>
 </body>
 </html>
