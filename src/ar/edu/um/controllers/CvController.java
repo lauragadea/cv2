@@ -3,8 +3,13 @@ package ar.edu.um.controllers;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
@@ -153,17 +158,35 @@ public class CvController {
 
 		model.addAttribute("datosPersonales", dp);
 
+		Map<Integer, String> meses = new HashMap<Integer, String>();
+		meses.put(new Integer(1), "Enero");
+		meses.put(new Integer(2), "Febrero");
+		meses.put(new Integer(3), "Marzo");
+		meses.put(new Integer(4), "Abril");
+		meses.put(new Integer(5), "Mayo");
+		meses.put(new Integer(6), "Junio");
+		meses.put(new Integer(7), "Julio");
+		meses.put(new Integer(8), "Agosto");
+		meses.put(new Integer(9), "Septiembre");
+		meses.put(new Integer(10), "Octubre");
+		meses.put(new Integer(11), "Noviembre");
+		meses.put(new Integer(12), "Diciembre");
+		model.addAttribute("meses", meses);
+	 
+		/*for(int i=1;i < 71;i++){
+			
+		}*/
+
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(dp.getFecha_nac());
 		int anio = cal.get(Calendar.YEAR);
-		int mes = cal.get(Calendar.MONTH);
+		int mes = cal.get(Calendar.MONTH)+1;
 		int dia = cal.get(Calendar.DAY_OF_MONTH);
 
 		model.addAttribute("diaa", dia);
 		model.addAttribute("mess", mes);
 		model.addAttribute("anioo", anio);
 
-		System.out.println("dia:" + dia + "mes: " + mes + "anio:" + anio);
 		model.addAttribute("titulo", "datos");
 
 		return "datosEditar";

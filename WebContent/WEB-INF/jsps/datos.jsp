@@ -84,7 +84,8 @@
 							name="email" placeholder="Email">
 						<form:errors cssClass="error" path="email"></form:errors>
 					</div>
-
+					
+					
 					<!-- FECHA DE NACIMIENTO -->
 					<div class="form-group">
 						<label for="inputFechaNac">Fecha de Nacimiento</label> <select

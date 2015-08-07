@@ -4,7 +4,9 @@ import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import  java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.validation.Valid;
 
@@ -91,6 +93,22 @@ public class DataController {
 			return "/";
 		}
 		
+		Map<Integer, String> meses = new HashMap<Integer, String>();
+		meses.put(new Integer(1), "Enero");
+		meses.put(new Integer(2), "Febrero");
+		meses.put(new Integer(3), "Marzo");
+		meses.put(new Integer(4), "Abril");
+		meses.put(new Integer(5), "Mayo");
+		meses.put(new Integer(6), "Junio");
+		meses.put(new Integer(7), "Julio");
+		meses.put(new Integer(8), "Agosto");
+		meses.put(new Integer(9), "Septiembre");
+		meses.put(new Integer(10), "Octubre");
+		meses.put(new Integer(11), "Noviembre");
+		meses.put(new Integer(12), "Diciembre");
+
+		model.addAttribute("meses", meses);
+
 		String fecha = anio + "-" + mes + "-" + dia;
 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
