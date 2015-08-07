@@ -20,21 +20,10 @@
 					method="post"
 					action="${pageContext.request.contextPath}/modificarantecedentes"
 					modelAttribute="antedecentes">
-<<<<<<< HEAD
-	
+
 						<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
 				
-=======
-					
-                   <!-- -DNI -->
-					<div class="form-group">
-						<label for="inputName">DNI:</label>
-						<c:out value="${dni}" />
-						<input type="hidden" id="dni"value="${antecedentes.dni}" path="dni" name="dni">
-					</div>
->>>>>>> a7d6ede978e00091e272d17417aeb38fe38b240f
-					
-                   
+          
                     <!-- BOTON EDITAR -->
 					<div class="form-group">
 		     			<div class="row">
