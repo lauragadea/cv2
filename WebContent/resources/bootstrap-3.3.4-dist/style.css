@@ -30,5 +30,13 @@ label.error {
 .mensajepass{
 	text-align:center;
 	font-size: 10px;
-	
+}
+
+.date {
+    padding-bottom: 10px;
+}
+
+.date select{
+	float: left;
+    width: 140px	
 }
