@@ -11,6 +11,19 @@
 					action="${pageContext.request.contextPath}/modificardatos"
 					modelAttribute="dp">
 
+					<!-- BOTON EDITAR -->
+					<div class="form-group">
+		     			<div class="row">
+		     				<div class="col-md-8">
+		     					 <h3>Datos Personales</h3>
+		     				</div>
+		                   	<div class="col-md-1"></div>
+		                   	<div class="col-md-3">
+		                  	
+		                   	</div>
+		                </div>
+					</div>
+
 					<!-- DNI  -->
 					<div class="form-group">
 						<label for="dni">DNI <input type="text" id="dni"

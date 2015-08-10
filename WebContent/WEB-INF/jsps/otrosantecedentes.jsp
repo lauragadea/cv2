@@ -16,7 +16,18 @@
 
 
 							<input type="hidden" id="dni" path="dni" name="dni" placeholder="DNI" value="${dni}">
-
+							<!-- BOTON EDITAR -->
+							<div class="form-group">
+				     			<div class="row">
+				     				<div class="col-md-8">
+				     					 <h3>Otros Antecedentes</h3>
+				     				</div>
+				                   	<div class="col-md-1"></div>
+				                   	<div class="col-md-3">
+				                  	
+				                   	</div>
+				                </div>
+							</div>
 
 							<!-- Participación u organización de eventos CyT -->
 							<div class="form-group">

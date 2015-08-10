@@ -2,12 +2,8 @@
 
 <body>
 
-	<script src="jquery-1.8.3.js"></script>
-	<script src="resources/bootstrap-3.3.4-dist/js/bootstrap.js"></script>
-
-
 	<header>
-		<title>Currículum Vitae</title>
+	<title>Currículum Vitae</title>
 	</header>
 
 	<div class="col-lg-6 col-lg-offset-3">
@@ -25,6 +21,20 @@
 				
           
                     <!-- BOTON EDITAR -->
+                    
+                    <!-- BOTON EDITAR -->
+					<div class="form-group">
+		     			<div class="row">
+		     				<div class="col-md-8">
+		     					 <h3>Antecedentes</h3>
+		     				</div>
+		                   	<div class="col-md-1"></div>
+		                   	<div class="col-md-3">
+		                  	
+		                   	</div>
+		                </div>
+					</div>
+					
 					<div class="form-group">
 		     			<div class="row">
 		     				<div class="col-md-8">

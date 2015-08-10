@@ -16,9 +16,7 @@
 					action="${pageContext.request.contextPath}/crearformacion"
 					modelAttribute="formacion">
 
-					<input type="hidden" id="dni" path="dni" name="dni" placeholder="DNI" value="${dni}">
-
-					
+					<input type="hidden" id="dni" path="dni" name="dni" placeholder="DNI" value="${dni}">					
 	
 					<!-- BOTON EDITAR -->
 					<div class="form-group">

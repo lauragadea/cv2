@@ -2,10 +2,6 @@
 
 <body>
 
-	<script src="jquery-1.8.3.js"></script>
-	<script src="resources/bootstrap-3.3.4-dist/js/bootstrap.js"></script>
-
-
 	<header>
 		<title>Currículum Vitae</title>
 	</header>
@@ -24,7 +20,20 @@
 				<input type="hidden" id="dni"value="${dni}" path="dni" name="dni">
 
 						
+					
 					<!-- BOTON EDITAR -->
+					<div class="form-group">
+		     			<div class="row">
+		     				<div class="col-md-8">
+		     					 <h3>Otros Antecedentes</h3>
+		     				</div>
+		                   	<div class="col-md-1"></div>
+		                   	<div class="col-md-3">
+		                  	
+		                   	</div>
+		                </div>
+					</div>
+					
 					<div class="form-group">
 		     			<div class="row">
 		     				<div class="col-md-8">

@@ -57,10 +57,6 @@ private NamedParameterJdbcTemplate jdbc;
 							dp.setProvincia(rs.getString("provincia"));
 							dp.setPais(rs.getString("pais"));
 							
-							
-							
-							System.out.println("ALU DENTRO DAO: " + dp);
-	
 							return dp;
 						}
 	

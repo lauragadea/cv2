@@ -14,21 +14,28 @@
 					action="${pageContext.request.contextPath}/creardatos"
 					modelAttribute="datos">
 					
+					
+					<!-- BOTON EDITAR -->
 					<div class="form-group">
+		     			<div class="row">
+		     				<div class="col-md-8">
+		     					 <h3>Datos Personales</h3>
+		     				</div>
+		                   	<div class="col-md-1"></div>
+		                   	<div class="col-md-3">
+		                  	
+		                   	</div>
+		                </div>
+					</div>
+					
+					<div class="form-group">
+					
 						<label for="dni">DNI
 						<input type="text"
 							id="dni" class="form-control" path="dni"
 							name="dni" placeholder="DNI" value="${dni}" readonly></label></div>
 					
-					<div class="form-group">
-		     			<div class="row">
-		     				
-		                   
-		                   	<div class="col-md-3">
-		                   	
-		                   	</div>
-		                </div>
-					</div>
+					
 						
 					<!-- NOMBRE -->
 					<div class="form-group">
@@ -37,7 +44,7 @@
 							name="nombre" placeholder="Nombre">
 						<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
-										<!-- APELLIDO -->
+					<!-- APELLIDO -->
 					<div class="form-group">
 						<label for="inputApellido">Apellido</label> <input type="text"
 							class="form-control" id="alu_apellido" path="apellido"

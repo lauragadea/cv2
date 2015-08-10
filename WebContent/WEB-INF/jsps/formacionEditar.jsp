@@ -2,10 +2,6 @@
 
 <body>
 
-	<script src="jquery-1.8.3.js"></script>
-	<script src="resources/bootstrap-3.3.4-dist/js/bootstrap.js"></script>
-
-
 	<header>
 		<title>Currículum Vitae</title>
 	</header>
