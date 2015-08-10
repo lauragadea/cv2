@@ -28,7 +28,7 @@ private NamedParameterJdbcTemplate jdbc;
 	}
 	
 	//trae los datos de la bd
-	public DatosPersonales getData(BigDecimal dni) {
+	public DatosPersonales getData(long dni) {
 
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("dni", dni);

@@ -39,7 +39,7 @@ public class AntecedentesDAO {
 	}
 	
 	//trae los datos de la bd
-		public Antecedentes getData(BigDecimal dni) {
+		public Antecedentes getData(long dni) {
 
 			MapSqlParameterSource params = new MapSqlParameterSource();
 			params.addValue("dni", dni);

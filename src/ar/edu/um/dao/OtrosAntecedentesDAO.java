@@ -36,7 +36,7 @@ private NamedParameterJdbcTemplate jdbc;
 	}
 
 
-	public OtrosAntecedentes getData(BigDecimal dni) {
+	public OtrosAntecedentes getData(long dni) {
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("dni", dni);
 		  

@@ -27,7 +27,7 @@ public class CargosService {
 		cargosDao.modify(cargos);
 	}
 
-	public Cargos getData(BigDecimal dni) {
+	public Cargos getData(long dni) {
 		return cargosDao.getData(dni);
 	}
 }

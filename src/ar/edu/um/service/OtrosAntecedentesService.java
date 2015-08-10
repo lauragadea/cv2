@@ -24,7 +24,7 @@ public class OtrosAntecedentesService {
 		otrosantecedentesDao.create(otrosAntecedentes);
 	}
 
-	public OtrosAntecedentes getData(BigDecimal dni) {
+	public OtrosAntecedentes getData(long dni) {
 		return otrosantecedentesDao.getData(dni);
 	}
 	

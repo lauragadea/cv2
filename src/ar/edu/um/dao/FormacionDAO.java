@@ -36,7 +36,7 @@ public class FormacionDAO {
 	}
 	
 
-	public Formacion getData(BigDecimal dni) {
+	public Formacion getData(long dni) {
 
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("dni", dni);

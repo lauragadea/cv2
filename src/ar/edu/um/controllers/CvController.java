@@ -133,7 +133,8 @@ public class CvController {
 
 		model.addAttribute("meses", meses);
 		
-		BigDecimal dni = new BigDecimal(username);
+		//BigDecimal dni = new BigDecimal(username);
+		long dni = Long.parseLong(username);
 		model.addAttribute("dni", dni);
 
 		DatosPersonales dp = datosPersonalesService.getData(dni);
@@ -169,7 +170,7 @@ public class CvController {
 										 */
 		System.out.println("USER: " + username);
 		Integer.parseInt(username);
-		BigDecimal dni = new BigDecimal(username);
+		long dni = Long.parseLong(username);
 		model.addAttribute("dni", dni);
 		DatosPersonales dp = datosPersonalesService.getData(dni);
 
@@ -232,7 +233,7 @@ public class CvController {
 										 * sistema
 										 */
 		System.out.println("USER: " + username);
-		BigDecimal dni = new BigDecimal(username);
+		long dni = Long.parseLong(username);
 		model.addAttribute("dni", dni);
 
 		Formacion formacion = formacionService.getData(dni);
@@ -264,7 +265,7 @@ public class CvController {
 										 * sistema
 										 */
 		System.out.println("USER: " + username);
-		BigDecimal dni = new BigDecimal(username);
+		long dni = Long.parseLong(username);
 		model.addAttribute("dni", dni);
 
 		Formacion formacion = formacionService.getData(dni);
@@ -287,7 +288,7 @@ public class CvController {
 										 * sistema
 										 */
 		System.out.println("USER: " + username);
-		BigDecimal dni = new BigDecimal(username);
+		long dni = Long.parseLong(username);;
 		model.addAttribute("dni", dni);
 
 		Cargos cargos = cargosService.getData(dni);
@@ -320,7 +321,7 @@ public class CvController {
 										 * sistema
 										 */
 		System.out.println("USER: " + username);
-		BigDecimal dni = new BigDecimal(username);
+		long dni = Long.parseLong(username);
 		model.addAttribute("dni", dni);
 
 		Cargos cargos = cargosService.getData(dni);
@@ -344,7 +345,7 @@ public class CvController {
 										 */
 		System.out.println("USER produccion: " + username);
 
-		BigDecimal dni = new BigDecimal(username);
+		long dni = Long.parseLong(username);
 		model.addAttribute("dni", dni);
 
 		Produccion produccion = produccionService.getData(dni);
@@ -377,7 +378,7 @@ public class CvController {
 										 * sistema
 										 */
 		System.out.println("USER produciconeditar: " + username);
-		BigDecimal dni = new BigDecimal(username);
+		long dni = Long.parseLong(username);
 		model.addAttribute("dni", dni);
 
 		Produccion produccion = produccionService.getData(dni);
@@ -398,7 +399,7 @@ public class CvController {
 										 */
 		System.out.println("USER otros antecedentes: " + username);
 
-		BigDecimal dni = new BigDecimal(username);
+		long dni = Long.parseLong(username);
 		model.addAttribute("dni", dni);
 
 		Antecedentes antecedentes = antecedentesService.getData(dni);
@@ -429,7 +430,7 @@ public class CvController {
 										 * sistema
 										 */
 		System.out.println("USER: " + username);
-		BigDecimal dni = new BigDecimal(username);
+		long dni = Long.parseLong(username);
 		model.addAttribute("dni", dni);
 
 		Antecedentes antecedentes = antecedentesService.getData(dni);
@@ -453,7 +454,8 @@ public class CvController {
 										 */
 		System.out.println("USER otros antecedentes: " + username);
 
-		BigDecimal dni = new BigDecimal(username);
+		//BigDecimal dni = new BigDecimal(username);
+		long dni = Long.parseLong(username);
 		model.addAttribute("dni", dni);
 
 		OtrosAntecedentes otrosAntecedentes = otrosAntecedentesService
@@ -487,7 +489,8 @@ public class CvController {
 										 * sistema
 										 */
 		System.out.println("USER: " + username);
-		BigDecimal dni = new BigDecimal(username);
+		//BigDecimal dni = new BigDecimal(username);
+		long dni = Long.parseLong(username);
 		model.addAttribute("dni", dni);
 
 		OtrosAntecedentes otrosAntecedentes = otrosAntecedentesService

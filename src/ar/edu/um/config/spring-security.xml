@@ -23,7 +23,7 @@
 			username-parameter="username"	
 			password-parameter="password" />
 			
-			<logout logout-success-url="/" logout-url="/j_spring_security_logout" />
+			<logout logout-success-url="/" logout-url="/j_spring_security_logout" invalidate-session="true" delete-cookies="true"/>
 	
 	<!--
 		<logout logout-success-url="/login?logout=1" delete-cookies="JSESSIONID" invalidate-session="true" />

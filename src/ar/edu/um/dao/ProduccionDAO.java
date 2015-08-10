@@ -35,7 +35,7 @@ private NamedParameterJdbcTemplate jdbc;
 	}
 
 
-	public Produccion getData(BigDecimal dni) {
+	public Produccion getData(long dni) {
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("dni", dni);
 		  

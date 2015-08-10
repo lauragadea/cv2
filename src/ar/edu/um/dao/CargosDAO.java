@@ -37,7 +37,7 @@ public class CargosDAO {
 
 	}
 	
-	public Cargos getData(BigDecimal dni) {
+	public Cargos getData(long dni) {
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("dni", dni);
 		  

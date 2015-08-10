@@ -22,7 +22,7 @@ public class DatosPersonalesService {
 		datosPersonalesDao.create(datosPersonales);
 	}
 	
-	public DatosPersonales getData(BigDecimal dni){
+	public DatosPersonales getData(long dni){
 		return datosPersonalesDao.getData(dni);
 	}
 	

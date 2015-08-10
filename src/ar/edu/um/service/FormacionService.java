@@ -22,7 +22,7 @@ public class FormacionService {
 		formacionDao.create(formacion);
 	}
 	
-	public Formacion getData(BigDecimal dni){
+	public Formacion getData(long dni){
 		return formacionDao.getData(dni);
 	}
 	

@@ -22,7 +22,7 @@ public class ProduccionService {
 		produccionDao.create(produccion);
 	}
 
-	public Produccion getData(BigDecimal dni) {
+	public Produccion getData(long dni) {
 		return produccionDao.getData(dni);
 	}
 
