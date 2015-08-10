@@ -20,118 +20,131 @@ import ar.edu.um.model.DatosPersonales;
 import ar.edu.um.model.User;
 import ar.edu.um.model.UserRole;
 import ar.edu.um.service.UsersService;
- 
+
 @Controller
 public class MainController {
- 
+
 	private UsersService usersService;
-		
+
 	@Autowired
 	public void setUsersService(UsersService usersService) {
 		this.usersService = usersService;
 	}
-	
-	
+
 	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
 	public String defaultPage() {
 
-	  return "login";
+		return "login";
 	}
-	
+
 	@RequestMapping(value = "logout", method = RequestMethod.GET)
 	public String logout() {
-		SecurityContextHolder.getContext().getAuthentication().setAuthenticated(false); 	
-		
-	    return "login";
+		SecurityContextHolder.getContext().getAuthentication()
+				.setAuthenticated(false);
+
+		return "login";
 	}
- 
+
 	@RequestMapping(value = "/admin**", method = RequestMethod.GET)
 	public ModelAndView adminPage() {
- 
-	  ModelAndView model = new ModelAndView();
-	  model.addObject("title", "Spring Security Login Form - Database Authentication");
-	  model.addObject("message", "This page is for ROLE_ADMIN only!");
-	  model.setViewName("admin");
-	  return model;
- 
+
+		ModelAndView model = new ModelAndView();
+		model.addObject("title",
+				"Spring Security Login Form - Database Authentication");
+		model.addObject("message", "This page is for ROLE_ADMIN only!");
+		model.setViewName("admin");
+		return model;
+
 	}
- 
+
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public ModelAndView login(@RequestParam(value = "error", required = false) String error,
-		@RequestParam(value = "logout", required = false) String logout) {
- 
-	  ModelAndView model = new ModelAndView();
-	  if (error != null) {
-		model.addObject("error", "Usuario o contraseña inválidos");
-	  }
-	   
-	  if (logout != null) {
-		model.addObject("msg", "Usted ha cerrado sesión correctamente");
-	  }
-	  model.setViewName("login");
- 
-	  return model;
- 
+	public ModelAndView login(
+			@RequestParam(value = "error", required = false) String error,
+			@RequestParam(value = "logout", required = false) String logout) {
+
+		ModelAndView model = new ModelAndView();
+		if (error != null) {
+			model.addObject("error", "Usuario o contraseña inválidos");
+		}
+
+		if (logout != null) {
+			model.addObject("msg", "Usted ha cerrado sesión correctamente");
+		}
+		model.setViewName("login");
+
+		return model;
+
 	}
-	
+
 	@RequestMapping(value = "/registro", method = RequestMethod.GET)
-	public ModelAndView login(@RequestParam(value = "error", required = false) String error) {
- 
-	  ModelAndView model = new ModelAndView();
-	  if (error != null) {
-		model.addObject("error", "Usuario o contraseña inválidos");
-	  }
- 
-	  model.setViewName("registro");
- 
-	  return model;
- 
+	public ModelAndView login(
+			@RequestParam(value = "error", required = false) String error) {
+
+		ModelAndView model = new ModelAndView();
+		if (error != null) {
+			model.addObject("error", "Usuario o contraseña inválidos");
+		}
+
+		model.setViewName("registro");
+
+		return model;
+
 	}
-	
-	@RequestMapping(value="/registrado", method=RequestMethod.POST)
-	public String confirmaRegistro(Model model, @RequestParam("DNI") BigDecimal DNI, @RequestParam("password") String password) {
+
+	@RequestMapping(value = "/registrado", method = RequestMethod.POST)
+	public String confirmaRegistro(Model model,
+			@RequestParam("DNI") BigDecimal DNI,
+			@RequestParam("password") String password) {
 
 		User user = new User();
 		user.setDNI(DNI);
 		user.setPassword(password);
-		
+
 		System.out.println(user);
-		
-		if(usersService.create(user) == false){
+
+		if (usersService.create(user) == false) {
 			System.out.println("ya esta registrado");
 			model.addAttribute("objeto", false);
 			return "login";
 		}
-		
+
 		System.out.println();
-		
+
 		UserRole userRole = new UserRole();
 		userRole.setDNI(DNI);
-		userRole.setRole("ROLE_USER");	
+		userRole.setRole("ROLE_USER");
 		System.out.println(userRole);
-		
+
 		usersService.createRole(userRole);
-		
+
 		return "registrado";
 	}
-	
-	
-	//for 403 access denied page
+
+	// for 403 access denied page
 	@RequestMapping(value = "/403", method = RequestMethod.GET)
 	public ModelAndView accesssDenied() {
+
+		ModelAndView model = new ModelAndView();
+
+		// check if user is login
+		Authentication auth = SecurityContextHolder.getContext()
+				.getAuthentication();
+		if (!(auth instanceof AnonymousAuthenticationToken)) {
+			UserDetails userDetail = (UserDetails) auth.getPrincipal();
+			model.addObject("username", userDetail.getUsername());
+		}
+
+		model.setViewName("403");
+		return model;
+
+	}
+	
+	@RequestMapping(value = "/404", method = RequestMethod.GET)
+	public String notFound() {
  
-	  ModelAndView model = new ModelAndView();
- 
-	  //check if user is login
-	  Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	  if (!(auth instanceof AnonymousAuthenticationToken)) {
-		UserDetails userDetail = (UserDetails) auth.getPrincipal();	
-		model.addObject("username", userDetail.getUsername());
-	  }
- 
-	  model.setViewName("403");
-	  return model;
+
+	  return "404";
  
 	}
- 
+
 }
