@@ -20,10 +20,9 @@
 
 							<!-- Participación u organización de eventos CyT -->
 							<div class="form-group">
-								<label for="inputEstanciasyPasantias">Estancias y
-									pasantías</label> <input type="text" class="form-control"
-									placeholder="Estancias y pasantías" id="estancias_pasantias"
-									path="estancias_pasantias" name="estancias_pasantias">
+								<label for="inputParticipacionUOrganizacion">Participación u organización de eventos CyT</label> <input type="text" class="form-control"
+									placeholder="Participación u organización de eventos CyT" id="participacion_organizacion_eventos"
+									path="participacion_organizacion_eventos" name="participacion_organizacion_eventos">
 							</div>
 
 							<!-- Membresías, redes y/o programas de cooperación -->
@@ -130,9 +129,8 @@
 
 							<!-- Participación u organización de eventos CyT -->
 							<div class="form-group">
-								<label for="inputEstanciasyPasantias">Estancias y
-									pasantías: </label>
-								<c:out value="${otrosAntecedentes.estancias_pasantias}" />
+								<label for="inputParticipacionUEventos">Participación u organización de eventos CyT: </label>
+								<c:out value="${otrosAntecedentes.participacion_organizacion_eventos}" />
 							</div>
 
 							<!-- Membresías, redes y/o programas de cooperación -->

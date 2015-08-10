@@ -30,8 +30,8 @@ private NamedParameterJdbcTemplate jdbc;
 	public boolean create(OtrosAntecedentes otrosAntecedentes) {
 		
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(otrosAntecedentes);
-		return jdbc.update("insert into otros_antecedentes (dni, estancias_pasantias, membresias_asociaciones_ct, coordinacion_proyectos_cooperacion, premios_distinciones, dato_academico, curriculum_vitae, participacion_redes_tematicas)"
-				+ " values (:dni, :estancias_pasantias, :membresias_asociaciones_ct, :coordinacion_proyectos_cooperacion, :premios_distinciones, :dato_academico, :curriculum_vitae, :participacion_redes_tematicas)", params) == 1;
+		return jdbc.update("insert into otros_antecedentes (dni, participacion_organizacion_eventos, membresias_asociaciones_ct, coordinacion_proyectos_cooperacion, premios_distinciones, dato_academico, curriculum_vitae, participacion_redes_tematicas)"
+				+ " values (:dni, :participacion_organizacion_eventos, :membresias_asociaciones_ct, :coordinacion_proyectos_cooperacion, :premios_distinciones, :dato_academico, :curriculum_vitae, :participacion_redes_tematicas)", params) == 1;
 
 	}
 
@@ -49,7 +49,7 @@ private NamedParameterJdbcTemplate jdbc;
 							OtrosAntecedentes otrosAntecedentes = new OtrosAntecedentes();
 							
 							otrosAntecedentes.setDni(rs.getBigDecimal("dni"));
-							otrosAntecedentes.setEstancias_pasantias(rs.getString("estancias_pasantias"));
+							otrosAntecedentes.setParticipacion_organizacion_eventos(rs.getString("participacion_organizacion_eventos"));
 							otrosAntecedentes.setMembresias_asociaciones_ct(rs.getString("membresias_asociaciones_ct"));
 							otrosAntecedentes.setCoordinacion_proyectos_cooperacion(rs.getString("coordinacion_proyectos_cooperacion"));
 							otrosAntecedentes.setPremios_distinciones(rs.getString("premios_distinciones"));
@@ -73,7 +73,7 @@ private NamedParameterJdbcTemplate jdbc;
 
 		BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(otrosAntecedentes);
 		return jdbc.update("update otros_antecedentes set "
-				+ "estancias_pasantias=:estancias_pasantias,"
+				+ "participacion_organizacion_eventos=:participacion_organizacion_eventos,"
 				+ "membresias_asociaciones_ct=:membresias_asociaciones_ct,"
 				+ "coordinacion_proyectos_cooperacion=:coordinacion_proyectos_cooperacion, "
 				+ "premios_distinciones=:premios_distinciones, "

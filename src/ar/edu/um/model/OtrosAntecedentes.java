@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class OtrosAntecedentes{
 	
 	public BigDecimal dni;
-	public String estancias_pasantias;
+	public String participacion_organizacion_eventos;
 	public String membresias_asociaciones_ct;
 	public String coordinacion_proyectos_cooperacion;
 	public String premios_distinciones;
@@ -21,11 +21,13 @@ public class OtrosAntecedentes{
 	}
 	
 	
-	public String getEstancias_pasantias() {
-		return estancias_pasantias;
+	
+	public String getParticipacion_organizacion_eventos() {
+		return participacion_organizacion_eventos;
 	}
-	public void setEstancias_pasantias(String estancias_pasantias) {
-		this.estancias_pasantias = estancias_pasantias;
+	public void setParticipacion_organizacion_eventos(
+			String participacion_organizacion_eventos) {
+		this.participacion_organizacion_eventos = participacion_organizacion_eventos;
 	}
 	public String getMembresias_asociaciones_ct() {
 		return membresias_asociaciones_ct;
@@ -68,8 +70,8 @@ public class OtrosAntecedentes{
 	
 	@Override
 	public String toString() {
-		return "OtrosAntecedentes [dni=" + dni + ", estancias_pasantias="
-				+ estancias_pasantias + ", membresias_asociaciones_ct="
+		return "OtrosAntecedentes [dni=" + dni + ", participacion_organizacion_eventos="
+				+ participacion_organizacion_eventos + ", membresias_asociaciones_ct="
 				+ membresias_asociaciones_ct
 				+ ", coordinacion_proyectos_cooperacion="
 				+ coordinacion_proyectos_cooperacion
