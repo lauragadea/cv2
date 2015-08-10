@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="ISO-8859-1"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 
 <!DOCTYPE html>
 <html>
@@ -16,7 +17,7 @@
 	<script src="resources/bootstrap-3.3.4-dist/js/bootstrap.js"></script>
 
 	<header>
-		<title>Currículum Vitae</title>
+		<title>CurrÃ­culum Vitae</title>
 	</header>
 
 </head>
