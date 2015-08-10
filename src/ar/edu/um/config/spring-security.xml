@@ -22,9 +22,10 @@
 			username-parameter="username"	
 			password-parameter="password" />
 	
-	
+	<!--
 		<logout logout-success-url="/login?logout=1" delete-cookies="JSESSIONID" invalidate-session="true" />
-		
+		-->
+		<logout logout-url="/logout" invalidate-session="true" delete-cookies="true" />
 		<!--
 		ESTE FUNCIONA
 		<logout logout-success-url="/login?logout"  />

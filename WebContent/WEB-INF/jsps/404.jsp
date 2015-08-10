@@ -6,14 +6,12 @@
 			<div class="container">
 				<%@include file="includes/menu.jsp" %>
 				<h1>Error 404</h1>
-	
-				<p>Página no encontrada.</p>
 
+				<p>Página no encontrada.</p>
 			</div>
 			<!--container-->
 		</div>
 	</div>
-
 	<%@include file="includes/footer.jsp" %>
 </body>
 </html>
