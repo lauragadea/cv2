@@ -34,7 +34,7 @@
 				<c:if test="${titulo=='formacion'}">
 					class="active"
 				</c:if>
-				><a href="http://localhost:8080/spring/formacion"
+				><a href="http:localhost:8080/spring/formacion"
 					role="button">Formación</a></li>
 				<li 
 				<c:if test="${titulo=='cargos'}">
