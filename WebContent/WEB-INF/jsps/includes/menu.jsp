@@ -34,31 +34,31 @@
 				<c:if test="${titulo=='formacion'}">
 					class="active"
 				</c:if>
-				><a href="http:localhost:8080/spring/formacion"
+				><a href="${pageContext.request.contextPath}/formacion"
 					role="button">Formación</a></li>
 				<li 
 				<c:if test="${titulo=='cargos'}">
 					class="active"
 				</c:if>
-				><a href="http://localhost:8080/spring/cargos"
+				><a href="${pageContext.request.contextPath}/cargos"
 					role="button">Cargos</a></li>
 				<li 
 				<c:if test="${titulo=='antecedentes'}">
 					class="active"
 				</c:if>
-				><a href="http://localhost:8080/spring/antecedentes"
+				><a href="${pageContext.request.contextPath}/antecedentes"
 					role="button">Antecedentes</a></li>
 				<li 
 				<c:if test="${titulo=='produccion'}">
 					class="active"
 				</c:if>
-				><a href="http://localhost:8080/spring/produccion"
+				><a href="${pageContext.request.contextPath}/produccion"
 					role="button">Producción</a></li>
 				<li 
 				<c:if test="${titulo=='otrosantecedentes'}">
 					class="active"
 				</c:if>
-				><a href="http://localhost:8080/spring/otrosantecedentes"
+				><a href="${pageContext.request.contextPath}/otrosantecedentes"
 					role="button">Otros Antecedentes</a></li>
 			</ul>
 		</div>
