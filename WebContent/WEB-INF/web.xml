@@ -43,10 +43,6 @@
 	</context-param>
 
 
-	<http>
-		<logout invalidate-session="true" logout-success-url="/login" logout-url="/logout" />
-	</http>
-
 	<!-- Spring Security -->
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>

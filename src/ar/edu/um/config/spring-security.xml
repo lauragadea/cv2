@@ -11,6 +11,7 @@
  
 		<intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/cv**" access="hasRole('ROLE_USER')" />
+		<logout logout-success-url="/login" />
  
 		<!-- access denied page -->
 		<access-denied-handler error-page="/403" />
@@ -21,17 +22,20 @@
 			authentication-failure-url="/login?error" 
 			username-parameter="username"	
 			password-parameter="password" />
+			
+			<logout logout-success-url="/" logout-url="/j_spring_security_logout" />
 	
 	<!--
 		<logout logout-success-url="/login?logout=1" delete-cookies="JSESSIONID" invalidate-session="true" />
 		-->
-		<logout logout-url="/logout" invalidate-session="true" delete-cookies="true" />
 		<!--
+		<logout logout-url="/logout" logout-success-url="/login?logout" invalidate-session="true" delete-cookies="true" />
+
 		ESTE FUNCIONA
 		<logout logout-success-url="/login?logout"  />
 		-->
 		<!-- enable csrf protection -->
-		<csrf/>
+		
 	</http>
  
 	<!-- Select users and user_roles from database -->
