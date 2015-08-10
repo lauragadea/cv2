@@ -1,23 +1,23 @@
 <%@include file="header.jsp" %>
 	
-		<form action="${logoutUrl}" method="post" id="logoutForm">
-			<input type="hidden" name="${_csrf.parameterName}"
-				value="${_csrf.token}" />
-		</form>
+	<form action="${logoutUrl}" method="post" id="logoutForm">
+		<input type="hidden" name="${_csrf.parameterName}"
+			value="${_csrf.token}" />
+	</form>
 
-		<div class="logout">
-			<div class="row">
-				<div class="col-md-7"></div>
-				<div class="col-md-3">Usuario: ${dni}</div>
-				<div class="col-md-2"><a href="<c:url value="/logout" />"> Salir</a></div>				
-			</div>
+	<div class="logout">
+		<div class="row">
+			<div class="col-md-7"></div>
+			<div class="col-md-3">Usuario: ${dni}</div>
+			<div class="col-md-2"><a href="<c:url value="/logout" />"> Salir</a></div>				
 		</div>
+	</div>
 
-		<h1>Currículum Vitae</h1>
+	<h1>Currículum Vitae</h1>
 
-		<!-- NAVBAR -->
-
-	<nav class="navbar navbar-default">
+	<!-- NAVBAR -->
+	
+	<nav class="responsive navbar navbar-default">
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
