@@ -84,10 +84,11 @@
 					
 					
 					<!-- FECHA DE NACIMIENTO -->
-					<div class="form-group">
-						<label for="inputFechaNac">Fecha de Nacimiento</label> <select
-							class="form-control" id="dia" name="dia" >
-							
+					<div class="form-group date">
+					<label for="inputFechaNac">Fecha de Nacimiento</label> 						
+						<div class="date">							
+							<select class="form-control" id="dia" name="dia" value="${dia}">
+							<option selected="${diaa}">${diaa}</option>
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
@@ -119,22 +120,17 @@
 							<option value="29">29</option>
 							<option value="30">30</option>
 							<option value="31">31</option>
-						</select> <select class="form-control" id="mes" name="mes" value="${mes}">
-							
-							<option value="01">Enero</option>
-							<option value="02">Febrero</option>
-							<option value="03">Marzo</option>
-							<option value="04">Abril</option>
-							<option value="05">Mayo</option>
-							<option value="06">Junio</option>
-							<option value="07">Julio</option>
-							<option value="08">Agosto</option>
-							<option value="09">Septiembre</option>
-							<option value="10">Octubre</option>
-							<option value="11">Noviembre</option>
-							<option value="12">Diciembre</option>
-						</select> <select class="form-control" id="anio" name="anio" value="${anio}">
-							
+							</select> 
+													
+							<select class="form-control" id="mes" name="mes" value="${mess}">
+							    <c:forEach items="${meses}" var="mes">
+							        <option value="${mes.key}" ${mes.key == mess ? 'selected' : ''}>${mes.value}</option>
+							    </c:forEach>
+							</select>
+													
+							<select class="form-control" id="anio" name="anio"
+							value="${anio}">
+							<option selected="${anioo}">${anioo}</option>
 							<option value="2001">2001</option>
 							<option value="2000">2000</option>
 							<option value="1999">1999</option>
@@ -207,9 +203,9 @@
 							<option value="1932">1932</option>
 							<option value="1931">1931</option>
 							<option value="1930">1930</option>
-
-						</select>
-
+							</select>
+							
+						</div>
 					</div>
 
 					<div class="form-group">

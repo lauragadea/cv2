@@ -117,6 +117,21 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
+		Map<Integer, String> meses = new HashMap<Integer, String>();
+		meses.put(new Integer(1), "Enero");
+		meses.put(new Integer(2), "Febrero");
+		meses.put(new Integer(3), "Marzo");
+		meses.put(new Integer(4), "Abril");
+		meses.put(new Integer(5), "Mayo");
+		meses.put(new Integer(6), "Junio");
+		meses.put(new Integer(7), "Julio");
+		meses.put(new Integer(8), "Agosto");
+		meses.put(new Integer(9), "Septiembre");
+		meses.put(new Integer(10), "Octubre");
+		meses.put(new Integer(11), "Noviembre");
+		meses.put(new Integer(12), "Diciembre");
+
+		model.addAttribute("meses", meses);
 		
 		BigDecimal dni = new BigDecimal(username);
 		model.addAttribute("dni", dni);
