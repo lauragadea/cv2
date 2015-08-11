@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import ar.edu.um.model.DatosPersonales;
+
 import ar.edu.um.model.User;
 import ar.edu.um.model.UserRole;
 import ar.edu.um.service.UsersService;
@@ -147,5 +147,13 @@ public class MainController {
 	  return "404";
  
 	}
+	/*
+	@RequestMapping(value = "/500", method = RequestMethod.GET)
+	public String pageNotFound() {
+ 
 
+	  return "500";
+ 
+	}
+	*/
 }
