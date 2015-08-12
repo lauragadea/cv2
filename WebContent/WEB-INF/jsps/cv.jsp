@@ -5,7 +5,7 @@
 		<div class="well">
 			<div class="container">
 				<%@include file="includes/menu.jsp" %>
-				<p>Bienenido al sistema de CV.</p> 
+				<p>Bienvenido al sistema de CV.</p> 
 				<p>Seleccione una categoría del menú para comenzar con la visualización, carga o modificación de sus datos.</p>
 				<!--  -->
 

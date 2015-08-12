@@ -48,7 +48,7 @@
 					<!--  -->
 					<div class="form-group">
 						<label for="inputNivelUniversitarioGrado">Nivel Universitario de
-							Grado</label> <input type="text" id="nivel_universitario_grado"
+							Grado</label> <input type="text" id="nivel_universitario_grado" path="nivel_universitario_grado" name="nivel_universitario_grado"
 							class="form-control"
 							placeholder="Nivel Universitario de Grado">
 					</div>

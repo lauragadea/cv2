@@ -91,6 +91,22 @@ public class Formacion {
 	public void setIdiomas(String idiomas) {
 		this.idiomas = idiomas;
 	}
+
+	@Override
+	public String toString() {
+		return "Formacion [dni=" + dni + ", nivel_universitario_posgrado="
+				+ nivel_universitario_posgrado
+				+ ", nivel_universitario_posgrado_especializacion="
+				+ nivel_universitario_posgrado_especializacion
+				+ ", nivel_universitario_grado=" + nivel_universitario_grado
+				+ ", nivel_terciario_no_universitario="
+				+ nivel_terciario_no_universitario
+				+ ", especialidad_certificada=" + especialidad_certificada
+				+ ", posdoctorado=" + posdoctorado
+				+ ", cursos_posgrado_y_capacitaciones="
+				+ cursos_posgrado_y_capacitaciones + ", idiomas=" + idiomas
+				+ "]";
+	}
 	
 	
 	

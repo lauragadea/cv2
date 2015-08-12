@@ -53,7 +53,7 @@ public class FormacionController {
 		
 		
 			formacionService.create(formacion);
-		
+			System.out.println("formacion = " + formacion);
 			model.addAttribute("formacion", formacion);
 			model.addAttribute("titulo", "formacion");
 		
