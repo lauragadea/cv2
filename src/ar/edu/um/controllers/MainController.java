@@ -144,7 +144,7 @@ public class MainController {
 	public String notFound() {
  
 
-	  return "404";
+	  return "login";
  
 	}
 	/*

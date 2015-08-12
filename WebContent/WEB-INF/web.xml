@@ -71,13 +71,13 @@
 	</filter-mapping>
 	 <error-page>
         <error-code>404</error-code>
-        <location>/404</location>
+        <location>/login</location>
     </error-page>
     
    
      <error-page>
 	<exception-type>java.lang.NumberFormatException</exception-type>
-	<location>/404</location>
+	<location>/login</location>
   </error-page>
      <!-- 
     <error-page>
