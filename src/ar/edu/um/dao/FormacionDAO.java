@@ -66,8 +66,7 @@ public class FormacionDAO {
 	
 					});
 		}
-		catch(EmptyResultDataAccessException erdae) {
-			System.out.println("en formacionDAO devuelve null");
+		catch(EmptyResultDataAccessException erdae) {			
 			return null;
 		}
 		

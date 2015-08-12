@@ -117,39 +117,43 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		Map<Integer, String> meses = new HashMap<Integer, String>();
-		meses.put(new Integer(1), "Enero");
-		meses.put(new Integer(2), "Febrero");
-		meses.put(new Integer(3), "Marzo");
-		meses.put(new Integer(4), "Abril");
-		meses.put(new Integer(5), "Mayo");
-		meses.put(new Integer(6), "Junio");
-		meses.put(new Integer(7), "Julio");
-		meses.put(new Integer(8), "Agosto");
-		meses.put(new Integer(9), "Septiembre");
-		meses.put(new Integer(10), "Octubre");
-		meses.put(new Integer(11), "Noviembre");
-		meses.put(new Integer(12), "Diciembre");
-
-		model.addAttribute("meses", meses);
-		
-		//BigDecimal dni = new BigDecimal(username);
-		long dni = Long.parseLong(username);
-		model.addAttribute("dni", dni);
-
-		DatosPersonales dp = datosPersonalesService.getData(dni);
-
-		if (dp == null) {
-
+		if (username != "anonymousUser"){				
+			Map<Integer, String> meses = new HashMap<Integer, String>();
+			meses.put(new Integer(1), "Enero");
+			meses.put(new Integer(2), "Febrero");
+			meses.put(new Integer(3), "Marzo");
+			meses.put(new Integer(4), "Abril");
+			meses.put(new Integer(5), "Mayo");
+			meses.put(new Integer(6), "Junio");
+			meses.put(new Integer(7), "Julio");
+			meses.put(new Integer(8), "Agosto");
+			meses.put(new Integer(9), "Septiembre");
+			meses.put(new Integer(10), "Octubre");
+			meses.put(new Integer(11), "Noviembre");
+			meses.put(new Integer(12), "Diciembre");
+	
+			model.addAttribute("meses", meses);
+			
+			//BigDecimal dni = new BigDecimal(username);
+			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-			model.addAttribute("objeto", false);
-
-		} else {
-			model.addAttribute("objeto", true);
-			model.addAttribute("datosPersonales", dp);
-
-		}
-		model.addAttribute("titulo", "datos");
+	
+			DatosPersonales dp = datosPersonalesService.getData(dni);
+	
+			if (dp == null) {
+	
+				model.addAttribute("dni", dni);
+				model.addAttribute("objeto", false);
+	
+			} else {
+				model.addAttribute("objeto", true);
+				model.addAttribute("datosPersonales", dp);
+	
+			}
+			model.addAttribute("titulo", "datos");
+		}else{
+			return "login";
+		}			
 		return "datos";
 	}
 
@@ -168,56 +172,60 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		System.out.println("USER: " + username);
-		Integer.parseInt(username);
-		long dni = Long.parseLong(username);
-		model.addAttribute("dni", dni);
-		DatosPersonales dp = datosPersonalesService.getData(dni);
-
-		model.addAttribute("datosPersonales", dp);
-
-		Map<Integer, String> meses = new HashMap<Integer, String>();
-		meses.put(new Integer(1), "Enero");
-		meses.put(new Integer(2), "Febrero");
-		meses.put(new Integer(3), "Marzo");
-		meses.put(new Integer(4), "Abril");
-		meses.put(new Integer(5), "Mayo");
-		meses.put(new Integer(6), "Junio");
-		meses.put(new Integer(7), "Julio");
-		meses.put(new Integer(8), "Agosto");
-		meses.put(new Integer(9), "Septiembre");
-		meses.put(new Integer(10), "Octubre");
-		meses.put(new Integer(11), "Noviembre");
-		meses.put(new Integer(12), "Diciembre");
-		model.addAttribute("meses", meses);
-	 
-		Map<String, String> sexo = new LinkedHashMap<String, String>();
-		sexo.put("Femenino", "Femenino");
-		sexo.put("Masculino", "Masculino");
-		model.addAttribute("sexo", sexo);
-		String sex = dp.getSexo();
-		model.addAttribute("sex", sex);
-		
-		Map<String, String> estado_civil = new LinkedHashMap<String, String>();
-		estado_civil.put("Soltero", "Soltero");
-		estado_civil.put("Casado", "Casado");
-		estado_civil.put("Viudo", "Viudo");
-		model.addAttribute("estado_civil", estado_civil );
-		String estadocivil  = dp.getEstado_civil();
-		model.addAttribute("estadocivil", estadocivil);
-		
-		Calendar cal = Calendar.getInstance();
-		cal.setTime(dp.getFecha_nac());
-		int anio = cal.get(Calendar.YEAR);
-		int mes = cal.get(Calendar.MONTH)+1;
-		int dia = cal.get(Calendar.DAY_OF_MONTH);
-
-		model.addAttribute("diaa", dia);
-		model.addAttribute("mess", mes);
-		model.addAttribute("anioo", anio);
-
-		model.addAttribute("titulo", "datos");
-
+		if (username != "anonymousUser"){	
+			System.out.println("USER: " + username);
+			Integer.parseInt(username);
+			long dni = Long.parseLong(username);
+			model.addAttribute("dni", dni);
+			DatosPersonales dp = datosPersonalesService.getData(dni);
+	
+			model.addAttribute("datosPersonales", dp);
+	
+			Map<Integer, String> meses = new HashMap<Integer, String>();
+			meses.put(new Integer(1), "Enero");
+			meses.put(new Integer(2), "Febrero");
+			meses.put(new Integer(3), "Marzo");
+			meses.put(new Integer(4), "Abril");
+			meses.put(new Integer(5), "Mayo");
+			meses.put(new Integer(6), "Junio");
+			meses.put(new Integer(7), "Julio");
+			meses.put(new Integer(8), "Agosto");
+			meses.put(new Integer(9), "Septiembre");
+			meses.put(new Integer(10), "Octubre");
+			meses.put(new Integer(11), "Noviembre");
+			meses.put(new Integer(12), "Diciembre");
+			model.addAttribute("meses", meses);
+		 
+			Map<String, String> sexo = new LinkedHashMap<String, String>();
+			sexo.put("Femenino", "Femenino");
+			sexo.put("Masculino", "Masculino");
+			model.addAttribute("sexo", sexo);
+			String sex = dp.getSexo();
+			model.addAttribute("sex", sex);
+			
+			Map<String, String> estado_civil = new LinkedHashMap<String, String>();
+			estado_civil.put("Soltero", "Soltero");
+			estado_civil.put("Casado", "Casado");
+			estado_civil.put("Viudo", "Viudo");
+			model.addAttribute("estado_civil", estado_civil );
+			String estadocivil  = dp.getEstado_civil();
+			model.addAttribute("estadocivil", estadocivil);
+			
+			Calendar cal = Calendar.getInstance();
+			cal.setTime(dp.getFecha_nac());
+			int anio = cal.get(Calendar.YEAR);
+			int mes = cal.get(Calendar.MONTH)+1;
+			int dia = cal.get(Calendar.DAY_OF_MONTH);
+	
+			model.addAttribute("diaa", dia);
+			model.addAttribute("mess", mes);
+			model.addAttribute("anioo", anio);
+	
+			model.addAttribute("titulo", "datos");
+		}
+		else{
+			return "login";
+		}
 		return "datosEditar";
 	}
 
@@ -232,24 +240,29 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		System.out.println("USER: " + username);
-		long dni = Long.parseLong(username);
-		model.addAttribute("dni", dni);
-
-		Formacion formacion = formacionService.getData(dni);
-
-		if (formacion == null) {
+		if (username != "anonymousUser"){				
+			System.out.println("USER: " + username);
+			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-			model.addAttribute("objeto", false);
-
-		} else {
-
-			model.addAttribute("objeto", true);
-			model.addAttribute("formacion", formacion);
-
+	
+			Formacion formacion = formacionService.getData(dni);
+	
+			if (formacion == null) {
+				model.addAttribute("dni", dni);
+				model.addAttribute("objeto", false);
+	
+			} else {
+	
+				model.addAttribute("objeto", true);
+				model.addAttribute("formacion", formacion);
+	
+			}
+	
+			model.addAttribute("titulo", "formacion");
 		}
-
-		model.addAttribute("titulo", "formacion");
+		else{
+			return "login";
+		}
 		return "formacion";
 	}
 
@@ -264,15 +277,20 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		System.out.println("USER: " + username);
-		long dni = Long.parseLong(username);
-		model.addAttribute("dni", dni);
-
-		Formacion formacion = formacionService.getData(dni);
-
-		model.addAttribute("formacion", formacion);
-		model.addAttribute("titulo", "formacion");
-
+		if (username != "anonymousUser"){	
+			System.out.println("USER: " + username);
+			long dni = Long.parseLong(username);
+			model.addAttribute("dni", dni);
+	
+			Formacion formacion = formacionService.getData(dni);
+	
+			model.addAttribute("formacion", formacion);
+			model.addAttribute("titulo", "formacion");
+		}
+		else{
+			return "login";
+		}
+			
 		return "formacionEditar";
 	}
 
@@ -287,25 +305,28 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		System.out.println("USER: " + username);
-		long dni = Long.parseLong(username);;
-		model.addAttribute("dni", dni);
-
-		Cargos cargos = cargosService.getData(dni);
-
-		if (cargos == null) {
+		if (username != "anonymousUser"){							
+			System.out.println("USER: " + username);
+			long dni = Long.parseLong(username);;
 			model.addAttribute("dni", dni);
-			model.addAttribute("objeto", false);
-
-		} else {
-
-			model.addAttribute("objeto", true);
-
-			model.addAttribute("cargos", cargos);
-
-
+	
+			Cargos cargos = cargosService.getData(dni);
+	
+			if (cargos == null) {
+				model.addAttribute("dni", dni);
+				model.addAttribute("objeto", false);
+	
+			} else {
+	
+				model.addAttribute("objeto", true);
+	
+				model.addAttribute("cargos", cargos);
+			}
+			model.addAttribute("titulo", "cargos");
 		}
-		model.addAttribute("titulo", "cargos");
+		else{
+			return "login";
+		}
 		return "cargos";
 	}
 
@@ -320,15 +341,19 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		System.out.println("USER: " + username);
-		long dni = Long.parseLong(username);
-		model.addAttribute("dni", dni);
-
-		Cargos cargos = cargosService.getData(dni);
-
-		model.addAttribute("cargos", cargos);
-		model.addAttribute("titulo", "cargos");
-
+		if (username != "anonymousUser"){	
+			System.out.println("USER: " + username);
+			long dni = Long.parseLong(username);
+			model.addAttribute("dni", dni);
+	
+			Cargos cargos = cargosService.getData(dni);
+	
+			model.addAttribute("cargos", cargos);
+			model.addAttribute("titulo", "cargos");
+		}
+		else{
+			return "login";
+		}
 		return "cargosEditar";
 	}
 
@@ -343,26 +368,31 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		System.out.println("USER produccion: " + username);
-
-		long dni = Long.parseLong(username);
-		model.addAttribute("dni", dni);
-
-		Produccion produccion = produccionService.getData(dni);
-
-		if (produccion == null) {
+		if (username != "anonymousUser"){							
+			System.out.println("USER produccion: " + username);
+	
+			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-			model.addAttribute("objeto", false);
-
-		} else {
-
-			model.addAttribute("objeto", true);
-
-			model.addAttribute("produccion", produccion);
-			
-
+	
+			Produccion produccion = produccionService.getData(dni);
+	
+			if (produccion == null) {
+				model.addAttribute("dni", dni);
+				model.addAttribute("objeto", false);
+	
+			} else {
+	
+				model.addAttribute("objeto", true);
+	
+				model.addAttribute("produccion", produccion);
+				
+	
+			}
+			model.addAttribute("titulo", "produccion");
 		}
-		model.addAttribute("titulo", "produccion");
+		else{
+			return "login";
+		}
 		return "produccion";
 	}
 
@@ -377,14 +407,18 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		System.out.println("USER produciconeditar: " + username);
-		long dni = Long.parseLong(username);
-		model.addAttribute("dni", dni);
-
-		Produccion produccion = produccionService.getData(dni);
-		model.addAttribute("produccion", produccion);
-		model.addAttribute("titulo", "produccion");
-
+		if (username != "anonymousUser"){	
+			System.out.println("USER produciconeditar: " + username);
+			long dni = Long.parseLong(username);
+			model.addAttribute("dni", dni);
+	
+			Produccion produccion = produccionService.getData(dni);
+			model.addAttribute("produccion", produccion);
+			model.addAttribute("titulo", "produccion");
+		}
+		else{
+			return "login";
+		}
 		return "produccionEditar";
 	}
 
@@ -397,26 +431,31 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		System.out.println("USER otros antecedentes: " + username);
-
-		long dni = Long.parseLong(username);
-		model.addAttribute("dni", dni);
-
-		Antecedentes antecedentes = antecedentesService.getData(dni);
-
-		if (antecedentes == null) {
+		if (username != "anonymousUser"){							
+			System.out.println("USER otros antecedentes: " + username);
+	
+			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-			model.addAttribute("objeto", false);
-
-		} else {
-
-			model.addAttribute("objeto", true);
-
-			model.addAttribute("antecedentes", antecedentes);
-			
-
+	
+			Antecedentes antecedentes = antecedentesService.getData(dni);
+	
+			if (antecedentes == null) {
+				model.addAttribute("dni", dni);
+				model.addAttribute("objeto", false);
+	
+			} else {
+	
+				model.addAttribute("objeto", true);
+	
+				model.addAttribute("antecedentes", antecedentes);
+				
+	
+			}
+			model.addAttribute("titulo", "antecedentes");
 		}
-		model.addAttribute("titulo", "antecedentes");
+		else{
+			return "login";
+		}
 		return "antecedentes";
 	}
 
@@ -429,15 +468,19 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		System.out.println("USER: " + username);
-		long dni = Long.parseLong(username);
-		model.addAttribute("dni", dni);
-
-		Antecedentes antecedentes = antecedentesService.getData(dni);
-		model.addAttribute("antecedentes", antecedentes);
-
-		model.addAttribute("titulo", "antecedentes");
-
+		if (username != "anonymousUser"){	
+			System.out.println("USER: " + username);		
+			long dni = Long.parseLong(username);
+			model.addAttribute("dni", dni);
+	
+			Antecedentes antecedentes = antecedentesService.getData(dni);
+			model.addAttribute("antecedentes", antecedentes);
+	
+			model.addAttribute("titulo", "antecedentes");
+		}
+		else{
+			return "login";
+		}
 		return "antecedentesEditar";
 	}
 
@@ -452,28 +495,32 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		System.out.println("USER otros antecedentes: " + username);
-
-		//BigDecimal dni = new BigDecimal(username);
-		long dni = Long.parseLong(username);
-		model.addAttribute("dni", dni);
-
-		OtrosAntecedentes otrosAntecedentes = otrosAntecedentesService
-				.getData(dni);
-
-		if (otrosAntecedentes == null) {
+		if (username != "anonymousUser"){							
+			System.out.println("USER otros antecedentes: " + username);
+	
+			//BigDecimal dni = new BigDecimal(username);
+			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-			model.addAttribute("objeto", false);
-
-		} else {
-
-			model.addAttribute("objeto", true);
-
-			model.addAttribute("otrosAntecedentes", otrosAntecedentes);
-			
-
+	
+			OtrosAntecedentes otrosAntecedentes = otrosAntecedentesService
+					.getData(dni);
+	
+			if (otrosAntecedentes == null) {
+				model.addAttribute("dni", dni);
+				model.addAttribute("objeto", false);
+	
+			} else {
+	
+				model.addAttribute("objeto", true);
+	
+				model.addAttribute("otrosAntecedentes", otrosAntecedentes);
+				
+	
+			}
+			model.addAttribute("titulo", "otrosantecedentes");
+		}else{
+			return "login";
 		}
-		model.addAttribute("titulo", "otrosantecedentes");
 		return "otrosantecedentes";
 	}
 
@@ -488,17 +535,21 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		System.out.println("USER: " + username);
-		//BigDecimal dni = new BigDecimal(username);
-		long dni = Long.parseLong(username);
-		model.addAttribute("dni", dni);
-
-		OtrosAntecedentes otrosAntecedentes = otrosAntecedentesService
-				.getData(dni);
-
-		model.addAttribute("otrosAntecedentes", otrosAntecedentes);
-		model.addAttribute("titulo", "otrosantecedentes");
-
+		if (username != "anonymousUser"){							
+			System.out.println("USER: " + username);
+			//BigDecimal dni = new BigDecimal(username);
+			long dni = Long.parseLong(username);
+			model.addAttribute("dni", dni);
+	
+			OtrosAntecedentes otrosAntecedentes = otrosAntecedentesService
+					.getData(dni);
+	
+			model.addAttribute("otrosAntecedentes", otrosAntecedentes);
+			model.addAttribute("titulo", "otrosantecedentes");
+		}
+		else{
+			return "login";
+		}
 		return "otrosantecedentesEditar";
 	}
 
