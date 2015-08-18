@@ -1,6 +1,7 @@
 package ar.edu.um.service;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,6 +25,10 @@ public class DatosPersonalesService {
 	
 	public DatosPersonales getData(long dni){
 		return datosPersonalesDao.getData(dni);
+	}
+	
+	public List<DatosPersonales> getAllData(){
+		return datosPersonalesDao.getAllData();
 	}
 	
 	public void modify(DatosPersonales datosPersonales){

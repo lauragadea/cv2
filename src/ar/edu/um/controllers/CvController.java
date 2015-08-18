@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -159,7 +160,11 @@ public class CvController {
 
 	@RequestMapping(value = "/admin")
 	public String admin(Model model) throws ParseException {
-
+		
+		List<DatosPersonales> list = datosPersonalesService.getAllData();
+		System.out.println(Arrays.toString(list.toArray()));
+		model.addAttribute("listDatos", list);
+	
 		return "admin";
 	}
 
