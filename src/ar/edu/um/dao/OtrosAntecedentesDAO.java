@@ -79,6 +79,6 @@ private NamedParameterJdbcTemplate jdbc;
 				+ "premios_distinciones=:premios_distinciones, "
 				+ "dato_academico=:dato_academico, "
 				+ "curriculum_vitae=:curriculum_vitae, "
-				+ "participacion_redes_tematicas=:participacion_redes_tematicas", params) == 1;
+				+ "participacion_redes_tematicas=:participacion_redes_tematicas WHERE dni=:dni", params) == 1;
 	}
 }

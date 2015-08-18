@@ -103,6 +103,6 @@ private NamedParameterJdbcTemplate jdbc;
 					+ "genero_literario_dramatico=:genero_literario_dramatico,"
 					+ "genero_literario_guion=:genero_literario_guion,"
 					+ "otro_tipo=:otro_tipo,"
-					+ "otra_produccion=:otra_produccion", params) == 1;
+					+ "otra_produccion=:otra_produccion WHERE dni=:dni", params) == 1;
 		}
 }
