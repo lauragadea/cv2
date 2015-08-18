@@ -50,7 +50,7 @@
 					</div>
 					<!-- Nivel basico y/o medio -->
 					<div class="form-group">
-						<label for="inputNivelBasicoyMedio">Nivel basico y/o medio</label>
+						<label for="inputNivelBasicoyMedio">Nivel básico y/o medio</label>
 						<input type="text" class="form-control" id="nivel_basico"
 							path="nivel_basico" name ="nivel_basico"
 							placeholder="Nivel terciario no universitario">
@@ -89,7 +89,7 @@
 					<!-- Cargos I+D en otro tipo de institucines -->
 					<div class="form-group">
 						<label for="inputCargosIDenOtroTipodeInstituciones">Cargos
-							I+D en otro tipo de institucines</label> <input type="text"
+							I+D en otro tipo de instituciones</label> <input type="text"
 							class="form-control" id="cargos_id_otro" path="cargos_id_otro" name="cargos_id_otro"
 							placeholder="Cargos I+D en otro tipo de institucines">
 					</div>
