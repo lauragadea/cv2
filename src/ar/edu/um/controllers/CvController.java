@@ -157,6 +157,12 @@ public class CvController {
 		return "datos";
 	}
 
+	@RequestMapping(value = "/admin")
+	public String admin(Model model) throws ParseException {
+
+		return "admin";
+	}
+
 	/***
 	 * DATOS EDITAR
 	 * 
