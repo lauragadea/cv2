@@ -22,6 +22,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import ar.edu.um.model.Antecedentes;
 import ar.edu.um.model.Cargos;
@@ -49,7 +51,8 @@ public class CvController {
 	private ProduccionService produccionService;
 
 	@Autowired
-	public void setDatosPersonalesService(DatosPersonalesService datosPersonalesService) {
+	public void setDatosPersonalesService(
+			DatosPersonalesService datosPersonalesService) {
 		this.datosPersonalesService = datosPersonalesService;
 	}
 
@@ -118,7 +121,7 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		if (username != "anonymousUser"){				
+		if (username != "anonymousUser") {
 			Map<Integer, String> meses = new HashMap<Integer, String>();
 			meses.put(new Integer(1), "Enero");
 			meses.put(new Integer(2), "Febrero");
@@ -132,39 +135,62 @@ public class CvController {
 			meses.put(new Integer(10), "Octubre");
 			meses.put(new Integer(11), "Noviembre");
 			meses.put(new Integer(12), "Diciembre");
-	
+
 			model.addAttribute("meses", meses);
-			
-			//BigDecimal dni = new BigDecimal(username);
+
+			// BigDecimal dni = new BigDecimal(username);
 			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-	
+
 			DatosPersonales dp = datosPersonalesService.getData(dni);
-	
+
 			if (dp == null) {
-	
+
 				model.addAttribute("dni", dni);
 				model.addAttribute("objeto", false);
-	
+
 			} else {
 				model.addAttribute("objeto", true);
 				model.addAttribute("datosPersonales", dp);
-	
+
 			}
 			model.addAttribute("titulo", "datos");
-		}else{
+		} else {
 			return "login";
-		}			
+		}
 		return "datos";
+	}
+
+	@RequestMapping(value = "/detalle", method = RequestMethod.GET)
+	public String detalle(Model model, @RequestParam Long dni)
+			throws ParseException {
+
+		model.addAttribute("dni", dni);
+
+		DatosPersonales dp = datosPersonalesService.getData(dni);
+		Antecedentes ant = antecedentesService.getData(dni);
+		Cargos cg = cargosService.getData(dni);
+		Formacion form = formacionService.getData(dni);
+		OtrosAntecedentes oant = otrosAntecedentesService.getData(dni);
+		Produccion prod = produccionService.getData(dni);
+
+		model.addAttribute("datosPersonales", dp);
+		model.addAttribute("antecedentes", ant);
+		model.addAttribute("cargos", cg);
+		model.addAttribute("formacion", form);
+		model.addAttribute("otrosAntecedentes", oant);
+		model.addAttribute("produccion", prod);		
+
+		return "detalle";
 	}
 
 	@RequestMapping(value = "/admin")
 	public String admin(Model model) throws ParseException {
-		
+
 		List<DatosPersonales> list = datosPersonalesService.getAllData();
 		System.out.println(Arrays.toString(list.toArray()));
 		model.addAttribute("listDatos", list);
-	
+
 		return "admin";
 	}
 
@@ -183,15 +209,15 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		if (username != "anonymousUser"){	
+		if (username != "anonymousUser") {
 			System.out.println("USER: " + username);
 			Integer.parseInt(username);
 			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
 			DatosPersonales dp = datosPersonalesService.getData(dni);
-	
+
 			model.addAttribute("datosPersonales", dp);
-	
+
 			Map<Integer, String> meses = new HashMap<Integer, String>();
 			meses.put(new Integer(1), "Enero");
 			meses.put(new Integer(2), "Febrero");
@@ -206,35 +232,34 @@ public class CvController {
 			meses.put(new Integer(11), "Noviembre");
 			meses.put(new Integer(12), "Diciembre");
 			model.addAttribute("meses", meses);
-		 
+
 			Map<String, String> sexo = new LinkedHashMap<String, String>();
 			sexo.put("Femenino", "Femenino");
 			sexo.put("Masculino", "Masculino");
 			model.addAttribute("sexo", sexo);
 			String sex = dp.getSexo();
 			model.addAttribute("sex", sex);
-			
+
 			Map<String, String> estado_civil = new LinkedHashMap<String, String>();
 			estado_civil.put("Soltero", "Soltero");
 			estado_civil.put("Casado", "Casado");
 			estado_civil.put("Viudo", "Viudo");
-			model.addAttribute("estado_civil", estado_civil );
-			String estadocivil  = dp.getEstado_civil();
+			model.addAttribute("estado_civil", estado_civil);
+			String estadocivil = dp.getEstado_civil();
 			model.addAttribute("estadocivil", estadocivil);
-			
+
 			Calendar cal = Calendar.getInstance();
 			cal.setTime(dp.getFecha_nac());
 			int anio = cal.get(Calendar.YEAR);
-			int mes = cal.get(Calendar.MONTH)+1;
+			int mes = cal.get(Calendar.MONTH) + 1;
 			int dia = cal.get(Calendar.DAY_OF_MONTH);
-	
+
 			model.addAttribute("diaa", dia);
 			model.addAttribute("mess", mes);
 			model.addAttribute("anioo", anio);
-	
+
 			model.addAttribute("titulo", "datos");
-		}
-		else{
+		} else {
 			return "login";
 		}
 		return "datosEditar";
@@ -251,27 +276,26 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		if (username != "anonymousUser"){				
+		if (username != "anonymousUser") {
 			System.out.println("USER: " + username);
 			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-	
+
 			Formacion formacion = formacionService.getData(dni);
-	
+
 			if (formacion == null) {
 				model.addAttribute("dni", dni);
 				model.addAttribute("objeto", false);
-	
+
 			} else {
-	
+
 				model.addAttribute("objeto", true);
 				model.addAttribute("formacion", formacion);
-	
+
 			}
-	
+
 			model.addAttribute("titulo", "formacion");
-		}
-		else{
+		} else {
 			return "login";
 		}
 		return "formacion";
@@ -288,20 +312,19 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		if (username != "anonymousUser"){	
+		if (username != "anonymousUser") {
 			System.out.println("USER: " + username);
 			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-	
+
 			Formacion formacion = formacionService.getData(dni);
-	
+
 			model.addAttribute("formacion", formacion);
 			model.addAttribute("titulo", "formacion");
-		}
-		else{
+		} else {
 			return "login";
 		}
-			
+
 		return "formacionEditar";
 	}
 
@@ -316,26 +339,26 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		if (username != "anonymousUser"){							
+		if (username != "anonymousUser") {
 			System.out.println("USER: " + username);
-			long dni = Long.parseLong(username);;
+			long dni = Long.parseLong(username);
+			;
 			model.addAttribute("dni", dni);
-	
+
 			Cargos cargos = cargosService.getData(dni);
-	
+
 			if (cargos == null) {
 				model.addAttribute("dni", dni);
 				model.addAttribute("objeto", false);
-	
+
 			} else {
-	
+
 				model.addAttribute("objeto", true);
-	
+
 				model.addAttribute("cargos", cargos);
 			}
 			model.addAttribute("titulo", "cargos");
-		}
-		else{
+		} else {
 			return "login";
 		}
 		return "cargos";
@@ -352,17 +375,16 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		if (username != "anonymousUser"){	
+		if (username != "anonymousUser") {
 			System.out.println("USER: " + username);
 			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-	
+
 			Cargos cargos = cargosService.getData(dni);
-	
+
 			model.addAttribute("cargos", cargos);
 			model.addAttribute("titulo", "cargos");
-		}
-		else{
+		} else {
 			return "login";
 		}
 		return "cargosEditar";
@@ -379,29 +401,27 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		if (username != "anonymousUser"){							
+		if (username != "anonymousUser") {
 			System.out.println("USER produccion: " + username);
-	
+
 			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-	
+
 			Produccion produccion = produccionService.getData(dni);
-	
+
 			if (produccion == null) {
 				model.addAttribute("dni", dni);
 				model.addAttribute("objeto", false);
-	
+
 			} else {
-	
+
 				model.addAttribute("objeto", true);
-	
+
 				model.addAttribute("produccion", produccion);
-				
-	
+
 			}
 			model.addAttribute("titulo", "produccion");
-		}
-		else{
+		} else {
 			return "login";
 		}
 		return "produccion";
@@ -418,16 +438,15 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		if (username != "anonymousUser"){	
+		if (username != "anonymousUser") {
 			System.out.println("USER produciconeditar: " + username);
 			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-	
+
 			Produccion produccion = produccionService.getData(dni);
 			model.addAttribute("produccion", produccion);
 			model.addAttribute("titulo", "produccion");
-		}
-		else{
+		} else {
 			return "login";
 		}
 		return "produccionEditar";
@@ -442,29 +461,27 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		if (username != "anonymousUser"){							
+		if (username != "anonymousUser") {
 			System.out.println("USER otros antecedentes: " + username);
-	
+
 			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-	
+
 			Antecedentes antecedentes = antecedentesService.getData(dni);
-	
+
 			if (antecedentes == null) {
 				model.addAttribute("dni", dni);
 				model.addAttribute("objeto", false);
-	
+
 			} else {
-	
+
 				model.addAttribute("objeto", true);
-	
+
 				model.addAttribute("antecedentes", antecedentes);
-				
-	
+
 			}
 			model.addAttribute("titulo", "antecedentes");
-		}
-		else{
+		} else {
 			return "login";
 		}
 		return "antecedentes";
@@ -479,17 +496,16 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		if (username != "anonymousUser"){	
-			System.out.println("USER: " + username);		
+		if (username != "anonymousUser") {
+			System.out.println("USER: " + username);
 			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-	
+
 			Antecedentes antecedentes = antecedentesService.getData(dni);
 			model.addAttribute("antecedentes", antecedentes);
-	
+
 			model.addAttribute("titulo", "antecedentes");
-		}
-		else{
+		} else {
 			return "login";
 		}
 		return "antecedentesEditar";
@@ -506,30 +522,29 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		if (username != "anonymousUser"){							
+		if (username != "anonymousUser") {
 			System.out.println("USER otros antecedentes: " + username);
-	
-			//BigDecimal dni = new BigDecimal(username);
+
+			// BigDecimal dni = new BigDecimal(username);
 			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-	
+
 			OtrosAntecedentes otrosAntecedentes = otrosAntecedentesService
 					.getData(dni);
-	
+
 			if (otrosAntecedentes == null) {
 				model.addAttribute("dni", dni);
 				model.addAttribute("objeto", false);
-	
+
 			} else {
-	
+
 				model.addAttribute("objeto", true);
-	
+
 				model.addAttribute("otrosAntecedentes", otrosAntecedentes);
-				
-	
+
 			}
 			model.addAttribute("titulo", "otrosantecedentes");
-		}else{
+		} else {
 			return "login";
 		}
 		return "otrosantecedentes";
@@ -546,19 +561,18 @@ public class CvController {
 										 * trae el usuario logueado en el
 										 * sistema
 										 */
-		if (username != "anonymousUser"){							
+		if (username != "anonymousUser") {
 			System.out.println("USER: " + username);
-			//BigDecimal dni = new BigDecimal(username);
+			// BigDecimal dni = new BigDecimal(username);
 			long dni = Long.parseLong(username);
 			model.addAttribute("dni", dni);
-	
+
 			OtrosAntecedentes otrosAntecedentes = otrosAntecedentesService
 					.getData(dni);
-	
+
 			model.addAttribute("otrosAntecedentes", otrosAntecedentes);
 			model.addAttribute("titulo", "otrosantecedentes");
-		}
-		else{
+		} else {
 			return "login";
 		}
 		return "otrosantecedentesEditar";

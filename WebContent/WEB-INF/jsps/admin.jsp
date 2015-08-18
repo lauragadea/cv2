@@ -47,7 +47,7 @@
 											<td>${datos.nombre}</td>
 											<td>${datos.apellido}</td>
 											<td>${datos.email}</td>
-											<td><a href="/detalle?dni=${datos.dni}">Ver</a></td>
+											<td><a href="detalle?dni=${datos.dni}">Ver</a></td>
 
 										</tr>
 									</c:forEach>
