@@ -16,9 +16,18 @@
 				<!-- BOTON EDITAR -->
 				<div class="form-group">
 					<div class="row">
-						<div class="col-md-8">
+						<div class="col-md-11">
 
-							<h1>Administrador</h1>
+							
+
+							<nav class="responsive navbar navbar-default">
+								<div class="collapse navbar-collapse"
+									id="bs-example-navbar-collapse-1">
+									<ul class="nav navbar-nav">
+										<h1><font color="white">Curriculum Vitae - Administrador</font></h1>
+									</ul>
+								</div>
+							</nav>
 
 
 							<table class="table">
@@ -47,8 +56,7 @@
 
 
 						</div>
-						<div class="col-md-1"></div>
-						<div class="col-md-3"></div>
+
 					</div>
 				</div>
 
