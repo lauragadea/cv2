@@ -31,9 +31,9 @@
 
 							<!-- Participación u organización de eventos CyT -->
 							<div class="form-group">
-								<label for="inputParticipacionUOrganizacion">Participación u organización de eventos CyT</label> <textarea wrap="hard" class="form-control"
+								<label for="inputParticipacionUOrganizacion">Participación u organización de eventos CyT</label> <input type="text" class="form-control"
 									placeholder="Participación u organización de eventos CyT" id="participacion_organizacion_eventos"
-									path="participacion_organizacion_eventos" name="participacion_organizacion_eventos"></textarea>
+									path="participacion_organizacion_eventos" name="participacion_organizacion_eventos">
 							</div>
 
 							<!-- Membresías, redes y/o programas de cooperación -->
@@ -45,34 +45,34 @@
 							<!-- Membresías n asocianiones C-T y/o profesionales -->
 							<div class="form-group">
 								<label for="inputMembresíasEnAsociacionesCT">Membresías
-									en asocianiones C-T y/o profesionales</label> <textarea wrap="hard"
+									en asocianiones C-T y/o profesionales</label> <input type="text"
 									class="form-control"
 									placeholder="Membresías en asocianiones C-T y/o profesionales"
 									id="membresias_asociaciones_ct"
 									path="membresias_asociaciones_ct"
-									name="membresias_asociaciones_ct">></textarea>
+									name="membresias_asociaciones_ct">
 							</div>
 
 							<!-- Participación en redes temáticas o institucionales -->
 							<div class="form-group">
 								<label for="inputParticipacionEnRedesTematicas">Participación
-									en redes temáticas o institucionales</label> <textarea wrap="hard"
+									en redes temáticas o institucionales</label> <input type="text"
 									class="form-control"
 									placeholder="Participación en redes temáticas o institucionales"
 									id="participacion_redes_tematicas"
 									path="participacion_redes_tematicas"
-									name="participacion_redes_tematicas"></textarea>
+									name="participacion_redes_tematicas">
 							</div>
 
 							<!-- Coordinación de proyectos de cooperación académica o  C-T -->
 							<div class="form-group">
 								<label for="inputCoordinacionDeProyectosCooperacion">Coordinación
-									de proyectos de cooperación académica o C-T</label> <textarea wrap="hard"
+									de proyectos de cooperación académica o C-T</label> <input type="text"
 									class="form-control"
 									placeholder="Coordinación de proyectos de cooperación académica o  C-T"
 									id="coordinacion_proyectos_cooperacion"
 									path="coordinacion_proyectos_cooperacion"
-									name="coordinacion_proyectos_cooperacion"></textarea>
+									name="coordinacion_proyectos_cooperacion">
 							</div>
 
 							<!-- PREMIOS Y/O DISTINCIONES -->
@@ -83,10 +83,10 @@
 							<!-- Premios y/o distinciones -->
 							<div class="form-group">
 								<label for="inputPremiosDistinciones">Premios y/o
-									distinciones</label> <textarea wrap="hard" class="form-control"
+									distinciones</label> <input type="text" class="form-control"
 									placeholder="Premios y/o distinciones"
 									id="premios_distinciones" path="premios_distinciones"
-									name="premios_distinciones"></textarea>
+									name="premios_distinciones">
 							</div>
 
 							<!-- OTROS ANTECEDENTES -->
@@ -97,14 +97,15 @@
 
 							<!--Dato Académico -->
 							<div class="form-group">
-								<label for="inputDatoAcademico">Dato Académico</label> <textarea wrap="hard"						type="text" class="form-control" placeholder="Dato Académico"
-									id="dato_academico" path="dato_academico" name="dato_academico"></textarea>
+								<label for="inputDatoAcademico">Dato Académico</label> <input
+									type="text" class="form-control" placeholder="Dato Académico"
+									id="dato_academico" path="dato_academico" name="dato_academico">
 							</div>
 
 							
 
 							<button type="submit" class="btn btn-primary" name="action"
-								value="enviar">Guardar</button>
+								value="enviar">Enviar</button>
 
 						</form:form>
 

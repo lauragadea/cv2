@@ -27,39 +27,39 @@
                    <!-- Artículos publicados en revistas con/sin referato --> 
                    <div class="form-group">
                        <label for="artRef">Artículos publicados en revistas con referato</label>
-                       <textarea wrap="hard" id="articulos_revistas_con_referato" path="articulos_revistas_con_referato" name="articulos_revistas_con_referato" class="form-control"
-					  placeholder="Artículos publicados en revistas con referato"></textarea>
+                       <input type="text" id="articulos_revistas_con_referato" path="articulos_revistas_con_referato" name="articulos_revistas_con_referato" class="form-control"
+					  placeholder="Artículos publicados en revistas con referato">
                    </div>
                    
                    <div class="form-group">
                        <label for="artSRef">Artículos publicados en revistas sin referato</label>
-                       <textarea wrap="hard" id="articulos_revistas_sin_referato" path="articulos_revistas_sin_referato" name="articulos_revistas_sin_referato" class="form-control"
-					  placeholder="Artículos publicados en revistas sin referato"></textarea>
+                       <input type="text" id="articulos_revistas_sin_referato" path="articulos_revistas_sin_referato" name="articulos_revistas_sin_referato" class="form-control"
+					  placeholder="Artículos publicados en revistas sin referato">
                    </div>
                    <!-- Libros --> 
                    <div class="form-group">
                        <label for="libros">Libros</label>
-                       <textarea wrap="hard" id="libros" path="libros" name="libros" class="form-control"  placeholder="Libros"></textarea>
+                       <input type="text" id="libros" path="libros" name="libros" class="form-control"  placeholder="Libros">
                    </div>
                    <!-- Partes de Libros --> 
                    <div class="form-group">
                        <label for="partesLibros">Partes de Libros</label>
-                       <textarea wrap="hard" id="partes_libros" path="partes_libros" name="partes_libros"  class="form-control"  placeholder="Partes de Libros"></textarea>
+                       <input type="text" id="partes_libros" path="partes_libros" name="partes_libros"  class="form-control"  placeholder="Partes de Libros">
                    </div>
                    <!-- Trabajos en eventos C-T publicados --> 
                    <div class="form-group">
                        <label for="Estado">Trabajos en eventos C-T publicados</label>
-                       <textarea wrap="hard" id="trabajos_eventos_ct_publicados" path="trabajos_eventos_ct_publicados" name="trabajos_eventos_ct_publicados" class="form-control"  placeholder="Trabajos en eventos C-T publicados"></textarea>
+                       <input type="text" id="trabajos_eventos_ct_publicados" path="trabajos_eventos_ct_publicados" name="trabajos_eventos_ct_publicados" class="form-control"  placeholder="Trabajos en eventos C-T publicados">
                    </div>
                    <!-- Trabajos en eventos C-T no publicados --> 
                    <div class="form-group">
                        <label for="Trab">Trabajos en eventos C-T no publicados</label>
-                       <textarea wrap="hard" id="trabajos_eventos_ct_no_publicados" path="trabajos_eventos_ct_no_publicados" name="trabajos_eventos_ct_no_publicados"  class="form-control"  placeholder="Trabajos en eventos C-T no publicados"></textarea>
+                       <input type="text" id="trabajos_eventos_ct_no_publicados" path="trabajos_eventos_ct_no_publicados" name="trabajos_eventos_ct_no_publicados"  class="form-control"  placeholder="Trabajos en eventos C-T no publicados">
                    </div>
                    <!-- Demás producciones C-T --> 
                    <div class="form-group">
                        <label for="Estado">Demás producciones C-T</label>
-                       <textarea wrap="hard" id="demas_producciones_ct" path="demas_producciones_ct" name="demas_producciones_ct" class="form-control"  placeholder="Demás producciones C-T"></textarea>
+                       <input type="text" id="demas_producciones_ct" path="demas_producciones_ct" name="demas_producciones_ct" class="form-control"  placeholder="Demás producciones C-T">
                    </div>
 
                    <!-- PRODUCCION TECNOLOGICA-->
@@ -70,22 +70,22 @@
                    <!-- Con titulo de propiedad intelectual --> 
                    <div class="form-group">
                        <label for="Estado">Con titulo de propiedad intelectual</label>
-                       <textarea wrap="hard" id="con_titulo_prop_int" path="con_titulo_prop_int" name="con_titulo_prop_int"  class="form-control"  placeholder="Con titulo de propiedad intelectual"></textarea>
+                       <input type="text" id="con_titulo_prop_int" path="con_titulo_prop_int" name="con_titulo_prop_int"  class="form-control"  placeholder="Con titulo de propiedad intelectual">
                    </div>
                    <!-- sin titulo de propiedad intelectual --> 
                    <div class="form-group">
                        <label for="Estado">Sin titulo de propiedad intelectual</label>
-                       <textarea wrap="hard" id="sin_titulo_prop_int" path="sin_titulo_prop_int" name="sin_titulo_prop_int"  class="form-control"  placeholder="Sin titulo de propiedad intelectual"></textarea>
+                       <input type="text" id="sin_titulo_prop_int" path="sin_titulo_prop_int" name="sin_titulo_prop_int"  class="form-control"  placeholder="Sin titulo de propiedad intelectual">
                    </div>
                    <!-- servicio científico-tecnológico --> 
                    <div class="form-group">
                        <label for="Estado">Servicio científico-tecnológico</label>
-                       <textarea wrap="hard" id="servicio_ct" path="servicio_ct" name="servicio_ct"  class="form-control"  placeholder="Servicio científico-tecnológico"></textarea>
+                       <input type="text" id="servicio_ct" path="servicio_ct" name="servicio_ct"  class="form-control"  placeholder="Servicio científico-tecnológico">
                    </div>
                    <!-- Informe técnico --> 
                    <div class="form-group">
                        <label for="Estado">Informe técnico</label>
-                       <textarea wrap="hard" id="informe_tecnico" path="informe_tecnico" name="informe_tecnico"  class="form-control"  placeholder="Informe técnico"></textarea>
+                       <input type="text" id="informe_tecnico" path="informe_tecnico" name="informe_tecnico"  class="form-control"  placeholder="Informe técnico">
                    </div>
                    
                    <!-- PRODUCCION ARTÍSICA-->
@@ -96,32 +96,32 @@
                    <!-- Musical-sonora --> 
                    <div class="form-group">
                        <label for="Estado">Musical-sonora</label>
-                       <textarea wrap="hard" id="musical_sonora" path="musical_sonora" name="musical_sonora"  class="form-control"  placeholder="Musical-sonora"></textarea>
+                       <input type="text" id="musical_sonora" path="musical_sonora" name="musical_sonora"  class="form-control"  placeholder="Musical-sonora">
                    </div>
                    <!-- Visual --> 
                    <div class="form-group">
                        <label for="Estado">Visual</label>
-                       <textarea wrap="hard" id="visual" path="visual" name="visual" class="form-control"  placeholder="Visual"></textarea>
+                       <input type="text" id="visual" path="visual" name="visual" class="form-control"  placeholder="Visual">
                    </div>
                    <!-- Audiovisual multimedial --> 
                    <div class="form-group">
                        <label for="Estado">Audiovisual multimedial</label>
-                       <textarea wrap="hard" id="audiovisual" path="audiovisual" name="audiovisual" class="form-control"  placeholder="Audiovisual multimedial"></textarea>
+                       <input type="text" id="audiovisual" path="audiovisual" name="audiovisual" class="form-control"  placeholder="Audiovisual multimedial">
                    </div>
                    <!-- Corporal teatral --> 
                    <div class="form-group">
                        <label for="Estado">Corporal teatral</label>
-                       <textarea wrap="hard" id="corporal_teatral" path="corporal_teatral" name="corporal_teatral"  class="form-control"  placeholder="Corporal teatral"></textarea>
+                       <input type="text" id="corporal_teatral" path="corporal_teatral" name="corporal_teatral"  class="form-control"  placeholder="Corporal teatral">
                    </div>
                    <!-- Genero literario narrativo --> 
                    <div class="form-group">
                        <label for="Estado">Genero literario narrativo</label>
-                       <textarea wrap="hard" id="genero_literario_narrativo" path="genero_literario_narrativo" name="genero_literario_narrativo" class="form-control"  placeholder="Genero literario narrativo"></textarea>
+                       <input type="text" id="genero_literario_narrativo" path="genero_literario_narrativo" name="genero_literario_narrativo" class="form-control"  placeholder="Genero literario narrativo">
                    </div>
                    <!-- Genero literario dramático, poético o ensayo --> 
                    <div class="form-group">
                        <label for="Estado">Genero literario dramático, poético o ensayo</label>
-                       <textarea wrap="hard" id="genero_literario_dramatico" path="genero_literario_dramatico" name="genero_literario_dramatico"  class="form-control"  placeholder="Genero literario dramático, poético o ensayo"></textarea>
+                       <input type="text" id="genero_literario_dramatico" path="genero_literario_dramatico" name="genero_literario_dramatico"  class="form-control"  placeholder="Genero literario dramático, poético o ensayo">
                    </div>
                    <!-- Genero literario guión --> 
                    <div class="form-group">
@@ -131,16 +131,16 @@
                    <!-- otro tipo de Genero literario --> 
                    <div class="form-group">
                        <label for="Estado">Otro tipo de Genero literario</label>
-                       <textarea wrap="hard" id="otro_tipo" path="otro_tipo" name="otro_tipo"  class="form-control"  placeholder="Otro tipo de Genero literario"></textarea>
+                       <input type="text" id="otro_tipo" path="otro_tipo" name="otro_tipo"  class="form-control"  placeholder="Otro tipo de Genero literario">
                    </div>
                    <!-- otra producción artística --> 
                    <div class="form-group">
                        <label for="Estado">Otra producción artística</label>
-                       <textarea wrap="hard" id="otra_produccion" path="otra_produccion" name="otra_produccion"  class="form-control"  placeholder="Otra producción artística"></textarea>
+                       <input type="text" id="otra_produccion" path="otra_produccion" name="otra_produccion"  class="form-control"  placeholder="Otra producción artística">
                    </div>
 
                   
-                   <button type="submit" class="btn btn-primary" name="action" value="enviar">Guardar</button>
+                   <button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
 
 				</form:form>
 				
