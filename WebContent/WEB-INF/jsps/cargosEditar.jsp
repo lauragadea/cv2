@@ -38,42 +38,41 @@
 					<!-- nivel superior universitario y/o posgrado -->
 					<div class="form-group">
 						<label for="inputNivelSuperiorUniversitarioyPosgrado">Nivel
-							superior universitario y/o posgrado</label> <input type="text"
+							superior universitario y/o posgrado</label> <textarea wrap="hard"
 							class="form-control" id="nivel_superior_universitario"
 							path="nivel_superior_universitario"
 							name="nivel_superior_universitario"
-							placeholder="Nivel superioruniversitario y/o posgrado"
-							value="${cargos.nivel_superior_universitario}">
+							placeholder="Nivel superioruniversitario y/o posgrado"> 
+							${cargos.nivel_superior_universitario}</textarea>
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- nivel terciario no universitario -->
 					<div class="form-group">
 						<label for="inputNivelTerciarioNoUniversitario">Nivel
-							terciario no universitario</label> <input type="text"
+							terciario no universitario</label> <textarea wrap="hard" 
 							class="form-control" id="nivel_terciario_no_universitario"
 							path="nivel_terciario_no_universitario" name="nivel_terciario_no_universitario"
 							placeholder="Nivel terciario no universitario"
-							value="${cargos.nivel_terciario_no_universitario}">
+							>${cargos.nivel_terciario_no_universitario}</textarea>
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Nivel basico y/o medio -->
 					<div class="form-group">
 						<label for="inputNivelBasicoyMedio">Nivel basico y/o medio</label>
-						<input type="text" class="form-control" id="nivel_basico"
+						<textarea wrap="hard"  class="form-control" id="nivel_basico"
 							path="nivel_basico" name ="nivel_basico"
-							placeholder="Nivel terciario no universitario"
-							value="${cargos.nivel_basico}">
+							placeholder="Nivel terciario no universitario">${cargos.nivel_basico}</textarea>
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Cursos de posgrado y/o capacitaciones extracurriculares -->
 					<div class="form-group">
 						<label for="inputCursosPosgradoyCapacitacionesExtracurriculares">Cursos
-							de posgrado y/o capacitaciones extracurriculares</label> <input
-							type="text" class="form-control"
+							de posgrado y/o capacitaciones extracurriculares</label> <textarea wrap="hard"
+							 class="form-control"
 							id="cursos_posgrado_y_capacitaciones"
 							path="cursos_posgrado_y_capacitaciones" name="cursos_posgrado_y_capacitaciones"
 							placeholder="Cursos de posgrado y/o capacitaciones extracurriculares"
-							value="${cargos.cursos_posgrado_y_capacitaciones}">
+							>${cargos.cursos_posgrado_y_capacitaciones}</textarea>
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
@@ -85,30 +84,30 @@
 					<!-- cargos en organismos científico-tecnológicos -->
 					<div class="form-group">
 						<label for="inputCargosEnOrganismosCT">Cargos en
-							organismos científico-tecnológicos</label> <input type="text"
+							organismos científico-tecnológicos</label><textarea wrap="hard"
 							class="form-control" id="cargos_organismos_ct"
 							path="cargos_organismos_ct" name="cargos_organismos_ct"
 							placeholder="Cargos en organismos científico-tecnológicos"
-							value="${cargos.cargos_organismos_ct}">
+							>${cargos.cargos_organismos_ct}</textarea>
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Categorización del programa de incentivos -->
 					<div class="form-group">
 						<label for="inputCategorizacionProgramaIncentivos">Categorización
-							del programa de incentivos</label> <input type="text"
+							del programa de incentivos</label> <textarea wrap="hard"
 							class="form-control" id="categorizacion_programa_incentivos"
 							path="categorizacion_programa_incentivos" name="categorizacion_programa_incentivos"
 							placeholder="Categorización del programa de incentivos"
-							value="${cargos.categorizacion_programa_incentivos}">
+							>${cargos.categorizacion_programa_incentivos}</textarea>
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 					<!-- Cargos I+D en otro tipo de institucines -->
 					<div class="form-group">
 						<label for="inputCargosIDenOtroTipodeInstituciones">Cargos
-							I+D en otro tipo de institucines</label> <input type="text"
+							I+D en otro tipo de institucines</label><textarea wrap="hard"
 							class="form-control" id="cargos_id_otro" path="cargos_id_otro" name="cargos_id_otro"
 							placeholder="Cargos I+D en otro tipo de institucines"
-							value="${cargos.cargos_id_otro}">
+							>${cargos.cargos_id_otro}</textarea>
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
@@ -120,11 +119,11 @@
 					<!-- cargos en gestion institucional -->
 					<div class="form-group">
 						<label for="inputCargosenGestionInstitucional">Cargos en
-							gestion institucional</label> <input type="text" class="form-control"
+							gestion institucional</label> <textarea wrap="hard" class="form-control"
 							id="cargos_gestion_institucional"
 							path="cargos_gestion_institucional" name="cargos_gestion_institucional"
 							placeholder="Cargos en gestion institucional"
-							value="${cargos.cargos_gestion_institucional}">
+							>${cargos.cargos_gestion_institucional}</textarea>
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
@@ -136,13 +135,13 @@
 					<!-- Otros Cargos -->
 					<div class="form-group">
 						<label for="inputOtrosCargos">Otros Cargos</label> 
-						<input type="text" class="form-control" id="otros_cargos"
+						<textarea wrap="hard"  class="form-control" id="otros_cargos"
 							path="otros_cargos" name="otros_cargos"
-							placeholder="Otros Cargos" value="${cargos.otros_cargos}">
+							placeholder="Otros Cargos" >${cargos.otros_cargos}</textarea>
 							<form:errors cssClass="error" path="nombre"></form:errors>
 					</div>
 
-						<button type="submit" class="btn btn-primary" name="action" value="Enviar">Enviar</button>
+						<button type="submit" class="btn btn-primary" name="action" value="Enviar">Guardar</button>
  
 				</form:form>
 			</div>

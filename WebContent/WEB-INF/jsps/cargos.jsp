@@ -34,35 +34,35 @@
 					<!-- nivel superior universitario y/o posgrado -->
 					<div class="form-group">
 						<label for="inputNivelSuperiorUniversitarioyPosgrado">Nivel
-							superior universitario y/o posgrado</label> <input type="text"
+							superior universitario y/o posgrado</label> <textarea wrap="hard"
 							class="form-control" id="nivel_superior_universitario"
 							path="nivel_superior_universitario"
 							name="nivel_superior_universitario"
-							placeholder="Nivel superioruniversitario y/o posgrado">
+							placeholder="Nivel superioruniversitario y/o posgrado"></textarea>
 					</div>
 					<!-- nivel terciario no universitario -->
 					<div class="form-group">
 						<label for="inputNivelTerciarioNoUniversitario">Nivel
-							terciario no universitario</label> <input type="text"
+							terciario no universitario</label> <textarea wrap="hard"
 							class="form-control" id="nivel_terciario_no_universitario"
 							path="nivel_terciario_no_universitario" name="nivel_terciario_no_universitario"
-							placeholder="Nivel terciario no universitario">
+							placeholder="Nivel terciario no universitario"></textarea>
 					</div>
 					<!-- Nivel basico y/o medio -->
 					<div class="form-group">
 						<label for="inputNivelBasicoyMedio">Nivel básico y/o medio</label>
-						<input type="text" class="form-control" id="nivel_basico"
+						<textarea wrap="hard" class="form-control" id="nivel_basico"
 							path="nivel_basico" name ="nivel_basico"
-							placeholder="Nivel terciario no universitario">
+							placeholder="Nivel terciario no universitario"></textarea>
 					</div>
 					<!-- Cursos de posgrado y/o capacitaciones extracurriculares -->
 					<div class="form-group">
 						<label for="inputCursosPosgradoyCapacitacionesExtracurriculares">Cursos
-							de posgrado y/o capacitaciones extracurriculares</label> <input
-							type="text" class="form-control"
+							de posgrado y/o capacitaciones extracurriculares</label> <textarea wrap="hard"
+							 class="form-control"
 							id="cursos_posgrado_y_capacitaciones"
 							path="cursos_posgrado_y_capacitaciones" name="cursos_posgrado_y_capacitaciones"
-							placeholder="Cursos de posgrado y/o capacitaciones extracurriculares">
+							placeholder="Cursos de posgrado y/o capacitaciones extracurriculares"></textarea>
 					</div>
 
 					<!-- CARGOS I+D -->
@@ -73,25 +73,25 @@
 					<!-- cargos en organismos científico-tecnológicos -->
 					<div class="form-group">
 						<label for="inputCargosEnOrganismosCT">Cargos en
-							organismos científico-tecnológicos</label> <input type="text"
+							organismos científico-tecnológicos</label><textarea wrap="hard"
 							class="form-control" id="cargos_organismos_ct"
 							path="cargos_organismos_ct" name="cargos_organismos_ct"
-							placeholder="Cargos en organismos científico-tecnológicos">
+							placeholder="Cargos en organismos científico-tecnológicos"></textarea>
 					</div>
 					<!-- Categorización del programa de incentivos -->
 					<div class="form-group">
 						<label for="inputCategorizacionProgramaIncentivos">Categorización
-							del programa de incentivos</label> <input type="text"
+							del programa de incentivos</label> <textarea wrap="hard"
 							class="form-control" id="categorizacion_programa_incentivos"
 							path="categorizacion_programa_incentivos" name="categorizacion_programa_incentivos"
-							placeholder="Categorización del programa de incentivos">
+							placeholder="Categorización del programa de incentivos"></textarea>
 					</div>
 					<!-- Cargos I+D en otro tipo de institucines -->
 					<div class="form-group">
 						<label for="inputCargosIDenOtroTipodeInstituciones">Cargos
-							I+D en otro tipo de instituciones</label> <input type="text"
+							I+D en otro tipo de instituciones</label> <textarea wrap="hard"
 							class="form-control" id="cargos_id_otro" path="cargos_id_otro" name="cargos_id_otro"
-							placeholder="Cargos I+D en otro tipo de institucines">
+							placeholder="Cargos I+D en otro tipo de institucines"></textarea>
 					</div>
 
 					<!-- CARGOS EN GESTION INSTITUCIONAL -->
@@ -102,10 +102,10 @@
 					<!-- cargos en gestion institucional -->
 					<div class="form-group">
 						<label for="inputCargosenGestionInstitucional">Cargos en
-							gestion institucional</label> <input type="text" class="form-control"
+							gestion institucional</label> <textarea wrap="hard" class="form-control"
 							id="cargos_gestion_institucional"
 							path="cargos_gestion_institucional" name="cargos_gestion_institucional"
-							placeholder="Cargos en gestion institucional">
+							placeholder="Cargos en gestion institucional"></textarea>
 					</div>
 
 					<!-- OTROS CARGOS -->
@@ -115,12 +115,12 @@
 					</div>
 					<!-- Otros Cargos -->
 					<div class="form-group">
-						<label for="inputOtrosCargos">Otros Cargos</label> <input
-							type="text" class="form-control" id="otros_cargos"
-							path="otros_cargos" name="otros_cargos" placeholder="Otros Cargos">
+						<label for="inputOtrosCargos">Otros Cargos</label> <textarea wrap="hard" 
+						class="form-control" id="otros_cargos"
+							path="otros_cargos" name="otros_cargos" placeholder="Otros Cargos"></textarea>
 					</div>
 
-						<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
+						<button type="submit" class="btn btn-primary" name="action" value="enviar">Guardar</button>
 				</form:form>
 				
 				</c:when>
