@@ -220,7 +220,7 @@
                     <div class="form-group">
                         <label for="inputEjercicioProfesionAmbitoNoAcademico">Ejercicio de la profesión en el ámbito no académico</label>
                         <textarea wrap="hard" class="form-control" id="ejercicio_profesion_ambito_no_academico" 
-                        path=" ejercicio_profesion_ambito_no_academico" name=" ejercicio_profesion_ambito_no_academico" placeholder="Ejercicio de la profesión en el ámbito no académico" >${antecedentes.ejercicio_profesion_ambito_no_academico}</textarea>
+                        path="ejercicio_profesion_ambito_no_academico" name="ejercicio_profesion_ambito_no_academico" placeholder="Ejercicio de la profesión en el ámbito no académico" >${antecedentes.ejercicio_profesion_ambito_no_academico}</textarea>
                   		<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Otra actividad CyT --> 

@@ -50,7 +50,7 @@
                     <!-- Becarios -->
 				    <div class="form-group">
 				        <label for="inputBecarios">Becarios</label>
-				        <input type="text" class="form-control" id="becario" path="becario" name="becario" placeholder="Becarios" value="${antecedentes.becario}">
+				        <textarea wrap="hard" class="form-control" id="becario" path="becario" name="becario" placeholder="Becarios" >${antecedentes.becario}</textarea>
 				    	<form:errors cssClass="error" path="nombre"></form:errors>
 				    </div>     
 				    
@@ -59,37 +59,37 @@
                     <!-- Tesistas doctorado-->                
                     <div class="form-group">
                         <label for="inputTesistaDoctorado">Tesista Doctoral</label>
-                        <input type="text" class="form-control" id="tesista_doctoral" path="tesista_doctoral" name="tesista_doctoral" placeholder="Tesista Doctorado" value="${antecedentes.tesista_doctoral}">
+                        <textarea wrap="hard" class="form-control" id="tesista_doctoral" path="tesista_doctoral" name="tesista_doctoral" placeholder="Tesista Doctorado" >${antecedentes.tesista_doctoral}</textarea>
                     	<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Tesistas maestria -->                
                     <div class="form-group">
                         <label for="inputTesistaMaestria">Tesista Maestría</label>
-                        <input type="text" class="form-control" id="tesista_maestria" path="tesista_maestria" name="tesista_maestria" placeholder="Tesista Maestría" value="${antecedentes.tesista_maestria}">
+                        <textarea wrap="hard" class="form-control" id="tesista_maestria" path="tesista_maestria" name="tesista_maestria" placeholder="Tesista Maestría" >${antecedentes.tesista_maestria}</textarea>
                 		<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Tesistas grado -->                
                     <div class="form-group">
                         <label for="inputTesistaGrado">Tesista Grado</label>
-                        <input type="text" class="form-control" id="tesista_grado" path="tesista_grado" name="tesista_grado" placeholder="Tesista Grado" value="${antecedentes.tesista_grado}">
+                        <textarea wrap="hard" class="form-control" id="tesista_grado" path="tesista_grado" name="tesista_grado" placeholder="Tesista Grado">${antecedentes.tesista_grado}</textarea>
                    		<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Investigadores --> 
                     <div class="form-group">
                         <label for="inputInvestigadores">Investigadores</label>
-                        <input type="text" class="form-control" id="investigadores" path="investigadores" name="investigadores" placeholder="Investigadores" value="${antecedentes.investigadores}">
+                        <textarea wrap="hard" class="form-control" id="investigadores" path="investigadores" name="investigadores" placeholder="Investigadores" >${antecedentes.investigadores}</textarea>
                    		<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Pasantes de I+D y/o formación académica --> 
                     <div class="form-group">
                         <label for="inputPasantesDeIDFormacionAcademcia">Pasantes de I+D y/o formación académica</label>
-                        <input type="text" class="form-control" id="pasantes_id_y_facademica" path="pasantes_id_y_facademica" name="pasantes_id_y_facademica" placeholder="Pasantes de I+D y/o formación académica" value="${antecedentes.pasantes_id_y_facademica}">
+                        <textarea wrap="hard" class="form-control" id="pasantes_id_y_facademica" path="pasantes_id_y_facademica" name="pasantes_id_y_facademica" placeholder="Pasantes de I+D y/o formación académica" >${antecedentes.pasantes_id_y_facademica}</textarea>
 						<form:errors cssClass="error" path="nombre"></form:errors>                   	
                     </div>
                     <!-- Personal de apoyo a la I+D --> 
                     <div class="form-group">
                         <label for="inputPersonalDeApoyoID">Personal de apoyo a la I+D</label>
-                        <input type="text" class="form-control" id="personal_apoyo_id" path="personal_apoyo_id" name="personal_apoyo_id"  placeholder="Personal de apoyo a la I+D" value="${antecedentes.personal_apoyo_id}">
+                        <textarea wrap="hard" class="form-control" id="personal_apoyo_id" path="personal_apoyo_id" name="personal_apoyo_id"  placeholder="Personal de apoyo a la I+D" >${antecedentes.personal_apoyo_id}</textarea>
                    		<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
 
@@ -101,8 +101,8 @@
                     <!-- Financiamiento cientifico y tecnologico --> 
                     <div class="form-group">
                         <label for="inputFinanciamientoCientificoTecnologico">Financiamiento cientifico y tecnológico</label>
-                        <input type="text" class="form-control" id="financiamiento_cientifico_tecnologico" path="financiamiento_cientifico_tecnologico" name="financiamiento_cientifico_tecnologico"
-                         placeholder="Financiamiento cientifico y tecnologico" value="${antecedentes.financiamiento_cientifico_tecnologico}">
+                        <textarea wrap="hard" class="form-control" id="financiamiento_cientifico_tecnologico" path="financiamiento_cientifico_tecnologico" name="financiamiento_cientifico_tecnologico"
+                         placeholder="Financiamiento cientifico y tecnologico" >${antecedentes.financiamiento_cientifico_tecnologico}</textarea>
                          <form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
 
@@ -114,34 +114,34 @@
                     <!-- Actividades de divulgación CyT --> 
                     <div class="form-group">
                         <label for="inputActividadesDeDivulgacion">Actividades de divulgación CyT</label>
-                        <input type="text" class="form-control" id="actividades_divulgacion" path="actividades_divulgacion" name="actividades_divulgacion"
-                         placeholder="Actividades de divulgación CyT" value="${antecedentes.actividades_divulgacion}">
+                        <textarea wrap="hard" class="form-control" id="actividades_divulgacion" path="actividades_divulgacion" name="actividades_divulgacion"
+                         placeholder="Actividades de divulgación CyT" >${antecedentes.actividades_divulgacion}</textarea>
                          <form:errors cssClass="error" path="nombre"></form:errors>
                     </div> 
                     <!-- Extension rural o industrial --> 
                     <div class="form-group">
                         <label for="inputExtensionRuralIndustrial">Extensión rural o industrial</label>
-                        <input type="text" class="form-control" id="extension_rural_industrial" path="extension_rural_industrial" name="extension_rural_industrial"
-                         placeholder="Extensión rural o industrial" value="${antecedentes.extension_rural_industrial}">
+                        <textarea wrap="hard" class="form-control" id="extension_rural_industrial" path="extension_rural_industrial" name="extension_rural_industrial"
+                         placeholder="Extensión rural o industrial" >${antecedentes.extension_rural_industrial}</textarea>
                          <form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Prestación de servicios sociales y/o comunitarios --> 
                     <div class="form-group">
                         <label for="inputPrestacionServiciosSocialesComunitarios">Prestación de sericios sociales y/o comunitarios</label>
-                        <input type="text" class="form-control" id="prestacion_servicios_sociales" path="prestacion_servicios_sociales" name="prestacion_servicios_sociales" placeholder="Prestación de servicios sociales y/o comunitarios" value="${antecedentes.prestacion_servicios_sociales}">
+                        <textarea wrap="hard" class="form-control" id="prestacion_servicios_sociales" path="prestacion_servicios_sociales" name="prestacion_servicios_sociales" placeholder="Prestación de servicios sociales y/o comunitarios">${antecedentes.prestacion_servicios_sociales}</textarea>
                    		<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Producción y/o divulgación artística o cultural --> 
                     <div class="form-group">
                         <label for="inputProduccionDivulgacionArtisticaCultural">Producción y/o divulgación artística o cultural</label>
-                        <input type="text" class="form-control" id="produccion_divulgacion_artistica" path="produccion_divulgacion_artistica" name="produccion_divulgacion_artistica" 
-                        placeholder="Producción y/o divulgación artística o cultural" value="${antecedentes.produccion_divulgacion_artistica}">
+                        <textarea wrap="hard" class="form-control" id="produccion_divulgacion_artistica" path="produccion_divulgacion_artistica" name="produccion_divulgacion_artistica" 
+                        placeholder="Producción y/o divulgación artística o cultural">${antecedentes.produccion_divulgacion_artistica}</textarea>
                     	<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Otro tipo de actividad de extensión --> 
                     <div class="form-group">
                         <label for="inputOtroTipoActividadExtension">Otro tipo de actividad de extensión</label>
-                        <input type="text" class="form-control" id="otro_tipo_actividad" path="otro_tipo_actividad" name="otro_tipo_actividad" placeholder="Otro tipo de actividad de extensión" value="${antecedentes.otro_tipo_actividad}">
+                        <textarea wrap="hard" class="form-control" id="otro_tipo_actividad" path="otro_tipo_actividad" name="otro_tipo_actividad" placeholder="Otro tipo de actividad de extensión" >${antecedentes.otro_tipo_actividad}</textarea>
                         <form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
 
@@ -153,25 +153,25 @@
                     <!-- Evaluación de personal CyT Y jurado de tesis y/o premios --> 
                     <div class="form-group">
                         <label for="inputEvaluacionDePersonal">Evaluación de personal CyT Y jurado de tesis y/o premios</label>
-                        <input type="text" class="form-control" id="evaluacion_personal" path="evaluacion_personal" name="evaluacion_personal" placeholder="Evaluación de personal CyT Y jurado de tesis y/o premios" value="${antecedentes.evaluacion_personal}">
+                        <textarea wrap="hard" class="form-control" id="evaluacion_personal" path="evaluacion_personal" name="evaluacion_personal" placeholder="Evaluación de personal CyT Y jurado de tesis y/o premios" >${antecedentes.evaluacion_personal}</textarea>
                         <form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Evaluación de programas/proyectos de I+D y/o extensión --> 
                     <div class="form-group">
                         <label for="inputEvaluacionProgramas">Evaluación de programas/proyectos de I+D y/o extensión</label>
-                        <input type="text" class="form-control" id="evaluacion_programas" path="evaluacion_programas" name="evaluacion_programas" placeholder="Evaluación de programas/proyectos de I+D y/o extensión" value="${antecedentes.evaluacion_programas}">
+                        <textarea wrap="hard" class="form-control" id="evaluacion_programas" path="evaluacion_programas" name="evaluacion_programas" placeholder="Evaluación de programas/proyectos de I+D y/o extensión" >${antecedentes.evaluacion_programas}</textarea>
                    		<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Evaluacion institucional --> 
                     <div class="form-group">
                         <label for="inputEvaluacionInstitucional">Evaluacion institucional</label>
-                        <input type="text" class="form-control" id="evaluacion_institucional" path="evaluacion_institucional" name="evaluacion_institucional" placeholder="Evaluacion institucional" value="${antecedentes.evaluacion_institucional}">
+                        <textarea wrap="hard" class="form-control" id="evaluacion_institucional" path="evaluacion_institucional" name="evaluacion_institucional" placeholder="Evaluacion institucional" >${antecedentes.evaluacion_institucional}</textarea>
                   		<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Otro tipo de evaluación --> 
                     <div class="form-group">
                         <label for="inputOtroTipoEvaluacion">Otro tipo de evaluación</label>
-                        <input type="text" class="form-control" id="otro_tipo_evaluacion" path="otro_tipo_evaluacion" name="otro_tipo_evaluacion" placeholder="Otro tipo de evaluación" value="${antecedentes.otro_tipo_evaluacion}">
+                        <textarea wrap="hard" class="form-control" id="otro_tipo_evaluacion" path="otro_tipo_evaluacion" name="otro_tipo_evaluacion" placeholder="Otro tipo de evaluación" >${antecedentes.otro_tipo_evaluacion}</textarea>
                   		<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
 
@@ -183,7 +183,7 @@
                     <!-- Becas --> 
                     <div class="form-group">
                         <label for="inputBecas">Becas</label>
-                        <input type="text" class="form-control" id="becas" path="becas" name="becas" placeholder="Becas" value="${antecedentes.becas}">
+                        <textarea wrap="hard" class="form-control" id="becas" path="becas" name="becas" placeholder="Becas" >${antecedentes.becas}</textarea>
                     	<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>        
 
@@ -195,42 +195,42 @@
                     <!-- Estancias y pasantías -->
                     <div class="form-group">
                         <label for="inputEstanciasPasantias">Estancias y pasantías</label>
-                        <input type="text" class="form-control" id="estancias_pasantias" path="estancias_pasantias" name="estancias_pasantias" placeholder="Estancias y pasantías" value="${antecedentes.estancias_pasantias}">
+                        <textarea wrap="hard" class="form-control" id="estancias_pasantias" path="estancias_pasantias" name="estancias_pasantias" placeholder="Estancias y pasantías" >${antecedentes.estancias_pasantias}</textarea>
 	                	<form:errors cssClass="error" path="nombre"></form:errors>  
  					</div>                          
                     <!-- Operación y mantenimiento de sistemas de alta complejidad -->                
                     <div class="form-group">
                         <label for="inputOperacionyMantenimiento">Operación y mantenimiento de sistemas de alta complejidad</label>
-                        <input type="text" class="form-control" id="operacion_mantenimiento" path="operacion_mantenimiento" name="operacion_mantenimiento" placeholder="Operación y mantenimiento de sistemas de alta complejidad" value="${antecedentes.operacion_mantenimiento}">
+                        <textarea wrap="hard" class="form-control" id="operacion_mantenimiento" path="operacion_mantenimiento" name="operacion_mantenimiento" placeholder="Operación y mantenimiento de sistemas de alta complejidad" >${antecedentes.operacion_mantenimiento}</textarea>
                    		<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Producción --> 
                     <div class="form-group">
                         <label for="inputProduccion">Producción</label>
-                        <input type="text" class="form-control" id="produccion" path="produccion" name="produccion" placeholder="Producción" value="${antecedentes.produccion}">
+                        <textarea wrap="hard" class="form-control" id="produccion" path="produccion" name="produccion" placeholder="Producción" >${antecedentes.produccion}</textarea>
 						<form:errors cssClass="error" path="nombre"></form:errors>                   	
                     </div>
                     <!-- Normalización --> 
                     <div class="form-group">
                         <label for="inputNormalizacion">Normalización</label>
-                        <input type="text" class="form-control" id="normalizacion" path="normalizacion" name="normalizacion" placeholder="Normalización" value="${antecedentes.normalizacion}">
+                        <textarea wrap="hard" class="form-control" id="normalizacion" path="normalizacion" name="normalizacion" placeholder="Normalización" >${antecedentes.normalizacion}</textarea>
                    		<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Ejercicio de la profesión en el ámbito no académico --> 
                     <div class="form-group">
                         <label for="inputEjercicioProfesionAmbitoNoAcademico">Ejercicio de la profesión en el ámbito no académico</label>
-                        <input type="text" class="form-control" id="ejercicio_profesion_ambito_no_academico" 
-                        path=" ejercicio_profesion_ambito_no_academico" name=" ejercicio_profesion_ambito_no_academico" placeholder="Ejercicio de la profesión en el ámbito no académico" value="${antecedentes.ejercicio_profesion_ambito_no_academico}">
+                        <textarea wrap="hard" class="form-control" id="ejercicio_profesion_ambito_no_academico" 
+                        path=" ejercicio_profesion_ambito_no_academico" name=" ejercicio_profesion_ambito_no_academico" placeholder="Ejercicio de la profesión en el ámbito no académico" >${antecedentes.ejercicio_profesion_ambito_no_academico}</textarea>
                   		<form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
                     <!-- Otra actividad CyT --> 
                     <div class="form-group">
                         <label for="inputOtraActividad">Otra actividad CyT</label>
-                        <input type="text" class="form-control" id="otra_actividad_cyt" path="otra_actividad_cyt" name="otra_actividad_cyt" placeholder="Otra actividad CyT" value="${antecedentes.otra_actividad_cyt}">
+                        <textarea wrap="hard" class="form-control" id="otra_actividad_cyt" path="otra_actividad_cyt" name="otra_actividad_cyt" placeholder="Otra actividad CyT" >${antecedentes.otra_actividad_cyt}</textarea>
                         <form:errors cssClass="error" path="nombre"></form:errors>
                     </div>
 
-                  <button type="submit" class="btn btn-primary" name="action" value="Enviar">Enviar</button>
+                  <button type="submit" class="btn btn-primary" name="action" value="Enviar">Guardar</button>
 
 
 				</form:form>

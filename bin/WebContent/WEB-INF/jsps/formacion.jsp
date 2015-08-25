@@ -34,29 +34,28 @@
 										
 					<!-- Nivel Universitario de posgrado -->
 					<div class="form-group">
-						<label for="inputNivelUniversitarioPosgrado">Nivel Universitario de Posgrado</label> <input
-							type="text" id="nivel_universitario_posgrado" path="nivel_universitario_posgrado" name="nivel_universitario_posgrado" class="form-control"
-							placeholder="Nivel Universitario de Posgrado">
+						<label for="inputNivelUniversitarioPosgrado">Nivel Universitario de Posgrado</label> <textarea wrap="hard" id="nivel_universitario_posgrado" path="nivel_universitario_posgrado" name="nivel_universitario_posgrado" class="form-control"
+							placeholder="Nivel Universitario de Posgrado"></textarea>
 					</div>
 					<!--  -->
 					<div class="form-group">
 						<label for="inputNivelUniversitarioPosgradoEsp">Nivel Universitario de
-							Posgrado/especialización</label> <input type="text" id="nivel_universitario_posgrado_especializacion" path="nivel_universitario_posgrado_especializacion" name="nivel_universitario_posgrado_especializacion"
+							Posgrado/especialización</label> <textarea wrap="hard"  id="nivel_universitario_posgrado_especializacion" path="nivel_universitario_posgrado_especializacion" name="nivel_universitario_posgrado_especializacion"
 							class="form-control"
-							placeholder="Nivel Universitario de Posgrado/especialización">
+							placeholder="Nivel Universitario de Posgrado/especialización"></textarea>
 					</div>
 					<!--  -->
 					<div class="form-group">
 						<label for="inputNivelUniversitarioGrado">Nivel Universitario de
-							Grado</label> <input type="text" id="nivel_universitario_grado" path="nivel_universitario_grado" name="nivel_universitario_grado"
+							Grado</label> <textarea wrap="hard" id="nivel_universitario_grado" path="nivel_universitario_grado" name="nivel_universitario_grado"
 							class="form-control"
-							placeholder="Nivel Universitario de Grado">
+							placeholder="Nivel Universitario de Grado"></textarea>
 					</div>
 					<!--  -->
 					<div class="form-group">
-						<label for="inputNivelTerciario">Nivel Terciario no Universitario</label> <input type="text" id="nivel_terciario_no_universitario" path="nivel_terciario_no_universitario" name="nivel_terciario_no_universitario"
+						<label for="inputNivelTerciario">Nivel Terciario no Universitario</label> <textarea wrap="hard"  id="nivel_terciario_no_universitario" path="nivel_terciario_no_universitario" name="nivel_terciario_no_universitario"
 							class="form-control"
-							placeholder="Nivel Terciario No Universitario">
+							placeholder="Nivel Terciario No Universitario"></textarea>
 					</div>
 
 					<!-- FORMACION COMPLEMENTARIA -->
@@ -67,28 +66,28 @@
 					<!-- Especialidad certificada por org de salud -->
 					<div class="form-group">
 						<label for="inputEspecialidadCertificada">Especialidad certificada por
-							organismo de salud</label> <input type="text"  id="especialidad_certificada" path="especialidad_certificada" name="especialidad_certificada" class="form-control"
-							placeholder="Especialidad certificada por organismo de salud">
+							organismo de salud</label> <textarea wrap="hard"  id="especialidad_certificada" path="especialidad_certificada" name="especialidad_certificada" class="form-control"
+							placeholder="Especialidad certificada por organismo de salud"></textarea>
 					</div>
 					<!-- Posdoctorado -->
 					<div class="form-group">
-						<label for="inputPosdoctorado">Posdoctorado</label> <input type="text" id="posdoctorado" path="posdoctorado" name="posdoctorado"
-							class="form-control" placeholder="Posdoctorado">
+						<label for="inputPosdoctorado">Posdoctorado</label> <textarea wrap="hard" id="posdoctorado" path="posdoctorado" name="posdoctorado"
+							class="form-control" placeholder="Posdoctorado"></textarea>
 					</div>
 					<!-- Cursos de posgrado y/o capacitaciones extracurriculares -->
 					<div class="form-group">
 						<label for="inputCursosPosgrado">Cursos de posgrado y/o
-							capacitaciones extracurriculares</label> <input type="text" id="cursos_posgrado_y_capacitaciones" path="cursos_posgrado_y_capacitaciones" name="cursos_posgrado_y_capacitaciones"
+							capacitaciones extracurriculares</label> <textarea wrap="hard"  id="cursos_posgrado_y_capacitaciones" path="cursos_posgrado_y_capacitaciones" name="cursos_posgrado_y_capacitaciones"
 							class="form-control"
-							placeholder="Cursos de posgrado y/o capacitaciones extracurriculares">
+							placeholder="Cursos de posgrado y/o capacitaciones extracurriculares"></textarea>
 					</div>
 					<!-- Idiomas -->
 					<div class="form-group">
-						<label for="inputIdiomas">Idiomas</label> <input type="text" id="idiomas" path="idiomas" name="idiomas"
-							class="form-control" placeholder="Idiomas">
+						<label for="inputIdiomas">Idiomas</label><textarea wrap="hard"  id="idiomas" path="idiomas" name="idiomas"
+							class="form-control" placeholder="Idiomas"></textarea>
 					</div>
 
-				<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
+				<button type="submit" class="btn btn-primary" name="action" value="enviar">Guardar</button>
 
 				</form:form>
 				

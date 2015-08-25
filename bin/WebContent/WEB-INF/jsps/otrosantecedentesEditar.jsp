@@ -48,8 +48,8 @@
                    <!-- Participación u organización de eventos CyT -->
  				    <div class="form-group">
  				        <label for="inputParticipacionUOrganizacion">Participacion u organización de eventos CyT</label>
- 				        <input type="text" class="form-control"  placeholder="participacion_organizacion_eventos" id="participacion_organizacion_eventos" 
- 				        path="participacion_organizacion_eventos" name="participacion_organizacion_eventos" value="${otrosAntecedentes.participacion_organizacion_eventos}">
+ 				        <textarea wrap="hard" class="form-control"  placeholder="participacion_organizacion_eventos" id="participacion_organizacion_eventos" 
+ 				        path="participacion_organizacion_eventos" name="participacion_organizacion_eventos"> ${otrosAntecedentes.participacion_organizacion_eventos}</textarea>
  				    </div> 
 
                    <!-- Membresías, redes y/o programas de cooperación -->
@@ -61,25 +61,25 @@
                    <!-- Membresías n asocianiones C-T y/o profesionales -->                
                    <div class="form-group">
                        <label for="inputMembresíasEnAsociacionesCT">Membresías en asocianiones C-T y/o profesionales</label>
-                       <input type="text" class="form-control"  placeholder="Membresías en asocianiones C-T y/o profesionales"
+                       <textarea wrap="hard" class="form-control"  placeholder="Membresías en asocianiones C-T y/o profesionales"
                        id="membresias_asociaciones_ct" path="membresias_asociaciones_ct" name="membresias_asociaciones_ct"
-                       value="${otrosAntecedentes.membresias_asociaciones_ct}">
+                       >${otrosAntecedentes.membresias_asociaciones_ct}</textarea>
                    </div>
                    
                    <!-- Participación en redes temáticas o institucionales --> 
                    <div class="form-group">
                        <label for="inputParticipacionEnRedesTematicas">Participación en redes temáticas o institucionales</label>
-                       <input type="text" class="form-control"  placeholder="Participación en redes temáticas o institucionales"
+                       <textarea wrap="hard" class="form-control"  placeholder="Participación en redes temáticas o institucionales"
                        id="participacion_redes_tematicas" path="participacion_redes_tematicas" name="participacion_redes_tematicas"
-                       value="${otrosAntecedentes.participacion_redes_tematicas}">
+                       >${otrosAntecedentes.participacion_redes_tematicas}</textarea>
                    </div>
                    
                    <!-- Coordinación de proyectos de cooperación académica o  C-T --> 
                    <div class="form-group">
                        <label for="inputCoordinacionDeProyectosCooperacion">Coordinación de proyectos de cooperación académica o  C-T</label>
-                       <input type="text" class="form-control"  placeholder="Coordinación de proyectos de cooperación académica o  C-T"
+                       <textarea wrap="hard" class="form-control"  placeholder="Coordinación de proyectos de cooperación académica o  C-T"
                        id="coordinacion_proyectos_cooperacion" path="coordinacion_proyectos_cooperacion" name="coordinacion_proyectos_cooperacion"
-                       value="${otrosAntecedentes.coordinacion_proyectos_cooperacion}">
+                       >${otrosAntecedentes.coordinacion_proyectos_cooperacion}</textarea>
                    </div>
 
                    <!-- PREMIOS Y/O DISTINCIONES -->
@@ -90,9 +90,9 @@
                    <!-- Premios y/o distinciones --> 
                    <div class="form-group">
                        <label for="inputPremiosDistinciones">Premios y/o distinciones</label>
-                       <input type="text" class="form-control"  placeholder="Premios y/o distinciones"
+                       <textarea wrap="hard" class="form-control"  placeholder="Premios y/o distinciones"
                        id="premios_distinciones" path="premios_distinciones" name="premios_distinciones"
-                       value="${otrosAntecedentes.premios_distinciones}">
+                       >${otrosAntecedentes.premios_distinciones}</textarea>
                    </div>
 
                      <!-- OTROS ANTECEDENTES --> 
@@ -104,13 +104,13 @@
                    <!--Dato Académico --> 
                    <div class="form-group">
                        <label for="inputDatoAcademico">Dato Académico</label>
-                       <input type="text" class="form-control"  placeholder="Dato Académico" id="dato_academico"
-                       path="dato_academico" name="dato_academico" value="${otrosAntecedentes.dato_academico}">
+                       <textarea wrap="hard" class="form-control"  placeholder="Dato Académico" id="dato_academico"
+                       path="dato_academico" name="dato_academico" value="${otrosAntecedentes.dato_academico}"></textarea>
                    </div>
                    
                 
 
-                  	<button type="submit" class="btn btn-primary" name="action" value="enviar">Enviar</button>
+                  	<button type="submit" class="btn btn-primary" name="action" value="enviar">Guardar</button>
         			
 				</form:form>
 			</div>	<!--container-->

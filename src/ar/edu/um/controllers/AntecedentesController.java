@@ -81,7 +81,7 @@ public class AntecedentesController {
 		antecedentesService.modify(antecedentes);
 		
 		
-		
+		model.addAttribute("dni", antecedentes.getDni());
 		model.addAttribute("antecedentes", antecedentes);
 		model.addAttribute("titulo", "antecedentes");
 		
