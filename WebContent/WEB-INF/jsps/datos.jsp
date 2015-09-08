@@ -754,38 +754,38 @@
 							<!-- -DNI -->
 					<div class="form-group">
 						<label for="inputName">DNI:</label>
-						<c:out value="${datosPersonales.dni}" />
+						<span style="white-space:pre"><c:out value="${datosPersonales.dni}" /></span>
 						<input type="hidden" id="dni"value="${datosPersonales.dni}" path="dni" name="dni">
 					</div>
 								<!-- NOMBRE -->
 								<div class="form-group">
 									<label for="inputName">Nombre:</label>
-									<c:out value="${datosPersonales.nombre}" />
+									<span style="white-space:pre"><c:out value="${datosPersonales.nombre}" /></span>
 								</div>
 
 								<!-- APELLIDO -->
 								<div class="form-group">
 									<label for="inputName">Apellido:</label>
-									<c:out value="${datosPersonales.apellido}" />
+									<span style="white-space:pre"><c:out value="${datosPersonales.apellido}" /></span>
 								</div>
 								
 								<!-- EMAIL -->
 								<div class="form-group">
 									<label for="inputName">Email:</label>
-									<c:out value="${datosPersonales.email}" />
+									<span style="white-space:pre"><c:out value="${datosPersonales.email}" /></span>
 								</div>
 								
 								<!-- SEXO -->
 								<div class="form-group">
 									<label for="inputName">Sexo:</label>
-									<c:out value="${datosPersonales.sexo}" />
+									<span style="white-space:pre"><c:out value="${datosPersonales.sexo}" /></span>
 								</div>
 								
 
 								<!-- ESTADO CIVIL -->
 								<div class="form-group">
 									<label for="inputName">Estado Civil:</label>
-									<c:out value="${datosPersonales.estado_civil}" />
+									<span style="white-space:pre"><c:out value="${datosPersonales.estado_civil}" /></span>
 								</div>
 													
 								<!-- FECHA DE NACIMIENTO -->
@@ -809,7 +809,7 @@
 								<!-- DOMICILIO -->
 								<div class="form-group">
 									<label for="inputName">Domicilio:</label>
-									<c:out value="${datosPersonales.domicilio}" />
+									<span style="white-space:pre"><c:out value="${datosPersonales.domicilio}" /></span>
 								</div>
 
 								<!-- DEPARTAMENTO -->

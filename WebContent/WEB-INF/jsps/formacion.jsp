@@ -118,28 +118,28 @@
 		                   	</div>
 		                </div>
 					</div>
-										
+							
 					<!-- Nivel Universitario de posgrado -->
 					<div class="form-group">
 						<label for="inputName">Nivel Universitario de Posgrado:</label>
 						<c:out value="${formacion.nivel_universitario_posgrado}" />
 					</div>
-					
+						
 					
 					<div class="form-group">
 						<label for="inputName">Nivel Universitario de Posgrado/especializacion:</label>
-						<c:out value="${formacion.nivel_universitario_posgrado_especializacion}" />
+						<span style="white-space:pre"><c:out value="${formacion.nivel_universitario_posgrado_especializacion}" /></span>
 					</div>
 					
 					<div class="form-group">
 						<label for="inputName">Nivel Universitario de Grado:</label>
-						<c:out value="${formacion.nivel_universitario_grado}" />
+						<span style="white-space:pre"><c:out value="${formacion.nivel_universitario_grado}" /></span>
 					</div>
 					
 					
 					<div class="form-group">
 						<label for="inputName">Nivel Terciario no Univeresitario:</label>
-						<c:out value="${formacion.nivel_terciario_no_universitario}" />
+						<span style="white-space:pre"><c:out value="${formacion.nivel_terciario_no_universitario}" /></span>
 					</div>
 					
 					
@@ -154,7 +154,7 @@
 					<div class="form-group">
 						<label for="inputName">Especialidad certificada por
 							organismo de salud:</label>
-						<c:out value="${formacion.especialidad_certificada}" />
+						<span style="white-space:pre"><c:out value="${formacion.especialidad_certificada}" /></span>
 					</div>
 					
 				
@@ -162,7 +162,7 @@
 					
 					<div class="form-group">
 						<label for="inputName">Posdoctorado:</label>
-						<c:out value="${formacion.posdoctorado}" />
+						<span style="white-space:pre"><c:out value="${formacion.posdoctorado}" /></span>
 					</div>
 					
 					<!-- Cursos de posgrado y/o capacitaciones extracurriculares -->
@@ -170,14 +170,14 @@
 					<div class="form-group">
 						<label for="inputName">Cursos de posgrado y/o
 							capacitaciones extracurriculares:</label>
-						<c:out value="${formacion.cursos_posgrado_y_capacitaciones}" />
+						<span style="white-space:pre"><c:out value="${formacion.cursos_posgrado_y_capacitaciones}" /></span>
 					</div>
 					
 										
 					<!-- Idiomas -->
 					<div class="form-group">
 						<label for="inputName">Idiomas:</label>
-						<c:out value="${formacion.idiomas}" />
+						<span style="white-space:pre"><c:out value="${formacion.idiomas}" /></span>
 					</div>
 			
 

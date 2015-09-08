@@ -140,7 +140,7 @@
 							<!-- Participación u organización de eventos CyT -->
 							<div class="form-group">
 								<label for="inputParticipacionUEventos">Participación u organización de eventos CyT: </label>
-								<c:out value="${otrosAntecedentes.participacion_organizacion_eventos}" />
+								<span style="white-space:pre"><c:out value="${otrosAntecedentes.participacion_organizacion_eventos}" /></span>
 							</div>
 
 							<!-- Membresías, redes y/o programas de cooperación -->
@@ -153,23 +153,23 @@
 							<div class="form-group">
 								<label for="inputMembresíasEnAsociacionesCT">Membresías
 									en asocianiones C-T y/o profesionales: </label>
-								<c:out value="${otrosAntecedentes.membresias_asociaciones_ct}" />
+								<span style="white-space:pre"><c:out value="${otrosAntecedentes.membresias_asociaciones_ct}" /></span>
 							</div>
 
 							<!-- Participación en redes temáticas o institucionales -->
 							<div class="form-group">
 								<label for="inputParticipacionEnRedesTematicas">Participación
 									en redes temáticas o institucionales: </label>
-								<c:out
-									value="${otrosAntecedentes.participacion_redes_tematicas}" />
+								<span style="white-space:pre"><c:out
+									value="${otrosAntecedentes.participacion_redes_tematicas}" /></span>
 							</div>
 
 							<!-- Coordinación de proyectos de cooperación académica o  C-T -->
 							<div class="form-group">
 								<label for="inputCoordinacionDeProyectosCooperacion">Coordinación
 									de proyectos de cooperación académica o C-T: </label>
-								<c:out
-									value="${otrosAntecedentes.coordinacion_proyectos_cooperacion}" />
+								<span style="white-space:pre"><c:out
+									value="${otrosAntecedentes.coordinacion_proyectos_cooperacion}" /></span>
 							</div>
 
 							<!-- PREMIOS Y/O DISTINCIONES -->
@@ -181,7 +181,7 @@
 							<div class="form-group">
 								<label for="inputPremiosDistinciones">Premios y/o
 									distinciones: </label>
-								<c:out value="${otrosAntecedentes.premios_distinciones}" />
+								<span style="white-space:pre"><c:out value="${otrosAntecedentes.premios_distinciones}" /></span>
 							</div>
 
 							<!-- OTROS ANTECEDENTES -->
@@ -193,7 +193,7 @@
 							<!--Dato Académico -->
 							<div class="form-group">
 								<label for="inputDatoAcademico">Dato Académico: </label>
-								<c:out value="${otrosAntecedentes.dato_academico}" />
+								<span class="texto" style="white-space:pre"><c:out value="${otrosAntecedentes.dato_academico}" /></span>
 							</div>
 
 				
