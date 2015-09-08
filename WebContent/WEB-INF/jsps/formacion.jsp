@@ -34,7 +34,7 @@
 										
 					<!-- Nivel Universitario de posgrado -->
 					<div class="form-group">
-						<label for="inputNivelUniversitarioPosgrado">Nivel Universitario de Posgrado</label> <textarea wrap="hard" id="nivel_universitario_posgrado" path="nivel_universitario_posgrado" name="nivel_universitario_posgrado" class="form-control"
+						<label for="inputNivelUniversitarioPosgrado">Nivel Universitario de Posgrado</label> <br/><textarea id="nivel_universitario_posgrado" path="nivel_universitario_posgrado" name="nivel_universitario_posgrado" class="form-control"
 							placeholder="Nivel Universitario de Posgrado"></textarea>
 					</div>
 					<!--  -->
@@ -128,18 +128,18 @@
 					
 					<div class="form-group">
 						<label for="inputName">Nivel Universitario de Posgrado/especializacion:</label>
-						<span style="white-space:pre"><c:out value="${formacion.nivel_universitario_posgrado_especializacion}" /></span>
+						<span class="texto"><c:out value="${formacion.nivel_universitario_posgrado_especializacion}" /></span>
 					</div>
 					
 					<div class="form-group">
 						<label for="inputName">Nivel Universitario de Grado:</label>
-						<span style="white-space:pre"><c:out value="${formacion.nivel_universitario_grado}" /></span>
+						<span class="texto"><c:out value="${formacion.nivel_universitario_grado}" /></span>
 					</div>
 					
 					
 					<div class="form-group">
 						<label for="inputName">Nivel Terciario no Univeresitario:</label>
-						<span style="white-space:pre"><c:out value="${formacion.nivel_terciario_no_universitario}" /></span>
+						<span class="texto"><c:out value="${formacion.nivel_terciario_no_universitario}" /></span>
 					</div>
 					
 					
@@ -154,7 +154,7 @@
 					<div class="form-group">
 						<label for="inputName">Especialidad certificada por
 							organismo de salud:</label>
-						<span style="white-space:pre"><c:out value="${formacion.especialidad_certificada}" /></span>
+						<span class="texto"><c:out value="${formacion.especialidad_certificada}" /></span>
 					</div>
 					
 				
@@ -162,7 +162,7 @@
 					
 					<div class="form-group">
 						<label for="inputName">Posdoctorado:</label>
-						<span style="white-space:pre"><c:out value="${formacion.posdoctorado}" /></span>
+						<span class="texto"><c:out value="${formacion.posdoctorado}" /></span>
 					</div>
 					
 					<!-- Cursos de posgrado y/o capacitaciones extracurriculares -->
@@ -170,14 +170,14 @@
 					<div class="form-group">
 						<label for="inputName">Cursos de posgrado y/o
 							capacitaciones extracurriculares:</label>
-						<span style="white-space:pre"><c:out value="${formacion.cursos_posgrado_y_capacitaciones}" /></span>
+						<span class="texto"><c:out value="${formacion.cursos_posgrado_y_capacitaciones}" /></span>
 					</div>
 					
 										
 					<!-- Idiomas -->
 					<div class="form-group">
 						<label for="inputName">Idiomas:</label>
-						<span style="white-space:pre"><c:out value="${formacion.idiomas}" /></span>
+						<span class="texto"><c:out value="${formacion.idiomas}" /></span>
 					</div>
 			
 

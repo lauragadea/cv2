@@ -227,45 +227,45 @@
 					<!-- Becarios -->
 					<div class="form-group">
 						<label for="inputBecarios">Becarios: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.becario}" /></span>
+						<span class="texto"><c:out value="${antecedentes.becario}" /></span>
 					</div>
 
 					<!-- Tesistas doctorado-->
 					<div class="form-group">
 						<label for="inputTesistaDoctorado">Tesista Doctoral:</label>
-						<span style="white-space:pre"><c:out value="${antecedentes.tesista_doctoral}" /></span>
+						<span class="texto"><c:out value="${antecedentes.tesista_doctoral}" /></span>
 					</div>
 
 
 					<!-- Tesistas maestria -->
 					<div class="form-group">
 						<label for="inputTesistaMaestria">Tesista Maestría:</label>
-						<span style="white-space:pre"><c:out value="${antecedentes.tesista_maestria}" /></span>
+						<span class="texto"><c:out value="${antecedentes.tesista_maestria}" /></span>
 					</div>
 
 					<!-- Tesistas grado -->
 					<div class="form-group">
 						<label for="inputTesistaMaestria">Tesista Grado:</label>
-						<span style="white-space:pre"><c:out value="${antecedentes.tesista_grado}" /></span>
+						<span class="texto"><c:out value="${antecedentes.tesista_grado}" /></span>
 					</div>
 
 					<!-- Investigadores -->
 					<div class="form-group">
 						<label for="inputInvestigadores">Investigadores:</label>
-						<span style="white-space:pre"><c:out value="${antecedentes.investigadores}" /></span>
+						<span class="texto"><c:out value="${antecedentes.investigadores}" /></span>
 					</div>
 
 					<!-- Pasantes de I+D y/o formación académica -->
 					<div class="form-group">
 						<label for="inputPasantesDeIDFormacionAcademcia">Pasantes
 							de I+D y/o formación académica:</label>
-						<span style="white-space:pre"><c:out value="${antecedentes.pasantes_id_y_facademica}" /></span>
+						<span class="texto"><c:out value="${antecedentes.pasantes_id_y_facademica}" /></span>
 					</div>
 
 					<!-- Personal de apoyo a la I+D -->
 					<div class="form-group">
 						<label for="inputPersonalDeApoyoID">Personal de apoyo a la I+D :</label>
-						<span style="white-space:pre"><c:out value="${antecedentes.personal_apoyo_id}" /></span>
+						<span class="texto"><c:out value="${antecedentes.personal_apoyo_id}" /></span>
 					</div>
 
 
@@ -279,7 +279,7 @@
 					<div class="form-group">
 						<label for="inputFinanciamientoCientificoTecnologico">inanciamiento
 							cientifico y tecnológico: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.financiamiento_cientifico_tecnologico}" /></span>
+						<span class="texto"><c:out value="${antecedentes.financiamiento_cientifico_tecnologico}" /></span>
 					</div>
 
 
@@ -293,7 +293,7 @@
 					<div class="form-group">
 						<label for="inputActividadesDeDivulgacion">Actividades
 							de divulgación CyT: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.actividades_divulgacion}" /></span>
+						<span class="texto"><c:out value="${antecedentes.actividades_divulgacion}" /></span>
 					</div>
 
 
@@ -301,7 +301,7 @@
 					<div class="form-group">
 						<label for="inputExtensionRuralIndustrial">Extensión
 							rural o industrial: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.extension_rural_industrial}" /></span>
+						<span class="texto"><c:out value="${antecedentes.extension_rural_industrial}" /></span>
 					</div>
 
 
@@ -309,7 +309,7 @@
 					<div class="form-group">
 						<label for="inputPrestacionServiciosSocialesComunitarios">EPrestación
 							de sericios sociales y/o comunitarios: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.prestacion_servicios_sociales}" /></span>
+						<span class="texto"><c:out value="${antecedentes.prestacion_servicios_sociales}" /></span>
 					</div>
 
 
@@ -317,7 +317,7 @@
 					<div class="form-group">
 						<label for="inputProduccionDivulgacionArtisticaCultural">Producción
 							y/o divulgación artística o cultural: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.produccion_divulgacion_artistica}" /></span>
+						<span class="texto"><c:out value="${antecedentes.produccion_divulgacion_artistica}" /></span>
 					</div>
 
 
@@ -325,7 +325,7 @@
 					<div class="form-group">
 						<label for="inputOtroTipoActividadExtension">Otro tipo
 							de actividad de extensión: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.otro_tipo_actividad}" /></span>
+						<span class="texto"><c:out value="${antecedentes.otro_tipo_actividad}" /></span>
 					</div>
 
 
@@ -338,7 +338,7 @@
 					<div class="form-group">
 						<label for="inputEvaluacionDePersonal">Evaluación de
 							personal CyT Y jurado de tesis y/o premios: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.evaluacion_personal}" /></span>
+						<span class="texto"><c:out value="${antecedentes.evaluacion_personal}" /></span>
 					</div>
 
 
@@ -346,7 +346,7 @@
 					<div class="form-group">
 						<label for="inputEvaluacionProgramas">Evaluación de
 							programas/proyectos de I+D y/o extensión: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.evaluacion_programas}" /></span>
+						<span class="texto"><c:out value="${antecedentes.evaluacion_programas}" /></span>
 					</div>
 
 
@@ -354,14 +354,14 @@
 					<div class="form-group">
 						<label for="inputEvaluacionInstitucional">Evaluacion
 							institucional: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.evaluacion_institucional}" /></span>
+						<span class="texto"><c:out value="${antecedentes.evaluacion_institucional}" /></span>
 					</div>
 
 					<!-- Otro tipo de evaluación -->
 					<div class="form-group">
 						<label for="inputOtroTipoEvaluacio">Otro tipo de
 							evaluación: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.otro_tipo_evaluacion}" /></span>
+						<span class="texto"><c:out value="${antecedentes.otro_tipo_evaluacion}" /></span>
 					</div>
 
 					<!--  BECAS -->
@@ -373,7 +373,7 @@
 					<!-- Becas -->
 					<div class="form-group">
 						<label for="inputBecas">Becas: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.becas}" /></span>
+						<span class="texto"><c:out value="${antecedentes.becas}" /></span>
 					</div>
 
 					<!-- OTRAS ACTIVIDADES -->
@@ -386,39 +386,39 @@
 					<div class="form-group">
 						<label for="inputEstanciasPasantias">Estancias y
 							pasantías: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.estancias_pasantias}" /></span>
+						<span class="texto"><c:out value="${antecedentes.estancias_pasantias}" /></span>
 					</div>
 
 					<!-- Operación y mantenimiento de sistemas de alta complejidad -->
 					<div class="form-group">
 						<label for="inputOperacionyMantenimiento">Operación y
 							mantenimiento de sistemas de alta complejidad: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.operacion_mantenimiento}" /></span>
+						<span class="texto"><c:out value="${antecedentes.operacion_mantenimiento}" /></span>
 					</div>
 
 					<!-- Producción -->
 					<div class="form-group">
 						<label for="inputProduccion">Producción: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.produccion}" /></span>
+						<span class="texto"><c:out value="${antecedentes.produccion}" /></span>
 					</div>
 
 					<!-- Normalización -->
 					<div class="form-group">
 						<label for="inputNormalizacion">Normalización: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.normalizacion}" /></span>
+						<span class="texto"><c:out value="${antecedentes.normalizacion}" /></span>
 					</div>
 
 					<!-- Ejercicio de la profesión en el ámbito no académico -->
 					<div class="form-group">
 						<label for="inputEjercicioProfesionAmbitoNoAcademico">Ejercicio
 							de la profesión en el ámbito no académico: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.ejercicio_profesion_ambito_no_academico}" /></span>
+						<span class="texto"><c:out value="${antecedentes.ejercicio_profesion_ambito_no_academico}" /></span>
 					</div>
 
 					<!-- Otra actividad CyT -->
 					<div class="form-group">
 						<label for="inputOtraActividad">Otra actividad CyT: </label>
-						<span style="white-space:pre"><c:out value="${antecedentes.otra_actividad_cyt}" /></span>
+						<span class="texto"><c:out value="${antecedentes.otra_actividad_cyt}" /></span>
 					</div>
 				</form:form>
 				</c:otherwise>
